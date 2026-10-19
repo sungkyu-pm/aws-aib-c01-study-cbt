@@ -163,68 +163,86 @@ class AIBExamServerHandler(SimpleHTTPRequestHandler):
             payload = json.loads(body_bytes.decode('utf-8'))
 
             set_name = payload.get('set', 'mock1')
-            user_answers = payload.get('user_answers', {})
             time_spent_seconds = payload.get('time_spent_seconds', 0)
             mode = payload.get('mode', 'exam')
 
-            # 해당 세트의 정답 데이터 로드
-            file_map = {
-                'mock1': 'mock_exam_1.json',
-                'domain1': 'questions_domain1.json',
-                'domain2': 'questions_domain2.json',
-                'domain3': 'questions_domain3.json',
-                'domain4': 'questions_domain4.json'
-            }
-            filepath = os.path.join(QUESTIONS_DIR, file_map.get(set_name, 'mock_exam_1.json'))
-            with open(filepath, 'r', encoding='utf-8') as f:
-                questions = json.load(f)
+            # 클라이언트 측 동적 평가 결과가 전달된 경우 우선 사용
+            if 'client_evaluated' in payload and isinstance(payload['client_evaluated'], dict):
+                ce = payload['client_evaluated']
+                record = {
+                    "id": f"EXAM-{int(time.time())}",
+                    "timestamp": ce.get("timestamp", datetime.now().strftime("%Y-%m-%d %H:%M:%S")),
+                    "set": set_name,
+                    "mode": mode,
+                    "total": ce.get("total", 0),
+                    "correct_count": ce.get("correct_count", 0),
+                    "accuracy": ce.get("accuracy", 0),
+                    "scaled_score": ce.get("scaled_score", 0),
+                    "passed": ce.get("passed", False),
+                    "time_spent_seconds": time_spent_seconds,
+                    "domain_stats": ce.get("domain_stats", {}),
+                    "wrong_question_ids": ce.get("wrong_question_ids", [])
+                }
+            else:
+                user_answers = payload.get('user_answers', {})
+                # 해당 세트의 정답 데이터 로드
+                file_map = {
+                    'mock1': 'mock_exam_1.json',
+                    'domain1': 'questions_domain1.json',
+                    'domain2': 'questions_domain2.json',
+                    'domain3': 'questions_domain3.json',
+                    'domain4': 'questions_domain4.json'
+                }
+                filepath = os.path.join(QUESTIONS_DIR, file_map.get(set_name, 'mock_exam_1.json'))
+                with open(filepath, 'r', encoding='utf-8') as f:
+                    questions = json.load(f)
 
-            correct_count = 0
-            domain_stats = {}
-            wrong_question_ids = []
+                correct_count = 0
+                domain_stats = {}
+                wrong_question_ids = []
 
-            for q in questions:
-                dom = q.get('domain', 'Other')
-                if dom not in domain_stats:
-                    domain_stats[dom] = {'total': 0, 'correct': 0, 'name': q.get('domain_name', dom)}
-                domain_stats[dom]['total'] += 1
+                for q in questions:
+                    dom = q.get('domain', 'Other')
+                    if dom not in domain_stats:
+                        domain_stats[dom] = {'total': 0, 'correct': 0, 'name': q.get('domain_name', dom)}
+                    domain_stats[dom]['total'] += 1
 
-                ans = user_answers.get(q['id'])
-                corr = q['correct_answer']
-                is_correct = False
+                    ans = user_answers.get(q['id'])
+                    corr = q['correct_answer']
+                    is_correct = False
 
-                if isinstance(corr, list):
-                    if isinstance(ans, list) and len(ans) == len(corr) and sorted(ans) == sorted(corr):
-                        is_correct = True
-                else:
-                    if ans == corr:
-                        is_correct = True
+                    if isinstance(corr, list):
+                        if isinstance(ans, list) and len(ans) == len(corr) and sorted(ans) == sorted(corr):
+                            is_correct = True
+                    else:
+                        if ans == corr:
+                            is_correct = True
 
-                if is_correct:
-                    correct_count += 1
-                    domain_stats[dom]['correct'] += 1
-                else:
-                    wrong_question_ids.append(q['id'])
+                    if is_correct:
+                        correct_count += 1
+                        domain_stats[dom]['correct'] += 1
+                    else:
+                        wrong_question_ids.append(q['id'])
 
-            total = len(questions)
-            accuracy = round((correct_count / total * 100), 1) if total > 0 else 0
-            scaled_score = round(100 + (accuracy / 100) * 900)
-            passed = scaled_score >= 700
+                total = len(questions)
+                accuracy = round((correct_count / total * 100), 1) if total > 0 else 0
+                scaled_score = round(100 + (accuracy / 100) * 900)
+                passed = scaled_score >= 700
 
-            record = {
-                "id": f"EXAM-{int(time.time())}",
-                "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
-                "set": set_name,
-                "mode": mode,
-                "total": total,
-                "correct_count": correct_count,
-                "accuracy": accuracy,
-                "scaled_score": scaled_score,
-                "passed": passed,
-                "time_spent_seconds": time_spent_seconds,
-                "domain_stats": domain_stats,
-                "wrong_question_ids": wrong_question_ids
-            }
+                record = {
+                    "id": f"EXAM-{int(time.time())}",
+                    "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+                    "set": set_name,
+                    "mode": mode,
+                    "total": total,
+                    "correct_count": correct_count,
+                    "accuracy": accuracy,
+                    "scaled_score": scaled_score,
+                    "passed": passed,
+                    "time_spent_seconds": time_spent_seconds,
+                    "domain_stats": domain_stats,
+                    "wrong_question_ids": wrong_question_ids
+                }
 
             # 기록 파일에 영구 추가
             history = []

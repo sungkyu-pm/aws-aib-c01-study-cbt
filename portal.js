@@ -257,33 +257,103 @@ class PortalApp {
   // CBT 엔진 로직
   // ==========================================
 
+  // Fisher-Yates 배열 셔플 유틸리티
+  shuffleArray(array) {
+    const arr = [...array];
+    for (let i = arr.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [arr[i], arr[j]] = [arr[j], arr[i]];
+    }
+    return arr;
+  }
+
+  // 문항 내 보기(A~D) 순서 셔플 및 정답 키 동적 재매핑
+  randomizeQuestionOptions(question) {
+    const q = JSON.parse(JSON.stringify(question));
+    if (!Array.isArray(q.options) || q.options.length < 2) return q;
+
+    const isMultiple = Array.isArray(q.correct_answer);
+    const origCorrect = isMultiple ? new Set(q.correct_answer) : new Set([q.correct_answer]);
+
+    // 각 옵션의 원래 정답 여부 태깅
+    const tagged = q.options.map(opt => ({
+      opt: { ...opt },
+      isCorrect: origCorrect.has(opt.key)
+    }));
+
+    const shuffled = this.shuffleArray(tagged);
+    const keyLetters = ['A', 'B', 'C', 'D', 'E', 'F'];
+    const newCorrect = [];
+
+    shuffled.forEach((item, idx) => {
+      const letter = keyLetters[idx];
+      item.opt.key = letter;
+      if (item.isCorrect) {
+        newCorrect.push(letter);
+      }
+    });
+
+    q.options = shuffled.map(item => item.opt);
+    q.correct_answer = isMultiple ? newCorrect.sort() : (newCorrect[0] || q.correct_answer);
+    return q;
+  }
+
   async handleStartCbt() {
     const setInput = document.querySelector('input[name="cbtSet"]:checked');
     const modeInput = document.querySelector('input[name="cbtMode"]:checked');
+    const scopeInput = document.querySelector('input[name="cbtRandomScope"]:checked');
     const selectedSet = setInput ? setInput.value : 'mock1';
     const selectedMode = modeInput ? modeInput.value : 'study';
+    const selectedScope = scopeInput ? scopeInput.value : 'sample';
 
-    let questions = [];
+    let rawQuestions = [];
     const source = (typeof window !== 'undefined' && window.EXAM_DATA) ? window.EXAM_DATA : (typeof EXAM_DATA !== 'undefined' ? EXAM_DATA : null);
-    if (source && source[selectedSet]) {
-      questions = JSON.parse(JSON.stringify(source[selectedSet]));
-    } else {
+
+    if (source) {
+      if (selectedSet === 'mock1') {
+        // AWS 공식 가이드 비중에 맞춘 60문항 랜덤 추출 (D1:12, D2:19, D3:16, D4:13)
+        const d1 = this.shuffleArray(source.domain1 || []).slice(0, 12);
+        const d2 = this.shuffleArray(source.domain2 || []).slice(0, 19);
+        const d3 = this.shuffleArray(source.domain3 || []).slice(0, 16);
+        const d4 = this.shuffleArray(source.domain4 || []).slice(0, 13);
+        rawQuestions = this.shuffleArray([...d1, ...d2, ...d3, ...d4]);
+      } else if (source[selectedSet]) {
+        const pool = source[selectedSet] || [];
+        if (selectedScope === 'full') {
+          rawQuestions = this.shuffleArray(pool); // 30문항 전체 순서 셔플
+        } else {
+          rawQuestions = this.shuffleArray(pool).slice(0, 15); // 15문항 무작위 추출
+        }
+      }
+    }
+
+    if (!rawQuestions || rawQuestions.length === 0) {
       // 서버 API 폴백 시도
       try {
         const res = await fetch(`/api/questions?set=${selectedSet}`);
         if (res.ok) {
           const data = await res.json();
-          questions = data.questions || [];
+          const fetched = data.questions || [];
+          if (selectedSet === 'mock1') {
+            rawQuestions = this.shuffleArray(fetched);
+          } else if (selectedScope === 'full') {
+            rawQuestions = this.shuffleArray(fetched);
+          } else {
+            rawQuestions = this.shuffleArray(fetched).slice(0, 15);
+          }
         }
       } catch (e) {
         console.warn('API question load failed, checking fallback...', e);
       }
     }
 
-    if (!questions || questions.length === 0) {
+    if (!rawQuestions || rawQuestions.length === 0) {
       alert('문제 데이터를 로드할 수 없습니다. 페이지를 새로고침(F5) 해주세요.');
       return;
     }
+
+    // 각 문항 내 보기(A~D) 순서 및 정답 키 동적 셔플
+    const questions = rawQuestions.map(q => this.randomizeQuestionOptions(q));
 
     this.startCbtSession(questions, selectedMode);
   }
@@ -716,7 +786,23 @@ class PortalApp {
     });
 
     // 시험 결과 저장 (서버 연동 또는 localStorage 정적 브라우저 저장)
+    // 시험 결과 저장 (서버 연동 또는 localStorage 정적 브라우저 저장)
     const selectedSet = document.querySelector('input[name="cbtSet"]:checked')?.value || 'mock1';
+    const wrongQuestionIds = [];
+    this.cbtQuestions.forEach(q => {
+      const userAns = this.cbtUserAnswers[q.id];
+      const isMultiple = Array.isArray(q.correct_answer);
+      let isCorrect = false;
+      if (isMultiple) {
+        isCorrect = Array.isArray(userAns) &&
+          userAns.length === q.correct_answer.length &&
+          userAns.every((val, idx) => val === q.correct_answer[idx]);
+      } else {
+        isCorrect = userAns === q.correct_answer;
+      }
+      if (!isCorrect) wrongQuestionIds.push(q.id);
+    });
+
     const resultRecord = {
       timestamp: new Date().toISOString().replace('T', ' ').substring(0, 19),
       set: selectedSet,
@@ -726,7 +812,9 @@ class PortalApp {
       accuracy: Math.round(accuracy),
       scaled_score: scaled,
       passed: passed,
-      time_spent_seconds: this.cbtTimeSpent
+      time_spent_seconds: this.cbtTimeSpent,
+      domain_stats: domainStats,
+      wrong_question_ids: wrongQuestionIds
     };
 
     try {
@@ -743,7 +831,8 @@ class PortalApp {
           set: selectedSet,
           mode: this.cbtMode,
           user_answers: this.cbtUserAnswers,
-          time_spent_seconds: this.cbtTimeSpent
+          time_spent_seconds: this.cbtTimeSpent,
+          client_evaluated: resultRecord
         })
       }).then(res => res.json()).then(data => {
         console.log('Exam result saved to local server:', data);

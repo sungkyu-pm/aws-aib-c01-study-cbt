@@ -384,102 +384,6 @@
     "key_concept": "Hybrid Automation, Intelligent Document Processing (IDP), Rule-Based Validation"
   },
   {
-    "id": "D1-Q13",
-    "domain": "Domain 1",
-    "domain_name": "AI 기초 및 활용 능력 (AI Fundamentals and Literacy)",
-    "question_en": "An AI development lead explains to business executives that using an LLM in a production web application could experience response latency variations and streaming text generation. What is the business advantage of enabling token streaming in user-facing customer interfaces?",
-    "question_kr": "한 AI 개발 리드가 프로덕션 웹 애플리케이션에서 LLM을 사용할 때 응답 지연 시간 변동과 텍스트 스트리밍 생성이 발생할 수 있음을 경영진에게 설명합니다. 대고객 인터페이스에서 '토큰 스트리밍(Token Streaming)'을 활성화했을 때 얻을 수 있는 비즈니스상 이점은 무엇입니까?",
-    "options": [
-      {
-        "key": "A",
-        "text_en": "It significantly improves perceived user latency by displaying words immediately as they are generated rather than waiting for the complete response.",
-        "text_kr": "전체 응답이 완료될 때까지 기다리지 않고 생성되는 즉시 단어를 실시간 화면에 표시하여 사용자가 체감하는 지연 시간(Perceived Latency)을 대폭 개선합니다."
-      },
-      {
-        "key": "B",
-        "text_en": "It eliminates all cloud computing token costs completely.",
-        "text_kr": "클라우드 컴퓨팅의 모든 토큰 비용을 100% 완전히 면제해 줍니다."
-      },
-      {
-        "key": "C",
-        "text_en": "It permanently prevents models from generating biased responses.",
-        "text_kr": "모델이 편향된 응답을 생성하는 것을 영구적으로 방지합니다."
-      },
-      {
-        "key": "D",
-        "text_en": "It automatically translates all answers into 50 global languages simultaneously.",
-        "text_kr": "모든 답변을 동시에 전 세계 50개 언어로 자동 번역해 줍니다."
-      }
-    ],
-    "correct_answer": "A",
-    "explanation_kr": "정답은 A입니다.\n\n• LLM이 긴 문장을 생성할 때 전체 생성이 끝날 때까지 빈 화면을 보여주면(예: 8초 대기) 사용자는 시스템이 멈춘 것으로 착각하고 이탈할 수 있습니다.\n• **스트리밍(Streaming)** 기술은 첫 단어가 생성되자마자 실시간으로 타이핑되듯 보여주어 최초 응답 시간(TTFT, Time to First Token)을 단축시키고 사용자 체감 만족도를 획기적으로 높여줍니다.",
-    "key_concept": "Token Streaming, Perceived Latency, User Experience Optimization"
-  },
-  {
-    "id": "D1-Q14",
-    "domain": "Domain 1",
-    "domain_name": "AI 기초 및 활용 능력 (AI Fundamentals and Literacy)",
-    "question_en": "Which capability is essential for an AI Agent to take real-world actions, such as looking up an order status in a SQL database or executing a refund in a CRM system?",
-    "question_kr": "AI 에이전트가 SQL 데이터베이스에서 주문 상태를 조회하거나 CRM 시스템에서 환불을 실행하는 등 실제 환경에서 액션을 수행하기 위해 반드시 갖추어야 하는 필수 역량은 무엇입니까?",
-    "options": [
-      {
-        "key": "A",
-        "text_en": "Tool Usage / Action Groups (API integration)",
-        "text_kr": "도구 사용 / 액션 그룹 (API 연동 역량)"
-      },
-      {
-        "key": "B",
-        "text_en": "Pre-training from scratch on billion-parameter datasets",
-        "text_kr": "수십억 파라미터 데이터셋에 대한 처음부터의 사전 학습"
-      },
-      {
-        "key": "C",
-        "text_en": "Increasing temperature parameter to maximum value",
-        "text_kr": "온도(temperature) 파라미터를 최댓값으로 증가시키기"
-      },
-      {
-        "key": "D",
-        "text_en": "Restricting context window size to under 256 tokens",
-        "text_kr": "컨텍스트 윈도우 크기를 256 토큰 이하로 제한하기"
-      }
-    ],
-    "correct_answer": "A",
-    "explanation_kr": "정답은 A입니다.\n\n• AI 에이전트(예: Agents for Amazon Bedrock)의 핵심 역량은 사용자의 자연어 목표를 해석한 뒤, OpenAPI 스키마나 Lambda 함수로 정의된 **도구(Tools/Action Groups)**를 스스로 선택하여 실제 외부 시스템(DB 조회, 결제, 이메일 발송 등)을 호출하는 능력입니다.",
-    "key_concept": "AI Agents, Tool Calling, Action Groups, External API Integration"
-  },
-  {
-    "id": "D1-Q15",
-    "domain": "Domain 1",
-    "domain_name": "AI 기초 및 활용 능력 (AI Fundamentals and Literacy)",
-    "question_en": "Why is fine-tuning generally not recommended as the first-choice solution when an organization simply wants an LLM to answer questions about frequently updated internal company HR policies?",
-    "question_kr": "조직이 단순히 자주 변경되는 사내 HR 정책에 대해 LLM이 정확히 답변하도록 만들고자 할 때, 미세 조정(Fine-tuning)을 1순위 솔루션으로 권장하지 않는 주된 이유는 무엇입니까?",
-    "options": [
-      {
-        "key": "A",
-        "text_en": "Fine-tuning requires costly repeated retraining whenever policies update, does not eliminate hallucinations, and lacks transparent source citations compared to RAG.",
-        "text_kr": "미세 조정은 정책이 업데이트될 때마다 비용이 드는 재학습이 필요하고, 환각을 완전히 없애지 못하며, RAG에 비해 투명한 원문 출처(인용) 제공이 어렵기 때문입니다."
-      },
-      {
-        "key": "B",
-        "text_en": "Fine-tuning is prohibited by international labor regulations.",
-        "text_kr": "미세 조정은 국제 노동 규정에 의해 법적으로 금지되어 있기 때문입니다."
-      },
-      {
-        "key": "C",
-        "text_en": "Fine-tuning only works on numerical spreadsheet data, not text.",
-        "text_kr": "미세 조정은 텍스트가 아닌 오직 수치형 스프레드시트 데이터에만 동작하기 때문입니다."
-      },
-      {
-        "key": "D",
-        "text_en": "Fine-tuning automatically deletes the original foundation model weights.",
-        "text_kr": "미세 조정은 원래의 파운데이션 모델 가중치를 자동으로 삭제하기 때문입니다."
-      }
-    ],
-    "correct_answer": "A",
-    "explanation_kr": "정답은 A입니다.\n\n• 파인 튜닝은 모델에게 새로운 최신 사실(Fact)을 주입하는 용도로는 비효율적입니다. 정책이 바뀔 때마다 라벨링 데이터 준비 및 고비용 재학습이 필요하며, 근거 문서의 출처 페이지를 사용자에게 링크(Citations)로 보여줄 수 없습니다.\n• 반면 RAG는 사내 문서 S3에 문서를 교체하기만 하면 즉시 반영되며, '어떤 문서 몇 페이지를 참조했는지' 명확한 출처를 제공합니다.",
-    "key_concept": "Fine-Tuning vs RAG, Knowledge Recency, Source Citation"
-  },
-  {
     "id": "D2-Q01",
     "domain": "Domain 2",
     "domain_name": "AI 전략 및 비즈니스 가치 창출 (AI Strategy & Business Value Creation)",
@@ -958,6 +862,134 @@
     "correct_answer": "A",
     "explanation_kr": "정답은 A입니다.\n\n• GenAI 애플리케이션은 토큰 및 호출 수 기반 과금이므로 무한 루프나 트래픽 급증 시 비용이 폭증할 수 있습니다.\n• **API Gateway 수준의 스로틀링(Throttling)**으로 비정상 트래픽을 차단하고, **AWS Budgets 및 비용 이상 감지(Cost Anomaly Detection)**를 통해 사전 경보 체계를 두는 것이 표준적인 비용 통제 프랙티스입니다.",
     "key_concept": "AI Cost Control, AWS Budgets, Cost Anomaly Detection, API Throttling"
+  },
+  {
+    "id": "D2-Q16",
+    "domain": "Domain 2",
+    "domain_name": "AI 전략 및 비즈니스 가치 창출 (AI Strategy & Business Value Creation)",
+    "question_en": "An enterprise executive committee is evaluating 20 proposed AI use cases. Project Alpha promises moderate revenue uplift with low implementation complexity and ready-to-use S3 data. Project Beta promises transformational strategic value but requires 2 years of unproven deep tech research. According to standard AI prioritization matrices, which approach should the AI strategist recommend?",
+    "question_kr": "한 기업의 경영진 위원회가 제안된 20개의 AI 유스케이스를 평가하고 있습니다. 프로젝트 알파는 구현 복잡도가 낮고 S3 데이터가 이미 정제되어 있어 빠른 시일 내에 적건한 매출 증대를 약속합니다. 반면 프로젝트 베타는 혁신적인 전략적 가치를 약속하지만 아직 검증되지 않은 2년의 딥테크 연구가 필요합니다. 표준 AI 우선순위 매트릭스에 따를 때 AI 전략가는 어떤 권고를 해야 합니까?",
+    "options": [
+      {
+        "key": "A",
+        "text_en": "Cancel all projects and wait 5 years for industry standards to mature.",
+        "text_kr": "모든 프로젝트를 취소하고 업계 표준이 성숙해질 때까지 5년을 대기합니다."
+      },
+      {
+        "key": "B",
+        "text_en": "Execute Project Alpha immediately as a 'Quick Win' to demonstrate tangible business ROI and build organizational momentum, while staging Project Beta as a long-term strategic bet.",
+        "text_kr": "프로젝트 알파를 '단기 성과(Quick Win)'로 즉시 실행하여 가시적인 비즈니스 ROI를 입증하고 조직적 모멘텀을 구축하며, 프로젝트 베타는 단계별 장기 전략 과제로 배치합니다."
+      },
+      {
+        "key": "C",
+        "text_en": "Allocate 100% of the entire annual IT budget solely to Project Beta without any interim milestones.",
+        "text_kr": "중간 마일스톤 없이 연간 IT 전체 예산의 100%를 프로젝트 베타에만 몰아줍니다."
+      },
+      {
+        "key": "D",
+        "text_en": "Outsource the entire strategic decision to a third-party vendor without internal review.",
+        "text_kr": "내부 검토 없이 모든 전략적 결정을 전적으로 외부 벤더에 일임합니다."
+      }
+    ],
+    "correct_answer": "B",
+    "explanation_kr": "정답은 B입니다.\n\n• AI 프로젝트 우선순위 선정 매트릭스(Prioritization Matrix)에서는 '비즈니스 가치(Value)'와 '구현 실현 가능성(Feasibility)'의 2대 축을 기준으로 프로젝트를 분류합니다.\n• 난이도가 낮고 데이터가 준비된 'Quick Win' 프로젝트(프로젝트 알파)를 초기에 먼저 완수하여 실질적인 비용 절감이나 매출 성과를 수치로 증명해야 경영진의 신뢰와 후속 투자를 유치할 수 있으며, 고난도 전략 과제(프로젝트 베타)는 단계적 검증으로 리스크를 분산해야 합니다.",
+    "key_concept": "Prioritization Matrix, Quick Wins vs Strategic Bets, Value vs Feasibility"
+  },
+  {
+    "id": "D2-Q17",
+    "domain": "Domain 2",
+    "domain_name": "AI 전략 및 비즈니스 가치 창출 (AI Strategy & Business Value Creation)",
+    "question_en": "A manufacturing company's CFO complains that an AI visual inspection system's first-year actual expenditures exceeded estimates by 60%. The initial budget accounted only for GPU compute instances and cloud API calls. Which hidden Total Cost of Ownership (TCO) components were most likely neglected during financial planning?",
+    "question_kr": "한 제조업체의 CFO는 AI 비전 검사 시스템의 첫해 실제 지출이 예상치보다 60%나 초과했다고 지적했습니다. 초기 예산에는 GPU 컴퓨팅 인스턴스와 클라우드 API 호출료만 계상되어 있었습니다. 재무 기획 단계에서 누락되었을 가능성이 가장 높은 AI 총 소유 비용(TCO) 요소는 무엇입니까?",
+    "options": [
+      {
+        "key": "A",
+        "text_en": "Ongoing data collection, human labeling, pipeline maintenance, model drift monitoring, and personnel training.",
+        "text_kr": "지속적인 데이터 수집 및 라벨링 비용, 파이프라인 유지보수, 모델 드리프트 감시 모니터링, 현장 인력 재교육 비용."
+      },
+      {
+        "key": "B",
+        "text_en": "Government tax rates on electricity.",
+        "text_kr": "전기 요금에 대한 정부 세금 인상분."
+      },
+      {
+        "key": "C",
+        "text_en": "Office cafeteria food supplies.",
+        "text_kr": "사내 구내식당 식자재 비용."
+      },
+      {
+        "key": "D",
+        "text_en": "Depreciation of physical building foundations.",
+        "text_kr": "물리적 사옥 건물 기초 감가상각비."
+      }
+    ],
+    "correct_answer": "A",
+    "explanation_kr": "정답은 A입니다.\n\n• AI/ML 솔루션의 총 소유 비용(TCO)은 클라우드 인프라/API 요금(빙산의 일각)보다 하부의 운영 비용이 훨씬 큽니다.\n• 지속적인 결함 이미지 수집 및 전문 인력 라벨링 비용, SageMaker Model Monitor를 통한 드리프트 감지 및 주기적 재학습 비용, 생산 라인 작업자 변화 관리 교육 등 보이지 않는 운영(Opex) 비용을 사전에 산정하지 않으면 심각한 예산 초과가 발생합니다.",
+    "key_concept": "AI Total Cost of Ownership (TCO), Hidden Costs, Ongoing MLOps & Data Operations"
+  },
+  {
+    "id": "D2-Q18",
+    "domain": "Domain 2",
+    "domain_name": "AI 전략 및 비즈니스 가치 창출 (AI Strategy & Business Value Creation)",
+    "question_en": "A telecommunications company plans to launch a GenAI customer self-service app in 3 months. The company does not possess internal machine learning engineers, and the primary objective is rapid time-to-market using commoditized industry knowledge. Under the Build vs Buy vs Partner framework, which decision is most appropriate?",
+    "question_kr": "한 통신사가 3개월 이내에 생성형 AI 고객 셀프 서비스 앱을 출시할 계획입니다. 회사 내부에는 머신러닝 엔지니어가 부족하며, 주요 목표는 범용적인 지식을 활용하여 시장에 신속히 출시(Time-to-Market)하는 것입니다. '자체 구축 vs 상용 구매 vs 파트너십(Build vs Buy vs Partner)' 프레임워크에서 가장 적합한 결정은 무엇입니까?",
+    "options": [
+      {
+        "key": "A",
+        "text_en": "Build: Hire 50 data scientists to build and train a proprietary 100B parameter model from raw scratch.",
+        "text_kr": "자체 구축(Build): 50명의 데이터 과학자를 신규 채용하여 1,000억 개 파라미터 모델을 밑바닥부터 사전 학습."
+      },
+      {
+        "key": "B",
+        "text_en": "Buy: Adopt an enterprise-ready SaaS solution or fully managed API service (such as Amazon Q Business or Amazon Bedrock).",
+        "text_kr": "구매(Buy): 엔터프라이즈 레디 SaaS 솔루션 또는 완전관리형 API 서비스(예: Amazon Q Business, Amazon Bedrock)를 도입."
+      },
+      {
+        "key": "C",
+        "text_en": "Partner: Outsource all customer data to an unverified startup overseas.",
+        "text_kr": "파트너십(Partner): 검증되지 않은 해외 스타트업에 모든 고객 데이터를 아웃소싱."
+      },
+      {
+        "key": "D",
+        "text_en": "Abandon the initiative because non-tech companies cannot use AI.",
+        "text_kr": "비기술 기업은 AI를 쓸 수 없으므로 프로젝트를 영구 백지화."
+      }
+    ],
+    "correct_answer": "B",
+    "explanation_kr": "정답은 B입니다.\n\n• 일반적인 고객 지원 업무와 같이 비즈니스 차별화 핵심 독점 기술이 아니며(Commoditized), 내부 엔지니어링 역량이 부족하고 3개월 내 초고속 출시(Fast Time-to-Market)가 목표일 때는 '구매(Buy)' 또는 완전관리형 서비스(Amazon Bedrock, Q Business)가 TCO와 성공 확률 측면에서 가장 합리적인 전략적 선택입니다.",
+    "key_concept": "Build vs Buy vs Partner, Time to Market (TTM), Core Competency Differentiation"
+  },
+  {
+    "id": "D2-Q19",
+    "domain": "Domain 2",
+    "domain_name": "AI 전략 및 비즈니스 가치 창출 (AI Strategy & Business Value Creation)",
+    "question_en": "A fintech executive team is rolling out an AI copilot for wealth managers. The board wants to track early progress after 30 days, long before annual revenue or profit gains can be measured. Which leading indicator should the project lead report?",
+    "question_kr": "한 핀테크 경영진이 자산 관리자를 위한 AI 코파일럿을 배포했습니다. 이사회는 연간 매출이나 순이익 성과가 집계되기 훨씬 전인 출시 30일 시점에 초기 성패를 가늠하고자 합니다. 프로젝트 리더가 이사회에 보고해야 할 가장 적절한 선행 지표(Leading Indicator)는 무엇입니까?",
+    "options": [
+      {
+        "key": "A",
+        "text_en": "Total net annual EBITDA margin achieved two years later.",
+        "text_kr": "2년 후에 달성될 총 연간 순 EBITDA 마진율."
+      },
+      {
+        "key": "B",
+        "text_en": "Weekly active user adoption rate, daily queries per user, and user task completion satisfaction scores.",
+        "text_kr": "주간 활성 사용자(WAU) 채택률, 사용자당 일일 AI 쿼리 수, 작업 완료 만족도 점수."
+      },
+      {
+        "key": "C",
+        "text_en": "The stock price of competitor companies.",
+        "text_kr": "경쟁사의 주가 변동 추이."
+      },
+      {
+        "key": "D",
+        "text_en": "The physical weight of the server racks in the data center.",
+        "text_kr": "데이터 센터 서버 랙의 물리적 무게."
+      }
+    ],
+    "correct_answer": "B",
+    "explanation_kr": "정답은 B입니다.\n\n• 선행 지표(Leading Indicator)는 최종 비즈니스 성과(후행 지표: 연간 순이익, 총 매출 증대)가 수치로 집계되기 전에, 프로젝트가 성공 궤도에 올랐는지 조기에 예측할 수 있는 초기 참여 지표입니다.\n• 배포 초기에는 실제 사용자들이 도구를 얼마나 자주 쓰는지(채택률, 쿼리 빈도)와 체감 만족도가 향후 생산성 향상과 ROI로 직결되는 가장 중요한 선행 지표가 됩니다.",
+    "key_concept": "Leading vs Lagging Indicators, Adoption Metrics, User Engagement"
   },
   {
     "id": "D3-Q01",
@@ -1448,6 +1480,38 @@
     "key_concept": "Model Licenses (Commercial Restrictions, Copyleft), IP Risk Review"
   },
   {
+    "id": "D3-Q16",
+    "domain": "Domain 3",
+    "domain_name": "AI 거버넌스 및 책임 있는 AI 리더십 (AI Governance & Responsible AI)",
+    "question_en": "Under financial consumer protection regulations, a bank must provide an applicant with specific, understandable reasons if their loan application is rejected by an AI model (e.g., 'debt-to-income ratio too high'). Which AWS service and machine learning capability evaluates feature attribution and model explainability to resolve the 'black-box' dilemma?",
+    "question_kr": "금융 소비자 보호 규정에 따라, 은행은 AI 모델에 의해 대출 신청이 거절되었을 때 신청자에게 구체적이고 이해하기 쉬운 거절 사유(예: '총부채상환비율 과다')를 고지해야 합니다. 모델의 '블랙박스' 딜레마를 해소하고 각 피처별 기여도와 설명 가능성(Explainability)을 평가해주는 AWS 서비스 및 기능은 무엇입니까?",
+    "options": [
+      {
+        "key": "A",
+        "text_en": "Amazon SageMaker Clarify (calculating SHAP feature attribution values)",
+        "text_kr": "Amazon SageMaker Clarify (SHAP 피처 기여도 값 산출 및 설명 가능성 분석)"
+      },
+      {
+        "key": "B",
+        "text_en": "Amazon S3 Glacier Deep Archive",
+        "text_kr": "Amazon S3 Glacier Deep Archive"
+      },
+      {
+        "key": "C",
+        "text_en": "AWS Snowmobile data transport truck",
+        "text_kr": "AWS Snowmobile 데이터 운송 트럭"
+      },
+      {
+        "key": "D",
+        "text_en": "AWS Elastic Load Balancer health check",
+        "text_kr": "AWS Elastic Load Balancer 헬스 체크"
+      }
+    ],
+    "correct_answer": "A",
+    "explanation_kr": "정답은 A입니다.\n\n• Amazon SageMaker Clarify는 모델 학습 전 데이터의 잠재적 편향을 분석할 뿐만 아니라, 모델 배포 후 개별 예측 결과에 어떤 입력 변수(소득, 부채, 연체 이력 등)가 가장 큰 영향을 미쳤는지 SHAP(SHapley Additive exPlanations) 기법으로 수치화해 줍니다.\n• 이를 통해 금융 규제 당국이나 대출 거절 고객에게 판단 근거를 투명하게 설명(Explainability)할 수 있어 고위험 금융 AI 거버넌스의 핵심 도구로 활용됩니다.",
+    "key_concept": "Explainability, Interpretability, Amazon SageMaker Clarify, SHAP Values"
+  },
+  {
     "id": "D4-Q01",
     "domain": "Domain 4",
     "domain_name": "비즈니스 준비성, 리더십, AI 혁신 (Business Readiness, Leadership & Transformation)",
@@ -1862,69 +1926,5 @@
     "correct_answer": "A",
     "explanation_kr": "정답은 A입니다.\n\n• AI 프로젝트가 현업(영업/비즈니스)의 혁신 요구와 통제 부서(보안/법무)의 안전 요구 사이에서 교착 상태에 빠졌을 때, 이를 중재하고 절충안(예: 가드레일과 익명화 적용 후 승인)을 결정할 수 있는 주체는 강력한 **경영진 스폰서(Executive Sponsor)**와 다학제적 AI 운영 위원회입니다.",
     "key_concept": "Executive Sponsorship, Cross-Functional Conflict Resolution, AI Governance Committee"
-  },
-  {
-    "id": "D4-Q14",
-    "domain": "Domain 4",
-    "domain_name": "비즈니스 준비성, 리더십, AI 혁신 (Business Readiness, Leadership & Transformation)",
-    "question_en": "What is the primary role of an 'AI Champion' within a line-of-business department?",
-    "question_kr": "현업 사업 부서 내에서 'AI 챔피언(AI Champion)'의 주요 역할은 무엇입니까?",
-    "options": [
-      {
-        "key": "A",
-        "text_en": "Act as a localized peer evangelist who identifies departmental pain points, tests pilot tools, coaches colleagues, and channels user feedback back to the central AI CoE.",
-        "text_kr": "부서 내 고충을 발굴하고, 파일럿 도구를 테스트하며, 동료들을 코칭하고, 현장 사용자 피드백을 중앙 AI CoE로 전달하는 현장 전도사 역할을 수행합니다."
-      },
-      {
-        "key": "B",
-        "text_en": "Write low-level assembly language code for server motherboards.",
-        "text_kr": "서버 마더보드용 저수준 어셈블리어 코드를 작성합니다."
-      },
-      {
-        "key": "C",
-        "text_en": "Physically guard the server room doors from employees.",
-        "text_kr": "서버실 문 앞을 직원들로부터 물리적으로 경비합니다."
-      },
-      {
-        "key": "D",
-        "text_en": "Audit employee personal tax returns.",
-        "text_kr": "직원들의 개인 세금 환급 내역을 감사합니다."
-      }
-    ],
-    "correct_answer": "A",
-    "explanation_kr": "정답은 A입니다.\n\n• **AI 챔피언(AI Champion)**은 현업 부서의 실무 전문가이면서 AI 기술에 열정을 가진 핵심 인재입니다.\n• 중앙 IT의 탑다운 지시보다 현업 동료의 추천과 코칭이 훨씬 빠르게 수용되므로, 변화 관리의 가교 역할을 하는 가장 핵심적인 인력 네트워크입니다.",
-    "key_concept": "AI Champions, Peer Coaching, Grassroots Innovation, Feedback Loop"
-  },
-  {
-    "id": "D4-Q15",
-    "domain": "Domain 4",
-    "domain_name": "비즈니스 준비성, 리더십, AI 혁신 (Business Readiness, Leadership & Transformation)",
-    "question_en": "Why is establishing a continuous feedback loop and monitoring mechanism vital after deploying an enterprise AI initiative from launch into ongoing operations?",
-    "question_kr": "엔터프라이즈 AI 이니셔티브를 출시(Launch)한 후 지속적인 운영 단계로 확장할 때, 지속적인 피드백 루프와 모니터링 메커니즘을 수립하는 것이 필수적인 이유는 무엇입니까?",
-    "options": [
-      {
-        "key": "A",
-        "text_en": "AI systems operate in dynamic business environments where user needs evolve, model performance drifts, and continuous user feedback is required to iterate prompts, refine datasets, and prove ongoing business value.",
-        "text_kr": "AI 시스템은 사용자 요구가 진화하고 모델 성능이 드리프트되는 동적 환경에서 동작하므로, 프롬프트를 반복 개선하고 데이터셋을 정제하며 지속적인 비즈니스 가치를 입증하기 위해 사용자 피드백이 지속적으로 필요하기 때문입니다."
-      },
-      {
-        "key": "B",
-        "text_en": "Once deployed, AI software never requires monitoring or updates for the next 50 years.",
-        "text_kr": "한 번 배포된 AI 소프트웨어는 향후 50년 동안 어떠한 모니터링이나 업데이트도 필요하지 않기 때문입니다."
-      },
-      {
-        "key": "C",
-        "text_en": "To automatically delete all user profiles at the end of each fiscal quarter.",
-        "text_kr": "매 회계 분기 말마다 모든 사용자 프로필을 자동으로 삭제하기 위해."
-      },
-      {
-        "key": "D",
-        "text_en": "Because cloud servers cannot function without daily manual restarts.",
-        "text_kr": "클라우드 서버는 매일 수동으로 재시작하지 않으면 작동할 수 없기 때문입니다."
-      }
-    ],
-    "correct_answer": "A",
-    "explanation_kr": "정답은 A입니다.\n\n• AI 솔루션은 '한 번 배포하고 끝(Fire and Forget)'인 소프트웨어가 아닙니다.\n• 실제 사용자의 만족도, 정답률, 비즈니스 성과를 지속적으로 수집하는 **피드백 루프(Feedback Loop)**를 통해 프롬프트를 미세 조정하고, 모델 드리프트를 감지하며, 추가 개선 영역을 파악하는 지속적인 선순환 체계를 운영해야 합니다.",
-    "key_concept": "Continuous Feedback Loop, Post-Deployment Scaling, Long-Term Value Tracking"
   }
 ]

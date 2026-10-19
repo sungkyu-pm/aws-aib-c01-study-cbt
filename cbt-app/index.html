@@ -42,16 +42,32 @@
           <div class="card selection-card">
             <h3>1. 학습 범위 선택</h3>
             <div class="select-group">
-              <label><input type="radio" name="examSet" value="mock1" checked> <strong>종합 실전 모의고사 (정규 60문항 풀 세트)</strong></label>
-              <label><input type="radio" name="examSet" value="domain1"> 도메인 1: AI 기초 및 활용 능력 (15문항)</label>
-              <label><input type="radio" name="examSet" value="domain2"> 도메인 2: AI 전략 및 비즈니스 가치 창출 (15문항)</label>
-              <label><input type="radio" name="examSet" value="domain3"> 도메인 3: AI 거버넌스 및 책임 있는 AI (15문항)</label>
-              <label><input type="radio" name="examSet" value="domain4"> 도메인 4: 비즈니스 준비성 & 조직 혁신 (15문항)</label>
+              <label><input type="radio" name="examSet" value="mock1" checked> <strong>🎲 종합 실전 모의고사</strong> <p class="mode-desc">공식 비중 맞춤 60문항 무작위 추출 (D1:12, D2:19, D3:16, D4:13)</p></label>
+              <label><input type="radio" name="examSet" value="domain1"> 🎯 도메인 1: AI 기초 및 활용 능력 (30문항 풀)</label>
+              <label><input type="radio" name="examSet" value="domain2"> 🎯 도메인 2: AI 전략 및 비즈니스 가치 창출 (30문항 풀)</label>
+              <label><input type="radio" name="examSet" value="domain3"> 🎯 도메인 3: AI 거버넌스 및 책임 있는 AI (30문항 풀)</label>
+              <label><input type="radio" name="examSet" value="domain4"> 🎯 도메인 4: 비즈니스 준비성 & 조직 혁신 (30문항 풀)</label>
             </div>
           </div>
 
           <div class="card selection-card">
-            <h3>2. 응시 모드 선택</h3>
+            <h3>2. 출제 방식 및 문항 수</h3>
+            <div class="select-group">
+              <label>
+                <input type="radio" name="examRandomScope" value="sample" checked>
+                <strong>🔀 매회 새로운 무작위 추출 (추천)</strong>
+                <p class="mode-desc">매 응시마다 문항 및 보기(A~D) 순서 셔플 (도메인 15문항 / 종합 60문항)</p>
+              </label>
+              <label>
+                <input type="radio" name="examRandomScope" value="full">
+                <strong>📚 해당 도메인 전체 문항 집중 풀이</strong>
+                <p class="mode-desc">도메인 선택 시 30문항 전체 순서 셔플 출제</p>
+              </label>
+            </div>
+          </div>
+
+          <div class="card selection-card">
+            <h3>3. 응시 모드 선택</h3>
             <div class="select-group">
               <label>
                 <input type="radio" name="examMode" value="study" checked>

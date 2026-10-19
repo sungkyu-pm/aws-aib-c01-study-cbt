@@ -1,0 +1,482 @@
+[
+  {
+    "id": "D4-Q16",
+    "domain": "Domain 4",
+    "domain_name": "비즈니스 준비성, 리더십, AI 혁신 (Business Readiness, Leadership & Transformation)",
+    "question_en": "An enterprise assesses its AI capabilities and discovers that while multiple ad-hoc machine learning scripts exist across departments, there is no shared infrastructure, standardized deployment pipeline, or centralized strategy. According to standard AI Maturity Models, which stage does this organization currently occupy, and what is their recommended next milestone?",
+    "question_kr": "한 기업이 자사의 AI 역량을 진단한 결과, 여러 부서에서 임시방편적인 머신러닝 스크립트들이 개별적으로 사용되고 있으나 공유 인프라, 표준화된 배포 파이프라인, 중앙 집중식 전략이 전혀 부재함을 확인했습니다. 표준 AI 성숙도 모델(AI Maturity Model)에 따르면 이 조직은 현재 어느 단계에 속하며, 권장되는 다음 마일스톤은 무엇입니까?",
+    "options": [
+      {
+        "key": "A",
+        "text_en": "Transformational stage; immediately restructure the entire corporate business model around autonomous agents.",
+        "text_kr": "변혁(Transformational) 단계; 자율 에이전트를 중심으로 기업 비즈니스 모델 전체를 즉시 재편해야 합니다."
+      },
+      {
+        "key": "B",
+        "text_en": "Opportunistic (Ad-hoc) stage; transition to the Systematic (Repeatable) stage by establishing shared data platforms, standard MLOps/LLMOps governance, and an AI CoE.",
+        "text_kr": "기회주의적/임시(Opportunistic/Ad-hoc) 단계; 공유 데이터 플랫폼, 표준 MLOps/LLMOps 거버넌스 및 AI CoE를 구축하여 체계적/반복 가능(Systematic/Repeatable) 단계로 도약해야 합니다."
+      },
+      {
+        "key": "C",
+        "text_en": "Maturity Level 5; dismantle all IT controls since teams already demonstrate independent coding abilities.",
+        "text_kr": "성숙도 5단계; 팀들이 이미 독자적인 코딩 역량을 보이고 있으므로 모든 IT 통제를 해제해야 합니다."
+      },
+      {
+        "key": "D",
+        "text_en": "Exploration stage; eliminate all Python environments and restrict staff exclusively to spreadsheet formulas.",
+        "text_kr": "탐색(Exploration) 단계; 모든 파이썬 환경을 제거하고 직원들을 스프레드시트 수식만 사용하도록 제한해야 합니다."
+      }
+    ],
+    "correct_answer": "B",
+    "explanation_kr": "정답은 B입니다.\n\n• **AI 성숙도 모델(AI Maturity Model)**은 대체로 4단계(탐색/인식 → 기회주의적/파편화 → 체계적/반복가능 → 변혁/AI-First)로 진화합니다.\n• 부서별로 파편화된 개별 스크립트와 PoC가 산발적으로 존재하는 상태는 **Opportunistic(기회주의적/임시) 단계**에 해당합니다.\n• 다음 단계인 **Systematic(체계적)** 단계로 나아가기 위해서는 전사 AI 우수성 센터(AI CoE)를 신설하고, 통합 데이터 레이크/카탈로그 및 MLOps 표준 배포 거버넌스를 구축하여 성과를 전사적으로 재현 가능하게 만들어야 합니다.",
+    "key_concept": "AI Maturity Models, Opportunistic to Systematic Transition, AI Strategy"
+  },
+  {
+    "id": "D4-Q17",
+    "domain": "Domain 4",
+    "domain_name": "비즈니스 준비성, 리더십, AI 혁신 (Business Readiness, Leadership & Transformation)",
+    "question_en": "A global conglomerate operates distinct business units (Retail, Healthcare, Finance) that need to discover, share, and collaborate on data products while maintaining strict domain-level ownership and regulatory compliance. Which AWS service and architectural paradigm should leadership adopt to break down organizational data silos without creating an unmanageable centralized bottleneck?",
+    "question_kr": "글로벌 대기업이 각기 다른 사업 부서(유통, 헬스케어, 금융)를 운영하고 있으며, 각 부서 고유의 소유권과 규제 준수를 유지하면서도 데이터 프로덕트를 검색, 공유 및 협업하고자 합니다. 관리 불가능한 중앙 집중식 병목을 만들지 않으면서 조직적 데이터 사일로를 해소하기 위해 경영진이 도입해야 하는 AWS 서비스와 아키텍처 패러다임은 무엇입니까?",
+    "options": [
+      {
+        "key": "A",
+        "text_en": "Amazon DataZone using a Data Mesh paradigm with decentralized data product governance",
+        "text_kr": "탈중앙화된 데이터 프로덕트 거버넌스를 갖춘 데이터 메시(Data Mesh) 패러다임 기반의 Amazon DataZone"
+      },
+      {
+        "key": "B",
+        "text_en": "Emailing CSV attachments between department heads over corporate VPN",
+        "text_kr": "사내 VPN을 통해 부서장 간에 CSV 첨부파일을 이메일로 교환하는 방식"
+      },
+      {
+        "key": "C",
+        "text_en": "Migrating all departmental workloads into a single shared AWS root account without IAM roles",
+        "text_kr": "IAM 역할 없이 단일 공유 AWS 루트 계정으로 모든 부서 워크로드를 통합하는 방식"
+      },
+      {
+        "key": "D",
+        "text_en": "AWS Snowball Edge to physically ship hard drives between office branches weekly",
+        "text_kr": "매주 지사 간에 물리적 하드 드라이브를 배송하기 위해 AWS Snowball Edge를 활용하는 방식"
+      }
+    ],
+    "correct_answer": "A",
+    "explanation_kr": "정답은 A입니다.\n\n• **Amazon DataZone**은 조직 경계를 넘어 데이터를 검색, 공유 및 관리(Cataloging & Governance)할 수 있는 엔터프라이즈 데이터 거버넌스 서비스입니다.\n• **데이터 메시(Data Mesh)** 패러다임은 도메인별 데이터 소유권(Domain Data Ownership)을 보장하는 동시에, 전사적인 데이터 프로덕트 셀프서비스 공유 체계를 제공하여 중앙 IT 병목을 해소합니다.",
+    "key_concept": "Amazon DataZone, Data Mesh, Breaking Data Silos, Federated Governance"
+  },
+  {
+    "id": "D4-Q18",
+    "domain": "Domain 4",
+    "domain_name": "비즈니스 준비성, 리더십, AI 혁신 (Business Readiness, Leadership & Transformation)",
+    "question_en": "An enterprise is structuring its AI Center of Excellence (CoE). The leadership wants to balance high-level strategic alignment and common architectural standards with the agility of individual business lines who understand their own domain-specific customer problems. Which organizational operating model is most effective?",
+    "question_kr": "한 기업이 AI 우수성 센터(CoE) 구조를 설계하고 있습니다. 경영진은 고수준의 전략적 일치와 공통 아키텍처 표준을 유지하면서도, 도메인 고유의 고객 문제를 가장 잘 이해하는 개별 사업 부서의 민첩성도 함께 확보하고자 합니다. 가장 효과적인 조직 운영 모델은 무엇입니까?",
+    "options": [
+      {
+        "key": "A",
+        "text_en": "Completely Centralized model: all data scientists report exclusively to an isolated corporate IT research lab.",
+        "text_kr": "완전 중앙 집중식(Centralized) 모델: 모든 데이터 과학자가 고립된 전사 IT 연구소에만 소속되어 보고합니다."
+      },
+      {
+        "key": "B",
+        "text_en": "Federated (Hub-and-Spoke) model: a central CoE hub establishes foundational standards, shared tooling, and governance, while embedded spoke practitioners execute domain-specific AI projects.",
+        "text_kr": "연합형/허브앤스포크(Federated / Hub-and-Spoke) 모델: 중앙 CoE 허브가 기반 표준, 공통 툴링, 거버넌스를 수립하고, 사업부 현업에 임베디드된 스포크(Spoke) 실무자가 도메인별 AI 프로젝트를 실행합니다."
+      },
+      {
+        "key": "C",
+        "text_en": "Decentralized (Shadow IT) model: eliminate all central coordination and allow each branch to select conflicting cloud vendors.",
+        "text_kr": "완전 분산/섀도우 IT 모델: 모든 중앙 조율을 없애고 각 지사가 상충되는 클라우드 벤더를 자유롭게 선정하도록 방치합니다."
+      },
+      {
+        "key": "D",
+        "text_en": "Sole Executive model: a single Chief AI Officer writes all company code directly without delegating.",
+        "text_kr": "단독 임원 모델: 최고 AI 책임자(CAIO) 1인이 권한 위임 없이 회사의 모든 코드를 직접 작성합니다."
+      }
+    ],
+    "correct_answer": "B",
+    "explanation_kr": "정답은 B입니다.\n\n• **연합형 허브 앤 스포크(Federated / Hub-and-Spoke) 모델**은 중앙 집중식(표준화, 재사용성, 거버넌스)과 분산식(현업 민첩성, 도메인 전문성)의 장점을 결합한 엔터프라이즈 AI의 가장 권장되는 운영 구조입니다.\n• 중앙 Hub(CoE)는 보안 가이드라인, 인프라 템플릿, 교육, MLOps 파이프라인을 지원하고, Spoke(사업 부서 데이터 엔지니어/기획자)는 실제 비즈니스 가치 창출에 집중합니다.",
+    "key_concept": "AI CoE Operating Models, Hub-and-Spoke, Federated AI Organization"
+  },
+  {
+    "id": "D4-Q19",
+    "domain": "Domain 4",
+    "domain_name": "비즈니스 준비성, 리더십, AI 혁신 (Business Readiness, Leadership & Transformation)",
+    "question_en": "To accelerate Generative AI adoption across non-technical departments (e.g., Marketing, HR, Legal), leadership establishes an 'AI Champions Network'. What is the primary operational role of an AI Champion within their respective department?",
+    "question_kr": "비기술 부서(예: 마케팅, 인사, 법무) 전반에서 생성형 AI 도입을 가속화하기 위해 경영진이 'AI 챔피언 네트워크(AI Champions Network)'를 구축했습니다. 소속 부서 내에서 AI 챔피언이 수행하는 주된 역할은 무엇입니까?",
+    "options": [
+      {
+        "key": "A",
+        "text_en": "Writing CUDA C++ kernels and training custom transformer models from scratch on GPU clusters.",
+        "text_kr": "CUDA C++ 커널을 작성하고 GPU 클러스터에서 커스텀 트랜스포머 모델을 밑바닥부터 직접 학습시키는 일."
+      },
+      {
+        "key": "B",
+        "text_en": "Acting as a peer coach and liaison, identifying departmental high-impact use cases, demonstrating best practices, and channeling feedback to the central AI CoE.",
+        "text_kr": "동료 코치 및 가교 역할을 수행하며, 부서 내 파급력 높은 유스케이스를 발굴하고, 모범 사례를 시연하며, 중앙 AI CoE로 피드백을 전달하는 역할."
+      },
+      {
+        "key": "C",
+        "text_en": "Approving corporate capital budgets and signing vendor purchase orders without procurement review.",
+        "text_kr": "조달 부서 검토 없이 기업 자본 예산을 단독 승인하고 벤더 구매 주문서에 서명하는 일."
+      },
+      {
+        "key": "D",
+        "text_en": "Auditing server cooling units in the corporate on-premises server room.",
+        "text_kr": "사내 온프레미스 서버실의 서버 냉각 장치를 물리적으로 점검하는 일."
+      }
+    ],
+    "correct_answer": "B",
+    "explanation_kr": "정답은 B입니다.\n\n• **AI 챔피언 네트워크(AI Champions Network)**는 풀뿌리(Grassroots) 방식의 AI 확산을 주도하는 현업 대표자 그룹입니다.\n• 챔피언들은 부서 동료들에게 일상적인 AI 툴 사용법을 코칭하고, 실무에서 마주치는 고통점(Pain Point)을 AI 유스케이스로 연결하며, 중앙 CoE와 부서 간의 원활한 소통 창구 역할을 담당합니다.",
+    "key_concept": "AI Champions Network, Grassroots Adoption, Peer Coaching"
+  },
+  {
+    "id": "D4-Q20",
+    "domain": "Domain 4",
+    "domain_name": "비즈니스 준비성, 리더십, AI 혁신 (Business Readiness, Leadership & Transformation)",
+    "question_en": "During the rollout of an AI assistant intended to automate drafting of insurance claims, customer service representatives express widespread anxiety about potential layoffs and intentionally avoid using the software. Which leadership and change management approach is essential to address this cultural resistance?",
+    "question_kr": "보험금 청구 초안 작성을 자동화하기 위한 AI 어시스턴트 도입 과정에서 고객 상담원들이 일자리 상실에 대한 극심한 불안감을 표출하며 의도적으로 소프트웨어 사용을 기피하고 있습니다. 이러한 조직 문화적 저항을 해결하기 위해 필수적인 리더십 및 변화 관리(Change Management) 접근법은 무엇입니까?",
+    "options": [
+      {
+        "key": "A",
+        "text_en": "Mandate immediate punitive performance reviews for any employee who raises concerns about AI.",
+        "text_kr": "AI에 대해 우려를 표명하는 모든 직원을 대상으로 즉각적인 징계성 인사평가를 의무화합니다."
+      },
+      {
+        "key": "B",
+        "text_en": "Adopt an 'Augmentation over Replacement' philosophy, transparently communicate how AI eliminates repetitive drudgery to elevate complex advisory work, and provide psychological safety with upskilling programs.",
+        "text_kr": "'대체(Replacement)가 아닌 증강(Augmentation)' 철학을 천명하고, AI가 단순 반복 업무를 제거하여 복합 상담 업무로 역량을 격상시켜 줌을 투명하게 소통하며, 업스킬링(직무 재교육) 프로그램과 심리적 안정감을 제공합니다."
+      },
+      {
+        "key": "C",
+        "text_en": "Secretly install monitoring keyloggers to force users to interact with the LLM API.",
+        "text_kr": "사용자가 LLM API와 상호작용하도록 강제하기 위해 감시용 키로거를 몰래 설치합니다."
+      },
+      {
+        "key": "D",
+        "text_en": "Halt all digital transformation initiatives indefinitely and return to manual paper filing.",
+        "text_kr": "모든 디지털 전환 프로젝트를 무기한 중단하고 수작업 종이 서류 방식으로 회귀합니다."
+      }
+    ],
+    "correct_answer": "B",
+    "explanation_kr": "정답은 B입니다.\n\n• AI 혁신의 가장 큰 실패 원인은 기술 결함이 아닌 **문화적 저항(Cultural Resistance)**과 고용 불안입니다.\n• 리더십은 AI가 인력을 대체(Replacement)하는 것이 아니라 인간의 지적 역량을 배가시키는 **증강(Augmentation)** 도구임을 명확히 하고, 투명한 로드맵 제시 및 업스킬링 기회를 제공하여 조직 구성원의 **심리적 안정감(Psychological Safety)**을 구축해야 합니다.",
+    "key_concept": "Change Management, Augmentation vs Replacement, Psychological Safety"
+  },
+  {
+    "id": "D4-Q21",
+    "domain": "Domain 4",
+    "domain_name": "비즈니스 준비성, 리더십, AI 혁신 (Business Readiness, Leadership & Transformation)",
+    "question_en": "A media company wants to encourage broad employee innovation with Generative AI without exposing confidential corporate IP or incurring unexpected cloud infrastructure expenses. Which AWS tool and environment setup provides a safe, no-code experimentation playground for non-developer employees?",
+    "question_kr": "한 미디어 기업이 기밀 기업 지식재산권(IP)을 외부로 유출하거나 예상치 못한 클라우드 비용을 초래하지 않으면서, 비개발자 직원들이 생성형 AI를 활용해 폭넓게 혁신 실험을 하도록 장려하고자 합니다. 비개발 직군을 위한 안전한 노코드 실험 플레이그라운드를 제공하는 AWS 도구 및 환경 구성은 무엇입니까?",
+    "options": [
+      {
+        "key": "A",
+        "text_en": "PartyRock (an Amazon Bedrock Playground) or an internal secure sandbox portal connected to Amazon Bedrock with strict spending quotas and AWS Guardrails.",
+        "text_kr": "PartyRock(Amazon Bedrock 기반 노코드 플레이그라운드) 또는 엄격한 비용 한도와 Bedrock Guardrails가 적용된 사내 보안 샌드박스 포털."
+      },
+      {
+        "key": "B",
+        "text_en": "Giving all staff AWS root credentials and direct SSH access to production EC2 GPU clusters.",
+        "text_kr": "모든 직원에게 AWS 루트 자격증명과 운영 EC2 GPU 클러스터에 대한 직접 SSH 접속 권한을 부여합니다."
+      },
+      {
+        "key": "C",
+        "text_en": "Instructing employees to paste internal drafts into unvetted public consumer chatbots on personal devices.",
+        "text_kr": "개인 기기에서 검증되지 않은 공개 무료 챗봇에 사내 초안 문서를 자유롭게 붙여넣도록 지시합니다."
+      },
+      {
+        "key": "D",
+        "text_en": "Restricting AI experimentation strictly to the Chief Technology Officer's personal laptop.",
+        "text_kr": "AI 실험을 최고기술책임자(CTO)의 개인 노트북에서만 단독으로 수행하도록 엄격히 제한합니다."
+      }
+    ],
+    "correct_answer": "A",
+    "explanation_kr": "정답은 A입니다.\n\n• **AWS PartyRock**은 Amazon Bedrock 기반의 직관적인 노코드(No-code) 생성형 AI 앱 제작 플레이그라운드로, 비개발 직군이 프롬프트와 체이닝 로직을 신속하게 실험할 수 있습니다.\n• 기업 환경에서는 Bedrock API에 연결된 격리된 사내 샌드박스 환경(비용 쿼터, Guardrails, 데이터 비저장 정책 적용)을 제공함으로써 기밀 유출 위험 없이 혁신 실험 속도를 극대화할 수 있습니다.",
+    "key_concept": "AWS PartyRock, Secure Prototyping Sandbox, Rapid Experimentation"
+  },
+  {
+    "id": "D4-Q22",
+    "domain": "Domain 4",
+    "domain_name": "비즈니스 준비성, 리더십, AI 혁신 (Business Readiness, Leadership & Transformation)",
+    "question_en": "An organization aims to build an enterprise-wide AI training curriculum to address skills gaps. Rather than providing a single generic deep learning course to every employee, what is the best practice strategy for designing an effective upskilling roadmap?",
+    "question_kr": "한 조직이 전사적 AI 역량 격차(Skills Gap)를 해소하기 위해 교육 커리큘럼을 구축하고자 합니다. 모든 직원에게 단일하고 획일적인 딥러닝 이론 강좌를 수강하게 하는 대신, 효과적인 업스킬링 로드맵을 설계하기 위한 최선의 전략은 무엇입니까?",
+    "options": [
+      {
+        "key": "A",
+        "text_en": "Role-based learning pathways tailored to distinct profiles (e.g., Executive literacy, Business User prompt fluency, Developer Bedrock/SDK integration, and Data Engineer MLOps).",
+        "text_kr": "직무 프로필별 맞춤형 역할 기반 학습 경로(Role-based learning pathways: 경영진 AI 리터러시, 현업 비즈니스 유저 프롬프트 활용, 개발자 Bedrock/SDK 연동, 데이터 엔지니어 MLOps 파이프라인 등)를 세분화하여 제공합니다."
+      },
+      {
+        "key": "B",
+        "text_en": "Requiring all administrative assistants and graphic designers to pass advanced linear algebra exams before granting email access.",
+        "text_kr": "이메일 계정을 부여받기 전 모든 행정 비서와 그래픽 디자이너에게 고급 선형대수학 시험 통과를 의무화합니다."
+      },
+      {
+        "key": "C",
+        "text_en": "Only training external contractors and forbidding permanent full-time employees from learning AI concepts.",
+        "text_kr": "외부 계약직만 교육하고 정규직 임직원은 AI 개념을 학습하지 못하도록 금지합니다."
+      },
+      {
+        "key": "D",
+        "text_en": "Purchasing textbooks on obsolete 1980s expert systems and placing them in the corporate library without workshops.",
+        "text_kr": "워크숍 없이 1980년대 구형 전문가 시스템 교재를 사내 도서관에 비치해 두는 방식."
+      }
+    ],
+    "correct_answer": "A",
+    "explanation_kr": "정답은 A입니다.\n\n• 효과적인 전사 업스킬링은 **역할 기반(Role-based) 맞춤 커리큘럼**이어야 합니다.\n• 경영진은 AI 거버넌스 및 비즈니스 가치 평가(AI Literacy), 비즈니스 실무자는 프롬프트 엔지니어링 및 툴 활용(Productivity), 엔지니어는 Bedrock API/RAG 파이프라인 구축(Implementation), 데이터 전문가는 데이터 거버넌스 및 MLOps(Operations)를 학습해야 실질적인 전환 효과가 발생합니다.",
+    "key_concept": "Role-based Upskilling, AI Literacy, Human Capital Transformation"
+  },
+  {
+    "id": "D4-Q23",
+    "domain": "Domain 4",
+    "domain_name": "비즈니스 준비성, 리더십, AI 혁신 (Business Readiness, Leadership & Transformation)",
+    "question_en": "An enterprise AI project encounters significant friction when mid-level managers push back against workflow changes, and budget allocations are repeatedly redirected to short-term legacy operational emergencies. What foundational element of AI leadership is missing, and how does it safeguard project longevity?",
+    "question_kr": "한 엔터프라이즈 AI 프로젝트가 중간 관리자들의 워크플로 변경 거부와 예산의 잦은 단기 레거시 운영 전용으로 인해 심각한 난항을 겪고 있습니다. 이 상황에서 결여된 AI 리더십의 핵심 요소는 무엇이며, 그것이 프로젝트의 지속성을 어떻게 보장합니까?",
+    "options": [
+      {
+        "key": "A",
+        "text_en": "Continuous GPU overclocking.",
+        "text_kr": "지속적인 GPU 오버클럭킹."
+      },
+      {
+        "key": "B",
+        "text_en": "Active Executive Sponsorship (C-suite commitment), which establishes an authorized strategic mandate, secures multi-year funding, resolves cross-departmental deadlocks, and defends the vision against short-termism.",
+        "text_kr": "확고한 경영진 스폰서십(Executive Sponsorship / C-suite 전폭적 지지); 전략적 명분과 권한을 부여하고, 다년도 예산을 확보하며, 부서 간 이해관계를 조율하고, 단기 성과주의로부터 AI 비전을 수호합니다."
+      },
+      {
+        "key": "C",
+        "text_en": "Replacing all project managers with automated Kanban cron jobs.",
+        "text_kr": "모든 프로젝트 관리자를 자동화된 칸반 크론 작업으로 교체하는 것."
+      },
+      {
+        "key": "D",
+        "text_en": "Switching cloud providers every calendar quarter to negotiate promotional discounts.",
+        "text_kr": "프로모션 할인을 받기 위해 매 분기마다 클라우드 공급업체를 변경하는 것."
+      }
+    ],
+    "correct_answer": "B",
+    "explanation_kr": "정답은 B입니다.\n\n• 엔터프라이즈 AI 트랜스포메이션의 최우선 성공 요인은 **경영진 스폰서십(Executive Sponsorship)**입니다.\n• C-레벨(CEO, CDO, CIO) 리더의 강력한 스폰서십이 있어야만 부서 간의 영역 다툼(Silo politics)을 중재하고, 단기적인 실적 압박 속에서도 장기적인 AI 인프라 및 인재 투자 예산을 안정적으로 방어할 수 있습니다.",
+    "key_concept": "Executive Sponsorship, C-Suite Mandate, AI Leadership"
+  },
+  {
+    "id": "D4-Q24",
+    "domain": "Domain 4",
+    "domain_name": "비즈니스 준비성, 리더십, AI 혁신 (Business Readiness, Leadership & Transformation)",
+    "question_en": "Before deploying a fine-tuned LLM or RAG pipeline, a company conducts an audit of its enterprise data foundation using a 'Data Readiness Framework'. Which four core dimensions must the organization evaluate to guarantee the data is fit for AI?",
+    "question_kr": "파인 튜닝된 LLM이나 RAG 파이프라인을 배포하기 전, 한 기업이 '데이터 준비성 프레임워크(Data Readiness Framework)'를 사용하여 전사 데이터 기반에 대한 감사를 진행합니다. 데이터가 AI에 적합한지 보장하기 위해 조직이 평가해야 하는 4대 핵심 차원은 무엇입니까?",
+    "options": [
+      {
+        "key": "A",
+        "text_en": "Font size, screen resolution, RGB color gamut, and mouse DPI.",
+        "text_kr": "글꼴 크기, 화면 해상도, RGB 색 영역, 마우스 DPI."
+      },
+      {
+        "key": "B",
+        "text_en": "Data Accessibility (can models reach it?), Data Quality (is it accurate, clean, and representative?), Data Security & Privacy (is it compliant and scrubbed?), and Data Governance/Ownership (is provenance clear?).",
+        "text_kr": "데이터 접근성(모델이 접근 가능한가?), 데이터 품질(정확하고 정제되었으며 대표성이 있는가?), 데이터 보안 및 프라이버시(규정을 준수하고 비식별화되었는가?), 데이터 거버넌스 및 소유권(출처와 책임 소재가 명확한가?)."
+      },
+      {
+        "key": "C",
+        "text_en": "Physical hard drive weight, Ethernet cable color, rack humidity, and AC voltage.",
+        "text_kr": "물리 하드 드라이브 무게, 이더넷 케이블 색상, 랙 습도, 교류 전압."
+      },
+      {
+        "key": "D",
+        "text_en": "Word processor license count, printer toner levels, keyboard switches, and desk ergonomics.",
+        "text_kr": "워드프로세서 라이선스 수, 프린터 토너 잔량, 키보드 스위치, 사무용 책상 인체공학."
+      }
+    ],
+    "correct_answer": "B",
+    "explanation_kr": "정답은 B입니다.\n\n• **데이터 준비성 프레임워크(Data Readiness Framework)**의 4대 핵심 축:\n  1. **접근성(Accessibility)**: 사일로가 제거되어 파이프라인이 API/스토리지로 원활히 인출할 수 있는가?\n  2. **품질(Quality)**: 결측치, 노이즈, 편향이 최소화되고 라벨링/임베딩이 정확한가?\n  3. **보안/프라이버시(Security & Privacy)**: PII가 마스킹되고 최소 권한 원칙이 적용되었는가?\n  4. **거버넌스/소유권(Governance & Ownership)**: 메타데이터, 데이터 계보(Lineage), 책임자가 명확한가?",
+    "key_concept": "Data Readiness Framework, Accessibility, Quality, Security, Governance"
+  },
+  {
+    "id": "D4-Q25",
+    "domain": "Domain 4",
+    "domain_name": "비즈니스 준비성, 리더십, AI 혁신 (Business Readiness, Leadership & Transformation)",
+    "question_en": "A company has successfully deployed three standalone AI Proofs-of-Concept (PoCs) in staging. When preparing to scale these solutions into mission-critical enterprise production, what fundamental shift must take place in their engineering and operational processes?",
+    "question_kr": "한 기업이 스테이징 환경에서 세 개의 독립적인 AI PoC(개념 증명)를 성공적으로 배포했습니다. 이러한 솔루션을 미션 크리티컬한 전사 운영 프로덕션 환경으로 확장(Scale)하기 위해 엔지니어링 및 운영 프로세스에서 일어나야 하는 근본적인 전환은 무엇입니까?",
+    "options": [
+      {
+        "key": "A",
+        "text_en": "Transitioning from manual, notebook-based ad-hoc deployments to automated MLOps/LLMOps pipelines featuring automated CI/CD, drift monitoring, canary deployments, and incident rollback mechanisms.",
+        "text_kr": "수작업 주피터 노트북 기반의 임시 배포에서 벗어나 자동화된 CI/CD, 드리프트 모니터링, 카나리 배포, 장애 롤백 메커니즘을 갖춘 체계적인 MLOps/LLMOps 파이프라인으로 전환합니다."
+      },
+      {
+        "key": "B",
+        "text_en": "Deleting all automated unit tests and relying on manual spot-checks during live customer calls.",
+        "text_kr": "모든 자동화 단위 테스트를 삭제하고 실제 고객 상담 통화 중 수작업 육안 검사에만 의존합니다."
+      },
+      {
+        "key": "C",
+        "text_en": "Locking model weights forever without any future retraining or monitoring.",
+        "text_kr": "향후 재학습이나 모니터링을 전혀 하지 못하도록 모델 가중치를 영구 동결합니다."
+      },
+      {
+        "key": "D",
+        "text_en": "Shutting down the cloud infrastructure and re-implementing the system in desktop spreadsheets.",
+        "text_kr": "클라우드 인프라를 종료하고 데스크톱 스프레드시트로 시스템을 다시 구현합니다."
+      }
+    ],
+    "correct_answer": "A",
+    "explanation_kr": "정답은 A입니다.\n\n• 'PoC에서 전사 프로덕션으로의 확장(Launch to Scale)' 단계에서는 개발자의 개인 노트북(Jupyter Notebook) 코드 환경을 탈피해야 합니다.\n• **MLOps / LLMOps 프랙티스**(Amazon SageMaker Pipelines, Amazon Bedrock automated evaluation, CloudWatch 모니터링, CI/CD 배포 자동화, Canary 배포)를 도입하여 안정성, 신뢰성, 지속적 모니터링 체계를 갖추는 것이 필수적입니다.",
+    "key_concept": "Scaling AI, PoC to Production, MLOps, LLMOps Pipeline"
+  },
+  {
+    "id": "D4-Q26",
+    "domain": "Domain 4",
+    "domain_name": "비즈니스 준비성, 리더십, AI 혁신 (Business Readiness, Leadership & Transformation)",
+    "question_en": "A Chief Digital Officer wants to track the cultural health and innovation velocity of the company's AI transformation beyond pure financial ROI. Which combination of organizational metrics best reflects a thriving, AI-ready corporate culture?",
+    "question_kr": "최고 디지털 책임자(CDO)가 단순한 재무적 ROI를 넘어 회사의 AI 혁신에 대한 조직 문화적 건강도와 혁신 속도를 추적하고자 합니다. 번영하고 있는 AI 준비 완료 기업 문화를 가장 잘 반영하는 조직 지표의 조합은 무엇입니까?",
+    "options": [
+      {
+        "key": "A",
+        "text_en": "Employee AI literacy completion rate, internal experimentation velocity (number of safe PoCs launched per quarter), grassroots hackathon participation, and positive sentiment surveys regarding AI tooling.",
+        "text_kr": "임직원 AI 리터러시 교육 수료율, 내부 실험 속도(분기별 안전하게 런칭된 PoC 수), 풀뿌리 사내 해커톤 참여도, AI 툴 도입에 대한 긍정적 임직원 만족도 조사 결과."
+      },
+      {
+        "key": "B",
+        "text_en": "Number of printed paper memo pages and office desk occupancy logs.",
+        "text_kr": "인쇄된 종이 메모 페이지 수 및 사무실 책상 점유 로그."
+      },
+      {
+        "key": "C",
+        "text_en": "Count of reprimands issued to staff who ask questions in technical meetings.",
+        "text_kr": "기술 회의에서 질문을 제기한 직원에게 부과된 문책 횟수."
+      },
+      {
+        "key": "D",
+        "text_en": "The total weight of the CEO's company car in kilograms.",
+        "text_kr": "CEO의 법인 차량 총중량(kg 단위)."
+      }
+    ],
+    "correct_answer": "A",
+    "explanation_kr": "정답은 A입니다.\n\n• AI 문화 성숙도(AI Culture)를 측정하기 위해서는 선행 문화 지표(Leading Cultural Metrics)를 활용해야 합니다.\n• **교육 수료율(Literacy)**, **실험 주기 및 속도(Experimentation Velocity)**, **해커톤/자발적 참여도(Grassroots Participation)**, 그리고 **직원 감성 및 심리적 안정감(Employee Sentiment)**은 조직이 AI를 저항의 대상이 아닌 혁신의 엔진으로 받아들이고 있는지 측정하는 최적의 지표입니다.",
+    "key_concept": "Measuring AI Culture, Experimentation Velocity, Cultural Metrics"
+  },
+  {
+    "id": "D4-Q27",
+    "domain": "Domain 4",
+    "domain_name": "비즈니스 준비성, 리더십, AI 혁신 (Business Readiness, Leadership & Transformation)",
+    "question_en": "A logistics enterprise attempts to automate its freight routing by inserting a Generative AI LLM directly into an existing 20-year-old manual approval chain, resulting in delayed shipments and operator confusion. An AWS AI consultant recommends 'Business Process Re-engineering (BPR)'. What does this recommendation entail?",
+    "question_kr": "한 물류 기업이 화물 배차를 자동화하기 위해 20년 된 기존의 수작업 결재 승인 단계 한가운데에 생성형 AI LLM을 그대로 끼워 넣었으나, 배송 지연과 운영자의 혼란만 초래했습니다. AWS AI 컨설턴트가 '비즈니스 프로세스 리엔지니어링(BPR)'을 권고했습니다. 이 권고의 본질적인 의미는 무엇입니까?",
+    "options": [
+      {
+        "key": "A",
+        "text_en": "Redesigning workflows end-to-end to leverage AI capabilities natively (e.g., exception-only human review, autonomous low-risk dispatch), rather than merely superimposing AI on antiquated legacy manual procedures.",
+        "text_kr": "구시대적 레거시 수작업 절차 위에 단순히 AI를 덧씌우는 것이 아니라, AI의 특성에 맞게 워크플로를 엔드투엔드로 재설계(예: 저위험 자동 배차, 고위험 예외 상황만 인간 검토)하는 것."
+      },
+      {
+        "key": "B",
+        "text_en": "Forcing employees to type faster on mechanical keyboards.",
+        "text_kr": "직원들에게 기계식 키보드로 더 빠른 타이핑 속도를 강요하는 것."
+      },
+      {
+        "key": "C",
+        "text_en": "Firing all human freight dispatchers on day one without any software replacement.",
+        "text_kr": "소프트웨어 대체재 없이 첫날 모든 인간 화물 배차원을 해고하는 것."
+      },
+      {
+        "key": "D",
+        "text_en": "Replacing cloud servers with fax machines to slow down customer orders.",
+        "text_kr": "고객 주문 접수를 늦추기 위해 클라우드 서버를 팩스 머신으로 교체하는 것."
+      }
+    ],
+    "correct_answer": "A",
+    "explanation_kr": "정답은 A입니다.\n\n• 비즈니스 프로세스 리엔지니어링(BPR)은 AI 도입 시 가장 중요한 구조적 변화입니다.\n• 비효율적인 기존 수동 승인 단계를 그대로 둔 채 기술만 얹는 '포장식 자동화(Paving the cowpath)'를 피하고, AI가 95%의 일상적인 결정을 자율 처리하고 인간 전문가는 복잡한 예외 처리(Exception Handling)에만 개입하도록 업무 프로세스 자체를 근본적으로 재설계해야 비즈니스 임팩트를 거둘 수 있습니다.",
+    "key_concept": "Business Process Re-engineering (BPR), Workflow Redesign, Exception-based HITL"
+  },
+  {
+    "id": "D4-Q28",
+    "domain": "Domain 4",
+    "domain_name": "비즈니스 준비성, 리더십, AI 혁신 (Business Readiness, Leadership & Transformation)",
+    "question_en": "In a decentralized organization, the Marketing AI team relies on daily customer transaction feeds maintained by the Core Banking team. However, unannounced schema modifications and intermittent pipeline delays frequently break the marketing AI models. Which governance mechanism should the leadership mandate to establish accountability and reliability between data producers and consumers?",
+    "question_kr": "분산형 조직 구조에서 마케팅 AI 팀은 코어 뱅킹 팀이 관리하는 일일 고객 결제 데이터 피드에 의존하고 있습니다. 그러나 사전 공지 없는 스키마 변경과 간헐적인 파이프라인 지연으로 인해 마케팅 AI 모델이 빈번하게 오류를 일으킵니다. 데이터 생산자와 소비자 간의 신뢰성과 책임성을 확립하기 위해 경영진이 의무화해야 하는 거버넌스 메커니즘은 무엇입니까?",
+    "options": [
+      {
+        "key": "A",
+        "text_en": "Data Contracts and internal Service Level Agreements (SLAs) defining schema versioning, freshness guarantees, quality thresholds, and designated data product ownership.",
+        "text_kr": "스키마 버전 관리, 데이터 최신성 보장, 품질 임계값 및 데이터 프로덕트 소유권을 명시한 데이터 계약(Data Contracts) 및 내부 서비스 수준 계약(SLA) 체결."
+      },
+      {
+        "key": "B",
+        "text_en": "Banning the Marketing team from accessing any financial data permanently.",
+        "text_kr": "마케팅 팀의 모든 금융 데이터 접근을 영구적으로 금지하는 조치."
+      },
+      {
+        "key": "C",
+        "text_en": "Rewriting all core banking ledgers in unformatted plain text files.",
+        "text_kr": "모든 코어 뱅킹 원장을 서식 없는 일반 텍스트 파일로 다시 작성하는 것."
+      },
+      {
+        "key": "D",
+        "text_en": "Allowing data pipelines to fail without notification to save CloudWatch alert fees.",
+        "text_kr": "CloudWatch 알람 비용을 절약하기 위해 데이터 파이프라인이 알림 없이 실패하도록 방치하는 것."
+      }
+    ],
+    "correct_answer": "A",
+    "explanation_kr": "정답은 A입니다.\n\n• **데이터 계약(Data Contract)** 및 **내부 SLA**는 데이터 생산자(업스트림 엔지니어)와 데이터 소비자(다운스트림 AI/ML 팀) 사이의 공식적인 약속입니다.\n• 데이터 스키마, 업데이트 주기(Freshness), 데이터 유효성 검사 규칙, 변경 관리 절차를 공식화하여 다운스트림 AI 모델의 예기치 않은 중단을 방지하고 조직적 책임을 명확히 합니다.",
+    "key_concept": "Data Contracts, Internal SLAs, Data Product Ownership, Federated Governance"
+  },
+  {
+    "id": "D4-Q29",
+    "domain": "Domain 4",
+    "domain_name": "비즈니스 준비성, 리더십, AI 혁신 (Business Readiness, Leadership & Transformation)",
+    "question_en": "A legacy manufacturing firm launches an enterprise AI initiative, but branch operations managers resist adopting the new predictive maintenance recommendations, preferring their traditional gut-feel inspections. Which change management tactic is most effective in dismantling departmental resistance and driving genuine adoption?",
+    "question_kr": "전통 제조업 기업이 전사적 AI 이니셔티브를 출범시켰으나, 지사 운영 관리자들이 기존의 직관 기반 점검을 선호하며 새로운 예측 유지보수 AI 권장 사항의 도입을 거부하고 있습니다. 부서의 저항을 허물고 진정한 채택(Adoption)을 이끌어내기 위해 가장 효과적인 변화 관리 전술은 무엇입니까?",
+    "options": [
+      {
+        "key": "A",
+        "text_en": "Identify a cooperative pilot branch, co-design the tool with plant technicians to solve a real daily pain point, celebrate a demonstrable 'quick win' (e.g., preventing a catastrophic downtime incident), and use those frontline peers as credible evangelists for other branches.",
+        "text_kr": "협조적인 파일럿 지사를 선정하여 현장 엔지니어와 실질적 고통점을 해결할 수 있도록 툴을 공동 설계하고, 명확한 조기 성공 사례('Quick Win', 예: 대규모 가동 중단 사고 예방)를 입증 및 포상하며, 해당 현장 동료들을 타 지사의 전도사(Evangelist)로 활용합니다."
+      },
+      {
+        "key": "B",
+        "text_en": "Send a 500-page theoretical mathematics whitepaper to the technicians' email inbox.",
+        "text_kr": "현장 엔지니어의 이메일로 500페이지 분량의 이론 수학 백서를 발송합니다."
+      },
+      {
+        "key": "C",
+        "text_en": "Ignore the technicians completely and mandate that plant machinery operate without human safety supervision.",
+        "text_kr": "현장 엔지니어를 전면 무시하고 인간의 안전 감독 없이 공장 기계가 작동하도록 의무화합니다."
+      },
+      {
+        "key": "D",
+        "text_en": "Impose financial salary deductions for any technician who performs a manual inspection.",
+        "text_kr": "수작업 육안 점검을 수행하는 모든 엔지니어에게 급여 차감 페널티를 부과합니다."
+      }
+    ],
+    "correct_answer": "A",
+    "explanation_kr": "정답은 A입니다.\n\n• 조직의 저항을 극복하는 가장 효과적인 전략은 **조기 가치 입증(Demonstrating Quick Wins)**과 **공동 설계(Co-design)**입니다.\n• 현장 실무자를 설계 단계부터 참여시켜 신뢰를 쌓고, 파일럿 성공 사례를 공개적으로 축하함으로써 다른 보수적인 부서들이 자발적으로 도입을 요청하게 만드는 '끌어당김(Pull) 전략'이 성공을 견인합니다.",
+    "key_concept": "Overcoming Resistance, Quick Wins, Co-design, Change Advocacy"
+  },
+  {
+    "id": "D4-Q30",
+    "domain": "Domain 4",
+    "domain_name": "비즈니스 준비성, 리더십, AI 혁신 (Business Readiness, Leadership & Transformation)",
+    "question_en": "A healthcare enterprise wants to ensure that its AI transformation fosters an ethical, accountable culture rather than prioritizing rapid revenue at the expense of safety. Which leadership policy directly incentivizes frontline engineers and staff to prioritize responsible AI practices?",
+    "question_kr": "한 헬스케어 기업이 안전을 희생하고 단기 수익에만 치우치는 것을 방지하며 윤리적이고 책임감 있는 AI 문화를 육성하고자 합니다. 일선 엔지니어와 직원들이 책임감 있는 AI 실천(Responsible AI)을 최우선으로 두도록 직접적으로 유인(Incentivize)하는 리더십 정책은 무엇입니까?",
+    "options": [
+      {
+        "key": "A",
+        "text_en": "Establishing a confidential safety reporting mechanism and formally recognizing/rewarding employees who proactively identify ethical risks, bias, or safety hazards prior to deployment.",
+        "text_kr": "기밀 안전 제보 채널을 개설하고, 배포 전 윤리적 위험, 편향, 안전 결함을 선제적으로 식별하고 보고한 임직원을 공식적으로 인정하고 포상하는 제도."
+      },
+      {
+        "key": "B",
+        "text_en": "Rewarding engineers strictly based on how fast they push code to production, regardless of hallucination rates.",
+        "text_kr": "환각(Hallucination) 발생률과 무관하게 오직 코드를 프로덕션에 얼마나 빨리 푸시하는지에 따라서만 엔지니어를 평가하고 포상합니다."
+      },
+      {
+        "key": "C",
+        "text_en": "Prohibiting any documentation of model weaknesses or training biases to avoid discovery in legal disputes.",
+        "text_kr": "소송 증거 수집을 피하기 위해 모델의 취약점이나 학습 편향에 관한 모든 문서화를 엄격히 금지합니다."
+      },
+      {
+        "key": "D",
+        "text_en": "Transferring all legal responsibility for AI errors directly to patient end-users via long disclaimer checkboxes.",
+        "text_kr": "긴 면책조항 체크박스를 통해 AI 오류에 대한 모든 법적 책임을 환자 최종 사용자에게 전가합니다."
+      }
+    ],
+    "correct_answer": "A",
+    "explanation_kr": "정답은 A입니다.\n\n• 책임감 있는 AI 문화(Ethical AI Culture)를 안착시키려면, 보안 결함이나 편향을 발견하고 제동을 거는 행위가 불이익이 아닌 **포상과 칭찬(Reward & Psychological Safety)**으로 이어지는 제도적 장치가 필요합니다.\n• 안전 보고 옴부즈맨 제도, 레드팀 활동 포상, 배포 전 윤리 심의 통과를 핵심 KPI로 편입함으로써 안전을 희생하여 출시를 서두르는 위험을 방지합니다.",
+    "key_concept": "Ethical AI Culture, Whistleblower/Safety Reporting, Responsible AI Incentives"
+  }
+]

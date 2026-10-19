@@ -142,21 +142,37 @@
               <div class="setup-box">
                 <h3>1. 문제 세트 선택</h3>
                 <div class="radio-list">
-                  <label><input type="radio" name="cbtSet" value="mock1" checked> <strong>전 도메인 종합 실전 모의고사 (정규 60문항 풀 세트)</strong></label>
-                  <label><input type="radio" name="cbtSet" value="domain1"> 도메인 1: AI 기초 및 활용 능력 (15문항)</label>
-                  <label><input type="radio" name="cbtSet" value="domain2"> 도메인 2: AI 전략 및 비즈니스 가치 창출 (15문항)</label>
-                  <label><input type="radio" name="cbtSet" value="domain3"> 도메인 3: AI 거버넌스 및 책임 있는 AI (15문항)</label>
-                  <label><input type="radio" name="cbtSet" value="domain4"> 도메인 4: 비즈니스 준비성 & 조직 혁신 (15문항)</label>
+                  <label><input type="radio" name="cbtSet" value="mock1" checked> <strong>🎲 전 도메인 종합 실전 모의고사</strong> <span class="sub-desc">공식 비중 맞춤 60문항 무작위 추출 (D1:12, D2:19, D3:16, D4:13)</span></label>
+                  <label><input type="radio" name="cbtSet" value="domain1"> 🎯 도메인 1: AI 기초 및 활용 능력 (30문항 풀)</label>
+                  <label><input type="radio" name="cbtSet" value="domain2"> 🎯 도메인 2: AI 전략 및 비즈니스 가치 창출 (30문항 풀)</label>
+                  <label><input type="radio" name="cbtSet" value="domain3"> 🎯 도메인 3: AI 거버넌스 및 책임 있는 AI (30문항 풀)</label>
+                  <label><input type="radio" name="cbtSet" value="domain4"> 🎯 도메인 4: 비즈니스 준비성 & 조직 혁신 (30문항 풀)</label>
                 </div>
               </div>
 
               <div class="setup-box">
-                <h3>2. 응시 모드 선택</h3>
+                <h3>2. 출제 방식 및 문항 수</h3>
+                <div class="radio-list">
+                  <label>
+                    <input type="radio" name="cbtRandomScope" value="sample" checked>
+                    <strong>🔀 매회 새로운 무작위 추출 (추천)</strong>
+                    <span class="sub-desc">매 응시마다 문항 및 보기(A~D) 순서 셔플 (도메인 15문항 / 종합 60문항)</span>
+                  </label>
+                  <label>
+                    <input type="radio" name="cbtRandomScope" value="full">
+                    <strong>📚 해당 도메인 전체 문항 집중 풀이</strong>
+                    <span class="sub-desc">도메인 선택 시 30문항 전체 순서 셔플 출제</span>
+                  </label>
+                </div>
+              </div>
+
+              <div class="setup-box">
+                <h3>3. 응시 모드 선택</h3>
                 <div class="radio-list">
                   <label>
                     <input type="radio" name="cbtMode" value="study" checked>
                     <strong>💡 학습 모드 (Study Mode)</strong>
-                    <span class="sub-desc">문제 풀이 중 즉시 [정답 확인] 및 상세 한국어 해설 열람 가능</span>
+                    <span class="sub-desc">풀이 중 즉시 [정답 확인] 및 상세 한국어 해설 열람 가능</span>
                   </label>
                   <label>
                     <input type="radio" name="cbtMode" value="exam">

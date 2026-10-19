@@ -105,19 +105,82 @@ class CBTSimulator {
     this.timerBox.classList.add('hidden');
   }
 
-  startExamFromSettings() {
-    const selectedSet = document.querySelector('input[name="examSet"]:checked').value;
-    const selectedMode = document.querySelector('input[name="examMode"]:checked').value;
+  // Fisher-Yates 배열 셔플 유틸리티
+  shuffleArray(array) {
+    const arr = [...array];
+    for (let i = arr.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [arr[i], arr[j]] = [arr[j], arr[i]];
+    }
+    return arr;
+  }
 
-    let sourceQuestions = [];
-    if (typeof EXAM_DATA !== 'undefined' && EXAM_DATA[selectedSet]) {
-      sourceQuestions = JSON.parse(JSON.stringify(EXAM_DATA[selectedSet]));
-    } else {
-      alert('문제 데이터를 로드할 수 없습니다.');
+  // 문항 내 보기(A~D) 순서 셔플 및 정답 키 동적 재매핑
+  randomizeQuestionOptions(question) {
+    const q = JSON.parse(JSON.stringify(question));
+    if (!Array.isArray(q.options) || q.options.length < 2) return q;
+
+    const isMultiple = Array.isArray(q.correct_answer);
+    const origCorrect = isMultiple ? new Set(q.correct_answer) : new Set([q.correct_answer]);
+
+    // 각 옵션의 원래 정답 여부 태깅
+    const tagged = q.options.map(opt => ({
+      opt: { ...opt },
+      isCorrect: origCorrect.has(opt.key)
+    }));
+
+    const shuffled = this.shuffleArray(tagged);
+    const keyLetters = ['A', 'B', 'C', 'D', 'E', 'F'];
+    const newCorrect = [];
+
+    shuffled.forEach((item, idx) => {
+      const letter = keyLetters[idx];
+      item.opt.key = letter;
+      if (item.isCorrect) {
+        newCorrect.push(letter);
+      }
+    });
+
+    q.options = shuffled.map(item => item.opt);
+    q.correct_answer = isMultiple ? newCorrect.sort() : (newCorrect[0] || q.correct_answer);
+    return q;
+  }
+
+  startExamFromSettings() {
+    const setInput = document.querySelector('input[name="examSet"]:checked');
+    const modeInput = document.querySelector('input[name="examMode"]:checked');
+    const scopeInput = document.querySelector('input[name="examRandomScope"]:checked');
+    const selectedSet = setInput ? setInput.value : 'mock1';
+    const selectedMode = modeInput ? modeInput.value : 'study';
+    const selectedScope = scopeInput ? scopeInput.value : 'sample';
+
+    let rawQuestions = [];
+    if (typeof EXAM_DATA !== 'undefined') {
+      if (selectedSet === 'mock1') {
+        // AWS 공식 가이드 비중에 맞춘 60문항 랜덤 추출 (D1:12, D2:19, D3:16, D4:13)
+        const d1 = this.shuffleArray(EXAM_DATA.domain1 || []).slice(0, 12);
+        const d2 = this.shuffleArray(EXAM_DATA.domain2 || []).slice(0, 19);
+        const d3 = this.shuffleArray(EXAM_DATA.domain3 || []).slice(0, 16);
+        const d4 = this.shuffleArray(EXAM_DATA.domain4 || []).slice(0, 13);
+        rawQuestions = this.shuffleArray([...d1, ...d2, ...d3, ...d4]);
+      } else if (EXAM_DATA[selectedSet]) {
+        const pool = EXAM_DATA[selectedSet] || [];
+        if (selectedScope === 'full') {
+          rawQuestions = this.shuffleArray(pool); // 30문항 전체 순서 셔플
+        } else {
+          rawQuestions = this.shuffleArray(pool).slice(0, 15); // 15문항 무작위 추출
+        }
+      }
+    }
+
+    if (!rawQuestions || rawQuestions.length === 0) {
+      alert('문제 데이터를 로드할 수 없습니다. 페이지를 새로고침(F5) 해주세요.');
       return;
     }
 
-    this.startSession(sourceQuestions, selectedMode);
+    // 각 문항 내 보기(A~D) 순서 및 정답 키 동적 셔플
+    const processedQuestions = rawQuestions.map(q => this.randomizeQuestionOptions(q));
+    this.startSession(processedQuestions, selectedMode);
   }
 
   startSession(questionList, mode = 'study', keepAnswers = false) {
