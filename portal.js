@@ -310,7 +310,14 @@ class PortalApp {
     const source = (typeof window !== 'undefined' && window.EXAM_DATA) ? window.EXAM_DATA : (typeof EXAM_DATA !== 'undefined' ? EXAM_DATA : null);
 
     if (source) {
-      if (selectedSet === 'mock1') {
+      if (selectedScope === 'canonical') {
+        // 기본 출제: 셔플 없이 공식 순서 그대로 출제
+        if (selectedSet === 'mock1') {
+          rawQuestions = JSON.parse(JSON.stringify(source.mock1 || []));
+        } else if (source[selectedSet]) {
+          rawQuestions = JSON.parse(JSON.stringify((source[selectedSet] || []).slice(0, 15)));
+        }
+      } else if (selectedSet === 'mock1') {
         // AWS 공식 가이드 비중에 맞춘 60문항 랜덤 추출 (D1:12, D2:19, D3:16, D4:13)
         const d1 = this.shuffleArray(source.domain1 || []).slice(0, 12);
         const d2 = this.shuffleArray(source.domain2 || []).slice(0, 19);
@@ -334,7 +341,9 @@ class PortalApp {
         if (res.ok) {
           const data = await res.json();
           const fetched = data.questions || [];
-          if (selectedSet === 'mock1') {
+          if (selectedScope === 'canonical') {
+            rawQuestions = (selectedSet === 'mock1') ? fetched : fetched.slice(0, 15);
+          } else if (selectedSet === 'mock1') {
             rawQuestions = this.shuffleArray(fetched);
           } else if (selectedScope === 'full') {
             rawQuestions = this.shuffleArray(fetched);
@@ -352,8 +361,10 @@ class PortalApp {
       return;
     }
 
-    // 각 문항 내 보기(A~D) 순서 및 정답 키 동적 셔플
-    const questions = rawQuestions.map(q => this.randomizeQuestionOptions(q));
+    // 기본 출제(canonical) 모드인 경우 보기 셔플 없이 원본 그대로 출제, 그 외 모드는 보기(A~D) 셔플
+    const questions = (selectedScope === 'canonical')
+      ? rawQuestions
+      : rawQuestions.map(q => this.randomizeQuestionOptions(q));
 
     this.startCbtSession(questions, selectedMode);
   }

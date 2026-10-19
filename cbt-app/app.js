@@ -156,7 +156,14 @@ class CBTSimulator {
 
     let rawQuestions = [];
     if (typeof EXAM_DATA !== 'undefined') {
-      if (selectedSet === 'mock1') {
+      if (selectedScope === 'canonical') {
+        // 기본 출제: 셔플 없이 공식 순서 그대로 출제
+        if (selectedSet === 'mock1') {
+          rawQuestions = JSON.parse(JSON.stringify(EXAM_DATA.mock1 || []));
+        } else if (EXAM_DATA[selectedSet]) {
+          rawQuestions = JSON.parse(JSON.stringify((EXAM_DATA[selectedSet] || []).slice(0, 15)));
+        }
+      } else if (selectedSet === 'mock1') {
         // AWS 공식 가이드 비중에 맞춘 60문항 랜덤 추출 (D1:12, D2:19, D3:16, D4:13)
         const d1 = this.shuffleArray(EXAM_DATA.domain1 || []).slice(0, 12);
         const d2 = this.shuffleArray(EXAM_DATA.domain2 || []).slice(0, 19);
@@ -178,8 +185,10 @@ class CBTSimulator {
       return;
     }
 
-    // 각 문항 내 보기(A~D) 순서 및 정답 키 동적 셔플
-    const processedQuestions = rawQuestions.map(q => this.randomizeQuestionOptions(q));
+    // 기본 출제(canonical) 모드인 경우 보기 셔플 없이 원본 그대로 출제, 그 외 모드는 보기(A~D) 셔플
+    const processedQuestions = (selectedScope === 'canonical')
+      ? rawQuestions
+      : rawQuestions.map(q => this.randomizeQuestionOptions(q));
     this.startSession(processedQuestions, selectedMode);
   }
 
