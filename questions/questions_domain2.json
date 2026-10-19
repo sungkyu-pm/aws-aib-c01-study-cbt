@@ -1,0 +1,482 @@
+[
+  {
+    "id": "D2-Q01",
+    "domain": "Domain 2",
+    "domain_name": "AI 전략 및 비즈니스 가치 창출 (AI Strategy & Business Value Creation)",
+    "question_en": "An enterprise wants to deploy an AI-powered document search tool for internal human resources policies within 4 weeks. The company has limited in-house machine learning engineering talent and wants to minimize ongoing infrastructure maintenance and security patching. The HR use case does not provide a core competitive differentiator for the company in its marketplace. Which strategy should the AI business strategist recommend?",
+    "question_kr": "한 기업이 4주 이내에 사내 인사(HR) 정책을 위한 AI 기반 문서 검색 도구를 배포하고자 합니다. 이 회사는 사내 머신러닝 엔지니어링 인력이 부족하며, 지속적인 인프라 유지보수 및 보안 패치 부담을 최소화하고 싶어 합니다. 또한 이 HR 유스케이스는 시장에서 회사의 핵심적인 경쟁 차별화 요소가 아닙니다. AI 비즈니스 전략가는 어떤 전략을 추천해야 합니까?",
+    "options": [
+      {
+        "key": "A",
+        "text_en": "Build: Hire external contractors to build a custom deep neural network from scratch.",
+        "text_kr": "Build (자체 구축): 외부 계약업체를 고용하여 처음부터 맞춤형 심층 신경망을 구축합니다."
+      },
+      {
+        "key": "B",
+        "text_en": "Buy / SaaS: Adopt a ready-to-use managed enterprise solution such as Amazon Q Business.",
+        "text_kr": "Buy / SaaS (구매): Amazon Q Business와 같은 즉시 사용 가능한 완전관리형 엔터프라이즈 솔루션을 도입합니다."
+      },
+      {
+        "key": "C",
+        "text_en": "Build: Train an in-house open-source language model on custom GPU clusters in an on-premises data center.",
+        "text_kr": "Build (자체 구축): 온프레미스 데이터 센터의 맞춤형 GPU 클러스터에서 자체 오픈소스 언어 모델을 학습시킵니다."
+      },
+      {
+        "key": "D",
+        "text_en": "Delay the initiative until internal developers complete a 12-month deep learning certification program.",
+        "text_kr": "사내 개발자가 12개월의 딥러닝 자격증 과정을 마칠 때까지 이니셔티브를 연기합니다."
+      }
+    ],
+    "correct_answer": "B",
+    "explanation_kr": "정답은 B입니다.\n\n• 'Build vs Buy vs Partner' 결정 매트릭스에 따르면, 핵심 경쟁 우위(Core Differentiator)가 아닌 보조 업무(Non-core, 예: 내부 HR 검색)이고, 출시 기간이 촉박(4주 이내)하며, 사내 엔지니어링 역량이 부족하고 인프라 관리 부담을 줄여야 할 때는 **기성 상용 솔루션(Buy / Managed Service, 예: Amazon Q Business)** 도입이 가장 현명한 전략입니다.\n• A와 C는 엄청난 개발 기간, 비용 및 유지보수 부담이 발생하므로 비즈니스 요건에 위배됩니다.\n• D는 시장 기회를 놓치고 긴급한 비즈니스 요구를 충족하지 못합니다.",
+    "key_concept": "Build vs Buy vs Partner, Time to Market, Core vs Non-core Differentiation"
+  },
+  {
+    "id": "D2-Q02",
+    "domain": "Domain 2",
+    "domain_name": "AI 전략 및 비즈니스 가치 창출 (AI Strategy & Business Value Creation)",
+    "question_en": "An executive committee asks the AI leader to prove the return on investment (ROI) of a newly launched customer support AI assistant. The AI assistant was launched two months ago, but the project team never recorded the pre-implementation average call duration, staffing costs, or resolution rates. Why is the team now struggling to demonstrate business value, and what foundational step was missed?",
+    "question_kr": "경영위원회가 AI 리더에게 새로 출시된 고객 지원 AI 어시스턴트의 투자 수익률(ROI)을 입증할 것을 요구했습니다. 이 AI 어시스턴트는 2개월 전에 출시되었지만, 프로젝트 팀은 도입 전의 평균 통화 시간, 인건비, 또는 해결률을 사전에 전혀 기록해두지 않았습니다. 팀이 현재 비즈니스 가치를 입증하는 데 어려움을 겪는 이유는 무엇이며, 어떤 기초적인 단계를 누락했기 때문입니까?",
+    "options": [
+      {
+        "key": "A",
+        "text_en": "They failed to establish baseline metrics before deployment to enable pre-and post-implementation comparison.",
+        "text_kr": "도입 전후의 비교를 가능하게 하는 기준 지표(Baseline metrics)를 사전에 설정하지 않았기 때문입니다."
+      },
+      {
+        "key": "B",
+        "text_en": "They failed to purchase specialized proprietary benchmarking hardware.",
+        "text_kr": "특수 독점 벤치마킹 하드웨어를 구매하지 않았기 때문입니다."
+      },
+      {
+        "key": "C",
+        "text_en": "They should only have measured intangible benefits like customer happiness rather than call durations.",
+        "text_kr": "통화 시간 대신 고객 행복과 같은 무형적 이익만 측정했어야 했기 때문입니다."
+      },
+      {
+        "key": "D",
+        "text_en": "They used Amazon Bedrock instead of developing an on-premises neural network.",
+        "text_kr": "온프레미스 신경망을 개발하는 대신 Amazon Bedrock을 사용했기 때문입니다."
+      }
+    ],
+    "correct_answer": "A",
+    "explanation_kr": "정답은 A입니다.\n\n• AI 이니셔티브의 비즈니스 가치와 ROI를 객관적으로 증명하려면, 솔루션을 배포하기 전에 '현재 상태(As-Is)'를 나타내는 **기준 지표(Baseline Metric)**를 반드시 측정하고 문서화해야 합니다.\n• 과거의 기준 수치(예: 과거 상담 시간 8분, 해결률 65%)가 없으면, 현재 수치(예: 상담 시간 4분, 해결률 85%)가 아무리 우수하더라도 AI 도입으로 인한 개선분인지 입증할 수 없습니다.",
+    "key_concept": "Baseline Metrics, Measuring AI Business Value, ROI Calculation"
+  },
+  {
+    "id": "D2-Q03",
+    "domain": "Domain 2",
+    "domain_name": "AI 전략 및 비즈니스 가치 창출 (AI Strategy & Business Value Creation)",
+    "question_en": "A company recently rolled out an AI-assisted marketing copywriting tool. The project sponsor wants to know whether the initiative is on track to deliver its projected annual financial revenue growth before the annual financial results are released at the end of the year. Which metric serves as the best leading indicator of the project's ultimate success?",
+    "question_kr": "한 기업이 최근 마케팅 카피라이팅을 돕는 AI 어시스턴트 도구를 사내에 배포했습니다. 프로젝트 스폰서는 연말에 최종 재무 결과가 나오기 전에 이 이니셔티브가 예상했던 연간 매출 성장을 달성할 수 있는 정상 궤도에 있는지 알고 싶어 합니다. 프로젝트의 최종 성공을 예측하는 가장 좋은 선행 지표(Leading indicator)는 무엇입니까?",
+    "options": [
+      {
+        "key": "A",
+        "text_en": "Annual net profit reported in the year-end audited financial statement",
+        "text_kr": "연말 회계 감사 보고서에 기록된 연간 순이익"
+      },
+      {
+        "key": "B",
+        "text_en": "Daily active user (DAU) adoption rate and volume of generated campaigns by marketing staff in the first 60 days",
+        "text_kr": "배포 첫 60일 동안 마케팅 직원들의 일일 활성 사용자(DAU) 채택률 및 생성된 캠페인 수"
+      },
+      {
+        "key": "C",
+        "text_en": "Depreciation schedule of the company's server infrastructure",
+        "text_kr": "회사 서버 인프라의 감가상각 일정"
+      },
+      {
+        "key": "D",
+        "text_en": "Total number of GPU cores provisioned by the IT department",
+        "text_kr": "IT 부서가 프로비저닝한 총 GPU 코어 수"
+      }
+    ],
+    "correct_answer": "B",
+    "explanation_kr": "정답은 B입니다.\n\n• **선행 지표 (Leading Indicator)**는 미래의 최종 성과(후행 지표)가 어떻게 될지 조기에 예측해주는 실행 과정의 지표입니다. AI 도구의 일일 활성 사용자 수(DAU), 직원 채택률, 실제 생성된 마케팅 캠페인 수 등은 사용자들이 도구를 실제로 적극 활용하고 있는지를 보여주는 최고의 선행 지표입니다.\n• A(연간 순이익)는 1년이 지나야 알 수 있는 전형적인 **후행 지표(Lagging Indicator)**입니다.\n• C와 D는 단순한 기술/회계 자원 수치일 뿐 프로젝트 성공을 예측하는 지표가 아닙니다.",
+    "key_concept": "Leading vs Lagging Indicators, User Adoption, AI Success Metrics"
+  },
+  {
+    "id": "D2-Q04",
+    "domain": "Domain 2",
+    "domain_name": "AI 전략 및 비즈니스 가치 창출 (AI Strategy & Business Value Creation)",
+    "question_en": "When calculating the Total Cost of Ownership (TCO) for an enterprise generative AI solution, which combination of costs must the AI business strategist include beyond simple cloud API subscription fees?",
+    "question_kr": "엔터프라이즈 생성형 AI 솔루션의 총 소유 비용(TCO)을 계산할 때, AI 비즈니스 전략가는 단순한 클라우드 API 구독료 외에 어떤 비용 요소들을 반드시 종합적으로 포함해야 합니까?",
+    "options": [
+      {
+        "key": "A",
+        "text_en": "Only the physical server rack purchase cost and electricity bills.",
+        "text_kr": "오직 물리적 서버 랙 구매 비용과 전기 요금만 포함합니다."
+      },
+      {
+        "key": "B",
+        "text_en": "Data preparation and cleansing, human change management and staff training, continuous model monitoring, and ongoing compliance auditing.",
+        "text_kr": "데이터 준비 및 정제 비용, 인력 변화 관리 및 직원 교육 비용, 지속적인 모델 모니터링 비용, 지속적인 규정 준수 감사 비용."
+      },
+      {
+        "key": "C",
+        "text_en": "Only the salaries of the executive steering committee members.",
+        "text_kr": "오직 경영진 운영 위원회 구성원의 급여만 포함합니다."
+      },
+      {
+        "key": "D",
+        "text_en": "TCO for generative AI only consists of token input and output fees without any human operational overhead.",
+        "text_kr": "생성형 AI의 TCO는 사람의 운영 오버헤드 없이 오직 토큰 입출력 비용으로만 구성됩니다."
+      }
+    ],
+    "correct_answer": "B",
+    "explanation_kr": "정답은 B입니다.\n\n• AI 프로젝트의 TCO(총 소유 비용)는 단순 API 요금이나 클라우드 인프라 비용보다 **인간 및 운영 비용**이 더 큰 비중을 차지하는 경우가 많습니다.\n• 데이터 수집 및 정제, 직원 대상 AI 교육 및 변화 관리, 배포 후 드리프트 모니터링, 법적 규정 준수 및 보안 감사 비용이 모두 TCO 산정에 포함되어야 정확한 ROI를 도출할 수 있습니다.",
+    "key_concept": "Total Cost of Ownership (TCO), Comprehensive AI Cost Modeling"
+  },
+  {
+    "id": "D2-Q05",
+    "domain": "Domain 2",
+    "domain_name": "AI 전략 및 비즈니스 가치 창출 (AI Strategy & Business Value Creation)",
+    "question_en": "An organization has identified 15 potential AI use cases across marketing, finance, and operations. The steering committee needs to decide which project to initiate first. According to recommended AI prioritization frameworks, which project category should be prioritized as 'Quick Wins'?",
+    "question_kr": "한 조직이 마케팅, 재무, 운영 부서 전반에 걸쳐 15개의 잠재적 AI 유스케이스를 발굴했습니다. 운영 위원회는 어떤 프로젝트를 가장 먼저 시작할지 결정해야 합니다. 권장되는 AI 우선순위화 프레임워크에 따르면, 어떤 프로젝트 범주를 'Quick Wins(단기 성공 과제)'로 우선시해야 합니까?",
+    "options": [
+      {
+        "key": "A",
+        "text_en": "Projects with extremely high technical complexity and uncertain business value requiring a multi-year research phase.",
+        "text_kr": "수년간의 연구 단계가 필요하며 비즈니스 가치가 불확실하고 기술적 복잡성이 극도로 높은 프로젝트."
+      },
+      {
+        "key": "B",
+        "text_en": "Projects with high business value and high technical feasibility / low implementation complexity.",
+        "text_kr": "비즈니스 가치가 높고 기술적 실현 가능성이 높으며(구현 복잡성이 낮은) 프로젝트."
+      },
+      {
+        "key": "C",
+        "text_en": "Projects with minimal business impact but the latest cutting-edge experimental algorithms.",
+        "text_kr": "비즈니스 영향은 미미하지만 가장 최신의 실험적 알고리즘을 사용하는 프로젝트."
+      },
+      {
+        "key": "D",
+        "text_en": "Projects with low feasibility and low business value.",
+        "text_kr": "실현 가능성도 낮고 비즈니스 가치도 낮은 프로젝트."
+      }
+    ],
+    "correct_answer": "B",
+    "explanation_kr": "정답은 B입니다.\n\n• AI 우선순위화 매트릭스에서 가장 먼저 착수해야 하는 'Quick Wins'는 **비즈니스 가치(Business Value)는 높으면서도, 기술적 복잡성이 낮고 실현 가능성(Feasibility)이 높은 과제**입니다.\n• 이를 통해 짧은 시간 안에 가시적인 성과를 내어 경영진과 조직원들의 신뢰를 얻고, 이후 더 복잡하고 장기적인 대규모 전략 과제(Strategic Bets)로 나아갈 수 있는 추진력을 확보할 수 있습니다.",
+    "key_concept": "AI Prioritization Framework, Quick Wins vs Strategic Bets"
+  },
+  {
+    "id": "D2-Q06",
+    "domain": "Domain 2",
+    "domain_name": "AI 전략 및 비즈니스 가치 창출 (AI Strategy & Business Value Creation)",
+    "question_en": "A company invested ,000 in a 6-month AI pilot to automate warehouse inventory inspection using computer vision. After testing, the model achieves only 62% accuracy due to poor lighting and shifting camera angles, far below the required 95% threshold. Continued engineering would require millions in physical hardware redesign without guaranteed success. What strategic decision should the AI business strategist recommend?",
+    "question_kr": "한 기업이 컴퓨터 비전을 사용하여 창고 재고 검사를 자동화하기 위한 6개월간의 AI 파일럿에 30만 달러를 투자했습니다. 테스트 결과, 열악한 조명과 카메라 각도 변동으로 인해 모델의 정확도가 요구 기준인 95%에 훨씬 못 미치는 62%에 불과한 것으로 나타났습니다. 엔지니어링을 계속하려면 성공 보장 없이 수백만 달러의 물리적 하드웨어 재설계가 필요합니다. AI 비즈니스 전략가는 어떤 전략적 결정을 권고해야 합니까?",
+    "options": [
+      {
+        "key": "A",
+        "text_en": "Terminate (Stop/Kill) the initiative to avoid sunk cost fallacy, document key learnings, and reallocate budget to higher-feasibility use cases.",
+        "text_kr": "매몰 비용 오류(Sunk Cost Fallacy)를 피하기 위해 이니셔티브를 중단(Stop/Kill)하고, 핵심 교훈을 문서화하며, 실현 가능성이 더 높은 유스케이스로 예산을 재할당합니다."
+      },
+      {
+        "key": "B",
+        "text_en": "Double the project budget and continue indefinitely until the model magically improves.",
+        "text_kr": "프로젝트 예산을 2배로 늘리고 모델이 개선될 때까지 무기한 계속 진행합니다."
+      },
+      {
+        "key": "C",
+        "text_en": "Deploy the 62% accurate model immediately to all global warehouses to justify the ,000 spent.",
+        "text_kr": "이미 지출된 30만 달러를 정당화하기 위해 62% 정확도의 모델을 전 세계 모든 창고에 즉시 배포합니다."
+      },
+      {
+        "key": "D",
+        "text_en": "Conceal the pilot test results from executive leadership.",
+        "text_kr": "파일럿 테스트 결과를 경영진에게 숨깁니다."
+      }
+    ],
+    "correct_answer": "A",
+    "explanation_kr": "정답은 A입니다.\n\n• 성숙한 AI 전략은 유스케이스를 발굴하는 것만큼이나 **비즈니스 가치와 실현 가능성이 부족한 과제를 과감하게 중단(Kill/Pause)하는 규율**을 갖추어야 합니다.\n• 이미 들어간 비용에 집착하는 '매몰 비용 오류(Sunk Cost Fallacy)'를 피하고, 파일럿에서 얻은 데이터/인프라 교훈을 자산화한 뒤 성공 확률이 높은 다른 과제로 리소스를 재배치하는 것이 전략적 리더의 올바른 역할입니다.",
+    "key_concept": "AI Prioritization, Project Kill/Pause Decision, Sunk Cost Fallacy"
+  },
+  {
+    "id": "D2-Q07",
+    "domain": "Domain 2",
+    "domain_name": "AI 전략 및 비즈니스 가치 창출 (AI Strategy & Business Value Creation)",
+    "question_en": "A global banking app integrates an external cloud LLM to power real-time wire transfer dispute resolutions. To guarantee business continuity in case of cloud API outages or sudden latency spikes, what architecture pattern should the business strategist require?",
+    "question_kr": "한 글로벌 뱅킹 앱이 실시간 계좌 이체 분쟁 처리를 지원하기 위해 외부 클라우드 LLM을 연동하고 있습니다. 클라우드 API 장애나 갑작스러운 지연 시간 급증 상황에서도 비즈니스 연속성(Business Continuity)을 보장하기 위해 비즈니스 전략가가 요구해야 하는 아키텍처 패턴은 무엇입니까?",
+    "options": [
+      {
+        "key": "A",
+        "text_en": "Establish a multi-model fallback strategy with graceful degradation to secondary models or deterministic rule-based workflows.",
+        "text_kr": "보조 모델 또는 결정론적 규칙 기반 워크플로우로 우아하게 전환(Graceful Degradation)되는 다중 모델 폴백(Fallback) 전략을 수립합니다."
+      },
+      {
+        "key": "B",
+        "text_en": "Hardcode a single proprietary API endpoint without any backup plan.",
+        "text_kr": "어떠한 백업 계획도 없이 단일 독점 API 엔드포인트만 하드코딩합니다."
+      },
+      {
+        "key": "C",
+        "text_en": "Shut down all bank operations globally whenever the external AI API is unreachable.",
+        "text_kr": "외부 AI API에 접속할 수 없을 때마다 은행의 모든 글로벌 운영을 전면 중단합니다."
+      },
+      {
+        "key": "D",
+        "text_en": "Increase token context size to maximum limits.",
+        "text_kr": "토큰 컨텍스트 크기를 최댓값으로 늘립니다."
+      }
+    ],
+    "correct_answer": "A",
+    "explanation_kr": "정답은 A입니다.\n\n• 비즈니스 핵심 프로세스에 AI를 통합할 때는 시스템 장애, 벤더 다운타임, 레이턴시 급증에 대비한 **비즈니스 연속성(Business Continuity) 및 탄력성(Resilience)** 설계가 필수적입니다.\n• 주 모델 장애 시 보조 모델(Amazon Bedrock 내 대안 모델)로 라우팅하거나, 규칙 기반 기본 로직으로 우아하게 전환(Graceful Degradation)하는 폴백 아키텍처를 갖추어야 합니다.",
+    "key_concept": "Business Continuity, Multi-Model Fallback, Graceful Degradation"
+  },
+  {
+    "id": "D2-Q08",
+    "domain": "Domain 2",
+    "domain_name": "AI 전략 및 비즈니스 가치 창출 (AI Strategy & Business Value Creation)",
+    "question_en": "A heavy industrial equipment manufacturer has traditionally sold machinery via one-time capital purchases. By equipping machines with IoT sensors and predictive ML models, the company introduces a new 'Equipment-as-a-Service' subscription model that predicts component failures before they occur and guarantees 99.9% factory uptime. Which business strategy concept does this transformation illustrate?",
+    "question_kr": "한 중장비 제조업체가 전통적으로 일회성 장비 판매 방식으로 수익을 올려왔습니다. 장비에 IoT 센서와 예측 ML 모델을 탑재함으로써, 회사는 부품 고장이 발생하기 전에 미리 예측하고 99.9%의 공장 가동률을 보증하는 새로운 '서비스형 장비(Equipment-as-a-Service)' 구독 모델을 선보였습니다. 이러한 혁신은 어떤 비즈니스 전략 개념을 보여줍니까?",
+    "options": [
+      {
+        "key": "A",
+        "text_en": "Business Model Transformation from transactional hardware sales to high-margin recurring SaaS/service revenue.",
+        "text_kr": "일회성 하드웨어 판매에서 고마진의 지속적(Recurring) 구독/서비스 수익으로의 '비즈니스 모델 혁신(Business Model Transformation)'."
+      },
+      {
+        "key": "B",
+        "text_en": "Catastrophic forgetting in recurrent neural networks.",
+        "text_kr": "순환 신경망에서의 파국적 망각."
+      },
+      {
+        "key": "C",
+        "text_en": "Shadow AI risk escalation.",
+        "text_kr": "섀도 AI 위험 에스컬레이션."
+      },
+      {
+        "key": "D",
+        "text_en": "Regulatory non-compliance under ISO 9001.",
+        "text_kr": "ISO 9001에 따른 규정 미준수."
+      }
+    ],
+    "correct_answer": "A",
+    "explanation_kr": "정답은 A입니다.\n\n• AI의 가장 높은 전략적 가치는 단순한 내부 비용 절감(운영 효율화)에 머무르는 것이 아니라, 기존의 수익 구조를 근본적으로 재편하는 **비즈니스 모델 혁신(Business Model Innovation)**에 있습니다.\n• 일회성 기계 판매에서 예측 유지보수 기반의 정기 구독형 비즈니스로 전환하여 지속적인 현금 흐름과 높은 경쟁 장벽(Moat)을 확보한 대표적 사례입니다.",
+    "key_concept": "Business Model Innovation, Predictive Maintenance, Recurring Revenue"
+  },
+  {
+    "id": "D2-Q09",
+    "domain": "Domain 2",
+    "domain_name": "AI 전략 및 비즈니스 가치 창출 (AI Strategy & Business Value Creation)",
+    "question_en": "A company deployed Amazon Q Developer across a 200-person software engineering organization. To measure whether the tool is genuinely driving business value and engineering productivity, which combination of tangible KPIs should the leadership team track?",
+    "question_kr": "한 회사가 200명의 소프트웨어 엔지니어링 조직 전체에 Amazon Q Developer를 배포했습니다. 이 도구가 진정으로 비즈니스 가치와 엔지니어링 생산성을 견인하고 있는지 측정하기 위해 경영진이 추적해야 하는 유형적 KPI의 조합은 무엇입니까?",
+    "options": [
+      {
+        "key": "A",
+        "text_en": "Reduction in Pull Request (PR) cycle time, increased automated unit test coverage, and decreased time spent on legacy language modernization.",
+        "text_kr": "풀 리퀘스트(PR) 검토 주기 단축, 자동화된 단위 테스트 커버리지 증가, 레거시 언어 현대화에 소요되는 시간 감소."
+      },
+      {
+        "key": "B",
+        "text_en": "Only the total number of lines of raw code typed by developers.",
+        "text_kr": "오직 개발자가 타이핑한 원시 코드의 총 라인 수만 측정."
+      },
+      {
+        "key": "C",
+        "text_en": "The electricity usage of employee laptop monitors.",
+        "text_kr": "직원 노트북 모니터의 전력 소비량."
+      },
+      {
+        "key": "D",
+        "text_en": "The number of coffee breaks taken by development managers.",
+        "text_kr": "개발 관리자들의 커피 브레이크 횟수."
+      }
+    ],
+    "correct_answer": "A",
+    "explanation_kr": "정답은 A입니다.\n\n• 개발자 AI 생산성 도구의 성과는 단순한 코드 줄 수(Lines of Code)로 측정하면 안 됩니다(줄 수가 많다고 좋은 코드가 아님).\n• **PR 리드타임 단축(개발 속도), 단위 테스트 작성률 향상(품질 및 안정성), 레거시 마이그레이션 소요 기간 단축** 등 실질적인 소프트웨어 딜리버리 가치와 직결된 지표를 추적해야 합니다.",
+    "key_concept": "Developer Productivity KPIs, Amazon Q Developer, Tangible Engineering Metrics"
+  },
+  {
+    "id": "D2-Q10",
+    "domain": "Domain 2",
+    "domain_name": "AI 전략 및 비즈니스 가치 창출 (AI Strategy & Business Value Creation)",
+    "question_en": "An enterprise strategist advocates for using Amazon Bedrock rather than committing exclusively to a single model provider API. What key business and strategic advantage does Amazon Bedrock provide from a risk and procurement standpoint?",
+    "question_kr": "한 엔터프라이즈 전략가가 단일 모델 공급업체 API에만 독점적으로 의존하는 대신 Amazon Bedrock을 활용할 것을 주장합니다. 위험 관리 및 조달(Procurement) 관점에서 Amazon Bedrock이 제공하는 핵심 비즈니스·전략적 이점은 무엇입니까?",
+    "options": [
+      {
+        "key": "A",
+        "text_en": "Single unified API access to leading models from multiple vendors (Anthropic, Meta, Amazon, Cohere), mitigating vendor lock-in and allowing flexible model switching as technology and pricing evolve.",
+        "text_kr": "여러 벤더(Anthropic, Meta, Amazon, Cohere)의 최상위 모델에 단일 통합 API로 접근할 수 있어 벤더 종속을 방지하고 기술 및 가격 변화에 따라 유연하게 모델을 교체할 수 있는 역량."
+      },
+      {
+        "key": "B",
+        "text_en": "It guarantees that all models are 100% free of cloud charges forever.",
+        "text_kr": "모든 모델이 영구적으로 100% 무료임을 보장해 주는 역량."
+      },
+      {
+        "key": "C",
+        "text_en": "It automatically writes business strategy slide decks without human input.",
+        "text_kr": "인간의 입력 없이 비즈니스 전략 슬라이드를 자동으로 작성해 주는 역량."
+      },
+      {
+        "key": "D",
+        "text_en": "It replaces the need for corporate financial audits.",
+        "text_kr": "기업 회계 감사의 필요성을 대체해 주는 역량."
+      }
+    ],
+    "correct_answer": "A",
+    "explanation_kr": "정답은 A입니다.\n\n• GenAI 기술은 몇 주 단위로 새로운 최고 성능 모델이 등장할 정도로 급변합니다. 특정 단일 벤더의 독점 API에 코드베이스를 결속시키면 **벤더 종속(Vendor Lock-in)**과 가격 인상 위험에 노출됩니다.\n• Amazon Bedrock은 여러 선도 기업의 모델들을 표준화된 단일 API 및 보안 거버넌스 체계 하에서 제공하므로, 필요에 따라 유스케이스별로 가장 가성비 좋은 모델로 손쉽게 전환할 수 있습니다.",
+    "key_concept": "Amazon Bedrock Multi-Model Strategy, Mitigating Vendor Lock-in, Procurement Flexibility"
+  },
+  {
+    "id": "D2-Q11",
+    "domain": "Domain 2",
+    "domain_name": "AI 전략 및 비즈니스 가치 창출 (AI Strategy & Business Value Creation)",
+    "question_en": "A company is designing an A/B test to measure the impact of an AI-driven personalized product recommendation system on an e-commerce website. How should the team configure the baseline and experiment groups to isolate the true causal business impact of the AI model?",
+    "question_kr": "한 기업이 이커머스 웹사이트에서 AI 기반 개인화 제품 추천 시스템이 미치는 영향을 측정하기 위해 A/B 테스트를 설계하고 있습니다. AI 모델의 진정한 인과적 비즈니스 영향을 격리하여 측정하려면 기준(대조군)과 실험군을 어떻게 구성해야 합니까?",
+    "options": [
+      {
+        "key": "A",
+        "text_en": "Randomly assign identical cohorts of visitors during the exact same time window, presenting the AI recommendations to Group A (Treatment) and the existing non-AI baseline to Group B (Control).",
+        "text_kr": "정확히 동일한 기간 동안 무작위로 배정된 동일한 방문자 집단을 대상으로, 실험군(Group A)에는 AI 추천을 제공하고 대조군(Group B)에는 기존의 비-AI 기준 추천을 제공합니다."
+      },
+      {
+        "key": "B",
+        "text_en": "Compare holiday peak sales in December using AI against low-season sales in February without AI.",
+        "text_kr": "AI를 사용한 12월 연말 성수기 매출과 AI를 사용하지 않은 2월 비수기 매출을 비교합니다."
+      },
+      {
+        "key": "C",
+        "text_en": "Show the AI recommendations only to the company's internal executives and record their opinions.",
+        "text_kr": "사내 경영진에게만 AI 추천을 보여주고 그들의 주관적 의견을 기록합니다."
+      },
+      {
+        "key": "D",
+        "text_en": "Change the website prices simultaneously for only the AI group.",
+        "text_kr": "AI 그룹에게만 제품 판매 가격을 동시에 변경하여 제공합니다."
+      }
+    ],
+    "correct_answer": "A",
+    "explanation_kr": "정답은 A입니다.\n\n• AI의 효과를 정확히 입증하려면 계절성(연말 성수기 등)이나 외부 요인을 배제하고, 동일한 시점에 무작위 분할된 **실험군(Treatment)과 대조군(Control Group / Baseline)**을 비교하는 엄격한 A/B 테스트가 필수적입니다.\n• B는 계절적 왜곡이 발생하며, C는 주관적 편향, D는 가격 변수가 혼입되어 AI의 순수 효과를 분리할 수 없습니다.",
+    "key_concept": "A/B Testing, Control Group, Baseline Isolation, Causal Impact"
+  },
+  {
+    "id": "D2-Q12",
+    "domain": "Domain 2",
+    "domain_name": "AI 전략 및 비즈니스 가치 창출 (AI Strategy & Business Value Creation)",
+    "question_en": "An organization wants to introduce AI into customer support. Which metric is considered an 'intangible' business benefit that contributes to long-term competitive advantage, even though it cannot be directly measured on a balance sheet as instant cash?",
+    "question_kr": "한 조직이 고객 지원에 AI를 도입하고자 합니다. 단기적인 현금으로 재무제표에 즉각 반영되지는 않지만 장기적인 경쟁 우위에 기여하는 '무형적(Intangible)' 비즈니스 이점으로 분류되는 지표는 무엇입니까?",
+    "options": [
+      {
+        "key": "A",
+        "text_en": "Customer Satisfaction Score (CSAT) and Net Promoter Score (NPS) improvement reflecting enhanced brand trust.",
+        "text_kr": "향상된 브랜드 신뢰도를 반영하는 고객 만족도(CSAT) 및 순추천고객지수(NPS) 향상."
+      },
+      {
+        "key": "B",
+        "text_en": "Direct server maintenance electricity cost reduction in dollars.",
+        "text_kr": "달러 단위로 직접 환산되는 서버 유지보수 전기 비용 절감액."
+      },
+      {
+        "key": "C",
+        "text_en": "Total monthly invoice amount paid to AWS for API tokens.",
+        "text_kr": "API 토큰에 대해 AWS에 지불한 월간 청구서 총액."
+      },
+      {
+        "key": "D",
+        "text_en": "Immediate headcount reduction percentage.",
+        "text_kr": "즉각적인 인원 감축 비율."
+      }
+    ],
+    "correct_answer": "A",
+    "explanation_kr": "정답은 A입니다.\n\n• **유형적 이익(Tangible)**은 인건비 절감액, 매출 증가액 등 숫자로 바로 드러나는 성과입니다.\n• **무형적 이익(Intangible)**은 고객 만족도(CSAT/NPS), 브랜드 평판, 직원 직무 몰입도 향상 등 숫자로 환산하기는 어렵지만 지속 가능한 경쟁 우위의 원천이 되는 가치입니다.",
+    "key_concept": "Tangible vs Intangible Benefits, CSAT, NPS, Long-term Brand Trust"
+  },
+  {
+    "id": "D2-Q13",
+    "domain": "Domain 2",
+    "domain_name": "AI 전략 및 비즈니스 가치 창출 (AI Strategy & Business Value Creation)",
+    "question_en": "In which situation would a financial institution with strict sovereign compliance requirements favor 'Building / Fine-Tuning a private model in a dedicated VPC' over 'Buying an off-the-shelf public multi-tenant SaaS chatbot'?",
+    "question_kr": "엄격한 데이터 주권 및 규정 준수 요건을 가진 금융 기관이 '기성 공용 멀티테넌트 SaaS 챗봇 구매(Buy)'보다 '전용 VPC 내 자체 프라이빗 모델 구축/파인 튜닝(Build)'을 선호하게 되는 상황은 언제입니까?",
+    "options": [
+      {
+        "key": "A",
+        "text_en": "When regulatory mandates strictly forbid customer financial transaction records from ever traversing multi-tenant shared cloud environments outside the institution's private perimeter.",
+        "text_kr": "금융 규제 법률상 고객 금융 거래 기록이 금융 기관의 프라이빗 경계 외부의 멀티테넌트 공유 클라우드 환경을 경유하는 것을 엄격히 금지할 때."
+      },
+      {
+        "key": "B",
+        "text_en": "When the primary objective is to launch within 48 hours with zero engineering effort.",
+        "text_kr": "주요 목표가 엔지니어링 노력 없이 48시간 이내에 즉시 출시하는 것일 때."
+      },
+      {
+        "key": "C",
+        "text_en": "When the company has no budget and no qualified machine learning personnel.",
+        "text_kr": "회사에 예산이 전혀 없고 자격을 갖춘 머신러닝 인력도 없을 때."
+      },
+      {
+        "key": "D",
+        "text_en": "When the chatbot is only intended to display public holiday schedules on the website.",
+        "text_kr": "챗봇이 오직 웹사이트에 공휴일 일정만 표시할 용도일 때."
+      }
+    ],
+    "correct_answer": "A",
+    "explanation_kr": "정답은 A입니다.\n\n• 'Build vs Buy' 프레임워크에서 **규제 준수(Compliance), 데이터 주권(Data Sovereignty), 엄격한 격리(VPC Isolation)**는 비용보다 우선하는 결정 요인입니다.\n• 기성 SaaS 챗봇은 도입이 빠르지만 민감 데이터가 외부 멀티테넌트 시스템으로 유출될 수 있으므로, 금융 규제를 준수하기 위해 자체 프라이빗 환경(AWS Dedicated VPC / KMS 암호화) 내 구축을 선택하게 됩니다.",
+    "key_concept": "Build vs Buy Framework, Data Sovereignty, Regulatory Compliance, VPC Isolation"
+  },
+  {
+    "id": "D2-Q14",
+    "domain": "Domain 2",
+    "domain_name": "AI 전략 및 비즈니스 가치 창출 (AI Strategy & Business Value Creation)",
+    "question_en": "A logistics firm is evaluating whether to adopt AI for delivery route optimization. The industry is currently in the 'Early Adopter' maturity stage, where early technological risk is high but competitive first-mover advantage is massive. Which strategic investment posture is most appropriate?",
+    "question_kr": "한 물류 기업이 배송 경로 최적화를 위해 AI를 도입할지 평가하고 있습니다. 현재 해당 산업은 초기 기술 위험은 높지만 선점자(First-Mover) 경쟁 우위가 매우 큰 '초기 수용자(Early Adopter)' 성숙도 단계에 있습니다. 가장 적절한 전략적 투자 태도는 무엇입니까?",
+    "options": [
+      {
+        "key": "A",
+        "text_en": "Fund focused agile Proof of Concepts (PoCs) on high-value routes to test feasibility and establish proprietary data flywheels ahead of competitors.",
+        "text_kr": "경쟁사보다 앞서 실현 가능성을 검증하고 독점적 데이터 플라이휠을 구축하기 위해 가치가 높은 주요 노선에 집중된 애자일 PoC에 투자합니다."
+      },
+      {
+        "key": "B",
+        "text_en": "Wait 10 years until all competitors have completely commoditized the technology.",
+        "text_kr": "모든 경쟁업체가 기술을 완전히 범용화할 때까지 10년간 아무런 투자 없이 관망합니다."
+      },
+      {
+        "key": "C",
+        "text_en": "Liquidate all delivery vehicles immediately to invest 100% of company capital in generative AI art.",
+        "text_kr": "모든 배송 차량을 즉시 매각하고 회사 자본의 100%를 생성형 AI 아트에 투자합니다."
+      },
+      {
+        "key": "D",
+        "text_en": "Prohibit all logistics software upgrades.",
+        "text_kr": "모든 물류 소프트웨어의 업그레이드를 전면 금지합니다."
+      }
+    ],
+    "correct_answer": "A",
+    "explanation_kr": "정답은 A입니다.\n\n• 산업 초기 단계(Early Adopter stage)에서는 맹목적인 대규모 투자도 위험하지만, 완전한 방관도 선점 기회를 놓치게 만듭니다.\n• 가장 고부가가치 영역을 타깃으로 **애자일한 PoC를 실행하여 기술 리스크를 통제하면서, 자체 배송 데이터를 수집하는 선순환(Data Flywheel)을 먼저 구축**하는 것이 전략적 정답입니다.",
+    "key_concept": "Industry Maturity Stages, Early Adopter Investment Strategy, Data Flywheel"
+  },
+  {
+    "id": "D2-Q15",
+    "domain": "Domain 2",
+    "domain_name": "AI 전략 및 비즈니스 가치 창출 (AI Strategy & Business Value Creation)",
+    "question_en": "When estimating ongoing operational expenditures (OpEx) for a generative AI application on AWS, which cost-control strategy helps prevent unexpected billing surprises from runaway automated API queries?",
+    "question_kr": "AWS에서 생성형 AI 애플리케이션의 지속적인 운영 비용(OpEx)을 추정할 때, 폭주하는 자동화 API 쿼리로 인한 예기치 못한 청구 요금 폭탄을 방지하는 데 도움이 되는 비용 통제 전략은 무엇입니까?",
+    "options": [
+      {
+        "key": "A",
+        "text_en": "Configure rate limiting / API throttling in Amazon API Gateway and set up automated spending alerts with AWS Budgets and AWS Cost Anomaly Detection.",
+        "text_kr": "Amazon API Gateway에서 속도 제한(Rate Limiting) 및 스로틀링을 구성하고, AWS Budgets 및 AWS Cost Anomaly Detection을 통해 자동 지출 알림을 설정합니다."
+      },
+      {
+        "key": "B",
+        "text_en": "Delete all corporate AWS credentials every Friday night.",
+        "text_kr": "매주 금요일 밤마다 회사의 모든 AWS 자격 증명을 삭제합니다."
+      },
+      {
+        "key": "C",
+        "text_en": "Instruct developers to never inspect AWS billing consoles.",
+        "text_kr": "개발자들에게 AWS 결제 콘솔을 절대로 확인하지 말라고 지시합니다."
+      },
+      {
+        "key": "D",
+        "text_en": "Switch from cloud computing back to paper-based fax machines.",
+        "text_kr": "클라우드 컴퓨팅에서 종이 기반 팩스 기계로 다시 전환합니다."
+      }
+    ],
+    "correct_answer": "A",
+    "explanation_kr": "정답은 A입니다.\n\n• GenAI 애플리케이션은 토큰 및 호출 수 기반 과금이므로 무한 루프나 트래픽 급증 시 비용이 폭증할 수 있습니다.\n• **API Gateway 수준의 스로틀링(Throttling)**으로 비정상 트래픽을 차단하고, **AWS Budgets 및 비용 이상 감지(Cost Anomaly Detection)**를 통해 사전 경보 체계를 두는 것이 표준적인 비용 통제 프랙티스입니다.",
+    "key_concept": "AI Cost Control, AWS Budgets, Cost Anomaly Detection, API Throttling"
+  }
+]

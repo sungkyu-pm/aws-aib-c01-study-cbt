@@ -1,0 +1,482 @@
+[
+  {
+    "id": "D4-Q01",
+    "domain": "Domain 4",
+    "domain_name": "비즈니스 준비성, 리더십, AI 혁신 (Business Readiness, Leadership & Transformation)",
+    "question_en": "An enterprise wants to transition from isolated, team-level AI experiments to an enterprise-wide scaling model. Individual departments have been independently purchasing duplicate software tools and duplicating engineering efforts. Which organizational initiative should the company establish to unify standards, share reusable assets, and guide enterprise-wide scaling?",
+    "question_kr": "한 기업이 고립된 팀 단위의 AI 실험 단계에서 벗어나 전사적인 확장 모델로 전환하고자 합니다. 개별 부서들이 서로 중복된 소프트웨어 도구를 개별 구매하고 엔지니어링 노력을 중복하고 있는 실정입니다. 표준을 통합하고, 재사용 가능한 에셋을 공유하며, 전사적 확장을 이끌기 위해 회사가 설립해야 하는 조직적 이니셔티브는 무엇입니까?",
+    "options": [
+      {
+        "key": "A",
+        "text_en": "An AI Center of Excellence (AI CoE)",
+        "text_kr": "AI 우수성 센터 (AI Center of Excellence, AI CoE)"
+      },
+      {
+        "key": "B",
+        "text_en": "A strict ban on all future AI experiments across all business units",
+        "text_kr": "모든 사업 부서 전반에 걸쳐 향후 모든 AI 실험을 엄격히 금지하는 조치"
+      },
+      {
+        "key": "C",
+        "text_en": "Outsourcing 100% of corporate operations to a single third-party IT reseller",
+        "text_kr": "회사 운영의 100%를 단일 서드파티 IT 리셀러에게 전면 외주화"
+      },
+      {
+        "key": "D",
+        "text_en": "Replacing all departmental managers with automated algorithms",
+        "text_kr": "모든 부서 관리자를 자동화된 알고리즘으로 교체"
+      }
+    ],
+    "correct_answer": "A",
+    "explanation_kr": "정답은 A입니다.\n\n• **AI Center of Excellence (AI CoE)**는 전사적 AI 전략을 수립하고, 부서 간 중복 투자를 방지하며, 클라우드 아키텍처 및 보안 표준을 정립하고, 성공 사례와 재사용 가능한 공통 에셋(프롬프트 라이브러리, 데이터셋, MLOps 파이프라인)을 전사에 전파하는 중앙 집중식 전문 조직입니다.\n• 이를 통해 고립된 사일로 실험에서 전사적 확장(Scaling) 단계로 원활하게 도약할 수 있습니다.",
+    "key_concept": "AI Center of Excellence (CoE), Enterprise AI Scaling, Governance"
+  },
+  {
+    "id": "D4-Q02",
+    "domain": "Domain 4",
+    "domain_name": "비즈니스 준비성, 리더십, AI 혁신 (Business Readiness, Leadership & Transformation)",
+    "question_en": "A company is attempting to train a predictive recommendation engine to personalize customer journeys. However, the customer transaction records reside in a legacy on-premises mainframe, online web interactions are logged in an isolated cloud bucket, and support tickets are stored in a siloed third-party CRM with incompatible identifiers. What is the fundamental organizational hurdle preventing successful AI deployment, and how must it be resolved?",
+    "question_kr": "한 기업이 고객 경험을 개인화하기 위해 예측 추천 엔진을 학습시키고자 합니다. 그러나 고객 결제 내역은 레거시 온프레미스 메인프레임에 있고, 온라인 웹 상호작용은 격리된 클라우드 스토리지에 저장되어 있으며, 고객 지원 티켓은 호환되지 않는 식별자를 가진 사일로화된 서드파티 CRM에 갇혀 있습니다. 성공적인 AI 배포를 가로막는 근본적인 조직적 장애물은 무엇이며, 어떻게 해결해야 합니까?",
+    "options": [
+      {
+        "key": "A",
+        "text_en": "Hardware token limits; resolved by upgrading local laptop memory.",
+        "text_kr": "하드웨어 토큰 한계; 로컬 노트북 메모리를 업그레이드하여 해결합니다."
+      },
+      {
+        "key": "B",
+        "text_en": "Data Silos and fragmented data architecture; resolved by establishing an integrated data foundation (e.g., centralized Data Lake) and enterprise data governance.",
+        "text_kr": "데이터 사일로(Data Silos) 및 파편화된 데이터 아키텍처; 통합 데이터 기반(예: 중앙 집중식 데이터 레이크) 및 전사 데이터 거버넌스를 구축하여 해결합니다."
+      },
+      {
+        "key": "C",
+        "text_en": "Prompt engineering failure; resolved by changing LLM temperature settings.",
+        "text_kr": "프롬프트 엔지니어링 실패; LLM 온도 설정을 변경하여 해결합니다."
+      },
+      {
+        "key": "D",
+        "text_en": "Algorithmic bias; resolved by removing all customer age columns.",
+        "text_kr": "알고리즘 편향; 모든 고객 연령 열을 제거하여 해결합니다."
+      }
+    ],
+    "correct_answer": "B",
+    "explanation_kr": "정답은 B입니다.\n\n• 부서별 시스템 간에 데이터가 단절되어 통합되지 못하는 상태를 **데이터 사일로(Data Silos)**라고 합니다. 데이터 사일로는 AI 도입 실패의 가장 흔한 기술/인프라적 원인입니다.\n• AI 모델이 일관된 고객 여정을 파악하려면, 중앙 집중식 데이터 레이크(Amazon S3) 및 데이터 거버넌스(AWS DataZone, Lake Formation)를 통해 사일로를 타파하고 데이터 접근성과 품질을 확보해야 합니다.",
+    "key_concept": "Data Silos, Data Readiness, Data Lake, Enterprise Data Foundation"
+  },
+  {
+    "id": "D4-Q03",
+    "domain": "Domain 4",
+    "domain_name": "비즈니스 준비성, 리더십, AI 혁신 (Business Readiness, Leadership & Transformation)",
+    "question_en": "When introducing a generative AI productivity tool to a traditional manufacturing company, employee surveys indicate high levels of fear and cultural resistance regarding potential job elimination. Which leadership change management strategy is most effective to overcome this cultural barrier?",
+    "question_kr": "전통적인 제조업체에 생성형 AI 생산성 도구를 도입할 때, 직원 설문조사 결과 일자리 감축에 대한 극심한 두려움과 문화적 저항이 나타났습니다. 이러한 문화적 장벽을 극복하기 위해 가장 효과적인 리더십 변화 관리 전략은 무엇입니까?",
+    "options": [
+      {
+        "key": "A",
+        "text_en": "Conceal the AI roadmap from employees until after full deployment.",
+        "text_kr": "전면 배포가 끝날 때까지 직원들에게 AI 로드맵을 숨깁니다."
+      },
+      {
+        "key": "B",
+        "text_en": "Position the AI as a collaborative tool (co-pilot) that augments human capabilities by handling routine tasks, while providing transparent communication, reskilling programs, and empowering internal AI Champions.",
+        "text_kr": "AI를 반복적이고 지루한 업무를 처리하여 인간의 역량을 증강하는 협업 도구(코파일럿)로 포지셔닝하고, 투명한 소통과 직원 재교육(Reskilling) 프로그램을 제공하며 사내 'AI 챔피언'을 육성합니다."
+      },
+      {
+        "key": "C",
+        "text_en": "Mandate immediate punitive salary reductions for employees who express concerns.",
+        "text_kr": "우려를 표명하는 직원에게 즉각적인 징벌적 급여 삭감을 시행합니다."
+      },
+      {
+        "key": "D",
+        "text_en": "Immediately eliminate human supervision to prove that AI is superior.",
+        "text_kr": "AI가 더 우월함을 증명하기 위해 인간의 감독을 즉시 없앱니다."
+      }
+    ],
+    "correct_answer": "B",
+    "explanation_kr": "정답은 B입니다.\n\n• AI 혁신의 성패는 기술보다 사람(People)과 조직 문화(Culture)에 달려 있습니다.\n• 직원들의 일자리 불안을 해소하기 위해서는 AI가 '인간의 대체재'가 아니라 '인간의 역량을 증강(Augment)하는 파트너'임을 명확히 소통해야 합니다.\n• 반복적인 잡무에서 벗어나 고부가가치 업무에 집중할 수 있도록 돕는 재교육(Reskilling/Upskilling) 기회를 제공하고, 현업 부서의 'AI 챔피언'들이 긍정적인 실무 경험을 동료들에게 전파하도록 장려하는 것이 모범적인 변화 관리 전략입니다.",
+    "key_concept": "Change Management, Cultural Barriers, AI Augmentation, AI Champions"
+  },
+  {
+    "id": "D4-Q04",
+    "domain": "Domain 4",
+    "domain_name": "비즈니스 준비성, 리더십, AI 혁신 (Business Readiness, Leadership & Transformation)",
+    "question_en": "An organization is following AWS's recommended iterative transformation approach for AI adoption: Envision, Experiment, Launch, and Scale. What is the primary objective of the 'Experiment' phase?",
+    "question_kr": "한 조직이 AWS에서 권장하는 반복적 AI 혁신 접근 방식인 '구상(Envision) ➔ 실험(Experiment) ➔ 출시(Launch) ➔ 확장(Scale)'을 따르고 있습니다. '실험(Experiment)' 단계의 주요 목표는 무엇입니까?",
+    "options": [
+      {
+        "key": "A",
+        "text_en": "Conduct rapid Proof of Concepts (PoCs) in a controlled environment to validate technical feasibility and test business value hypotheses.",
+        "text_kr": "통제된 환경에서 신속한 개념 증명(PoC)을 수행하여 기술적 실현 가능성을 검증하고 비즈니스 가치 가설을 테스트하는 것."
+      },
+      {
+        "key": "B",
+        "text_en": "Deploy the unverified solution immediately to 100% of global external customers.",
+        "text_kr": "검증되지 않은 솔루션을 글로벌 외부 고객 100%에게 즉시 전면 배포하는 것."
+      },
+      {
+        "key": "C",
+        "text_en": "Terminate all IT staffing contracts before building prototypes.",
+        "text_kr": "프로토타입을 구축하기 전에 모든 IT 인력 계약을 종료하는 것."
+      },
+      {
+        "key": "D",
+        "text_en": "Publish the final annual audited earnings report.",
+        "text_kr": "최종 연간 감사 수익 보고서를 발행하는 것."
+      }
+    ],
+    "correct_answer": "A",
+    "explanation_kr": "정답은 A입니다.\n\n• AWS의 4단계 프레임워크에서 **실험(Experiment)** 단계는 비즈니스 가설과 기술적 실현 가능성을 작고 빠른 PoC(개념 증명)를 통해 검증하는 단계입니다. 이를 통해 실패 비용을 최소화(Fail Fast)하고 성공 가능성이 높은 프로젝트만 출시(Launch) 단계로 전진시킵니다.\n• Envision은 비전 수립 및 우선순위화, Launch는 파일럿/MVP 배포, Scale은 전사적 확산 단계입니다.",
+    "key_concept": "Iterative Transformation Framework (Envision, Experiment, Launch, Scale), PoC"
+  },
+  {
+    "id": "D4-Q05",
+    "domain": "Domain 4",
+    "domain_name": "비즈니스 준비성, 리더십, AI 혁신 (Business Readiness, Leadership & Transformation)",
+    "question_en": "To accelerate enterprise AI literacy and spark practical grassroots innovation without requiring months of coding training, which AWS no-code playground environment can business teams use to rapidly prototype generative AI applications?",
+    "question_kr": "수개월간의 코딩 교육 없이도 전사적인 AI 리터러시를 가속화하고 현업 주도의 실용적인 혁신을 촉진하기 위해, 비즈니스 팀이 생성형 AI 애플리케이션을 신속하게 프로토타이핑할 수 있도록 지원하는 AWS의 노코드(No-code) 플레이그라운드 환경은 무엇입니까?",
+    "options": [
+      {
+        "key": "A",
+        "text_en": "AWS PartyRock",
+        "text_kr": "AWS PartyRock"
+      },
+      {
+        "key": "B",
+        "text_en": "AWS Snowball Edge Storage",
+        "text_kr": "AWS Snowball Edge 스토리지"
+      },
+      {
+        "key": "C",
+        "text_en": "Amazon Elastic Block Store (EBS)",
+        "text_kr": "Amazon Elastic Block Store (EBS)"
+      },
+      {
+        "key": "D",
+        "text_en": "AWS Direct Connect Dedicated Circuit",
+        "text_kr": "AWS Direct Connect 전용 회선"
+      }
+    ],
+    "correct_answer": "A",
+    "explanation_kr": "정답은 A입니다.\n\n• **AWS PartyRock**은 Amazon Bedrock을 기반으로 동작하는 웹 기반 노코드(No-code) 생성형 AI 앱 제작 플레이그라운드입니다.\n• 비개발자나 비즈니스 실무자도 코딩 한 줄 없이 프롬프트 설계만으로 텍스트 생성, 챗봇, 이미지 생성 등의 미니 앱을 단 몇 분 만에 만들고 공유할 수 있어, 사내 해커톤이나 AI 리터러시 교육에 매우 이상적입니다.",
+    "key_concept": "AWS PartyRock, No-Code GenAI Playground, AI Literacy, Grassroots Innovation"
+  },
+  {
+    "id": "D4-Q06",
+    "domain": "Domain 4",
+    "domain_name": "비즈니스 준비성, 리더십, AI 혁신 (Business Readiness, Leadership & Transformation)",
+    "question_en": "An enterprise with multiple decentralized business divisions (Retail, Finance, Healthcare) wants to scale AI. The company wants to maintain central enterprise governance and shared infrastructure standards, while still allowing individual business units the agility to build specialized AI applications for their specific markets. Which AI Center of Excellence (AI CoE) organizational model best fits this requirement?",
+    "question_kr": "여러 개의 분권화된 사업 부서(소매, 금융, 헬스케어)를 보유한 한 기업이 AI를 확장하고자 합니다. 이 회사는 중앙 집중식 엔터프라이즈 거버넌스와 공유 인프라 표준을 유지하면서도, 개별 사업 부서가 각자의 시장에 특화된 AI 애플리케이션을 신속하게 구축할 수 있는 민첩성을 보장하고자 합니다. 이러한 요구 사항에 가장 부합하는 AI CoE(우수성 센터) 조직 모델은 무엇입니까?",
+    "options": [
+      {
+        "key": "A",
+        "text_en": "Federated / Hub-and-Spoke CoE model (Central Hub defines standards, security, and shared platforms; distributed Spokes embedded in business units drive localized delivery).",
+        "text_kr": "연합형 / 허브앤스포크(Hub-and-Spoke) CoE 모델 (중앙 허브는 표준, 보안 및 공유 플랫폼을 총괄하고, 각 사업 부서에 내재된 스포크 팀이 현장 맞춤형 딜리버리를 주도함)."
+      },
+      {
+        "key": "B",
+        "text_en": "Completely isolated Anarchy model with zero central communication or shared guidelines.",
+        "text_kr": "중앙 커뮤니케이션이나 공유 가이드라인이 전혀 없는 완전 격리형 무정부 모델."
+      },
+      {
+        "key": "C",
+        "text_en": "Strict 100% Centralized model where all departmental ideas must wait 3 years in a single backlog.",
+        "text_kr": "모든 부서의 아이디어가 단일 백로그에서 3년간 대기해야 하는 엄격한 100% 중앙 집중형 모델."
+      },
+      {
+        "key": "D",
+        "text_en": "Dissolving all technical teams and outsourcing all decisions to random external consultants.",
+        "text_kr": "모든 사내 기술 팀을 해체하고 모든 의사결정을 임의의 외부 컨설턴트에게 전면 외주화."
+      }
+    ],
+    "correct_answer": "A",
+    "explanation_kr": "정답은 A입니다.\n\n• 대규모 다각화 기업에서 가장 성공적인 AI CoE 조직 구조는 **허브앤스포크(Hub-and-Spoke / Federated) 모델**입니다.\n• 중앙의 **허브(Hub)**는 전사 거버넌스, 클라우드 아키텍처 표준(AWS 계정 체계, 보안, 가드레일), 공통 인프라를 총괄하여 일관성을 유지하고, 각 사업 부서의 **스포크(Spoke)**는 비즈니스 도메인 지식을 바탕으로 유연하고 빠르게 현업 애플리케이션을 개발할 수 있습니다.",
+    "key_concept": "AI CoE Organizational Models, Hub-and-Spoke, Central Governance vs Decentralized Agility"
+  },
+  {
+    "id": "D4-Q07",
+    "domain": "Domain 4",
+    "domain_name": "비즈니스 준비성, 리더십, AI 혁신 (Business Readiness, Leadership & Transformation)",
+    "question_en": "Which framework provided by AWS guides enterprises in evaluating readiness and building an actionable holistic transformation roadmap across Business, People, Governance, Platform, Security, and Operations perspectives?",
+    "question_kr": "비즈니스, 사람(People), 거버넌스, 플랫폼, 보안, 운영의 6대 관점 전반에서 기업이 준비 상태를 평가하고 실행 가능한 종합 혁신 로드맵을 수립하도록 안내하는 AWS의 프레임워크는 무엇입니까?",
+    "options": [
+      {
+        "key": "A",
+        "text_en": "AWS Cloud Adoption Framework (AWS CAF) with the AI/ML Lens",
+        "text_kr": "AWS 클라우드 채택 프레임워크 (AWS CAF) AI/ML 렌즈"
+      },
+      {
+        "key": "B",
+        "text_en": "Simple Storage Service (S3) Glacier Deep Archive",
+        "text_kr": "S3 Glacier Deep Archive 스토리지"
+      },
+      {
+        "key": "C",
+        "text_en": "Amazon Relational Database Service (RDS) Multi-AZ",
+        "text_kr": "Amazon RDS 다중 AZ 배포"
+      },
+      {
+        "key": "D",
+        "text_en": "AWS Snowcone physical device",
+        "text_kr": "AWS Snowcone 물리 디바이스"
+      }
+    ],
+    "correct_answer": "A",
+    "explanation_kr": "정답은 A입니다.\n\n• **AWS Cloud Adoption Framework (AWS CAF) - AI/ML Lens**는 기술뿐만 아니라 조직 역량, 거버넌스, 비즈니스 가치, 인력 변화 관리 등 6대 핵심 관점(Foundational Perspectives)을 체계적으로 진단하여 엔터프라이즈의 AI 혁신 성공을 돕는 공식 프레임워크입니다.",
+    "key_concept": "AWS Cloud Adoption Framework (CAF), AI/ML Lens, Enterprise Transformation Perspectives"
+  },
+  {
+    "id": "D4-Q08",
+    "domain": "Domain 4",
+    "domain_name": "비즈니스 준비성, 리더십, AI 혁신 (Business Readiness, Leadership & Transformation)",
+    "question_en": "An enterprise discovers that machine learning teams spend 70% of their time searching for data assets, negotiating access permissions, and resolving incompatible data definitions across business units. Which AWS data management service helps break data silos by cataloging, discovering, and sharing data across business boundaries with automated governance?",
+    "question_kr": "한 기업은 머신러닝 팀들이 업무 시간의 70%를 데이터 에셋을 검색하고, 접근 권한을 협의하며, 부서 간 호환되지 않는 데이터 정의를 해결하는 데 허비하고 있음을 발견했습니다. 비즈니스 경계를 넘어 데이터를 카탈로그화, 발견 및 공유하고 자동화된 거버넌스를 제공하여 데이터 사일로를 타파하는 데 도움을 주는 AWS 데이터 관리 서비스는 무엇입니까?",
+    "options": [
+      {
+        "key": "A",
+        "text_en": "Amazon DataZone",
+        "text_kr": "Amazon DataZone"
+      },
+      {
+        "key": "B",
+        "text_en": "AWS Direct Connect",
+        "text_kr": "AWS Direct Connect"
+      },
+      {
+        "key": "C",
+        "text_en": "Amazon Route 53 Traffic Flow",
+        "text_kr": "Amazon Route 53 트래픽 흐름"
+      },
+      {
+        "key": "D",
+        "text_en": "Amazon Elastic File System (EFS)",
+        "text_kr": "Amazon Elastic File System (EFS)"
+      }
+    ],
+    "correct_answer": "A",
+    "explanation_kr": "정답은 A입니다.\n\n• **Amazon DataZone**은 부서 간 데이터 사일로를 해소하기 위해 설계된 데이터 거버넌스 서비스입니다. 비즈니스 데이터 카탈로그를 구축하여 데이터 생성자와 소비자를 연결하고, 웹 포털을 통해 권한 승인 워크플로우를 자동화하여 안전하고 원활한 전사 데이터 공유를 가능하게 합니다.",
+    "key_concept": "Amazon DataZone, Breaking Data Silos, Enterprise Data Governance"
+  },
+  {
+    "id": "D4-Q09",
+    "domain": "Domain 4",
+    "domain_name": "비즈니스 준비성, 리더십, AI 혁신 (Business Readiness, Leadership & Transformation)",
+    "question_en": "When designing an enterprise-wide AI literacy training curriculum, why should the training be differentiated across distinct organizational personas (e.g., Senior Executives, Business Product Managers, and Technical Engineers)?",
+    "question_kr": "전사적인 AI 리터러시 교육 커리큘럼을 설계할 때, 다양한 조직 페르소나(예: 최고 경영진, 비즈니스 기획자/PM, 기술 엔지니어)별로 교육 내용을 차별화해야 하는 이유는 무엇입니까?",
+    "options": [
+      {
+        "key": "A",
+        "text_en": "Each persona has unique strategic responsibilities: Executives need strategic ROI and risk oversight, Business PMs need use-case identification and prompt framing, while Engineers require deep architectural implementation.",
+        "text_kr": "각 페르소나마다 고유한 전략적 역할이 다르기 때문입니다: 경영진은 전략적 ROI와 리스크 감독이 필요하고, 비즈니스 기획자는 유스케이스 발굴과 프롬프트 설계가 필요하며, 엔지니어는 심층 아키텍처 구현 역량이 필요합니다."
+      },
+      {
+        "key": "B",
+        "text_en": "Non-technical managers should be permanently forbidden from learning anything about AI concepts.",
+        "text_kr": "비기술직 관리자는 AI 개념에 대해 배우는 것을 영구적으로 금지해야 하기 때문입니다."
+      },
+      {
+        "key": "C",
+        "text_en": "All employees regardless of role should be forced to write raw CUDA C++ GPU kernel code.",
+        "text_kr": "직무와 관계없이 모든 직원에게 로우 레벨 CUDA C++ GPU 커널 코드를 작성하도록 강제해야 하기 때문입니다."
+      },
+      {
+        "key": "D",
+        "text_en": "To ensure the company spends the maximum possible amount on external training vendors.",
+        "text_kr": "회사가 외부 교육 벤더에게 최대한 많은 비용을 지출하도록 만들기 위해."
+      }
+    ],
+    "correct_answer": "A",
+    "explanation_kr": "정답은 A입니다.\n\n• '원-사이즈-핏-올(One-size-fits-all)' 교육은 실패합니다. 경영진에게 파이썬 코딩을 가르치거나, 엔지니어에게 일반적인 비즈니스 개론만 가르치면 실무 적용력이 떨어집니다.\n• 직무별 맞춤(Persona-based) 교육을 통해 각자의 위치에서 AI를 올바르게 판단하고 활용할 수 있는 역량을 배양해야 전사적인 AI 준비도가 완성됩니다.",
+    "key_concept": "AI Literacy Curriculum, Persona-based Training, Organizational Readiness"
+  },
+  {
+    "id": "D4-Q10",
+    "domain": "Domain 4",
+    "domain_name": "비즈니스 준비성, 리더십, AI 혁신 (Business Readiness, Leadership & Transformation)",
+    "question_en": "An organization has completed several successful standalone generative AI pilots. As it prepares to scale to enterprise production with dozens of models, what operational discipline (practice) is essential to automate model packaging, CI/CD testing, deployment, and operational monitoring?",
+    "question_kr": "한 조직이 몇 가지 성공적인 독립형 생성형 AI 파일럿을 완료했습니다. 수십 개의 모델을 갖춘 엔터프라이즈 프로덕션 환경으로 확장할 준비를 하면서 모델 패키징, CI/CD 테스트, 배포 및 운영 모니터링을 자동화하는 데 필수적인 운영 원칙(프랙티스)은 무엇입니까?",
+    "options": [
+      {
+        "key": "A",
+        "text_en": "MLOps / LLMOps (Machine Learning / Large Language Model Operations)",
+        "text_kr": "MLOps / LLMOps (머신러닝 및 대규모 언어 모델 운영 체계)"
+      },
+      {
+        "key": "B",
+        "text_en": "Waterfall Software Project Management from the 1970s",
+        "text_kr": "1970년대 스타일의 폭포수(Waterfall) 소프트웨어 프로젝트 관리"
+      },
+      {
+        "key": "C",
+        "text_en": "Manual pen-and-paper server logging on physical clipboards",
+        "text_kr": "물리적 클립보드에 수기 펜으로 종이에 서버 로그를 기록하는 방식"
+      },
+      {
+        "key": "D",
+        "text_en": "Deleting all automated code deployment pipelines",
+        "text_kr": "모든 자동화된 코드 배포 파이프라인을 삭제하는 것"
+      }
+    ],
+    "correct_answer": "A",
+    "explanation_kr": "정답은 A입니다.\n\n• 파일럿(실험) 단계에서 프로덕션(확장) 단계로 넘어갈 때 수동 배포와 임시방편적인 관리는 한계에 부딪힙니다.\n• **MLOps / LLMOps**는 데이터 수집, 모델 버전 관리, 프롬프트 템플릿 테스트, 자동 배포, 드리프트 모니터링을 소프트웨어 엔지니어링의 DevOps 원칙과 결합하여 전사적 확장성을 보장하는 핵심 인프라 원칙입니다.",
+    "key_concept": "MLOps, LLMOps, Scaling from Pilot to Production, Automated Deployment"
+  },
+  {
+    "id": "D4-Q11",
+    "domain": "Domain 4",
+    "domain_name": "비즈니스 준비성, 리더십, AI 혁신 (Business Readiness, Leadership & Transformation)",
+    "question_en": "When introducing an AI assistant into a corporate legal team, paralegals worry that their contract review roles will be eliminated. How should leadership redefine the job role to foster positive adoption and strategic collaboration?",
+    "question_kr": "사내 법무팀에 AI 어시스턴트를 도입할 때 법무 보조 인력(Paralegals)은 계약서 검토 직무가 사라질 것을 걱정하고 있습니다. 긍정적인 도입과 전략적 협업을 촉진하기 위해 경영진은 이 직무를 어떻게 재정의해야 합니까?",
+    "options": [
+      {
+        "key": "A",
+        "text_en": "Transition the role from tedious manual clause comparison to higher-value legal risk strategists and supervisors of AI outputs, focusing on negotiation strategy and nuanced human judgment.",
+        "text_kr": "지루한 수동 계약 조항 비교 업무에서 AI 산출물을 감독하고 협상 전략 및 미묘한 인간적 판단에 집중하는 고부가가치 법률 리스크 전략가로 역할을 전환합니다."
+      },
+      {
+        "key": "B",
+        "text_en": "Inform staff that AI will completely replace all human thought within 30 days.",
+        "text_kr": "30일 이내에 AI가 인간의 모든 사고를 완전히 대체할 것이라고 직원들에게 통보합니다."
+      },
+      {
+        "key": "C",
+        "text_en": "Prohibit the legal team from using any software tools developed after 1995.",
+        "text_kr": "법무팀이 1995년 이후에 개발된 소프트웨어 도구를 사용하는 것을 금지합니다."
+      },
+      {
+        "key": "D",
+        "text_en": "Fire the entire legal team immediately without notice.",
+        "text_kr": "사전 예고 없이 전체 법무팀을 즉시 해고합니다."
+      }
+    ],
+    "correct_answer": "A",
+    "explanation_kr": "정답은 A입니다.\n\n• 성공적인 변화 관리(Change Management)의 핵심은 **직무 재정의(Job Redesign)**입니다.\n• AI는 인간을 대체하는 것이 아니라 단순 반복적인 작업(조항 대조)을 신속히 처리해주며, 인간은 비판적 사고, 공감, 전략적 협상과 같은 고차원적 역량에 집중하도록 포지셔닝해야 조직적 저항을 극복하고 생산성을 극대화할 수 있습니다.",
+    "key_concept": "Job Redesign, Human-AI Collaboration, Augmenting Human Capabilities"
+  },
+  {
+    "id": "D4-Q12",
+    "domain": "Domain 4",
+    "domain_name": "비즈니스 준비성, 리더십, AI 혁신 (Business Readiness, Leadership & Transformation)",
+    "question_en": "Three months after launching an internal generative AI search assistant, metrics show that only 15% of employees actively use the tool. Exit surveys indicate users find the interface confusing and don't know how to write effective prompts. What leadership intervention is most effective to resolve this adoption barrier?",
+    "question_kr": "사내 생성형 AI 검색 어시스턴트를 출시한 지 3개월 후, 측정 결과 직원의 15%만이 이 도구를 적극적으로 사용하고 있는 것으로 나타났습니다. 설문조사 결과 사용자들은 인터페이스가 혼란스럽고 효과적인 프롬프트를 작성하는 방법을 모른다고 응답했습니다. 이러한 채택 장벽을 해결하기 위해 가장 효과적인 리더십 개입 조치는 무엇입니까?",
+    "options": [
+      {
+        "key": "A",
+        "text_en": "Implement targeted user-experience improvements, provide pre-built prompt templates for daily tasks, and establish a network of department-level AI Champions to coach peers.",
+        "text_kr": "타깃화된 사용자 경험(UX) 개선을 구현하고, 일상 업무용 기성 프롬프트 템플릿을 제공하며, 동료들을 코칭할 부서별 AI 챔피언 네트워크를 구축합니다."
+      },
+      {
+        "key": "B",
+        "text_en": "Threaten non-users with immediate disciplinary action and fines.",
+        "text_kr": "미사용자에게 즉각적인 징계 조치와 벌금을 물리겠다고 위협합니다."
+      },
+      {
+        "key": "C",
+        "text_en": "Immediately shut down the system and announce that the company will never use AI again.",
+        "text_kr": "시스템을 즉시 폐쇄하고 회사가 다시는 AI를 사용하지 않을 것이라고 선언합니다."
+      },
+      {
+        "key": "D",
+        "text_en": "Double the length of the system prompt without telling anyone.",
+        "text_kr": "아무에게도 알리지 않고 시스템 프롬프트의 길이를 2배로 늘립니다."
+      }
+    ],
+    "correct_answer": "A",
+    "explanation_kr": "정답은 A입니다.\n\n• 낮은 채택률(Low Adoption)은 강압적인 규칙으로 해결할 수 없습니다.\n• 사용자들이 즉각 업무에 활용할 수 있는 **직무별 프롬프트 템플릿 라이브러리**를 제공하고, 각 부서의 **AI 챔피언(AI Champions)**들이 실제 유용한 활용 팁을 전파하는 친화적 코칭 체계를 가동해야 유기적인 사용 확산이 일어납니다.",
+    "key_concept": "Overcoming Adoption Barriers, Prompt Templates, AI Champions Network"
+  },
+  {
+    "id": "D4-Q13",
+    "domain": "Domain 4",
+    "domain_name": "비즈니스 준비성, 리더십, AI 혁신 (Business Readiness, Leadership & Transformation)",
+    "question_en": "During an enterprise AI rollout, the Head of Sales wants to build a custom customer churn model immediately, while the Chief Information Security Officer (CISO) blocks the project over data privacy concerns. Who possesses the organizational mandate to resolve this inter-departmental conflict and maintain strategic momentum?",
+    "question_kr": "전사 AI 도입 과정에서 영업 책임자는 맞춤형 고객 이탈 모델을 즉시 구축하고자 하지만, 최고정보보호책임자(CISO)는 데이터 프라이버시 우려를 이유로 프로젝트를 차단하고 있습니다. 이러한 부서 간 이해상충을 조정하고 전략적 추진력을 유지할 조직적 권한을 가진 주체는 누구입니까?",
+    "options": [
+      {
+        "key": "A",
+        "text_en": "The Executive Sponsor / Steering Committee chaired by C-level leadership",
+        "text_kr": "C-레벨 경영진이 의장을 맡은 경영진 스폰서(Executive Sponsor) / AI 운영 위원회"
+      },
+      {
+        "key": "B",
+        "text_en": "An entry-level intern hired last week",
+        "text_kr": "지난주에 입사한 신입 인턴"
+      },
+      {
+        "key": "C",
+        "text_en": "The hardware vendor supplying laptop mice",
+        "text_kr": "노트북 마우스를 납품하는 하드웨어 벤더"
+      },
+      {
+        "key": "D",
+        "text_en": "An anonymous voting poll on public social media",
+        "text_kr": "공개 소셜 미디어에서의 익명 투표"
+      }
+    ],
+    "correct_answer": "A",
+    "explanation_kr": "정답은 A입니다.\n\n• AI 프로젝트가 현업(영업/비즈니스)의 혁신 요구와 통제 부서(보안/법무)의 안전 요구 사이에서 교착 상태에 빠졌을 때, 이를 중재하고 절충안(예: 가드레일과 익명화 적용 후 승인)을 결정할 수 있는 주체는 강력한 **경영진 스폰서(Executive Sponsor)**와 다학제적 AI 운영 위원회입니다.",
+    "key_concept": "Executive Sponsorship, Cross-Functional Conflict Resolution, AI Governance Committee"
+  },
+  {
+    "id": "D4-Q14",
+    "domain": "Domain 4",
+    "domain_name": "비즈니스 준비성, 리더십, AI 혁신 (Business Readiness, Leadership & Transformation)",
+    "question_en": "What is the primary role of an 'AI Champion' within a line-of-business department?",
+    "question_kr": "현업 사업 부서 내에서 'AI 챔피언(AI Champion)'의 주요 역할은 무엇입니까?",
+    "options": [
+      {
+        "key": "A",
+        "text_en": "Act as a localized peer evangelist who identifies departmental pain points, tests pilot tools, coaches colleagues, and channels user feedback back to the central AI CoE.",
+        "text_kr": "부서 내 고충을 발굴하고, 파일럿 도구를 테스트하며, 동료들을 코칭하고, 현장 사용자 피드백을 중앙 AI CoE로 전달하는 현장 전도사 역할을 수행합니다."
+      },
+      {
+        "key": "B",
+        "text_en": "Write low-level assembly language code for server motherboards.",
+        "text_kr": "서버 마더보드용 저수준 어셈블리어 코드를 작성합니다."
+      },
+      {
+        "key": "C",
+        "text_en": "Physically guard the server room doors from employees.",
+        "text_kr": "서버실 문 앞을 직원들로부터 물리적으로 경비합니다."
+      },
+      {
+        "key": "D",
+        "text_en": "Audit employee personal tax returns.",
+        "text_kr": "직원들의 개인 세금 환급 내역을 감사합니다."
+      }
+    ],
+    "correct_answer": "A",
+    "explanation_kr": "정답은 A입니다.\n\n• **AI 챔피언(AI Champion)**은 현업 부서의 실무 전문가이면서 AI 기술에 열정을 가진 핵심 인재입니다.\n• 중앙 IT의 탑다운 지시보다 현업 동료의 추천과 코칭이 훨씬 빠르게 수용되므로, 변화 관리의 가교 역할을 하는 가장 핵심적인 인력 네트워크입니다.",
+    "key_concept": "AI Champions, Peer Coaching, Grassroots Innovation, Feedback Loop"
+  },
+  {
+    "id": "D4-Q15",
+    "domain": "Domain 4",
+    "domain_name": "비즈니스 준비성, 리더십, AI 혁신 (Business Readiness, Leadership & Transformation)",
+    "question_en": "Why is establishing a continuous feedback loop and monitoring mechanism vital after deploying an enterprise AI initiative from launch into ongoing operations?",
+    "question_kr": "엔터프라이즈 AI 이니셔티브를 출시(Launch)한 후 지속적인 운영 단계로 확장할 때, 지속적인 피드백 루프와 모니터링 메커니즘을 수립하는 것이 필수적인 이유는 무엇입니까?",
+    "options": [
+      {
+        "key": "A",
+        "text_en": "AI systems operate in dynamic business environments where user needs evolve, model performance drifts, and continuous user feedback is required to iterate prompts, refine datasets, and prove ongoing business value.",
+        "text_kr": "AI 시스템은 사용자 요구가 진화하고 모델 성능이 드리프트되는 동적 환경에서 동작하므로, 프롬프트를 반복 개선하고 데이터셋을 정제하며 지속적인 비즈니스 가치를 입증하기 위해 사용자 피드백이 지속적으로 필요하기 때문입니다."
+      },
+      {
+        "key": "B",
+        "text_en": "Once deployed, AI software never requires monitoring or updates for the next 50 years.",
+        "text_kr": "한 번 배포된 AI 소프트웨어는 향후 50년 동안 어떠한 모니터링이나 업데이트도 필요하지 않기 때문입니다."
+      },
+      {
+        "key": "C",
+        "text_en": "To automatically delete all user profiles at the end of each fiscal quarter.",
+        "text_kr": "매 회계 분기 말마다 모든 사용자 프로필을 자동으로 삭제하기 위해."
+      },
+      {
+        "key": "D",
+        "text_en": "Because cloud servers cannot function without daily manual restarts.",
+        "text_kr": "클라우드 서버는 매일 수동으로 재시작하지 않으면 작동할 수 없기 때문입니다."
+      }
+    ],
+    "correct_answer": "A",
+    "explanation_kr": "정답은 A입니다.\n\n• AI 솔루션은 '한 번 배포하고 끝(Fire and Forget)'인 소프트웨어가 아닙니다.\n• 실제 사용자의 만족도, 정답률, 비즈니스 성과를 지속적으로 수집하는 **피드백 루프(Feedback Loop)**를 통해 프롬프트를 미세 조정하고, 모델 드리프트를 감지하며, 추가 개선 영역을 파악하는 지속적인 선순환 체계를 운영해야 합니다.",
+    "key_concept": "Continuous Feedback Loop, Post-Deployment Scaling, Long-Term Value Tracking"
+  }
+]

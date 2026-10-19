@@ -1,0 +1,482 @@
+[
+  {
+    "id": "D1-Q01",
+    "domain": "Domain 1",
+    "domain_name": "AI 기초 및 활용 능력 (AI Fundamentals and Literacy)",
+    "question_en": "A retail company wants to automate its customer service. The company has thousands of existing internal PDF policy manuals and FAQs. The customer service team needs a solution that provides accurate answers strictly based on these internal documents and avoids hallucinations. The team does not have deep machine learning expertise or a budget to train models from scratch. Which approach best meets these requirements?",
+    "question_kr": "한 소매 기업이 고객 서비스를 자동화하고자 합니다. 이 기업은 수천 개의 기존 내부 PDF 정책 매뉴얼과 FAQ 문서를 보유하고 있습니다. 고객 서비스 팀은 모델의 자체적인 환각(hallucination)을 방지하고 철저히 이 내부 문서에 근거하여 정확한 답변을 제공하는 솔루션을 필요로 합니다. 이 팀은 딥러닝 전문 지식이 없으며 모델을 처음부터 학습시킬 예산도 없습니다. 이러한 요구 사항을 가장 잘 충족하는 접근 방식은 무엇입니까?",
+    "options": [
+      {
+        "key": "A",
+        "text_en": "Pre-train a proprietary foundation model from scratch using internal documents.",
+        "text_kr": "내부 문서를 사용하여 처음부터 독자적인 파운데이션 모델을 사전 학습(Pre-train)합니다."
+      },
+      {
+        "key": "B",
+        "text_en": "Use Retrieval-Augmented Generation (RAG) with Knowledge Bases for Amazon Bedrock connected to the document repository.",
+        "text_kr": "문서 저장소에 연결된 Knowledge Bases for Amazon Bedrock과 함께 검색 증강 생성(RAG)을 사용합니다."
+      },
+      {
+        "key": "C",
+        "text_en": "Fine-tune a large language model with labeled input-output pairs for every single policy question.",
+        "text_kr": "모든 단일 정책 질문에 대해 라벨링된 입출력 쌍을 만들어 대규모 언어 모델을 파인 튜닝(Fine-tune)합니다."
+      },
+      {
+        "key": "D",
+        "text_en": "Implement a deterministic rule-based decision tree without using any generative AI models.",
+        "text_kr": "생성형 AI 모델을 사용하지 않고 결정론적인 규칙 기반 의사결정 트리를 구현합니다."
+      }
+    ],
+    "correct_answer": "B",
+    "explanation_kr": "정답은 B입니다.\n\n• RAG(검색 증강 생성)는 최신 내부 문서를 실시간 검색하여 프롬프트의 컨텍스트로 제공하므로, 환각(Hallucination)을 획기적으로 줄이고 출처 기반의 정확한 답변을 제공하는 데 최적입니다.\n• Knowledge Bases for Amazon Bedrock은 완전관리형 RAG 서비스로 인프라 구축이나 복잡한 ML 코딩 없이 클릭 몇 번으로 S3 문서를 연동할 수 있어 머신러닝 전문 지식이 부족한 팀에 가장 적합합니다.\n• A(사전 학습)는 천문학적인 비용과 데이터가 소요되므로 오답입니다.\n• C(파인 튜닝)는 지식 주입보다는 모델의 '말투나 형식' 변경에 적합하며, 지속적으로 변경되는 정책 문서를 반영하려면 매번 재학습 비용이 발생하므로 비효율적입니다.\n• D(규칙 기반 의사결정 트리)는 방대한 자연어 정책 문서와 다양한 고객 질의의 모호성을 유연하게 처리할 수 없습니다.",
+    "key_concept": "RAG (Retrieval-Augmented Generation), Knowledge Bases for Amazon Bedrock, Hallucination Prevention"
+  },
+  {
+    "id": "D1-Q02",
+    "domain": "Domain 1",
+    "domain_name": "AI 기초 및 활용 능력 (AI Fundamentals and Literacy)",
+    "question_en": "A company wants to introduce an AI solution to handle complex customer travel booking requests. The system must understand user intentions, break down goals into sub-tasks, check airline flight availability APIs, query hotel database systems, and process the final payment transaction autonomously. Which AI technology best describes this capability?",
+    "question_kr": "한 기업이 복잡한 고객 여행 예약 요청을 처리하기 위해 AI 솔루션을 도입하고자 합니다. 시스템은 사용자의 의도를 파악하고, 목표를 하위 작업으로 분해하며, 항공편 가용성 API를 확인하고, 호텔 데이터베이스 시스템을 조회하고, 최종 결제 거래를 자율적으로 처리해야 합니다. 이러한 기능을 가장 잘 설명하는 AI 기술은 무엇입니까?",
+    "options": [
+      {
+        "key": "A",
+        "text_en": "Rule-based Robotic Process Automation (RPA)",
+        "text_kr": "규칙 기반 로봇 프로세스 자동화 (RPA)"
+      },
+      {
+        "key": "B",
+        "text_en": "Static Machine Learning Classification Model",
+        "text_kr": "정적 머신러닝 분류 모델"
+      },
+      {
+        "key": "C",
+        "text_en": "AI Agents with tool usage and multi-step orchestration",
+        "text_kr": "도구 사용 및 다단계 오케스트레이션 기능을 갖춘 AI 에이전트"
+      },
+      {
+        "key": "D",
+        "text_en": "Few-Shot Prompt Engineering on a standalone language model",
+        "text_kr": "단독 언어 모델에 대한 퓨샷(Few-Shot) 프롬프트 엔지니어링"
+      }
+    ],
+    "correct_answer": "C",
+    "explanation_kr": "정답은 C입니다.\n\n• AI 에이전트(AI Agents)는 단순한 텍스트 생성을 넘어, 자율성(Autonomy)을 바탕으로 상위 목표를 실행 가능한 세부 계획으로 분해(Planning)하고, 외부 도구 및 API(항공편 조회, 호텔 DB, 결제 시스템)를 호출하여 엔드투엔드 작업을 완수하는 시스템입니다.\n• A(RPA)는 정해진 규칙에 따라 화면 클릭을 반복할 뿐, 자연어 의도 파악 및 동적 계획 수립이 불가능합니다.\n• B(분류 모델)는 입력 데이터를 카테고리로 분류할 뿐 외부 API 실행 능력이 없습니다.\n• D(단독 LLM의 퓨샷)는 텍스트 답변만 생성할 뿐 외부 시스템과의 상호작용(Action)을 수행할 수 없습니다.",
+    "key_concept": "AI Agents, Autonomy, Tool Usage, Multi-Step Orchestration"
+  },
+  {
+    "id": "D1-Q03",
+    "domain": "Domain 1",
+    "domain_name": "AI 기초 및 활용 능력 (AI Fundamentals and Literacy)",
+    "question_en": "Employees in a financial firm are using publicly accessible third-party generative AI chatbots to draft client emails and summarize financial reports. The Chief Information Security Officer (CISO) is concerned about confidential corporate data and Personally Identifiable Information (PII) being exposed or used to train third-party public models. What is the business term for this risk, and what is the best immediate strategic mitigation?",
+    "question_kr": "한 금융 회사의 직원들이 고객 이메일을 작성하고 재무 보고서를 요약하기 위해 공개적으로 접근 가능한 서드파티 생성형 AI 챗봇을 사용하고 있습니다. 최고정보보호책임자(CISO)는 기업 기밀 데이터와 개인 식별 정보(PII)가 유출되거나 서드파티 공용 모델의 학습에 사용될 것을 우려하고 있습니다. 이러한 위험을 가리키는 비즈니스 용어는 무엇이며, 가장 적절한 즉각적인 전략적 완화 조치는 무엇입니까?",
+    "options": [
+      {
+        "key": "A",
+        "text_en": "Model Drift; mitigate by retraining models on historical corporate logs.",
+        "text_kr": "모델 드리프트; 과거 기업 로그를 기반으로 모델을 재학습하여 완화합니다."
+      },
+      {
+        "key": "B",
+        "text_en": "Shadow AI; mitigate by establishing an approved enterprise AI tool classification and providing a secure, governed enterprise alternative.",
+        "text_kr": "섀도 AI (Shadow AI); 승인된 엔터프라이즈 AI 도구 분류 체계를 수립하고 안전하게 통제되는 사내 대안 도구를 제공하여 완화합니다."
+      },
+      {
+        "key": "C",
+        "text_en": "Prompt Injection; mitigate by enforcing token limits on all employee internet requests.",
+        "text_kr": "프롬프트 주입; 모든 직원의 인터넷 요청에 대해 토큰 제한을 강제하여 완화합니다."
+      },
+      {
+        "key": "D",
+        "text_en": "Data Bias; mitigate by hiring external auditors to evaluate the third-party chatbots.",
+        "text_kr": "데이터 편향; 외부 감사인을 고용하여 서드파티 챗봇을 평가함으로써 완화합니다."
+      }
+    ],
+    "correct_answer": "B",
+    "explanation_kr": "정답은 B입니다.\n\n• 사내 승인이나 보안 통제 없이 직원들이 외부 상용 AI 툴을 임의로 사용하는 현상을 '섀도 AI(Shadow AI)'라고 부릅니다. 이로 인해 데이터 유출, 저작권 침해, 규정 위반이 발생할 수 있습니다.\n• 이를 효과적으로 완화하기 위해서는 단순히 전면 차단만 할 것이 아니라, 투명한 분류 기준(승인, 차단, 평가 중)을 설정하고, 기업 데이터가 외부 학습에 쓰이지 않는 안전한 엔터프라이즈 솔루션(예: Amazon Q Business, 사내 Bedrock 기반 시스템)을 공식 제공해야 합니다.\n• A(모델 드리프트), C(프롬프트 주입), D(데이터 편향)는 이 보안/거버넌스 시나리오와 맞지 않습니다.",
+    "key_concept": "Shadow AI, Data Privacy, Enterprise AI Tool Classification"
+  },
+  {
+    "id": "D1-Q04",
+    "domain": "Domain 1",
+    "domain_name": "AI 기초 및 활용 능력 (AI Fundamentals and Literacy)",
+    "question_en": "A business analyst wants to choose between traditional rule-based programming and an AI/Machine Learning solution for an invoice validation process. Under which circumstance is a rule-based approach distinctly preferable to an AI model?",
+    "question_kr": "한 비즈니스 분석가가 인보이스(청구서) 검증 프로세스를 위해 전통적인 규칙 기반 프로그래밍과 AI/머신러닝 솔루션 중 하나를 선택하고자 합니다. 어떤 상황에서 규칙 기반 접근 방식이 AI 모델보다 명백히 더 선호됩니까?",
+    "options": [
+      {
+        "key": "A",
+        "text_en": "When the invoice format varies drastically across hundreds of suppliers and contains handwritten unstructured notes.",
+        "text_kr": "수백 개의 공급업체마다 인보이스 형식이 완전히 제각각이고 손으로 쓴 비정형 메모가 포함되어 있을 때."
+      },
+      {
+        "key": "B",
+        "text_en": "When the business process has strictly defined deterministic IF-THEN logic with zero tolerance for probabilistic variation.",
+        "text_kr": "비즈니스 프로세스가 엄격하게 정의된 결정론적 IF-THEN 로직을 따르며 확률적 변동(오차)을 전혀 용인할 수 없을 때."
+      },
+      {
+        "key": "C",
+        "text_en": "When historical invoice data contains shifting economic trends and continuous pattern changes.",
+        "text_kr": "과거 인보이스 데이터에 변화하는 경제 트렌드와 지속적인 패턴 변화가 포함되어 있을 때."
+      },
+      {
+        "key": "D",
+        "text_en": "When the primary goal is to generate creative and novel payment reminder emails tailored to customer personalities.",
+        "text_kr": "주요 목표가 고객 성향에 맞춘 창의적이고 새로운 결제 알림 이메일을 생성하는 것일 때."
+      }
+    ],
+    "correct_answer": "B",
+    "explanation_kr": "정답은 B입니다.\n\n• 세금 계산, 수학적 금액 일치 여부 확인, 법적 필수 항목 누락 여부 등 명확한 규정(IF-THEN)과 100% 결정론적(Deterministic) 결과가 필요한 영역에서는 규칙 기반 자동화가 AI보다 훨씬 신뢰성이 높고 비용 효율적입니다.\n• A, C, D는 복잡한 비정형 데이터 처리, 패턴 적응, 자연어 창작이 필요한 영역이므로 AI/ML 및 GenAI가 적합한 사례입니다.",
+    "key_concept": "Rule-Based vs AI Solution, Deterministic Logic"
+  },
+  {
+    "id": "D1-Q05",
+    "domain": "Domain 1",
+    "domain_name": "AI 기초 및 활용 능력 (AI Fundamentals and Literacy)",
+    "question_en": "A product team is evaluating how to improve a generative AI customer assistant. The team notices that including the entire customer chat history and multiple product catalogs in every prompt causes slow response latency and significantly increases API token costs. Which technical concept directly explains this limitation?",
+    "question_kr": "한 제품 팀이 생성형 AI 고객 어시스턴트를 개선하는 방법을 평가하고 있습니다. 팀은 모든 프롬프트에 전체 고객 채팅 기록과 여러 제품 카탈로그를 전부 포함시키면 응답 지연 시간(latency)이 길어지고 API 토큰 비용이 크게 증가한다는 사실을 발견했습니다. 이러한 한계를 직접적으로 설명하는 기술적 개념은 무엇입니까?",
+    "options": [
+      {
+        "key": "A",
+        "text_en": "Context window constraints and token processing consumption",
+        "text_kr": "컨텍스트 윈도우(Context window) 제약 및 토큰 처리 소비량"
+      },
+      {
+        "key": "B",
+        "text_en": "Catastrophic forgetting during continuous pre-training",
+        "text_kr": "지속적 사전 학습 중 발생하는 파국적 망각(Catastrophic forgetting)"
+      },
+      {
+        "key": "C",
+        "text_en": "Overfitting caused by excessive model parameters",
+        "text_kr": "과도한 모델 파라미터로 인한 과적합(Overfitting)"
+      },
+      {
+        "key": "D",
+        "text_en": "Quantization loss in foundation models",
+        "text_kr": "파운데이션 모델의 양자화 손실(Quantization loss)"
+      }
+    ],
+    "correct_answer": "A",
+    "explanation_kr": "정답은 A입니다.\n\n• LLM은 입력과 출력을 '토큰(Token)' 단위로 처리하며, 한 번에 처리할 수 있는 최대 용량을 '컨텍스트 윈도우(Context Window)'라고 합니다.\n• 프롬프트에 불필요하게 방대한 텍스트(전체 채팅 기록, 대용량 카탈로그)를 계속 넣으면 토큰 사용량이 급증하여 API 청구 비용이 증가하고, 모델의 연산 시간(지연 시간)이 길어집니다.\n• 이를 해결하기 위해 요약 기법이나 RAG를 사용하여 꼭 필요한 관련 청크만 검색하여 주입하는 전략이 필요합니다.",
+    "key_concept": "Context Window, Token Limits, Latency and Cost Optimization"
+  },
+  {
+    "id": "D1-Q06",
+    "domain": "Domain 1",
+    "domain_name": "AI 기초 및 활용 능력 (AI Fundamentals and Literacy)",
+    "question_en": "An international enterprise wants to align its AI management practices with globally recognized standards for risk management, ethical considerations, and organizational governance. Which international standard specifically provides requirements and guidance for establishing, implementing, and continually improving an Artificial Intelligence Management System (AIMS)?",
+    "question_kr": "한 다국적 기업이 자사의 AI 관리 프랙티스를 위험 관리, 윤리적 고려 사항 및 조직 거버넌스를 다루는 국제적으로 공인된 표준에 맞추고자 합니다. 인공지능 경영시스템(AIMS)의 수립, 구현, 유지 및 지속적 개선을 위한 요구 사항과 지침을 구체적으로 제공하는 국제 표준은 무엇입니까?",
+    "options": [
+      {
+        "key": "A",
+        "text_en": "ISO/IEC 42001",
+        "text_kr": "ISO/IEC 42001"
+      },
+      {
+        "key": "B",
+        "text_en": "PCI DSS Level 1",
+        "text_kr": "PCI DSS 레벨 1"
+      },
+      {
+        "key": "C",
+        "text_en": "HIPAA Security Rule",
+        "text_kr": "HIPAA 보안 규칙"
+      },
+      {
+        "key": "D",
+        "text_en": "IEEE 802.11ax",
+        "text_kr": "IEEE 802.11ax"
+      }
+    ],
+    "correct_answer": "A",
+    "explanation_kr": "정답은 A입니다.\n\n• ISO/IEC 42001은 세계 최초의 공인된 '인공지능 경영시스템(AIMS, Artificial Intelligence Management System)' 국제 표준입니다. 조직이 책임감 있게 AI를 개발, 제공 또는 사용하는 체계적인 거버넌스 및 리스크 관리 요구사항을 명시하고 있습니다.\n• B(PCI DSS)는 신용카드 결제 보안 표준, C(HIPAA)는 미국 의료 정보 보호법, D(IEEE 802.11ax)는 Wi-Fi 6 무선 통신 규격입니다.",
+    "key_concept": "ISO/IEC 42001, AI Management System (AIMS), Global AI Standards"
+  },
+  {
+    "id": "D1-Q07",
+    "domain": "Domain 1",
+    "domain_name": "AI 기초 및 활용 능력 (AI Fundamentals and Literacy)",
+    "question_en": "A company is trying to solve two distinct business challenges: (1) predicting future quarterly customer churn probabilities based on monthly credit card billing records, and (2) summarizing thousands of unstructured customer voice call transcripts. Which pair of data types correctly categorizes these two sources?",
+    "question_kr": "한 기업이 두 가지 상이한 비즈니스 과제를 해결하고자 합니다: (1) 월별 신용카드 청구 내역을 바탕으로 향후 분기별 고객 이탈 확률 예측, (2) 수천 건의 비정형 고객 음성 통화 녹취록 요약. 이 두 가지 데이터 소스를 올바르게 분류한 쌍은 무엇입니까?",
+    "options": [
+      {
+        "key": "A",
+        "text_en": "(1) Structured data, (2) Unstructured data",
+        "text_kr": "(1) 정형 데이터, (2) 비정형 데이터"
+      },
+      {
+        "key": "B",
+        "text_en": "(1) Unstructured data, (2) Structured data",
+        "text_kr": "(1) 비정형 데이터, (2) 정형 데이터"
+      },
+      {
+        "key": "C",
+        "text_en": "Both are classified strictly as Synthetic data",
+        "text_kr": "두 데이터 모두 엄격하게 합성 데이터로 분류됨"
+      },
+      {
+        "key": "D",
+        "text_en": "Both are classified strictly as Vector embeddings",
+        "text_kr": "두 데이터 모두 엄격하게 벡터 임베딩으로 분류됨"
+      }
+    ],
+    "correct_answer": "A",
+    "explanation_kr": "정답은 A입니다.\n\n• 월별 결제 내역과 수치 데이터는 행/열 규격이 명확한 '정형 데이터(Structured Data)'이며, 전통적인 ML 분류 알고리즘에 매우 적합합니다.\n• 반면 고객 통화 녹취록, 텍스트 이메일, 문서 등은 사전 정의된 데이터 모델이 없는 '비정형 데이터(Unstructured Data)'이며, 대규모 언어 모델(LLM)과 생성형 AI가 탁월한 역량을 발휘하는 영역입니다.",
+    "key_concept": "Structured vs Unstructured Data, Traditional ML vs GenAI Suitability"
+  },
+  {
+    "id": "D1-Q08",
+    "domain": "Domain 1",
+    "domain_name": "AI 기초 및 활용 능력 (AI Fundamentals and Literacy)",
+    "question_en": "An engineering recruitment firm trained a candidate screening model using resumes submitted over the past 15 years. The model consistently ranks female engineering candidates lower than male candidates with identical qualifications. What foundational data issue causes this outcome, and what concept explains it?",
+    "question_kr": "한 엔지니어링 채용 회사가 지난 15년간 접수된 이력서를 사용하여 지원자 서류 스크리닝 모델을 학습시켰습니다. 이 모델은 동일한 자격을 갖춘 여성 엔지니어 지원자에게 남성 지원자보다 지속적으로 더 낮은 순위를 부여합니다. 이러한 결과를 초래한 근본적인 데이터 문제는 무엇이며 어떤 개념으로 설명됩니까?",
+    "options": [
+      {
+        "key": "A",
+        "text_en": "Historical Bias in training data reflecting past demographic imbalances in industry hiring",
+        "text_kr": "과거 업계 채용의 인구통계학적 불균형을 반영한 학습 데이터 내의 '과거 편향(Historical Bias)'"
+      },
+      {
+        "key": "B",
+        "text_en": "Context window token truncation in the vector database",
+        "text_kr": "벡터 데이터베이스에서의 컨텍스트 윈도우 토큰 잘림 현상"
+      },
+      {
+        "key": "C",
+        "text_en": "Hardware GPU thermal throttling during model inference",
+        "text_kr": "모델 추론 중 발생한 하드웨어 GPU의 발열 스로틀링"
+      },
+      {
+        "key": "D",
+        "text_en": "Shadow AI usage by applicants submitting altered resumes",
+        "text_kr": "지원자들이 위조된 이력서를 제출하여 발생한 섀도 AI 사용 문제"
+      }
+    ],
+    "correct_answer": "A",
+    "explanation_kr": "정답은 A입니다.\n\n• 머신러닝 모델은 입력된 데이터의 통계적 패턴을 그대로 학습합니다. 과거 15년간 남성 채용 비율이 압도적으로 높았다면, 모델은 '성별' 또는 성별과 관련된 단어를 합격의 긍정적 지표로 오인하는 '과거 편향(Historical Bias)'을 학습하게 됩니다.\n• 'Garbage In, Garbage Out' 원칙에 따라 데이터의 품질과 공정성 검증이 AI 모델의 성공에 필수적입니다.",
+    "key_concept": "Historical Bias, Data Quality, Responsible AI Fairness"
+  },
+  {
+    "id": "D1-Q09",
+    "domain": "Domain 1",
+    "domain_name": "AI 기초 및 활용 능력 (AI Fundamentals and Literacy)",
+    "question_en": "A marketing manager wants a foundation model to categorize customer feedback into three distinct sentiments and output the result strictly as a valid JSON object. Instead of modifying model weights, the manager provides three exemplary input-output JSON pairs within the prompt text. Which prompt engineering technique is being utilized?",
+    "question_kr": "한 마케팅 관리자가 파운데이션 모델을 통해 고객 피드백을 세 가지 감정으로 분류하고 결과를 엄격히 유효한 JSON 객체 형태로 출력받고자 합니다. 모델의 가중치를 수정하지 않고, 관리자는 프롬프트 텍스트 내에 3개의 모범적인 입출력 JSON 예시를 포함시켰습니다. 어떤 프롬프트 엔지니어링 기법이 활용되고 있습니까?",
+    "options": [
+      {
+        "key": "A",
+        "text_en": "Zero-Shot Prompting",
+        "text_kr": "제로샷 프롬프팅 (Zero-Shot Prompting)"
+      },
+      {
+        "key": "B",
+        "text_en": "Few-Shot Prompting (In-Context Learning)",
+        "text_kr": "퓨샷 프롬프팅 (Few-Shot Prompting / In-Context Learning)"
+      },
+      {
+        "key": "C",
+        "text_en": "Supervised Fine-Tuning (SFT)",
+        "text_kr": "지도 미세 조정 (Supervised Fine-Tuning)"
+      },
+      {
+        "key": "D",
+        "text_en": "Low-Rank Adaptation (LoRA)",
+        "text_kr": "LoRA (Low-Rank Adaptation)"
+      }
+    ],
+    "correct_answer": "B",
+    "explanation_kr": "정답은 B입니다.\n\n• 모델에 예시를 전혀 주지 않고 바로 질문하는 것을 '제로샷(Zero-Shot)'이라고 합니다.\n• 프롬프트 내에 몇 가지 모범 입출력 예시(2~3개)를 제공하여 모델이 원하는 패턴과 형식을 모방하도록 유도하는 기법을 **퓨샷 프롬프팅(Few-Shot Prompting)** 또는 인컨텍스트 학습(In-Context Learning)이라고 부릅니다.\n• C와 D는 모델 파라미터 가중치를 직접 변경하는 미세 조정 기법이므로 프롬프트 텍스트만 설계하는 이 시나리오와 다릅니다.",
+    "key_concept": "Few-Shot Prompting, In-Context Learning, Prompt Engineering"
+  },
+  {
+    "id": "D1-Q10",
+    "domain": "Domain 1",
+    "domain_name": "AI 기초 및 활용 능력 (AI Fundamentals and Literacy)",
+    "question_en": "A business strategist is evaluating the technical architecture of a Retrieval-Augmented Generation (RAG) system. What is the fundamental purpose of 'chunking' enterprise documents before storing them in a vector database for semantic search?",
+    "question_kr": "한 비즈니스 전략가가 검색 증강 생성(RAG) 시스템의 기술 아키텍처를 평가하고 있습니다. 시맨틱(의미론적) 검색을 위해 엔터프라이즈 문서를 벡터 데이터베이스에 저장하기 전에 문서를 '청킹(Chunking, 쪼개기)'하는 근본적인 목적은 무엇입니까?",
+    "options": [
+      {
+        "key": "A",
+        "text_en": "To fit within embedding model limits and ensure retrieved passages are highly relevant, specific, and fit inside the LLM context window.",
+        "text_kr": "임베딩 모델의 한계 내에 맞추고, 검색된 구절이 매우 관련성 높고 구체적이며 LLM의 컨텍스트 윈도우 내에 최적화되도록 보장하기 위해."
+      },
+      {
+        "key": "B",
+        "text_en": "To permanently delete sensitive employee records without an audit trail.",
+        "text_kr": "감사 추적 없이 민감한 직원 기록을 영구 삭제하기 위해."
+      },
+      {
+        "key": "C",
+        "text_en": "To convert unstructured English text into relational SQL tables.",
+        "text_kr": "비정형 영어 텍스트를 관계형 SQL 테이블로 변환하기 위해."
+      },
+      {
+        "key": "D",
+        "text_en": "To bypass token pricing charges imposed by cloud providers.",
+        "text_kr": "클라우드 공급업체가 부과하는 토큰 요금 청구를 우회하기 위해."
+      }
+    ],
+    "correct_answer": "A",
+    "explanation_kr": "정답은 A입니다.\n\n• RAG 시스템에서 100페이지 분량의 PDF 전체를 한 번에 벡터화하면 검색 정확도가 떨어지고 LLM 컨텍스트 윈도우를 초과하게 됩니다.\n• 문서를 의미 있는 작은 단락 단위로 쪼개는 **청킹(Chunking)**을 통해, 사용자의 질문과 가장 밀접한 구절만 정밀하게 검색(Retrieval)하여 프롬프트에 주입할 수 있습니다.",
+    "key_concept": "RAG Architecture, Document Chunking, Vector Embeddings"
+  },
+  {
+    "id": "D1-Q11",
+    "domain": "Domain 1",
+    "domain_name": "AI 기초 및 활용 능력 (AI Fundamentals and Literacy)",
+    "question_en": "An e-commerce company wants an AI assistant that can analyze customer product reviews containing both uploaded photos of damaged items and descriptive text complaints simultaneously to determine warranty eligibility. Which category of AI model is required for this use case?",
+    "question_kr": "한 이커머스 기업이 보증 적용 여부를 판정하기 위해 고객이 업로드한 파손 제품 사진과 설명 텍스트 불만 사항을 동시에 분석할 수 있는 AI 어시스턴트를 도입하고자 합니다. 이 유스케이스에 필요한 AI 모델 범주는 무엇입니까?",
+    "options": [
+      {
+        "key": "A",
+        "text_en": "Multimodal Foundation Model",
+        "text_kr": "멀티모달 파운데이션 모델 (Multimodal Foundation Model)"
+      },
+      {
+        "key": "B",
+        "text_en": "Single-variable Linear Regression Model",
+        "text_kr": "단변량 선형 회귀 모델"
+      },
+      {
+        "key": "C",
+        "text_en": "Optical Character Recognition (OCR) only without text understanding",
+        "text_kr": "텍스트 이해 기능이 없는 단순 광학 문자 인식(OCR)"
+      },
+      {
+        "key": "D",
+        "text_en": "Rule-based Decision Table",
+        "text_kr": "규칙 기반 의사결정 테이블"
+      }
+    ],
+    "correct_answer": "A",
+    "explanation_kr": "정답은 A입니다.\n\n• 텍스트, 이미지, 오디오, 비디오 등 둘 이상의 상이한 데이터 양식(Modalities)을 동시에 처리하고 이해할 수 있는 모델을 **멀티모달(Multimodal) 파운데이션 모델**(예: Claude 3.5 Sonnet on Bedrock)이라고 부릅니다.\n• 이미지 속 파손 상태를 시각적으로 인식하고 텍스트 불만 내용과 종합하여 판단해야 하므로 멀티모달 역량이 필수적입니다.",
+    "key_concept": "Multimodal Foundation Models, Text and Vision Processing"
+  },
+  {
+    "id": "D1-Q12",
+    "domain": "Domain 1",
+    "domain_name": "AI 기초 및 활용 능력 (AI Fundamentals and Literacy)",
+    "question_en": "When designing an automated accounts payable process, an organization wants to capture data from structured PDFs, validate invoice totals with deterministic math rules, and route exceptions to human clerks. Which strategy represents the best operational practice?",
+    "question_kr": "외상매입금(Accounts Payable) 처리 프로세스를 자동화할 때, 한 조직은 정형 PDF에서 데이터를 캡처하고, 결정론적 수학 규칙으로 인보이스 총액을 검증하며, 예외 사항은 담당 직원에게 라우팅하고자 합니다. 가장 모범적인 운영 프랙티스는 무엇입니까?",
+    "options": [
+      {
+        "key": "A",
+        "text_en": "Combine Intelligent Document Processing (AI OCR) with deterministic Rule-Based Automation and Human-in-the-Loop exception routing.",
+        "text_kr": "지능형 문서 처리(AI OCR)와 결정론적 규칙 기반 자동화, 그리고 인간 참여형(Human-in-the-Loop) 예외 처리 라우팅을 결합합니다."
+      },
+      {
+        "key": "B",
+        "text_en": "Use an unconstrained LLM to perform all financial balance arithmetic autonomously.",
+        "text_kr": "제약 없는 LLM을 단독 사용하여 모든 재무 잔액 산술 계산을 자율적으로 수행하도록 합니다."
+      },
+      {
+        "key": "C",
+        "text_en": "Rely 100% on manual human data entry without any software automation.",
+        "text_kr": "어떠한 소프트웨어 자동화도 없이 100% 수동 수기 입력에만 의존합니다."
+      },
+      {
+        "key": "D",
+        "text_en": "Fine-tune an open-source diffusion model on invoice images.",
+        "text_kr": "인보이스 이미지를 바탕으로 오픈소스 디퓨전(이미지 생성) 모델을 파인 튜닝합니다."
+      }
+    ],
+    "correct_answer": "A",
+    "explanation_kr": "정답은 A입니다.\n\n• 현대 비즈니스 프로세스에서는 AI와 규칙 기반 자동화(RPA)의 **상호 보완적 결합(Hybrid)**이 가장 이상적입니다.\n• 문서 판독 및 정보 추출은 AI(지능형 문서 처리)가 담당하고, 정확한 100% 산술 계산 및 규정 검증은 규칙 기반 엔진이 담당하며, 오차나 불일치는 인간 전문가(HITL)가 검토하도록 설계해야 안전하고 효율적입니다.",
+    "key_concept": "Hybrid Automation, Intelligent Document Processing (IDP), Rule-Based Validation"
+  },
+  {
+    "id": "D1-Q13",
+    "domain": "Domain 1",
+    "domain_name": "AI 기초 및 활용 능력 (AI Fundamentals and Literacy)",
+    "question_en": "An AI development lead explains to business executives that using an LLM in a production web application could experience response latency variations and streaming text generation. What is the business advantage of enabling token streaming in user-facing customer interfaces?",
+    "question_kr": "한 AI 개발 리드가 프로덕션 웹 애플리케이션에서 LLM을 사용할 때 응답 지연 시간 변동과 텍스트 스트리밍 생성이 발생할 수 있음을 경영진에게 설명합니다. 대고객 인터페이스에서 '토큰 스트리밍(Token Streaming)'을 활성화했을 때 얻을 수 있는 비즈니스상 이점은 무엇입니까?",
+    "options": [
+      {
+        "key": "A",
+        "text_en": "It significantly improves perceived user latency by displaying words immediately as they are generated rather than waiting for the complete response.",
+        "text_kr": "전체 응답이 완료될 때까지 기다리지 않고 생성되는 즉시 단어를 실시간 화면에 표시하여 사용자가 체감하는 지연 시간(Perceived Latency)을 대폭 개선합니다."
+      },
+      {
+        "key": "B",
+        "text_en": "It eliminates all cloud computing token costs completely.",
+        "text_kr": "클라우드 컴퓨팅의 모든 토큰 비용을 100% 완전히 면제해 줍니다."
+      },
+      {
+        "key": "C",
+        "text_en": "It permanently prevents models from generating biased responses.",
+        "text_kr": "모델이 편향된 응답을 생성하는 것을 영구적으로 방지합니다."
+      },
+      {
+        "key": "D",
+        "text_en": "It automatically translates all answers into 50 global languages simultaneously.",
+        "text_kr": "모든 답변을 동시에 전 세계 50개 언어로 자동 번역해 줍니다."
+      }
+    ],
+    "correct_answer": "A",
+    "explanation_kr": "정답은 A입니다.\n\n• LLM이 긴 문장을 생성할 때 전체 생성이 끝날 때까지 빈 화면을 보여주면(예: 8초 대기) 사용자는 시스템이 멈춘 것으로 착각하고 이탈할 수 있습니다.\n• **스트리밍(Streaming)** 기술은 첫 단어가 생성되자마자 실시간으로 타이핑되듯 보여주어 최초 응답 시간(TTFT, Time to First Token)을 단축시키고 사용자 체감 만족도를 획기적으로 높여줍니다.",
+    "key_concept": "Token Streaming, Perceived Latency, User Experience Optimization"
+  },
+  {
+    "id": "D1-Q14",
+    "domain": "Domain 1",
+    "domain_name": "AI 기초 및 활용 능력 (AI Fundamentals and Literacy)",
+    "question_en": "Which capability is essential for an AI Agent to take real-world actions, such as looking up an order status in a SQL database or executing a refund in a CRM system?",
+    "question_kr": "AI 에이전트가 SQL 데이터베이스에서 주문 상태를 조회하거나 CRM 시스템에서 환불을 실행하는 등 실제 환경에서 액션을 수행하기 위해 반드시 갖추어야 하는 필수 역량은 무엇입니까?",
+    "options": [
+      {
+        "key": "A",
+        "text_en": "Tool Usage / Action Groups (API integration)",
+        "text_kr": "도구 사용 / 액션 그룹 (API 연동 역량)"
+      },
+      {
+        "key": "B",
+        "text_en": "Pre-training from scratch on billion-parameter datasets",
+        "text_kr": "수십억 파라미터 데이터셋에 대한 처음부터의 사전 학습"
+      },
+      {
+        "key": "C",
+        "text_en": "Increasing temperature parameter to maximum value",
+        "text_kr": "온도(temperature) 파라미터를 최댓값으로 증가시키기"
+      },
+      {
+        "key": "D",
+        "text_en": "Restricting context window size to under 256 tokens",
+        "text_kr": "컨텍스트 윈도우 크기를 256 토큰 이하로 제한하기"
+      }
+    ],
+    "correct_answer": "A",
+    "explanation_kr": "정답은 A입니다.\n\n• AI 에이전트(예: Agents for Amazon Bedrock)의 핵심 역량은 사용자의 자연어 목표를 해석한 뒤, OpenAPI 스키마나 Lambda 함수로 정의된 **도구(Tools/Action Groups)**를 스스로 선택하여 실제 외부 시스템(DB 조회, 결제, 이메일 발송 등)을 호출하는 능력입니다.",
+    "key_concept": "AI Agents, Tool Calling, Action Groups, External API Integration"
+  },
+  {
+    "id": "D1-Q15",
+    "domain": "Domain 1",
+    "domain_name": "AI 기초 및 활용 능력 (AI Fundamentals and Literacy)",
+    "question_en": "Why is fine-tuning generally not recommended as the first-choice solution when an organization simply wants an LLM to answer questions about frequently updated internal company HR policies?",
+    "question_kr": "조직이 단순히 자주 변경되는 사내 HR 정책에 대해 LLM이 정확히 답변하도록 만들고자 할 때, 미세 조정(Fine-tuning)을 1순위 솔루션으로 권장하지 않는 주된 이유는 무엇입니까?",
+    "options": [
+      {
+        "key": "A",
+        "text_en": "Fine-tuning requires costly repeated retraining whenever policies update, does not eliminate hallucinations, and lacks transparent source citations compared to RAG.",
+        "text_kr": "미세 조정은 정책이 업데이트될 때마다 비용이 드는 재학습이 필요하고, 환각을 완전히 없애지 못하며, RAG에 비해 투명한 원문 출처(인용) 제공이 어렵기 때문입니다."
+      },
+      {
+        "key": "B",
+        "text_en": "Fine-tuning is prohibited by international labor regulations.",
+        "text_kr": "미세 조정은 국제 노동 규정에 의해 법적으로 금지되어 있기 때문입니다."
+      },
+      {
+        "key": "C",
+        "text_en": "Fine-tuning only works on numerical spreadsheet data, not text.",
+        "text_kr": "미세 조정은 텍스트가 아닌 오직 수치형 스프레드시트 데이터에만 동작하기 때문입니다."
+      },
+      {
+        "key": "D",
+        "text_en": "Fine-tuning automatically deletes the original foundation model weights.",
+        "text_kr": "미세 조정은 원래의 파운데이션 모델 가중치를 자동으로 삭제하기 때문입니다."
+      }
+    ],
+    "correct_answer": "A",
+    "explanation_kr": "정답은 A입니다.\n\n• 파인 튜닝은 모델에게 새로운 최신 사실(Fact)을 주입하는 용도로는 비효율적입니다. 정책이 바뀔 때마다 라벨링 데이터 준비 및 고비용 재학습이 필요하며, 근거 문서의 출처 페이지를 사용자에게 링크(Citations)로 보여줄 수 없습니다.\n• 반면 RAG는 사내 문서 S3에 문서를 교체하기만 하면 즉시 반영되며, '어떤 문서 몇 페이지를 참조했는지' 명확한 출처를 제공합니다.",
+    "key_concept": "Fine-Tuning vs RAG, Knowledge Recency, Source Citation"
+  }
+]
