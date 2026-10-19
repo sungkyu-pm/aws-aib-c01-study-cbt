@@ -693,6 +693,7 @@ def main():
 
     portal_docs = {
         'overview': exam_guide_content,
+        'exam_guide': exam_guide_content,
         'glossary': files['01_GLOSSARY_KR_EN.md'],
         'domain1': files['02_DOMAIN_1_AI_FUNDAMENTALS.md'],
         'domain2': files['03_DOMAIN_2_AI_STRATEGY_VALUE.md'],

@@ -89,11 +89,12 @@ class PortalApp {
     this.cbtClearHistoryBtn = document.getElementById('cbt-clear-history-btn');
   }
 
-  // 간단한 Fallback 마크다운 파서 (오프라인 지원)
+  // 견고한 Fallback 마크다운 파서 (오프라인 및 CDN 지연 완벽 지원)
   parseMarkdownFallback(text) {
     if (!text) return '';
-    let html = text;
-    // 임시 보존할 태그 마스킹
+    let html = text.replace(/\r\n/g, '\n');
+
+    // 1. 임시 보존할 태그 마스킹
     html = html
       .replace(/<div class="bilingual-grid">/gi, '___BILINGUAL_GRID_START___')
       .replace(/<div class="en-col">/gi, '___EN_COL_START___')
@@ -102,29 +103,52 @@ class PortalApp {
       .replace(/<span class="lang-badge en">/gi, '___LANG_EN_START___')
       .replace(/<span class="lang-badge kr">/gi, '___LANG_KR_START___')
       .replace(/<\/span>/gi, '___SPAN_END___')
+      .replace(/<br\s*\/?>/gi, '___BR_TAG___');
+
+    // 2. 코드 블록 선처리
+    html = html.replace(/```([\s\S]*?)```/g, (match, code) => {
+      const escaped = code.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+      return `<pre><code>${escaped.trim()}</code></pre>`;
+    });
+
+    // 3. HTML 특수문자 이스케이프
+    html = html
       .replace(/&/g, '&amp;')
       .replace(/</g, '&lt;')
-      .replace(/>/g, '&gt;')
+      .replace(/>/g, '&gt;');
+
+    // 4. 마스킹 태그 복원
+    html = html
       .replace(/___BILINGUAL_GRID_START___/g, '<div class="bilingual-grid">')
       .replace(/___EN_COL_START___/g, '<div class="en-col">')
       .replace(/___KR_COL_START___/g, '<div class="kr-col">')
       .replace(/___DIV_END___/g, '</div>')
       .replace(/___LANG_EN_START___/g, '<span class="lang-badge en">')
       .replace(/___LANG_KR_START___/g, '<span class="lang-badge kr">')
-      .replace(/___SPAN_END___/g, '</span>');
+      .replace(/___SPAN_END___/g, '</span>')
+      .replace(/___BR_TAG___/g, '<br>');
 
-    // 헤더
-    html = html.replace(/^### (.*$)/gim, '<h3>$1</h3>');
-    html = html.replace(/^## (.*$)/gim, '<h2>$1</h2>');
-    html = html.replace(/^# (.*$)/gim, '<h1>$1</h1>');
+    // 5. 인라인 코드 및 링크 처리
+    html = html.replace(/`([^`]+)`/g, '<code>$1</code>');
+    html = html.replace(/\[(.*?)\]\((.*?)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>');
 
-    // 블록 인용구
-    html = html.replace(/^\> (.*$)/gim, '<blockquote>$1</blockquote>');
+    // 6. 헤더 및 수평선
+    html = html.replace(/^### (.*$)/gm, '<h3>$1</h3>');
+    html = html.replace(/^## (.*$)/gm, '<h2>$1</h2>');
+    html = html.replace(/^# (.*$)/gm, '<h1>$1</h1>');
+    html = html.replace(/^---$/gm, '<hr>');
 
-    // 굵게
-    html = html.replace(/\*\*(.*?)\*\*/gim, '<strong>$1</strong>');
+    // 7. 인용구 (&gt; 로 이스케이프된 것 포함)
+    html = html.replace(/^(&gt;|>)\s*(.*$)/gm, '<blockquote>$2</blockquote>');
 
-    // 테이블 처리
+    // 8. 글자 강조 (Bold / Italic)
+    html = html.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+    html = html.replace(/\*(.*?)\*/g, '<em>$1</em>');
+
+    // 9. 리스트 처리
+    html = html.replace(/^[\*\-]\s+(.*$)/gm, '<li>$1</li>');
+
+    // 10. 마크다운 테이블 처리
     const lines = html.split('\n');
     let inTable = false;
     let tableHtml = '';
@@ -133,14 +157,17 @@ class PortalApp {
     for (let i = 0; i < lines.length; i++) {
       const line = lines[i].trim();
       if (line.startsWith('|') && line.endsWith('|')) {
+        // 테이블 구분행 (| :--- | :--- | 또는 | --- |) 무시
+        if (/^\|(\s*:?-+:?\s*\|)+$/.test(line)) {
+          continue;
+        }
         if (!inTable) {
           inTable = true;
           tableHtml = '<table><thead>';
-          const cols = line.split('|').filter(c => c !== '');
+          const cols = line.split('|').slice(1, -1);
           tableHtml += '<tr>' + cols.map(c => `<th>${c.trim()}</th>`).join('') + '</tr></thead><tbody>';
-          i++; // 구분행 건너뛰기
         } else {
-          const cols = line.split('|').filter(c => c !== '');
+          const cols = line.split('|').slice(1, -1);
           tableHtml += '<tr>' + cols.map(c => `<td>${c.trim()}</td>`).join('') + '</tr>';
         }
       } else {
@@ -157,7 +184,7 @@ class PortalApp {
       newLines.push(tableHtml);
     }
 
-    return newLines.join('\n').replace(/\n\n/g, '<p></p>');
+    return newLines.join('\n').replace(/\n\n+/g, '<p></p>');
   }
 
   renderMarkdown(text) {
@@ -176,7 +203,7 @@ class PortalApp {
     if (!docs) return;
 
     const mapping = {
-      'overview-content': docs.exam_guide,
+      'overview-content': docs.overview || docs.exam_guide,
       'glossary-content': docs.glossary,
       'domain1-content': docs.domain1,
       'domain2-content': docs.domain2,
@@ -195,6 +222,22 @@ class PortalApp {
         }
       }
     });
+
+    // CDN 지연 로드 대응: window load 시 marked가 뒤늦게 준비되었으면 고품질 렌더링으로 갱신
+    if (typeof window !== 'undefined') {
+      window.addEventListener('load', () => {
+        if (typeof marked !== 'undefined' && typeof marked.parse === 'function') {
+          Object.keys(mapping).forEach(elId => {
+            const el = document.getElementById(elId);
+            if (el && mapping[elId]) {
+              try {
+                el.innerHTML = marked.parse(mapping[elId]);
+              } catch (e) {}
+            }
+          });
+        }
+      });
+    }
   }
 
   bindEvents() {
