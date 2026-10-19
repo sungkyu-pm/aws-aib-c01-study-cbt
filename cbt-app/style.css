@@ -668,12 +668,171 @@ body {
   display: none !important;
 }
 
-/* 반응형 */
+/* ==========================================
+   종합 반응형 (Responsive Mobile & Tablet)
+   ========================================== */
+
 @media (max-width: 1024px) {
   .exam-layout {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
-  .mode-selection-grid,
+  .mode-selection-grid {
+    grid-template-columns: 1fr;
+  }
+  .score-summary-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .app-header {
+    padding: 0.75rem 1rem;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+  }
+  .header-brand {
+    gap: 0.5rem;
+  }
+  .aws-badge {
+    font-size: 0.65rem;
+    padding: 0.2rem 0.45rem;
+  }
+  .title-area h1 {
+    font-size: 1.05rem;
+    line-height: 1.3;
+  }
+  .header-status {
+    width: 100%;
+    justify-content: flex-end;
+  }
+  .timer-display {
+    padding: 0.25rem 0.65rem;
+    font-size: 0.95rem;
+  }
+
+  .main-content {
+    margin: 0.75rem auto;
+    padding: 0 0.6rem;
+  }
+  .welcome-card {
+    padding: 1.5rem 1rem;
+  }
+  .selection-card {
+    padding: 1rem 0.85rem;
+  }
+  .select-group label {
+    padding: 0.75rem 0.8rem;
+    font-size: 0.88rem;
+    min-height: 48px;
+  }
+
+  .question-main {
+    padding: 1rem 0.85rem;
+  }
+  .question-header-bar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.75rem;
+    padding-bottom: 0.75rem;
+    margin-bottom: 1rem;
+  }
+  .q-meta {
+    justify-content: space-between;
+  }
+  .q-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+  }
+  .q-actions button {
+    width: 100%;
+    justify-content: center;
+    font-size: 0.8rem;
+    padding: 0.5rem 0.35rem;
+  }
+
+  .question-box {
+    padding: 1rem 0.85rem;
+    margin-bottom: 1rem;
+  }
+  .question-text-en {
+    font-size: 1.02rem;
+    line-height: 1.6;
+  }
+  .question-text-kr {
+    font-size: 0.92rem;
+    padding: 0.75rem;
+    margin-top: 0.75rem;
+  }
+
+  .option-card {
+    padding: 0.85rem 0.85rem;
+    min-height: 48px;
+  }
+  .option-text-en {
+    font-size: 0.92rem;
+    line-height: 1.5;
+  }
+  .option-text-kr {
+    font-size: 0.85rem;
+    margin-top: 0.2rem;
+  }
+
+  .bottom-nav-bar {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0.45rem;
+    padding-top: 1rem;
+  }
+  .bottom-nav-bar button {
+    padding: 0.65rem 0.4rem;
+    font-size: 0.85rem;
+    text-align: center;
+  }
+  .bottom-nav-bar #submit-exam-btn {
+    grid-column: 1 / -1;
+    width: 100%;
+    margin-top: 0.3rem;
+    padding: 0.8rem 1rem;
+    font-size: 0.98rem;
+  }
+
+  .sidebar-palette {
+    padding: 1rem 0.85rem;
+  }
+  .palette-grid {
+    grid-template-columns: repeat(6, 1fr);
+    gap: 0.35rem;
+  }
+  .palette-item {
+    height: 38px;
+    font-size: 0.85rem;
+  }
+
+  .result-card {
+    padding: 1.5rem 1rem;
+  }
+  .score-summary-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.65rem;
+  }
+  .result-actions-bar {
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+  }
+  .result-actions-bar button {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .palette-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
   .score-summary-grid {
     grid-template-columns: 1fr;
   }

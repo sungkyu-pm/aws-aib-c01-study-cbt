@@ -8,9 +8,10 @@
 ---
 
 ## 🔗 공식 시험 및 접수 링크 (Official Links)
-* **AWS 공식 가이드**: [AWS Certified AI Business Strategist (AIB-C01) 공식 가이드 ↗](https://docs.aws.amazon.com/ko_kr/aws-certification/latest/ai-business-strategist-01/ai-business-strategist-01.html)
+* **AWS 공식 시험 가이드 (한국어)**: [AWS Certified AI Business Strategist 공식 가이드 (한국어) ↗](https://docs.aws.amazon.com/ko_kr/aws-certification/latest/ai-business-strategist-01/ai-business-strategist-01.html)
+* **AWS 공식 시험 가이드 (영문)**: [AWS Certified AI Business Strategist Official Exam Guide (English) ↗](https://docs.aws.amazon.com/aws-certification/latest/ai-business-strategist-01.html)
 * **AWS 자격증 시험 접수 포털**: [AWS Training & Certification (Pearson VUE) ↗](https://www.aws.training/certification)
-* **공식 시험 가이드 PDF**: [AIB-C01 Official Exam Guide PDF ↗](https://d1.awsstatic.com/training-and-certification/docs-ai-business-strategist/AWS-Certified-AI-Business-Strategist_Exam-Guide.pdf)
+* **AWS Skill Builder 시험 준비 코스**: [AIB-C01 Official Exam Prep Course ↗](https://skillbuilder.aws/category/exam-prep/ai-business-strategist-business-AIB-C01)
 
 ---
 
