@@ -146,6 +146,56 @@ class CBTSimulator {
     return q;
   }
 
+  // 중복 출제 방지: 카테고리/문제 타입별 1문항씩 추출하는 스마트 샘플링
+  sampleDistinctByCategory(pool, count) {
+    if (!pool || pool.length === 0) return [];
+
+    // 1. 문제 타입/카테고리별로 문항 그룹화
+    const categoryMap = new Map();
+    pool.forEach(q => {
+      let cat = q.topic_category;
+      if (!cat && q.key_concept) {
+        cat = q.key_concept.split(',')[0].trim();
+      }
+      if (!cat) cat = q.id;
+
+      if (!categoryMap.has(cat)) {
+        categoryMap.set(cat, []);
+      }
+      categoryMap.get(cat).push(q);
+    });
+
+    // 2. 카테고리 순서를 셔플하여 매회 다양한 분야가 골고루 선정되도록 보장
+    const categories = this.shuffleArray(Array.from(categoryMap.keys()));
+
+    const selected = [];
+    const usedQuestionIds = new Set();
+
+    // 3. 1차 패스: 각 카테고리(문제 타입)당 최대 1문항씩만 엄격히 추출 (중복 출제 원천 차단)
+    for (const cat of categories) {
+      if (selected.length >= count) break;
+      const catQuestions = this.shuffleArray(categoryMap.get(cat));
+      const chosen = catQuestions.find(q => !usedQuestionIds.has(q.id));
+      if (chosen) {
+        selected.push(chosen);
+        usedQuestionIds.add(chosen.id);
+      }
+    }
+
+    // 4. 요청 문항수가 카테고리 수보다 많은 경우 예외 보충 (중복 ID 없이)
+    if (selected.length < count) {
+      const remaining = this.shuffleArray(pool.filter(q => !usedQuestionIds.has(q.id)));
+      for (const q of remaining) {
+        if (selected.length >= count) break;
+        selected.push(q);
+        usedQuestionIds.add(q.id);
+      }
+    }
+
+    // 5. 최종 추출된 문항들의 출제 순서 셔플
+    return this.shuffleArray(selected);
+  }
+
   startExamFromSettings() {
     const setInput = document.querySelector('input[name="examSet"]:checked');
     const modeInput = document.querySelector('input[name="examMode"]:checked');
@@ -164,18 +214,19 @@ class CBTSimulator {
           rawQuestions = JSON.parse(JSON.stringify((EXAM_DATA[selectedSet] || []).slice(0, 15)));
         }
       } else if (selectedSet === 'mock1') {
-        // AWS 공식 가이드 비중에 맞춘 60문항 랜덤 추출 (D1:12, D2:19, D3:16, D4:13)
-        const d1 = this.shuffleArray(EXAM_DATA.domain1 || []).slice(0, 12);
-        const d2 = this.shuffleArray(EXAM_DATA.domain2 || []).slice(0, 19);
-        const d3 = this.shuffleArray(EXAM_DATA.domain3 || []).slice(0, 16);
-        const d4 = this.shuffleArray(EXAM_DATA.domain4 || []).slice(0, 13);
+        // AWS 공식 가이드 비중에 맞춘 60문항 중복 없는 카테고리별 추출 (D1:12, D2:19, D3:16, D4:13)
+        const d1 = this.sampleDistinctByCategory(EXAM_DATA.domain1 || [], 12);
+        const d2 = this.sampleDistinctByCategory(EXAM_DATA.domain2 || [], 19);
+        const d3 = this.sampleDistinctByCategory(EXAM_DATA.domain3 || [], 16);
+        const d4 = this.sampleDistinctByCategory(EXAM_DATA.domain4 || [], 13);
         rawQuestions = this.shuffleArray([...d1, ...d2, ...d3, ...d4]);
       } else if (EXAM_DATA[selectedSet]) {
         const pool = EXAM_DATA[selectedSet] || [];
         if (selectedScope === 'full') {
           rawQuestions = this.shuffleArray(pool); // 도메인 300문항 전체 순서 셔플
         } else {
-          rawQuestions = this.shuffleArray(pool).slice(0, 15); // 15문항 무작위 추출
+          // 카테고리(문제 타입)별 1문항씩 중복 없이 15문항 균등 추출
+          rawQuestions = this.sampleDistinctByCategory(pool, 15);
         }
       }
     }
