@@ -1,38 +1,32 @@
 # 출제 범위 내 핵심 AWS 서비스 치트시트 (AIB-C01 In-Scope Services)
 
-> **시험 공략 팁**: AIB-C01 시험은 기술적인 API 파라미터나 코드를 묻지 않습니다. 대신 **"어떤 비즈니스 시나리오에서 어떤 AWS 서비스를 선택하는 것이 최적인가?"**를 묻습니다.
+> **시험 공략 팁 (Exam Focus)**: AIB-C01 시험은 기술적인 API 코드 작성을 묻지 않습니다. 대신 **"어떤 비즈니스 시나리오에서 어떤 AWS 서비스를 선택하는 것이 최적인가?"**를 평가합니다.
 
 ---
 
 ## 1. 생성형 AI 특화 서비스 (Generative AI Services)
 
-| 서비스명 | 핵심 비즈니스 역할 및 특징 | 전형적인 시험 시나리오 |
+| 서비스명 (Service Name) | 🇺🇸 English Core Role & Exam Scenario | 🇰🇷 한국어 핵심 역할 및 전형적 출제 시나리오 |
 | :--- | :--- | :--- |
-| **Amazon Bedrock** | **완전관리형 파운데이션 모델(FM) API 서비스**.<br>다양한 최상위 모델(Anthropic Claude, Meta Llama, Amazon Titan 등)을 단일 API로 제공. 인프라 관리 불필요. 고객 데이터는 절대 모델 학습에 사용되지 않음. | "회사가 여러 벤더의 최신 파운데이션 모델을 서버 관리 없이 안전하게 테스트하고 비즈니스 애플리케이션에 통합하고자 할 때" |
-| **Knowledge Bases for Amazon Bedrock** | **완전관리형 RAG (검색 증강 생성) 기능**.<br>Amazon S3의 사내 문서와 벡터 데이터베이스를 클릭 몇 번으로 자동 연동하여 모델이 최신 사내 문서를 기반으로 답변하도록 함. | "사내 내부 규정집, 제품 매뉴얼 PDF를 LLM에 연동하여 환각 없이 정확한 답변을 제공하고자 할 때 (파인 튜닝 불필요)" |
-| **Guardrails for Amazon Bedrock** | **책임 있는 AI 보호 정책 필터**.<br>유해 단어 차단, 민감 개인정보(PII) 마스킹, 특정 금지 토픽 차단, 근거 기반 검증(Grounding Check)을 일괄 적용. | "고객 대상 챗봇에서 경쟁사 제품 언급을 차단하고 주민등록번호 유출을 자동으로 방지하고자 할 때" |
-| **Agents for Amazon Bedrock** | **지능형 다단계 작업 자동화 (AI 에이전트)**.<br>자연어 요청을 단계별로 분해하고, 사내 API나 Lambda 함수를 스스로 호출하여 항공권 예약, 환불 처리 등의 작업을 완수. | "사용자의 자연어 요청에 따라 외부 시스템 DB를 조회하고 실제 결제 API까지 실행하는 자율 워크플로우를 구현할 때" |
-| **Amazon Q Business** | **기업용 생성형 AI 어시스턴트**.<br>사내 데이터 소스(Confluence, Jira, Salesforce, SharePoint, S3 등 40+ 커넥터)에 연결되어 직원들의 질의응답 및 보고서 작성을 지원. 기업 권한 체계(ACL) 완벽 준수. | "직원들이 사내 여러 툴에 흩어진 문서를 한곳에서 검색하고 요약받되, 본인이 접근 권한이 없는 문서는 볼 수 없도록 할 때" |
-| **Amazon Q Developer** | **개발자용 AI 코딩 어시스턴트**.<br>코드 생성, 단위 테스트 작성, 보안 취약점 스캔, 레거시 Java 코드 버전 업그레이드 지원. | "사내 개발팀의 소프트웨어 개발 생산성을 높이고 레거시 코드베이스의 현대화를 가속화하고자 할 때" |
-| **AWS PartyRock** | **코드 없는(No-Code) 생성형 AI 앱 제작 플레이그라운드**.<br>비개발자도 프롬프트만으로 손쉽게 GenAI 미니 앱을 만들어보고 공유할 수 있는 교육/실험용 도구. | "전사 직원들의 AI 리터러시를 높이고 해커톤 등에서 코딩 없이 빠른 아이디어 프로토타이핑을 장려하고자 할 때" |
+| **Amazon Bedrock** | Fully managed foundation model API offering frontier models (Claude, Llama, Titan) via single API with zero model training on customer data. | 다양한 벤더의 최상위 모델을 서버 관리 없이 단일 API로 호출하며, 고객 데이터는 절대 모델 학습에 쓰이지 않는 완전관리형 FM 서비스. |
+| **Knowledge Bases for Bedrock** | Fully managed RAG orchestrating document stores in Amazon S3 with vector databases to eliminate hallucinations and cite verifiable sources. | 사내 내부 문서(PDF 등)를 벡터 DB와 자동 동기화하여 환각 없이 정확한 출처와 함께 답변을 생성하는 완전관리형 RAG 솔루션. |
+| **Guardrails for Bedrock** | Model-agnostic safety filter applying PII redaction, content moderation, denied topics, and contextual grounding verification. | 유해 콘텐츠 차단, 개인 식별 정보(PII) 마스킹, 특정 금지 주제 차단, 근거 기반 검증(Grounding Check)을 일괄 적용하는 보안 가드. |
+| **Agents for Bedrock** | Autonomous multi-step orchestration breaking user queries into sub-tasks and invoking external APIs via Lambda and OpenAPI schemas. | 자연어 요청에 따라 외부 시스템 DB를 조회하고 실제 배송 변경이나 결제 API까지 스스로 실행하는 지능형 AI 에이전트. |
+| **Amazon Q Business** | Enterprise generative AI assistant connecting to 40+ corporate repositories (Confluence, Jira, S3, Salesforce) while respecting ACL permissions. | 직원들이 사내 문서들을 안전하게 검색/요약받되, 본인이 접근 권한(ACL)이 없는 기밀 문서는 절대 볼 수 없도록 통제하는 기업용 AI 어시스턴트. |
+| **Amazon Q Developer** | Developer productivity assistant generating code, creating unit tests, scanning vulnerabilities, and upgrading legacy codebases. | 개발자의 소프트웨어 개발 생산성을 높이고 레거시 코드베이스의 현대화를 가속화하는 개발자 전용 AI 어시스턴트. |
+| **AWS PartyRock** | Intuitive no-code generative AI app-building playground fostering organizational AI literacy and rapid grassroots prototyping. | 비개발자도 프롬프트만으로 몇 분 만에 AI 미니 앱을 만들고 공유할 수 있는 노코드(No-Code) 실험 웹 도구. |
 
 ---
 
-## 2. 머신러닝 플랫폼 (Amazon SageMaker 제품군)
+## 2. 머신러닝 플랫폼 & 데이터 거버넌스 (ML & Data Governance)
 
-| 기능명 | 핵심 비즈니스 역할 및 특징 | 전형적인 시험 시나리오 |
+| 기능명 (Feature / Service) | 🇺🇸 English Core Role & Exam Scenario | 🇰🇷 한국어 핵심 역할 및 전형적 출제 시나리오 |
 | :--- | :--- | :--- |
-| **Amazon SageMaker Canvas** | **비즈니스 분석가를 위한 노코드(No-Code) 머신러닝**.<br>코딩 없이 클릭만으로 고객 이탈 예측, 매출 수요 예측 등의 머신러닝 모델을 생성하고 비즈니스 인사이트 도출. | "데이터 과학 팀의 도움 없이 현업 마케팅 분석가가 직접 고객 데이터를 바탕으로 이탈 가능성을 예측하고 싶을 때" |
-| **Amazon SageMaker JumpStart** | **사전 학습된 오픈소스/상용 모델 허브**.<br>다양한 문제 유형에 대해 검증된 ML 모델을 한 번의 클릭으로 배포 및 미세 조정(Fine-tuning) 가능. | "머신러닝 엔지니어가 처음부터 모델을 구축하지 않고 이미 검증된 모델을 가져와 빠르게 PoC를 시작하고자 할 때" |
-| **Amazon SageMaker Clarify** | **책임 있는 AI: 편향성 감지 및 설명 가능성(Explainability)**.<br>데이터 준비 단계 및 모델 학습 후 단계에서 잠재적 편향(Bias)을 감지하고, 예측에 중요한 피처 기여도(SHAP 값) 리포트 제공. | "대출 심사 AI 모델이 성별이나 인종에 대해 차별적이지 않은지 검증하고, 규제 당국에 판단 근거를 설명해야 할 때" |
-| **Amazon SageMaker Model Monitor** | **운영 중인 모델의 품질 및 드리프트(Drift) 지속 감지**.<br>실시간 트래픽 데이터를 분석하여 데이터 드리프트, 모델 드리프트, 편향 드리프트를 감지하고 알림 발송. | "프로덕션에 배포된 사기 탐지 모델의 성능이 시간 경과에 따라 시장 변화로 인해 떨어지지 않는지 지속 감시할 때" |
-
----
-
-## 3. 거버넌스, 비용 및 클라우드 전략 프레임워크
-
-| 항목명 | 핵심 비즈니스 역할 및 설명 |
-| :--- | :--- |
-| **AWS Cloud Adoption Framework (AWS CAF) - AI/ML Lens** | 기업이 클라우드와 AI를 전사적으로 도입할 때 조직(People), 거버넌스(Governance), 비즈니스(Business), 플랫폼(Platform), 운영(Operations), 보안(Security)의 6대 관점에서 체계적인 로드맵을 수립하도록 돕는 프레임워크. |
-| **AWS Cost Explorer & AWS Budgets** | AI 모델 API 호출 비용, 인프라 비용을 모니터링하고 예산 한도 초과 시 조기 경보를 발생시켜 예측 불가능한 AI TCO 폭증을 방지. |
-| **AWS Pricing Calculator** | 신규 AI 프로젝트 기획 단계에서 예상 토큰 사용량, 사용자 수, 스토리지 용량에 따른 초기 투자 및 운영 비용을 사전에 산정(TCO 추정). |
+| **Amazon SageMaker Canvas** | Visual no-code machine learning enabling business analysts to generate churn and demand forecasts without coding. | 데이터 과학 팀의 도움 없이 현업 마케팅/비즈니스 분석가가 직접 고객 이탈을 예측하고 인사이트를 도출하는 노코드 ML 도구. |
+| **Amazon SageMaker JumpStart** | Pre-trained model hub allowing machine learning teams to deploy and fine-tune open-source and proprietary models with 1-click. | 머신러닝 엔지니어가 처음부터 모델을 구축하지 않고 이미 검증된 모델을 가져와 빠르게 PoC를 시작하고자 할 때 사용하는 모델 허브. |
+| **Amazon SageMaker Clarify** | Responsible AI engine detecting bias across data and trained models while computing SHAP feature attribution explanations. | 대출 심사 모델이 성별이나 인종에 차별적이지 않은지 검증하고, 규제 기관에 판단 근거를 설명해야 할 때 사용하는 도구. |
+| **Amazon SageMaker Model Monitor** | Continuous telemetry monitoring tracking data drift, concept drift, and model degradation in production systems. | 프로덕션에 배포된 사기 탐지 모델의 성능이 시간 경과에 따른 시장 변화로 떨어지지 않는지 지속 감시하는 모니터링 도구. |
+| **Amazon Augmented AI (A2I)** | Managed Human-in-the-Loop workflow routing low-confidence or high-risk inferences to human reviewer pools automatically. | 고위험 의사결정(대출 승인, 채용) 시 AI 신뢰도가 낮을 때 인간 전문가가 직접 검토하고 승인하도록 강제하는 워크플로우 서비스. |
+| **Amazon DataZone** | Enterprise data governance portal enabling cross-departmental data discovery, cataloging, subscription, and data mesh sharing. | 부서별 데이터 사일로를 타파하고 각 팀이 데이터 소유권을 유지하면서 안전하게 전사적으로 데이터를 공유하도록 돕는 포털. |
+| **AWS Lake Formation** | Centralized security service governing data lake permissions at granular database, table, column, and row levels. | 데이터 레이크에 여러 분석 팀이 접근할 때 최소 권한 원칙(PoLP)에 따라 민감한 열(Column)을 일괄 제한하는 보안 서비스. |
+| **AWS Budgets & Cost Explorer** | AI financial management tools monitoring token consumption and firing alerts when expenditure exceeds budget thresholds. | 예측 불가능한 대규모 생성형 AI API 호출로 인한 TCO 폭증을 사전에 예방하고 통제하는 클라우드 재무 관리 도구. |

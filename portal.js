@@ -92,10 +92,26 @@ class PortalApp {
   // 간단한 Fallback 마크다운 파서 (오프라인 지원)
   parseMarkdownFallback(text) {
     if (!text) return '';
-    let html = text
+    let html = text;
+    // 임시 보존할 태그 마스킹
+    html = html
+      .replace(/<div class="bilingual-grid">/gi, '___BILINGUAL_GRID_START___')
+      .replace(/<div class="en-col">/gi, '___EN_COL_START___')
+      .replace(/<div class="kr-col">/gi, '___KR_COL_START___')
+      .replace(/<\/div>/gi, '___DIV_END___')
+      .replace(/<span class="lang-badge en">/gi, '___LANG_EN_START___')
+      .replace(/<span class="lang-badge kr">/gi, '___LANG_KR_START___')
+      .replace(/<\/span>/gi, '___SPAN_END___')
       .replace(/&/g, '&amp;')
       .replace(/</g, '&lt;')
-      .replace(/>/g, '&gt;');
+      .replace(/>/g, '&gt;')
+      .replace(/___BILINGUAL_GRID_START___/g, '<div class="bilingual-grid">')
+      .replace(/___EN_COL_START___/g, '<div class="en-col">')
+      .replace(/___KR_COL_START___/g, '<div class="kr-col">')
+      .replace(/___DIV_END___/g, '</div>')
+      .replace(/___LANG_EN_START___/g, '<span class="lang-badge en">')
+      .replace(/___LANG_KR_START___/g, '<span class="lang-badge kr">')
+      .replace(/___SPAN_END___/g, '</span>');
 
     // 헤더
     html = html.replace(/^### (.*$)/gim, '<h3>$1</h3>');

@@ -1,76 +1,141 @@
 # 도메인 1: AI 기초 및 활용 능력 (AI Fundamentals and Literacy)
 
-> **출제 비중**: 약 20%  
-> **핵심 키워드**: AI vs ML vs GenAI, 정형/비정형 데이터, 규칙 기반 vs AI, AI 에이전트, 프롬프트 엔지니어링, RAG vs Fine-tuning, 모델 드리프트, 섀도 AI
+> **출제 비중 (Exam Weight)**: **20%**  
+> **공식 시험 평가 목표 (Exam Objective)**: 비즈니스 문제에 적합한 AI/ML 솔루션 유형(정형 vs 비정형, 규칙 기반 vs AI, GenAI)을 구분하고, 프롬프트 엔지니어링, RAG, 파인 튜닝의 기술적 트레이드오프를 평가하며, AI 에이전트와 책임 있는 기초 AI 개념을 비즈니스 전략에 접목할 수 있는가?
 
 ---
 
-## 1.1 핵심 AI 개념 및 용어 (Key Concepts & Terms)
+## 1.1 핵심 AI 기술 및 개념 계층 (Core AI Taxonomy & Fundamentals)
 
-### 1. AI vs ML vs GenAI의 계층 구조
-* **인공지능 (AI - Artificial Intelligence)**: 인간의 학습, 추론, 지각 능력을 컴퓨터로 모방하는 가장 넓은 개념. (규칙 기반 전문가 시스템도 AI에 포함)
-* **머신러닝 (ML - Machine Learning)**: AI의 하위 집합. 데이터를 기반으로 알고리즘이 스스로 패턴을 학습하여 미래를 예측하거나 분류하는 기술.
-* **생성형 AI (GenAI - Generative AI)**: ML/딥러닝의 하위 집합. 단순히 패턴을 분류/예측하는 데서 나아가 텍스트, 이미지, 오디오, 코드 등 **새로운 원본 콘텐츠를 능동적으로 생성**하는 모델.
+<div class="bilingual-grid">
+<div class="en-col">
 
-### 2. 정형 데이터 vs 비정형 데이터
-* **정형 데이터 (Structured Data)**:
-  * 형태: RDBMS 테이블, CSV, 정형 로그 등 행(Row)과 열(Column)로 규격화된 데이터.
-  * 기존 ML 알고리즘(예: 회귀 분석, 결정 트리, XGBoost)에 매우 적합.
-* **비정형 데이터 (Unstructured Data)**:
-  * 형태: 텍스트 이메일, PDF 보고서, 상담 녹음본, 이미지, 동영상.
-  * 기업 데이터의 약 80% 이상을 차지하며, **GenAI와 대규모 파운데이션 모델(FM)이 가장 혁신적인 가치를 창출하는 영역**.
+#### 🇺🇸 English Exam Context
+* **Artificial Intelligence (AI)**: The broad discipline of computer science dedicated to simulating human cognitive functions such as learning, reasoning, and synthesis. Includes deterministic expert systems.
+* **Machine Learning (ML)**: A specialized subset of AI where mathematical models learn predictive patterns directly from historical data without hardcoded procedural rules.
+* **Generative AI (GenAI)**: A branch of deep learning models (such as Foundation Models and LLMs) capable of generating novel unstructured artifacts including natural text, synthetic code, and realistic media.
+* **Structured vs Unstructured Data**: Structured data (tables, CSVs) is suited for classical discriminative algorithms (e.g., XGBoost). Unstructured data (PDF manuals, customer audio, email inquiries) accounts for over 80% of enterprise assets and represents the primary operating domain of GenAI.
 
-### 3. 데이터 품질 (Data Quality)의 중요성
-* **"Garbage In, Garbage Out"**: AI/ML 모델의 성능과 신뢰성은 입력 데이터의 품질(정확성, 완전성, 최신성, 편향 없음)에 직접적으로 좌우됨.
-* 과거 데이터(Historical Data)의 한계: 과거의 비즈니스 패턴이나 사회적 편향(Historical Bias)이 포함되어 있을 경우 모델이 잘못된 예측을 지속할 수 있음.
+</div>
+<div class="kr-col">
 
----
+#### 🇰🇷 한국어 번역 및 비즈니스 전략 해설
+* **인공지능 (AI)**: 인간의 학습, 추론, 지각 능력을 컴퓨터로 모방하는 가장 포괄적인 개념입니다. (규칙 기반 시스템도 AI에 포함됨)
+* **머신러닝 (ML)**: 명시적인 IF-THEN 코딩 없이 대량의 데이터로부터 알고리즘이 스스로 패턴을 학습하여 예측이나 분류를 수행하는 하위 기술입니다.
+* **생성형 AI (GenAI)**: 단순히 기존 레이블을 분류하는 것을 넘어 텍스트, 코드, 이미지 등 **새로운 원본 콘텐츠를 능동적으로 생성**하는 모델입니다.
+* **정형 vs 비정형 데이터**: 정형 데이터(DB 테이블)는 전통적인 ML에 적합하며, 비정형 데이터(PDF 규정집, 상담 녹취록)는 기업 데이터의 80% 이상을 차지하며 **GenAI와 파운데이션 모델이 가장 큰 혁신을 만드는 영역**입니다.
 
-## 1.2 적절한 AI 솔루션 유형 파악 및 선택 (Solution Selection)
-
-### 1. 규칙 기반 자동화 vs AI 솔루션 (Rule-based vs AI)
-* **규칙 기반 자동화 (Rule-based / RPA)를 선택해야 하는 경우**:
-  * 명확한 비즈니스 로직(IF-THEN)이 존재하고, 100% 결정론적(Deterministic) 결과가 필요한 경우.
-  * 예외 케이스가 매우 적고, 데이터가 아닌 엄격한 규격/규정에 따라 처리해야 하는 경우 (예: 세금 계산, 정형화된 서류 이동).
-* **AI / ML 솔루션을 선택해야 하는 경우**:
-  * 데이터에 복잡한 비선형적 패턴이 있거나 모호성(Ambiguity)을 다뤄야 하는 경우.
-  * 새로운 데이터에 지속적으로 적응(Adaptation)해야 하거나 자연어/이미지 이해가 필요한 경우 (예: 고객 감정 분석, 사기 탐지).
-
-### 2. AI 에이전트 (AI Agents)의 핵심 기능
-* **단순 챗봇 vs AI 에이전트의 차이**:
-  * 단순 챗봇: 정해진 프롬프트에 답변만 생성.
-  * **AI 에이전트**:
-    1. **자율성 (Autonomy)**: 사용자의 복합적인 상위 목표(Goal)를 분석하여 세부 단계별 실행 계획(Planning) 수립.
-    2. **도구 사용 (Tool/API Usage)**: 외부 시스템(DB 조회, 결제 API, 이메일 발송 등)을 스스로 선택하여 호출.
-    3. **에이전트 간 협업 (Multi-Agent Orchestration)**: 복잡한 업무를 분담하여 협업 수행.
-
-### 3. 모델 드리프트 (Model Drift)와 지속적 모니터링
-* 모델 배포 후 시간이 지남에 따라 고객 선호도 변화, 시장 상황 변동 등으로 인해 예측 정확도가 저하됨.
-* 비즈니스 연속성을 위해 **지속적 모니터링(예: Amazon SageMaker Model Monitor)** 및 주기적 재학습(Retraining) 전략이 필수적.
-
-### 4. 섀도 AI (Shadow AI) 위험 및 거버넌스
-* 직원들이 회사의 통제 없이 개인적으로 퍼블릭 GenAI 도구를 사용하여 **회사 기밀 코드나 고객 PII를 유출**하는 현상.
-* **해결책**: 무조건적 차단보다는 **공식 승인 도구(Approved Tools, 예: Amazon Q Business, Bedrock)** 제공 + 명확한 사용 정책(Approved / Blocked / Under Evaluation) 수립.
+</div>
+</div>
 
 ---
 
-## 1.3 생성형 AI(GenAI) 핵심 기법과 비즈니스 적용
+## 1.2 솔루션 선택: 규칙 기반 vs 머신러닝 vs AI 에이전트 (Solution Architecture Selection)
 
-### 1. 프롬프트 엔지니어링 (Prompt Engineering)
-* 별도의 모델 학습/가중치 수정 없이 **입력 텍스트의 구조와 지침을 설계**하여 최적의 결과를 얻는 가장 가볍고 빠른 기법.
-* 기법: 명확한 역할 부여(Role-playing), 퓨샷(Few-shot examples), 출력 형식 지정(JSON 등), 사고 사슬(Chain-of-Thought).
+<div class="bilingual-grid">
+<div class="en-col">
 
-### 2. 토큰 제한 및 컨텍스트 윈도우 (Token Limit & Context Window)
-* **토큰(Token)**: 모델이 텍스트를 처리하는 기본 단위 (단어 조각).
-* **컨텍스트 윈도우(Context Window)**: 프롬프트에 담을 수 있는 총 용량.
-* 컨텍스트 윈도우가 클수록 많은 문서를 한 번에 입력할 수 있지만, **비용(Cost)과 응답 지연 시간(Latency)이 비례하여 증가**함.
+#### 🇺🇸 English Exam Context
+* **Rule-Based Automation (RPA)**: Select when the business process is deterministic, governed by explicit compliance rules (IF-THEN), and requires 100% mathematical consistency with zero tolerance for ambiguity (e.g., tax calculation, payroll batches).
+* **Machine Learning / GenAI**: Select when business inputs exhibit high ambiguity, unstructured complexity, or require dynamic adaptation to evolving consumer sentiment and fraud behaviors.
+* **AI Agents & Multi-Step Orchestration**: Unlike simple passive chatbots that merely render text answers, **AI Agents** possess:
+  1. *Autonomy*: Decomposing high-level enterprise goals into sequential sub-plans.
+  2. *Tool Use (Action Groups)*: Interacting with enterprise databases and invoking external REST APIs via AWS Lambda and OpenAPI schemas.
+  3. *Multi-Agent Orchestration*: Collaborating across specialized agents to execute complex transactions (e.g., checking flight availability, querying CRM records, and finalizing payments).
 
-### 3. 모델 적응 기법 비교: RAG vs Fine-Tuning vs 사전 학습
+</div>
+<div class="kr-col">
 
-| 비교 항목 | RAG (검색 증강 생성) | Fine-Tuning (미세 조정) | Pre-training (사전 학습) |
+#### 🇰🇷 한국어 번역 및 비즈니스 전략 해설
+* **규칙 기반 자동화 (RPA) 선택 기준**: 명확한 업무 규칙(IF-THEN)이 존재하고, 모호성이 없으며, 100% 오차 없는 결정론적(Deterministic) 결과가 필수적인 업무(세금 계산, 급여 이체)에 적합합니다.
+* **AI/머신러닝 솔루션 선택 기준**: 데이터에 복잡한 비선형적 패턴이 있거나, 자연어/이미지 이해가 필요하며, 시장 변화에 지속적으로 적응해야 하는 경우(고객 감정 분석, 사기 탐지)에 선택합니다.
+* **AI 에이전트 (AI Agents)의 핵심 차별점**: 단순 챗봇과 달리, 사용자의 포괄적 목표를 분석하여 하위 실행 계획을 세우고, **외부 API 도구(Action Groups, AWS Lambda)**를 스스로 호출하여 실제 예약이나 결제 같은 복합 업무를 완수합니다.
+
+</div>
+</div>
+
+---
+
+## 1.3 파운데이션 모델 추론 파라미터 제어 (Inference Hyperparameters)
+
+<div class="bilingual-grid">
+<div class="en-col">
+
+#### 🇺🇸 English Exam Context
+* **Temperature**: Dictates output stochasticity. For deterministic, strictly factual, and reproducible outputs (e.g., contract summarization, medical guidelines), **set Temperature to 0.0 (Greedy Decoding)**. For creative marketing campaigns, increase to 0.7–1.0+.
+* **Top-P (Nucleus Sampling)**: Dynamically filters the candidate pool to tokens whose cumulative probability reaches threshold P (e.g., 0.9), eliminating erratic long-tail vocabulary.
+* **Top-K**: Caps candidate consideration strictly to the top K most probable tokens.
+* **Token Streaming**: Emits generated tokens over an active HTTP stream as soon as they are computed, drastically decreasing Time-to-First-Token (TTFT) and elevating perceived responsiveness.
+
+</div>
+<div class="kr-col">
+
+#### 🇰🇷 한국어 번역 및 비즈니스 전략 해설
+* **Temperature (온도)**: 출력의 무작위성(창의성)을 제어합니다. 보고서나 법률 문서 요약처럼 매번 100% 동일하고 사실에 기반한 결정론적 결과가 필요할 때는 **반드시 Temperature를 0.0으로 설정**해야 합니다.
+* **Top-P (핵 샘플링)**: 누적 확률이 P(예: 0.9) 이내인 토큰 중에서만 다음 단어를 고르도록 하여 엉뚱한 단어 생성을 방지합니다.
+* **Top-K**: 다음 단어 후보를 확률 상위 K개로 제한합니다.
+* **토큰 스트리밍 (Token Streaming)**: 전체 답변이 완성될 때까지 기다리지 않고 첫 번째 토큰부터 화면에 실시간으로 표시하여 사용자의 체감 응답 대기 시간을 획기적으로 줄입니다.
+
+</div>
+</div>
+
+---
+
+## 1.4 모델 적응 아키텍처 비교: RAG vs Fine-Tuning vs Pre-training
+
+| 비교 항목 (Comparison Axis) | 🇺🇸 Retrieval-Augmented Generation (RAG) | 🇺🇸 Supervised Fine-Tuning | 🇺🇸 Model Pre-training |
 | :--- | :--- | :--- | :--- |
-| **작동 원리** | 외부 DB에서 문서를 실시간 검색해 프롬프트에 첨부 | 도메인 특화 라벨링 데이터로 모델 가중치를 영구 변경 | 처음부터 모델 아키텍처와 파라미터를 구축 |
-| **주요 목적** | **최신 정보 반영**, **기업 내부 문서 활용**, **환각 감소** | **특정 어조(Tone) 고정**, **특수 출력 포맷 준수**, **특수 용어 적응** | 국가/언어 전용 기반 모델 자체를 구축 |
-| **비용 및 리소스** | 상대적으로 저렴하고 빠름 (지식 베이스 연결) | 중간~높음 (데이터 라벨링 및 GPU 연산 필요) | 천문학적 비용과 GPU/엔지니어링 필요 |
-| **지식 업데이트** | DB 문서만 업데이트하면 즉시 반영 | 지식 변경 시마다 다시 학습 필요 | 재학습 불가에 가까움 |
-| **비즈니스 추천** | **기업 내부 지식 활용 시 1순위 권장** | 스타일/도메인 문체 적응이 필수적일 때만 권장 | 일반 기업에서는 거의 비추천 |
+| **작동 원리 (Mechanism)** | Retrieves real-time enterprise documents from vector DBs and injects them into prompt context. | Adjusts model neural network weights using domain-specific labeled dataset pairs. | Trains multi-billion parameters from scratch on raw web-scale corpora. |
+| **주요 목적 (Primary Objective)** | **Injecting dynamic enterprise knowledge**, preventing hallucinations, and citing verifiable sources. | **Specializing stylistic tone, fixed JSON schema output**, or unique organizational terminology. | Building sovereign or domain-exclusive foundational models from the ground up. |
+| **비용 및 출시 속도 (TCO & TTM)** | Lowest TCO, fastest Time-to-Market. Built easily via **Knowledge Bases for Amazon Bedrock**. | Moderate-to-high cost (requires labeled data curation, GPU cycles, and retraining maintenance). | Astronomical cost (millions of USD, massive GPU clusters, deep research teams). |
+| **지식 최신성 (Knowledge Recency)** | **Instantaneous**: Updating Amazon S3 documents reflects immediately without model downtime. | **Stale**: Requires complete dataset re-curation and model re-tuning for every update. | Static: Knowledge is completely frozen at training cutoff date. |
+| **주요 위험 (Inherent Risks)** | Retrieval latency, context window token limits, **Lost in the Middle** if chunks are too large. | **Catastrophic Forgetting** (loss of general reasoning capability), high training overhead. | Massive capital burn, project abandonment risk. |
+| **시험 추천 (Exam Recommendation)** | **1순위 정답**: 최신 사내 규정 반영 및 환각 방지 시나리오. | 특정 말투나 엄격한 출력 형식 강제가 필수적일 때만 선택. | 일반 기업 시나리오에서는 원칙적으로 오답. |
+
+---
+
+## 1.5 컨텍스트 윈도우, 청킹 및 검색 최적화 (Context, Chunking & Retrieval)
+
+<div class="bilingual-grid">
+<div class="en-col">
+
+#### 🇺🇸 English Exam Context
+* **Context Window Degradation ("Lost in the Middle")**: When prompts are filled with massive raw text, foundation models exhibit an attention bias where facts located in the middle of the context are overlooked compared to information at the beginning or end.
+* **Document Chunking Strategy**: Mitigates this phenomenon by parsing extensive documents into semantically coherent segments (e.g., 300–500 tokens) with 10–20% overlap, ensuring precise vector retrieval.
+* **Vector Embeddings & Semantic Search**: Text is encoded into mathematical vectors where distance reflects conceptual meaning. Using services like **OpenSearch Serverless** allows semantic matching even when user queries do not contain exact keyword matches.
+
+</div>
+<div class="kr-col">
+
+#### 🇰🇷 한국어 번역 및 비즈니스 전략 해설
+* **중간 정보 누락 ("Lost in the Middle") 현상**: 컨텍스트 윈도우에 수십 페이지의 방대한 문서를 한꺼번에 넣으면, 모델이 지문의 맨 앞과 맨 뒤 정보는 잘 기억하지만 **정작 중간에 위치한 중요한 사실을 놓치는 현상**이 발생합니다.
+* **문서 청킹 (Document Chunking)**: 대형 문서를 적절한 토큰 크기(예: 300~500 토큰)로 쪼개고 앞뒤로 일정 부분(10~20%) 중첩시켜 검색 정확도와 컨텍스트 효율을 극대화합니다.
+* **벡터 임베딩 및 의미론적 검색**: 텍스트를 의미 기반의 고차원 숫자 벡터로 변환하여, 사용자가 정확한 키워드를 입력하지 않아도 의도와 맥락이 일치하는 관련 문서를 정확하게 찾아냅니다.
+
+</div>
+</div>
+
+---
+
+## 1.6 프롬프트 엔지니어링 & 모델 평가 (Prompting & LLM Evaluation)
+
+<div class="bilingual-grid">
+<div class="en-col">
+
+#### 🇺🇸 English Exam Context
+* **Zero-Shot vs Few-Shot (In-Context Learning)**: Zero-shot provides direct instructions without examples. Few-shot includes 2–3 exemplar demonstrations within the prompt, significantly boosting accuracy for complex classification or rigid schema outputs without changing model weights.
+* **Chain-of-Thought (CoT)**: Instructing the model to "think step by step" forces sequential decomposition, drastically reducing arithmetic, logic, and multi-step reasoning errors.
+* **LLM-as-a-Judge**: Employing a superior frontier foundation model to automatically evaluate candidate model outputs across factual correctness, groundness, and tone at enterprise scale, overcoming human evaluation bottlenecks.
+* **Model Quantization**: Compressing model weights from 32-bit floating point (FP32) to 8-bit or 4-bit integers (INT8/INT4), drastically reducing memory and inference latency for deployment on edge devices or cost-constrained environments.
+
+</div>
+<div class="kr-col">
+
+#### 🇰🇷 한국어 번역 및 비즈니스 전략 해설
+* **제로샷 vs 퓨샷 (인컨텍스트 학습)**: 예시 없이 지시만 내리는 방식(Zero-Shot)과 달리, 프롬프트 안에 2~3개의 모범 입출력 예시(Few-Shot)를 함께 제공하여 모델이 원하는 출력 양식을 완벽히 준수하도록 유도합니다.
+* **사고의 사슬 (Chain-of-Thought, CoT)**: "단계별로 생각해보자"라는 지침을 통해 복합 문제를 순차적인 하위 단계로 나누어 풀도록 함으로써 논리적 추론 오류를 획기적으로 줄입니다.
+* **LLM-as-a-Judge**: 인간 평가자의 병목을 해소하기 위해 고성능 파운데이션 모델을 심사위원으로 활용하여 수천 건의 프롬프트 응답 품질과 사실성을 대규모로 자동 채점합니다.
+* **모델 양자화 (Model Quantization)**: 모델 가중치의 정밀도를 FP32에서 INT8/INT4로 압축하여 정확도 손실을 최소화하면서 메모리 사용량을 대폭 줄이고 추론 속도를 높여 엣지/모바일 배포를 가능하게 합니다.
+
+</div>
+</div>
