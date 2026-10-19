@@ -1,7 +1,7 @@
 # AWS Certified AI Business Strategist (AIB-C01) 학습 & CBT 플랫폼
 
 > **한국어 사용자를 위한 AIB-C01 시험 대비 올인원(All-in-One) 학습 공간 및 CBT 가상 실습 시스템**  
-> 공식 가이드 기준 도메인 1~4 완벽 반영 | 한·영 듀얼 트랙 학습 | 실전 CBT 모의고사 지원
+> 공식 가이드 기준 도메인 1~4 완벽 반영 (도메인당 300문항, 총 1,200문항 대규모 문제은행) | 한·영 듀얼 트랙 학습 | 동적 랜덤 출제 & 이력 관리 지원
 
 🌐 **온라인 실시간 포털 바로가기**: **[https://sungkyu-pm.github.io/aws-aib-c01-study-cbt/](https://sungkyu-pm.github.io/aws-aib-c01-study-cbt/)**
 
@@ -57,12 +57,12 @@ AI BS_AWS/
 │   ├── 05_DOMAIN_4_TRANSFORMATION_READINESS.md  # 도메인 4: 비즈니스 준비성 & 조직 혁신 (22%)
 │   └── 06_AWS_SERVICES_CHEAT_SHEET.md     # 출제 범위 내 핵심 AWS 서비스 치트시트
 │
-├── questions/                             # 📝 실전 수준 문제은행 (JSON 포맷)
-│   ├── questions_domain1.json             # 도메인 1 전용 문제 & 상세 한국어 해설
-│   ├── questions_domain2.json             # 도메인 2 전용 문제 & 상세 한국어 해설
-│   ├── questions_domain3.json             # 도메인 3 전용 문제 & 상세 한국어 해설
-│   ├── questions_domain4.json             # 도메인 4 전용 문제 & 상세 한국어 해설
-│   └── mock_exam_1.json                   # 전 도메인 통합 실전 모의고사 세트 (20문항)
+├── questions/                             # 📝 실전 수준 문제은행 (JSON 포맷, 총 1,200문항)
+│   ├── questions_domain1.json             # 도메인 1 전용 문제은행 (300문항) & 상세 한국어 해설
+│   ├── questions_domain2.json             # 도메인 2 전용 문제은행 (300문항) & 상세 한국어 해설
+│   ├── questions_domain3.json             # 도메인 3 전용 문제은행 (300문항) & 상세 한국어 해설
+│   ├── questions_domain4.json             # 도메인 4 전용 문제은행 (300문항) & 상세 한국어 해설
+│   └── mock_exam_1.json                   # 공식 비중 맞춤 실전 모의고사 세트 (60문항)
 │
 └── cbt-app/                               # 💻 실전 CBT 가상 실습 웹 애플리케이션
     ├── index.html                         # CBT 웹앱 메인 화면

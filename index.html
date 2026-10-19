@@ -143,10 +143,10 @@
                 <h3>1. 문제 세트 선택</h3>
                 <div class="radio-list">
                   <label><input type="radio" name="cbtSet" value="mock1" checked> <strong>🎲 전 도메인 종합 실전 모의고사</strong> <span class="sub-desc">공식 비중 맞춤 60문항 무작위 추출 (D1:12, D2:19, D3:16, D4:13)</span></label>
-                  <label><input type="radio" name="cbtSet" value="domain1"> 🎯 도메인 1: AI 기초 및 활용 능력 (30문항 풀)</label>
-                  <label><input type="radio" name="cbtSet" value="domain2"> 🎯 도메인 2: AI 전략 및 비즈니스 가치 창출 (30문항 풀)</label>
-                  <label><input type="radio" name="cbtSet" value="domain3"> 🎯 도메인 3: AI 거버넌스 및 책임 있는 AI (30문항 풀)</label>
-                  <label><input type="radio" name="cbtSet" value="domain4"> 🎯 도메인 4: 비즈니스 준비성 & 조직 혁신 (30문항 풀)</label>
+                  <label><input type="radio" name="cbtSet" value="domain1"> 🎯 도메인 1: AI 기초 및 활용 능력 (300문항 풀)</label>
+                  <label><input type="radio" name="cbtSet" value="domain2"> 🎯 도메인 2: AI 전략 및 비즈니스 가치 창출 (300문항 풀)</label>
+                  <label><input type="radio" name="cbtSet" value="domain3"> 🎯 도메인 3: AI 거버넌스 및 책임 있는 AI (300문항 풀)</label>
+                  <label><input type="radio" name="cbtSet" value="domain4"> 🎯 도메인 4: 비즈니스 준비성 & 조직 혁신 (300문항 풀)</label>
                 </div>
               </div>
 
@@ -166,7 +166,7 @@
                   <label>
                     <input type="radio" name="cbtRandomScope" value="full">
                     <strong>📚 해당 도메인 전체 문항 집중 풀이</strong>
-                    <span class="sub-desc">도메인 선택 시 30문항 전체 순서 셔플 출제</span>
+                    <span class="sub-desc">도메인 선택 시 300문항 전체 순서 셔플 출제</span>
                   </label>
                 </div>
               </div>
@@ -194,9 +194,14 @@
 
             <!-- 과거 시험 응시 이력 -->
             <div id="cbt-history-section" class="cbt-history-section hidden">
-              <h3 style="margin-top: 2rem; margin-bottom: 0.75rem; text-align: left; font-size: 1.15rem; color: var(--aws-dark-blue);">
-                📊 최근 시험 응시 이력 (Exam History)
-              </h3>
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 2rem; margin-bottom: 0.75rem;">
+                <h3 style="margin: 0; font-size: 1.15rem; color: var(--aws-dark-blue);">
+                  📊 최근 시험 응시 이력 (Exam History)
+                </h3>
+                <button id="cbt-clear-history-btn" class="btn btn-outline btn-sm" style="color: var(--danger); border-color: var(--danger); font-size: 0.8rem; padding: 0.35rem 0.75rem;">
+                  🗑️ 이력 초기화
+                </button>
+              </div>
               <div id="cbt-history-table-container"></div>
             </div>
           </div>

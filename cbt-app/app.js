@@ -173,7 +173,7 @@ class CBTSimulator {
       } else if (EXAM_DATA[selectedSet]) {
         const pool = EXAM_DATA[selectedSet] || [];
         if (selectedScope === 'full') {
-          rawQuestions = this.shuffleArray(pool); // 30문항 전체 순서 셔플
+          rawQuestions = this.shuffleArray(pool); // 도메인 300문항 전체 순서 셔플
         } else {
           rawQuestions = this.shuffleArray(pool).slice(0, 15); // 15문항 무작위 추출
         }

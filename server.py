@@ -57,6 +57,8 @@ class AIBExamServerHandler(SimpleHTTPRequestHandler):
 
         if path == '/api/submit':
             self.handle_api_submit()
+        elif path == '/api/history/clear':
+            self.handle_api_clear_history()
         elif path == '/api/questions/add':
             self.handle_api_add_question()
         else:
@@ -78,9 +80,11 @@ class AIBExamServerHandler(SimpleHTTPRequestHandler):
     def handle_api_status(self):
         """서버 상태 및 데이터베이스 요약 정보 반환"""
         total_questions = 0
-        if os.path.exists(os.path.join(QUESTIONS_DIR, 'mock_exam_1.json')):
-            with open(os.path.join(QUESTIONS_DIR, 'mock_exam_1.json'), 'r', encoding='utf-8') as f:
-                total_questions = len(json.load(f))
+        for i in range(1, 5):
+            df = os.path.join(QUESTIONS_DIR, f'questions_domain{i}.json')
+            if os.path.exists(df):
+                with open(df, 'r', encoding='utf-8') as f:
+                    total_questions += len(json.load(f))
 
         exam_count = 0
         if os.path.exists(HISTORY_FILE):
@@ -154,6 +158,15 @@ class AIBExamServerHandler(SimpleHTTPRequestHandler):
             self.send_json_response({"history": history})
         else:
             self.send_json_response({"history": []})
+
+    def handle_api_clear_history(self):
+        """시험 응시 기록 전체 초기화"""
+        try:
+            with open(HISTORY_FILE, 'w', encoding='utf-8') as f:
+                json.dump([], f, ensure_ascii=False, indent=2)
+            self.send_json_response({"status": "success", "message": "History cleared"})
+        except Exception as e:
+            self.send_json_response({"error": str(e)}, status_code=500)
 
     def handle_api_submit(self):
         """시험 제출 처리: 서버 측 정답 채점, 점수 계산, history.json 저장"""

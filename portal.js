@@ -84,6 +84,9 @@ class PortalApp {
     this.cbtReviewAllBtn = document.getElementById('cbt-review-all-btn');
     this.cbtReviewWrongBtn = document.getElementById('cbt-review-wrong-btn');
     this.cbtRestartBtn = document.getElementById('cbt-restart-btn');
+    this.cbtHistorySection = document.getElementById('cbt-history-section');
+    this.cbtHistoryTableContainer = document.getElementById('cbt-history-table-container');
+    this.cbtClearHistoryBtn = document.getElementById('cbt-clear-history-btn');
   }
 
   // 간단한 Fallback 마크다운 파서 (오프라인 지원)
@@ -216,6 +219,9 @@ class PortalApp {
     this.cbtReviewAllBtn.addEventListener('click', () => this.reviewCbt(false));
     this.cbtReviewWrongBtn.addEventListener('click', () => this.reviewCbt(true));
     this.cbtRestartBtn.addEventListener('click', () => this.resetCbtToStart());
+    if (this.cbtClearHistoryBtn) {
+      this.cbtClearHistoryBtn.addEventListener('click', () => this.clearHistory());
+    }
   }
 
   switchTab(tabKey) {
@@ -327,7 +333,7 @@ class PortalApp {
       } else if (source[selectedSet]) {
         const pool = source[selectedSet] || [];
         if (selectedScope === 'full') {
-          rawQuestions = this.shuffleArray(pool); // 30문항 전체 순서 셔플
+          rawQuestions = this.shuffleArray(pool); // 도메인 300문항 전체 순서 셔플
         } else {
           rawQuestions = this.shuffleArray(pool).slice(0, 15); // 15문항 무작위 추출
         }
@@ -969,6 +975,27 @@ class PortalApp {
         </tbody>
       </table>
     `;
+  }
+
+  async clearHistory() {
+    if (!confirm('최근 시험 응시 이력을 모두 초기화하시겠습니까?')) return;
+    try {
+      localStorage.removeItem('aib_cbt_history');
+    } catch (e) {}
+
+    if (this.serverOnline) {
+      try {
+        await fetch('/api/history/clear', { method: 'POST' });
+      } catch (e) {}
+    }
+
+    if (this.cbtHistorySection) {
+      this.cbtHistorySection.classList.add('hidden');
+    }
+    if (this.cbtHistoryTableContainer) {
+      this.cbtHistoryTableContainer.innerHTML = '';
+    }
+    alert('시험 응시 이력이 성공적으로 초기화되었습니다.');
   }
 
   resetCbtToStart() {
