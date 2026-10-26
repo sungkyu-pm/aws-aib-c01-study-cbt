@@ -60,7 +60,7 @@ def get_domain4_markdown():
 <div class="kr-col">
 
 #### 🇰🇷 한국어 전략 해설 & 비즈니스 판단 기준
-* **1단계(탐색) $\\rightarrow$ 2단계(기회주의적 시범) $\\rightarrow$ 3단계(체계화/CoE 구축) $\\rightarrow$ 4단계(전사 비즈니스 모델 혁신)**으로 진화합니다. 현재 조직이 어느 단계에 있는지 정확히 진단해야 다음 단계로의 현실적인 로드맵을 수립할 수 있습니다.
+* **1단계(탐색) ➔ 2단계(기회주의적 시범) ➔ 3단계(체계화/CoE 구축) ➔ 4단계(전사 비즈니스 모델 혁신)**으로 진화합니다. 현재 조직이 어느 단계에 있는지 정확히 진단해야 다음 단계로의 현실적인 로드맵을 수립할 수 있습니다.
 
 </div>
 </div>
@@ -273,7 +273,7 @@ def get_domain4_markdown():
 
 ## 제5장: 단계별 구현 프레임워크: Envision to Scale (Implementation Framework)
 
-### 4.14 단계별 구현 4단계 (Envision $\\rightarrow$ Experiment $\\rightarrow$ Launch $\\rightarrow$ Scale)
+### 4.14 단계별 구현 4단계 (Envision ➔ Experiment ➔ Launch ➔ Scale)
 <div class="bilingual-grid">
 <div class="en-col">
 
@@ -288,7 +288,7 @@ def get_domain4_markdown():
 <div class="kr-col">
 
 #### 🇰🇷 한국어 전략 해설 & 비즈니스 판단 기준
-* **구상(Envision) $\\rightarrow$ 실험(Experiment) $\\rightarrow$ 출시(Launch) $\\rightarrow$ 확장(Scale)**의 체계적인 단계를 밟아야 실패 리스크를 최소화하고 안정적으로 전사 확장을 달성할 수 있습니다.
+* **구상(Envision) ➔ 실험(Experiment) ➔ 출시(Launch) ➔ 확장(Scale)**의 체계적인 단계를 밟아야 실패 리스크를 최소화하고 안정적으로 전사 확장을 달성할 수 있습니다.
 
 </div>
 </div>

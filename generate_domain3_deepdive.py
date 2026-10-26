@@ -432,7 +432,7 @@ def get_domain3_markdown():
 <div class="kr-col">
 
 #### 🇰🇷 한국어 전략 해설 & 비즈니스 판단 기준
-* 미국 국립표준기술원(NIST)의 신뢰할 수 있는 AI 구축 가이드라인으로, GOVERN(거버넌스) $\\rightarrow$ MAP(매핑) $\\rightarrow$ MEASURE(측정) $\\rightarrow$ MANAGE(관리)의 4단계 프레임워크를 제공합니다.
+* 미국 국립표준기술원(NIST)의 신뢰할 수 있는 AI 구축 가이드라인으로, GOVERN(거버넌스) ➔ MAP(매핑) ➔ MEASURE(측정) ➔ MANAGE(관리)의 4단계 프레임워크를 제공합니다.
 
 </div>
 </div>

@@ -187,7 +187,7 @@
 
 #### 🇺🇸 English Exam Context
 * **AI ROI Formula**:
-  $$\text{ROI (\%)} = \left[ \frac{\text{Net Economic Benefits} - \text{Total Cost of Ownership}}{\text{Total Cost of Ownership}} \right] \times 100$$
+  * **`ROI (%) = [(Net Economic Benefits - Total Cost of Ownership) / Total Cost of Ownership] × 100`**
   * *Net Benefits*: Quantifiable labor savings + incremental revenues directly attributable to AI.
 
 </div>
@@ -354,7 +354,7 @@
 <div class="en-col">
 
 #### 🇺🇸 English Exam Context
-* **Data Flywheel**: Self-reinforcing cycle where an intuitive AI application attracts active users $\rightarrow$ generates proprietary user behavioral logs and domain telemetry $\rightarrow$ continuously refines model accuracy $\rightarrow$ attracts more users, establishing an insurmountable commercial moat against competitors.
+* **Data Flywheel**: Self-reinforcing cycle where an intuitive AI application attracts active users ➔ generates proprietary user behavioral logs and domain telemetry ➔ continuously refines model accuracy ➔ attracts more users, establishing an insurmountable commercial moat against competitors.
 
 </div>
 <div class="kr-col">
