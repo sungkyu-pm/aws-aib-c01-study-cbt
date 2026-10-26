@@ -10,9 +10,11 @@ import os
 import sys
 import json
 import time
-from datetime import datetime
+from datetime import datetime, timezone, timedelta
 from urllib.parse import urlparse, parse_qs
 from http.server import ThreadingHTTPServer, SimpleHTTPRequestHandler
+
+KST = timezone(timedelta(hours=9))
 
 PORT = 8000
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -96,7 +98,7 @@ class AIBExamServerHandler(SimpleHTTPRequestHandler):
             "server": "AIB-C01 Local Backend",
             "total_questions": total_questions,
             "total_exams_taken": exam_count,
-            "time": datetime.now().isoformat()
+            "time": datetime.now(KST).strftime("%Y-%m-%d %H:%M:%S KST")
         })
 
     def handle_api_docs(self, query):
@@ -184,7 +186,8 @@ class AIBExamServerHandler(SimpleHTTPRequestHandler):
                 ce = payload['client_evaluated']
                 record = {
                     "id": f"EXAM-{int(time.time())}",
-                    "timestamp": ce.get("timestamp", datetime.now().strftime("%Y-%m-%d %H:%M:%S")),
+                    "timestamp": ce.get("timestamp", datetime.now(KST).strftime("%Y-%m-%d %H:%M:%S")),
+                    "tz": "KST",
                     "set": set_name,
                     "mode": mode,
                     "total": ce.get("total", 0),
@@ -245,7 +248,8 @@ class AIBExamServerHandler(SimpleHTTPRequestHandler):
 
                 record = {
                     "id": f"EXAM-{int(time.time())}",
-                    "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+                    "timestamp": datetime.now(KST).strftime("%Y-%m-%d %H:%M:%S"),
+                    "tz": "KST",
                     "set": set_name,
                     "mode": mode,
                     "total": total,

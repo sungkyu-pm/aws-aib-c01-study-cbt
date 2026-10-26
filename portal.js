@@ -959,7 +959,8 @@ class PortalApp {
     });
 
     const resultRecord = {
-      timestamp: new Date().toISOString().replace('T', ' ').substring(0, 19),
+      timestamp: this.getKstTimestamp(),
+      tz: 'KST',
       set: selectedSet,
       mode: this.cbtMode,
       total: total,
@@ -1054,13 +1055,48 @@ class PortalApp {
     }
   }
 
+  getKstTimestamp(date = new Date()) {
+    try {
+      return new Intl.DateTimeFormat('sv-SE', {
+        timeZone: 'Asia/Seoul',
+        year: 'numeric',
+        month: '2-digit',
+        day: '2-digit',
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit',
+        hour12: false
+      }).format(date);
+    } catch (e) {
+      const kstTime = new Date(date.getTime() + 9 * 60 * 60 * 1000);
+      return kstTime.toISOString().replace('T', ' ').substring(0, 19);
+    }
+  }
+
+  normalizeHistoryRecord(record) {
+    if (!record || typeof record !== 'object') return record;
+    if (!record.tz && record.timestamp && typeof record.timestamp === 'string') {
+      if (!record.timestamp.includes('KST') && !record.timestamp.includes('+')) {
+        // 기존 toISOString()으로 저장되었던 UTC 시각을 한국 표준시(KST, UTC+9)로 자동 보정
+        try {
+          const utcDate = new Date(record.timestamp.replace(' ', 'T') + 'Z');
+          if (!isNaN(utcDate.getTime())) {
+            record.timestamp = this.getKstTimestamp(utcDate);
+          }
+        } catch (e) {}
+      }
+      record.tz = 'KST';
+    }
+    return record;
+  }
+
   async loadExamHistory() {
     if (this.serverOnline) {
       try {
         const res = await fetch('/api/history', { cache: 'no-store' });
         if (res.ok) {
           const data = await res.json();
-          const history = data.history || [];
+          const history = (data.history || []).map(r => this.normalizeHistoryRecord(r));
           this.renderHistoryTable(history);
           return;
         }
@@ -1070,7 +1106,9 @@ class PortalApp {
     // localStorage 폴백
     try {
       const localHist = JSON.parse(localStorage.getItem('aib_cbt_history') || '[]');
-      this.renderHistoryTable(localHist);
+      const history = localHist.map(r => this.normalizeHistoryRecord(r));
+      localStorage.setItem('aib_cbt_history', JSON.stringify(history.slice(0, 20)));
+      this.renderHistoryTable(history);
     } catch (e) {}
   }
 
@@ -1139,7 +1177,7 @@ class PortalApp {
       <table class="history-table">
         <thead>
           <tr>
-            <th>응시 일시</th>
+            <th>응시 일시 (KST)</th>
             <th>시험 세트</th>
             <th>정답률</th>
             <th>환산 점수</th>
