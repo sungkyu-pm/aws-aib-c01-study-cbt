@@ -188,6 +188,14 @@ class PortalApp {
   }
 
   renderMarkdown(text) {
+    if (!text) return '';
+    // Clean up any LaTeX arrows or math symbols into clean Unicode
+    text = text
+      .replace(/\$\\rightarrow\$/g, '➔')
+      .replace(/\\rightarrow/g, '➔')
+      .replace(/\$\\leftarrow\$/g, '⬅')
+      .replace(/\\leftarrow/g, '⬅');
+
     if (typeof marked !== 'undefined' && typeof marked.parse === 'function') {
       try {
         return marked.parse(text);
