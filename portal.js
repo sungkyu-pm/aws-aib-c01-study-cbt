@@ -289,6 +289,26 @@ class PortalApp {
     if (this.cbtClearHistoryBtn) {
       this.cbtClearHistoryBtn.addEventListener('click', () => this.clearHistory());
     }
+
+    // 오답노트 모달 닫기 및 재응시 이벤트 리스너
+    const notesModal = document.getElementById('wrong-notes-modal');
+    const notesCloseBtn = document.getElementById('notes-modal-close-btn');
+    const notesCloseBottomBtn = document.getElementById('notes-modal-close-bottom-btn');
+    const notesBackdrop = document.getElementById('notes-modal-backdrop');
+    const notesRetestBtn = document.getElementById('notes-modal-retest-btn');
+    const notesRetestBottomBtn = document.getElementById('notes-modal-retest-bottom-btn');
+
+    if (notesCloseBtn) notesCloseBtn.addEventListener('click', () => this.closeWrongNotesModal());
+    if (notesCloseBottomBtn) notesCloseBottomBtn.addEventListener('click', () => this.closeWrongNotesModal());
+    if (notesBackdrop) notesBackdrop.addEventListener('click', () => this.closeWrongNotesModal());
+    if (notesRetestBtn) notesRetestBtn.addEventListener('click', () => this.retestWrongQuestions());
+    if (notesRetestBottomBtn) notesRetestBottomBtn.addEventListener('click', () => this.retestWrongQuestions());
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && notesModal && !notesModal.classList.contains('hidden')) {
+        this.closeWrongNotesModal();
+      }
+    });
   }
 
   switchTab(tabKey) {
@@ -949,7 +969,9 @@ class PortalApp {
       passed: passed,
       time_spent_seconds: this.cbtTimeSpent,
       domain_stats: domainStats,
-      wrong_question_ids: wrongQuestionIds
+      wrong_question_ids: wrongQuestionIds,
+      user_answers: { ...this.cbtUserAnswers },
+      question_ids: this.cbtQuestions.map(q => q.id)
     };
 
     try {
@@ -1052,18 +1074,54 @@ class PortalApp {
     } catch (e) {}
   }
 
+  findQuestionById(id) {
+    if (!id) return null;
+    const source = (typeof window !== 'undefined' && window.EXAM_DATA) ? window.EXAM_DATA : (typeof EXAM_DATA !== 'undefined' ? EXAM_DATA : null);
+    if (!source) return null;
+    if (Array.isArray(source.all_pool)) {
+      const found = source.all_pool.find(q => q && q.id === id);
+      if (found) return found;
+    }
+    const domainKeys = ['domain1', 'domain2', 'domain3', 'domain4', 'mock1'];
+    for (const k of domainKeys) {
+      if (Array.isArray(source[k])) {
+        const found = source[k].find(q => q && q.id === id);
+        if (found) return found;
+      }
+    }
+    return null;
+  }
+
   renderHistoryTable(history) {
     if (!this.cbtHistorySection || !this.cbtHistoryTableContainer) return;
-    if (history.length === 0) {
+    this.currentHistory = history || [];
+    if (this.currentHistory.length === 0) {
       this.cbtHistorySection.classList.add('hidden');
       return;
     }
 
     this.cbtHistorySection.classList.remove('hidden');
     let rowsHtml = '';
-    history.slice(0, 5).forEach((item, idx) => {
+    this.currentHistory.slice(0, 10).forEach((item, idx) => {
       const mins = Math.floor((item.time_spent_seconds || 0) / 60);
       const secs = (item.time_spent_seconds || 0) % 60;
+      const wrongCount = Array.isArray(item.wrong_question_ids) ? item.wrong_question_ids.length : 0;
+
+      let wrongBtnHtml = '';
+      if (Array.isArray(item.wrong_question_ids)) {
+        if (wrongCount > 0) {
+          wrongBtnHtml = `
+            <button class="btn btn-sm btn-open-notes" data-idx="${idx}" style="font-weight:700; padding:0.25rem 0.65rem; font-size:0.8rem; background:#fee2e2; border:1px solid #f87171; color:#b91c1c; border-radius:5px; cursor:pointer;">
+              📝 오답노트 (${wrongCount}문항)
+            </button>
+          `;
+        } else {
+          wrongBtnHtml = `<span style="color:#16a34a; font-weight:700; font-size:0.82rem;">🎉 만점 (오답 없음)</span>`;
+        }
+      } else {
+        wrongBtnHtml = `<span style="color:#94a3b8; font-size:0.8rem;">기록 없음</span>`;
+      }
+
       rowsHtml += `
         <tr>
           <td>${item.timestamp}</td>
@@ -1072,6 +1130,7 @@ class PortalApp {
           <td><strong>${item.scaled_score}점</strong></td>
           <td><span class="history-badge ${item.passed ? 'pass' : 'fail'}">${item.passed ? '합격' : '불합격'}</span></td>
           <td>${mins}분 ${secs}초</td>
+          <td>${wrongBtnHtml}</td>
         </tr>
       `;
     });
@@ -1086,6 +1145,7 @@ class PortalApp {
             <th>환산 점수</th>
             <th>결과</th>
             <th>소요 시간</th>
+            <th>오답노트 / 복습</th>
           </tr>
         </thead>
         <tbody>
@@ -1093,6 +1153,147 @@ class PortalApp {
         </tbody>
       </table>
     `;
+
+    // 오답노트 버튼 클릭 이벤트 바인딩
+    this.cbtHistoryTableContainer.querySelectorAll('.btn-open-notes').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        const idx = parseInt(e.currentTarget.getAttribute('data-idx'), 10);
+        this.openWrongNotesModal(idx);
+      });
+    });
+  }
+
+  openWrongNotesModal(idx) {
+    if (!this.currentHistory || !this.currentHistory[idx]) return;
+    const record = this.currentHistory[idx];
+    const wrongIds = record.wrong_question_ids || [];
+    if (wrongIds.length === 0) {
+      alert('해당 시험 기록에는 틀린 문제가 없습니다. (만점 달성! 🎉)');
+      return;
+    }
+
+    const modal = document.getElementById('wrong-notes-modal');
+    const modalTitle = document.getElementById('notes-modal-title');
+    const modalSubtitle = document.getElementById('notes-modal-subtitle');
+    const modalBody = document.getElementById('notes-modal-body');
+
+    if (!modal || !modalBody) return;
+
+    const setNameMap = {
+      'mock1': '공식 실전 모의고사 (60문항)',
+      'domain1': '도메인 1: AI 기초 및 활용 능력',
+      'domain2': '도메인 2: AI 전략 및 비즈니스 가치 창출',
+      'domain3': '도메인 3: AI 거버넌스 및 책임 있는 AI',
+      'domain4': '도메인 4: 조직 준비성 및 AI 전환'
+    };
+    const setName = setNameMap[record.set] || record.set;
+
+    if (modalTitle) {
+      modalTitle.textContent = `${record.timestamp} 응시 오답노트 (${setName})`;
+    }
+    if (modalSubtitle) {
+      modalSubtitle.innerHTML = `총 ${record.total}문항 중 <strong style="color:#ef4444;">${wrongIds.length}문항 오답</strong> &bull; 정답률 <strong>${record.accuracy}%</strong> &bull; 환산 점수 <strong>${record.scaled_score}점</strong> (${record.passed ? '<span style="color:#16a34a; font-weight:700;">합격</span>' : '<span style="color:#dc2626; font-weight:700;">불합격</span>'})`;
+    }
+
+    const wrongQuestions = [];
+    wrongIds.forEach(id => {
+      const q = this.findQuestionById(id);
+      if (q) wrongQuestions.push(q);
+    });
+
+    if (wrongQuestions.length === 0) {
+      modalBody.innerHTML = `
+        <div style="text-align:center; padding:3rem; color:var(--text-muted); background:#fff; border-radius:8px;">
+          오답 문제 상세 데이터를 불러올 수 없습니다. (대상 문항 ID: ${wrongIds.join(', ')})
+        </div>
+      `;
+    } else {
+      let cardsHtml = '';
+      wrongQuestions.forEach((q, qIndex) => {
+        const userChoice = record.user_answers ? record.user_answers[q.id] : null;
+        const correctChoice = q.correct_answer;
+
+        let optionsHtml = '';
+        if (q.options && Array.isArray(q.options)) {
+          q.options.forEach(opt => {
+            const isCorrect = Array.isArray(correctChoice)
+              ? correctChoice.includes(opt.key)
+              : opt.key === correctChoice;
+            const isUserChoice = userChoice && (
+              Array.isArray(userChoice)
+                ? userChoice.includes(opt.key)
+                : userChoice === opt.key
+            );
+
+            let optClass = 'note-opt';
+            let badgeHtml = '';
+            if (isCorrect) {
+              optClass += ' note-opt-correct';
+              badgeHtml = '<span class="note-badge badge-correct">✓ 정답 (Correct)</span>';
+            } else if (isUserChoice) {
+              optClass += ' note-opt-wrong';
+              badgeHtml = '<span class="note-badge badge-user-wrong">✗ 내가 선택한 오답</span>';
+            }
+
+            optionsHtml += `
+              <div class="${optClass}">
+                <div class="note-opt-key">(${opt.key})</div>
+                <div class="note-opt-text">
+                  <div class="en">${opt.text_en || ''}</div>
+                  <div class="kr">${opt.text_kr || ''}</div>
+                </div>
+                ${badgeHtml}
+              </div>
+            `;
+          });
+        }
+
+        cardsHtml += `
+          <div class="wrong-q-card">
+            <div class="wrong-q-card-header">
+              <span class="q-num-badge">오답 #${qIndex + 1}</span>
+              <span class="q-id-badge">${q.id}</span>
+              <span class="q-topic-badge">${q.domain || ''} &bull; ${q.topic_category || ''}</span>
+            </div>
+            <div class="wrong-q-stem">
+              <div class="en-stem">🇺🇸 ${q.question_en || ''}</div>
+              <div class="kr-stem">🇰🇷 ${q.question_kr || ''}</div>
+            </div>
+            <div class="wrong-q-options">
+              ${optionsHtml}
+            </div>
+            <div class="wrong-q-explanation">
+              <div class="exp-title">💡 정답 및 비즈니스 해설 (Answer & Explanation)</div>
+              <div class="exp-content">${this.renderMarkdown(q.explanation_kr || '')}</div>
+            </div>
+          </div>
+        `;
+      });
+      modalBody.innerHTML = cardsHtml;
+    }
+
+    this.currentWrongQuestionsForRetest = wrongQuestions;
+    modal.classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+  }
+
+  closeWrongNotesModal() {
+    const modal = document.getElementById('wrong-notes-modal');
+    if (modal) {
+      modal.classList.add('hidden');
+      document.body.style.overflow = '';
+    }
+  }
+
+  retestWrongQuestions() {
+    if (!this.currentWrongQuestionsForRetest || this.currentWrongQuestionsForRetest.length === 0) {
+      alert('다시 풀 수 있는 오답 문항이 없습니다.');
+      return;
+    }
+    this.closeWrongNotesModal();
+    this.switchTab('cbt');
+    this.startCbtSession(this.currentWrongQuestionsForRetest, 'study', false);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
   async clearHistory() {

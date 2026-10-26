@@ -194,7 +194,8 @@ class AIBExamServerHandler(SimpleHTTPRequestHandler):
                     "passed": ce.get("passed", False),
                     "time_spent_seconds": time_spent_seconds,
                     "domain_stats": ce.get("domain_stats", {}),
-                    "wrong_question_ids": ce.get("wrong_question_ids", [])
+                    "wrong_question_ids": ce.get("wrong_question_ids", []),
+                    "user_answers": ce.get("user_answers", payload.get("user_answers", {}))
                 }
             else:
                 user_answers = payload.get('user_answers', {})
@@ -254,7 +255,8 @@ class AIBExamServerHandler(SimpleHTTPRequestHandler):
                     "passed": passed,
                     "time_spent_seconds": time_spent_seconds,
                     "domain_stats": domain_stats,
-                    "wrong_question_ids": wrong_question_ids
+                    "wrong_question_ids": wrong_question_ids,
+                    "user_answers": user_answers
                 }
 
             # 기록 파일에 영구 추가

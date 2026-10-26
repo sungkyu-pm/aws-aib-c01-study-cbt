@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="portal.css?v=20261026_1305">
+  <link rel="stylesheet" href="portal.css?v=20261026_1800">
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 <body>
@@ -326,8 +326,41 @@
     <p>AWS Certified AI Business Strategist (AIB-C01) Study Portal & CBT Simulator</p>
   </footer>
 
-  <script src="questions-data.js?v=20261026_1305"></script>
-  <script src="portal-docs-data.js?v=20261026_1305"></script>
-  <script src="portal.js?v=20261026_1305"></script>
+  <!-- 오답노트 전용 모달 (Wrong Answer Notes Modal) -->
+  <div id="wrong-notes-modal" class="notes-modal hidden">
+    <div class="notes-modal-backdrop" id="notes-modal-backdrop"></div>
+    <div class="notes-modal-dialog">
+      <div class="notes-modal-header">
+        <div class="notes-modal-title-group">
+          <div class="notes-modal-badge">📝 오답노트 (Incorrect Answers Review)</div>
+          <h3 id="notes-modal-title" class="notes-modal-title">응시 이력 오답 분석</h3>
+          <p id="notes-modal-subtitle" class="notes-modal-subtitle"></p>
+        </div>
+        <div class="notes-modal-actions">
+          <button id="notes-modal-retest-btn" class="btn btn-warning btn-sm" style="font-weight: 700;">
+            🔄 이 오답으로 다시 CBT 풀기
+          </button>
+          <button id="notes-modal-close-btn" class="btn btn-outline btn-sm">
+            ✕ 닫기
+          </button>
+        </div>
+      </div>
+      <div id="notes-modal-body" class="notes-modal-body">
+        <!-- 오답 카드 동적 렌더링 영역 -->
+      </div>
+      <div class="notes-modal-footer">
+        <button id="notes-modal-retest-bottom-btn" class="btn btn-warning" style="font-weight: 700;">
+          🔄 이 오답 문항들로 CBT 다시 풀기
+        </button>
+        <button id="notes-modal-close-bottom-btn" class="btn btn-secondary">
+          닫기 (Close)
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="questions-data.js?v=20261026_1800"></script>
+  <script src="portal-docs-data.js?v=20261026_1800"></script>
+  <script src="portal.js?v=20261026_1800"></script>
 </body>
 </html>
