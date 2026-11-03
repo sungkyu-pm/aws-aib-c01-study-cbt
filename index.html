@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="portal.css?v=20261026_1810">
+  <link rel="stylesheet" href="portal.css?v=20261103_1410">
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 <body>
@@ -28,6 +28,10 @@
       <div id="cbt-timer-box" class="cbt-timer-box hidden">
         <span>⏱️</span>
         <span id="cbt-time-display">00:00</span>
+        <button id="cbt-timer-pause-btn" class="cbt-timer-pause-btn" type="button" title="타이머 일시 정지 / 계속하기">
+          <span id="cbt-timer-pause-icon">⏸️</span>
+          <span id="cbt-timer-pause-text">일시정지</span>
+        </button>
       </div>
       <button class="nav-tab-btn highlight-cbt" data-tab="cbt">
         <span>💻 실전 CBT 모의고사</span>
@@ -218,6 +222,9 @@
                   <span id="cbt-q-domain" class="badge badge-gray">Domain 1</span>
                 </div>
                 <div class="q-top-actions">
+                  <button id="cbt-exam-pause-btn" class="btn btn-outline btn-sm" title="시험 일시 정지 (자리 비움)">
+                    <span id="cbt-exam-pause-icon">⏸️</span> <span id="cbt-exam-pause-label">일시 정지</span>
+                  </button>
                   <button id="cbt-flag-btn" class="btn btn-outline btn-sm">
                     🚩 <span id="cbt-flag-label">검토 표시 (Flag)</span>
                   </button>
@@ -326,6 +333,32 @@
     <p>AWS Certified AI Business Strategist (AIB-C01) Study Portal & CBT Simulator</p>
   </footer>
 
+  <!-- CBT 일시 정지 (자리 비움) 오버레이 -->
+  <div id="cbt-pause-overlay" class="cbt-pause-overlay hidden">
+    <div id="cbt-pause-backdrop" class="cbt-pause-backdrop"></div>
+    <div class="cbt-pause-card">
+      <div class="pause-icon-badge">⏸️</div>
+      <h2>시험 일시 정지 (Paused)</h2>
+      <p class="pause-notice">
+        자리 비움 또는 휴식을 위해 타이머가 정지되었습니다.<br>
+        문제 풀이를 계속하시려면 아래 버튼을 눌러주세요.
+      </p>
+      <div class="pause-status-box">
+        <div class="pause-status-item">
+          <span class="pause-status-label">현재 타이머</span>
+          <span id="pause-status-time" class="pause-status-val">00:00</span>
+        </div>
+        <div class="pause-status-item">
+          <span class="pause-status-label">풀이 진행도</span>
+          <span id="pause-status-progress" class="pause-status-val">0 / 0</span>
+        </div>
+      </div>
+      <button id="cbt-resume-modal-btn" class="btn btn-primary btn-large btn-resume">
+        ▶️ 시험 계속하기 (Resume)
+      </button>
+    </div>
+  </div>
+
   <!-- 오답노트 전용 모달 (Wrong Answer Notes Modal) -->
   <div id="wrong-notes-modal" class="notes-modal hidden">
     <div class="notes-modal-backdrop" id="notes-modal-backdrop"></div>
@@ -359,8 +392,8 @@
     </div>
   </div>
 
-  <script src="questions-data.js?v=20261026_1810"></script>
-  <script src="portal-docs-data.js?v=20261026_1810"></script>
-  <script src="portal.js?v=20261026_1810"></script>
+  <script src="questions-data.js?v=20261103_1410"></script>
+  <script src="portal-docs-data.js?v=20261103_1410"></script>
+  <script src="portal.js?v=20261103_1410"></script>
 </body>
 </html>

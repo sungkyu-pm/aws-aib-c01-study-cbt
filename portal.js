@@ -12,6 +12,7 @@ class PortalApp {
     this.cbtKoreanVisible = false;
     this.cbtTimerInterval = null;
     this.cbtSecondsLeft = 0;
+    this.isPaused = false;
     this.serverOnline = false;
 
     this.initDOM();
@@ -40,6 +41,10 @@ class PortalApp {
     // CBT 컴포넌트
     this.cbtTimerBox = document.getElementById('cbt-timer-box');
     this.cbtTimeDisplay = document.getElementById('cbt-time-display');
+    this.cbtTimerPauseBtn = document.getElementById('cbt-timer-pause-btn');
+    this.cbtTimerPauseIcon = document.getElementById('cbt-timer-pause-icon');
+    this.cbtTimerPauseText = document.getElementById('cbt-timer-pause-text');
+
     this.cbtStartScreen = document.getElementById('cbt-start-screen');
     this.cbtExamScreen = document.getElementById('cbt-exam-screen');
     this.cbtResultScreen = document.getElementById('cbt-result-screen');
@@ -47,9 +52,18 @@ class PortalApp {
     this.cbtStartBtn = document.getElementById('cbt-start-btn');
     this.cbtQIndex = document.getElementById('cbt-q-index');
     this.cbtQDomain = document.getElementById('cbt-q-domain');
+    this.cbtExamPauseBtn = document.getElementById('cbt-exam-pause-btn');
+    this.cbtExamPauseIcon = document.getElementById('cbt-exam-pause-icon');
+    this.cbtExamPauseLabel = document.getElementById('cbt-exam-pause-label');
     this.cbtFlagBtn = document.getElementById('cbt-flag-btn');
     this.cbtFlagLabel = document.getElementById('cbt-flag-label');
     this.cbtTransBtn = document.getElementById('cbt-trans-btn');
+
+    this.cbtPauseOverlay = document.getElementById('cbt-pause-overlay');
+    this.cbtPauseBackdrop = document.getElementById('cbt-pause-backdrop');
+    this.cbtResumeModalBtn = document.getElementById('cbt-resume-modal-btn');
+    this.pauseStatusTime = document.getElementById('pause-status-time');
+    this.pauseStatusProgress = document.getElementById('pause-status-progress');
 
     this.cbtQTextEn = document.getElementById('cbt-q-text-en');
     this.cbtQTextKr = document.getElementById('cbt-q-text-kr');
@@ -304,9 +318,33 @@ class PortalApp {
     if (notesRetestBtn) notesRetestBtn.addEventListener('click', () => this.retestWrongQuestions());
     if (notesRetestBottomBtn) notesRetestBottomBtn.addEventListener('click', () => this.retestWrongQuestions());
 
+    // 타이머 일시 정지 (자리 비움) 이벤트
+    if (this.cbtTimerPauseBtn) {
+      this.cbtTimerPauseBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        this.toggleCbtPause();
+      });
+    }
+    if (this.cbtExamPauseBtn) {
+      this.cbtExamPauseBtn.addEventListener('click', () => this.toggleCbtPause());
+    }
+    if (this.cbtResumeModalBtn) {
+      this.cbtResumeModalBtn.addEventListener('click', () => this.resumeCbtTimer());
+    }
+    if (this.cbtPauseBackdrop) {
+      this.cbtPauseBackdrop.addEventListener('click', () => this.resumeCbtTimer());
+    }
+
     document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && notesModal && !notesModal.classList.contains('hidden')) {
-        this.closeWrongNotesModal();
+      if (e.key === 'Escape') {
+        if (this.isPaused) {
+          this.resumeCbtTimer();
+          return;
+        }
+        if (notesModal && !notesModal.classList.contains('hidden')) {
+          this.closeWrongNotesModal();
+          return;
+        }
       }
     });
   }
@@ -547,6 +585,21 @@ class PortalApp {
     }
 
     try {
+      this.isPaused = false;
+      if (this.cbtPauseOverlay) this.cbtPauseOverlay.classList.add('hidden');
+      if (this.cbtTimerBox) this.cbtTimerBox.classList.remove('paused');
+      if (this.cbtTimerPauseIcon) this.cbtTimerPauseIcon.textContent = '⏸️';
+      if (this.cbtTimerPauseText) this.cbtTimerPauseText.textContent = '일시정지';
+      if (this.cbtExamPauseIcon) this.cbtExamPauseIcon.textContent = '⏸️';
+      if (this.cbtExamPauseLabel) this.cbtExamPauseLabel.textContent = '일시 정지';
+      if (this.cbtExamPauseBtn) {
+        if (this.isReviewMode) {
+          this.cbtExamPauseBtn.classList.add('hidden');
+        } else {
+          this.cbtExamPauseBtn.classList.remove('hidden');
+        }
+      }
+
       this.cbtStartScreen.classList.remove('active');
       this.cbtResultScreen.classList.remove('active');
       this.cbtExamScreen.classList.add('active');
@@ -588,6 +641,57 @@ class PortalApp {
       }
       this.updateTimerText();
     }, 1000);
+  }
+
+  toggleCbtPause() {
+    if (this.isPaused) {
+      this.resumeCbtTimer();
+    } else {
+      this.pauseCbtTimer();
+    }
+  }
+
+  pauseCbtTimer() {
+    if (!this.cbtExamScreen.classList.contains('active') || this.isReviewMode) return;
+    this.isPaused = true;
+    clearInterval(this.cbtTimerInterval);
+
+    if (this.cbtTimerBox) this.cbtTimerBox.classList.add('paused');
+    if (this.cbtTimerPauseIcon) this.cbtTimerPauseIcon.textContent = '▶️';
+    if (this.cbtTimerPauseText) this.cbtTimerPauseText.textContent = '계속';
+
+    if (this.cbtExamPauseIcon) this.cbtExamPauseIcon.textContent = '▶️';
+    if (this.cbtExamPauseLabel) this.cbtExamPauseLabel.textContent = '계속 풀기';
+
+    if (this.pauseStatusTime) {
+      this.pauseStatusTime.textContent = this.cbtTimeDisplay.textContent;
+    }
+    if (this.pauseStatusProgress) {
+      const answeredCount = this.cbtUserAnswers ? Object.keys(this.cbtUserAnswers).length : 0;
+      const totalCount = this.cbtQuestions ? this.cbtQuestions.length : 0;
+      this.pauseStatusProgress.textContent = `${answeredCount} / ${totalCount} 완료`;
+    }
+    if (this.cbtPauseOverlay) {
+      this.cbtPauseOverlay.classList.remove('hidden');
+    }
+  }
+
+  resumeCbtTimer() {
+    if (!this.isPaused) return;
+    this.isPaused = false;
+
+    if (this.cbtTimerBox) this.cbtTimerBox.classList.remove('paused');
+    if (this.cbtTimerPauseIcon) this.cbtTimerPauseIcon.textContent = '⏸️';
+    if (this.cbtTimerPauseText) this.cbtTimerPauseText.textContent = '일시정지';
+
+    if (this.cbtExamPauseIcon) this.cbtExamPauseIcon.textContent = '⏸️';
+    if (this.cbtExamPauseLabel) this.cbtExamPauseLabel.textContent = '일시 정지';
+
+    if (this.cbtPauseOverlay) {
+      this.cbtPauseOverlay.classList.add('hidden');
+    }
+
+    this.startCbtTimer();
   }
 
   updateTimerText() {
@@ -866,6 +970,9 @@ class PortalApp {
   }
 
   submitCbt() {
+    this.isPaused = false;
+    if (this.cbtPauseOverlay) this.cbtPauseOverlay.classList.add('hidden');
+    if (this.cbtTimerBox) this.cbtTimerBox.classList.remove('paused');
     clearInterval(this.cbtTimerInterval);
 
     let correctCount = 0;
@@ -1357,6 +1464,9 @@ class PortalApp {
 
   resetCbtToStart() {
     this.isReviewMode = false;
+    this.isPaused = false;
+    if (this.cbtPauseOverlay) this.cbtPauseOverlay.classList.add('hidden');
+    if (this.cbtTimerBox) this.cbtTimerBox.classList.remove('paused');
     clearInterval(this.cbtTimerInterval);
     this.cbtUserAnswers = {};
     this.cbtFlagged = new Set();

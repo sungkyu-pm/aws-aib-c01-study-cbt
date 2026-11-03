@@ -143,7 +143,7 @@ body {
 
 .cbt-timer-box {
   background-color: rgba(255, 255, 255, 0.1);
-  padding: 0.4rem 0.9rem;
+  padding: 0.35rem 0.75rem;
   border-radius: 6px;
   font-weight: 700;
   font-size: 1.1rem;
@@ -152,6 +152,49 @@ body {
   align-items: center;
   gap: 0.5rem;
   border: 1px solid rgba(56, 189, 248, 0.3);
+  transition: all 0.25s ease;
+}
+
+.cbt-timer-box.paused {
+  background-color: rgba(245, 158, 11, 0.2);
+  border-color: #f59e0b;
+  color: #fbbf24;
+  box-shadow: 0 0 10px rgba(245, 158, 11, 0.3);
+  animation: timerPausedPulse 1.8s infinite ease-in-out;
+}
+
+@keyframes timerPausedPulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.65; }
+}
+
+.cbt-timer-pause-btn {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #ffffff;
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 0.22rem 0.55rem;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  transition: all 0.18s ease;
+  line-height: 1;
+}
+
+.cbt-timer-pause-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+  border-color: #ffffff;
+  transform: translateY(-1px);
+}
+
+.cbt-timer-box.paused .cbt-timer-pause-btn {
+  background: #f59e0b;
+  border-color: #d97706;
+  color: #111827;
+  font-weight: 800;
 }
 
 .highlight-cbt {
@@ -948,8 +991,13 @@ body {
     font-size: 0.72rem;
   }
   .cbt-timer-box {
-    padding: 0.25rem 0.65rem;
-    font-size: 0.95rem;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.92rem;
+    gap: 0.35rem;
+  }
+  .cbt-timer-pause-btn {
+    padding: 0.18rem 0.45rem;
+    font-size: 0.72rem;
   }
 
   /* 네비게이션 탭 바 (모바일 가로 스와이프 터치) */
@@ -1495,6 +1543,121 @@ body {
   color: #ffffff !important;
   border-color: #ef4444 !important;
   transform: translateY(-1px);
+}
+
+/* ==========================================================================
+   CBT 일시 정지 (자리 비움) 오버레이
+   ========================================================================== */
+.cbt-pause-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.cbt-pause-overlay.hidden {
+  display: none !important;
+}
+
+.cbt-pause-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.82);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.cbt-pause-card {
+  position: relative;
+  z-index: 10000;
+  background: #ffffff;
+  width: 100%;
+  max-width: 480px;
+  border-radius: 16px;
+  padding: 2.2rem 2rem;
+  text-align: center;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.45);
+  animation: pauseCardPop 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes pauseCardPop {
+  from {
+    opacity: 0;
+    transform: scale(0.92) translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.pause-icon-badge {
+  width: 68px;
+  height: 68px;
+  margin: 0 auto 1.2rem;
+  background: #fef3c7;
+  border: 2px solid #fde68a;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.1rem;
+  box-shadow: 0 4px 14px rgba(245, 158, 11, 0.25);
+}
+
+.cbt-pause-card h2 {
+  margin: 0 0 0.6rem;
+  font-size: 1.4rem;
+  color: var(--aws-dark-blue);
+  font-weight: 800;
+}
+
+.pause-notice {
+  margin: 0 0 1.5rem;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.55;
+}
+
+.pause-status-box {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 1rem;
+  margin-bottom: 1.8rem;
+}
+
+.pause-status-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.pause-status-label {
+  font-size: 0.78rem;
+  color: #64748b;
+  font-weight: 600;
+}
+
+.pause-status-val {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--aws-dark-blue);
+}
+
+.btn-resume {
+  width: 100%;
+  padding: 0.9rem 1.5rem;
+  font-size: 1.05rem;
+  font-weight: 700;
+  box-shadow: 0 4px 14px rgba(255, 153, 0, 0.4);
+  cursor: pointer;
 }
 
 
