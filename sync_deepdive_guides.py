@@ -11,7 +11,7 @@ the corresponding high-complexity practice question directly underneath each top
 import json
 import os
 
-from build_deduplicated_question_bank import D1_TAXONOMY
+from build_deduplicated_question_bank import D1_TAXONOMY, EXECUTIVE_CONTEXTS
 from generate_all_deduplicated_domains import D2_TAXONOMY, D3_TAXONOMY, D4_TAXONOMY
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -161,8 +161,10 @@ def build_domain_markdown(d_num):
             md_lines.append(f"## {chapter_start_map[idx]}")
             md_lines.append("")
 
-        # Representative question from questions_domain{d_num}.json rotating across diverse industries (Bio, Manufacturing, R&D, Retail, Distribution, etc.)
+        # Representative question from questions_domain{d_num}.json rotating across diverse industries & C-suite contexts
         rep_q = q_list[(idx - 1) * 10 + ((idx + d_num) % 10)]
+        exec_ctx = EXECUTIVE_CONTEXTS[(idx + d_num) % len(EXECUTIVE_CONTEXTS)]
+        exec_title_kr, exec_title_en, exec_desc_kr, exec_desc_en = exec_ctx
 
         trap_bullets_en = "\n".join([f"  * *Common Exam Trap*: {d_en}" for _, d_en in distractors])
         trap_bullets_kr = "\n".join([f"  * *주의해야 할 오답 함정*: {d_kr}" for d_kr, _ in distractors])
@@ -173,6 +175,7 @@ def build_domain_markdown(d_num):
 
 #### 🇺🇸 English Exam Context & Strategic Trade-offs
 * **Core Exam Scenario Dilemma**: {stem_en}
+* **C-Suite Governance Context ({exec_title_en})**: {exec_desc_en}
 * **Optimal Strategic Decision (MOST Appropriate)**: **{corr_en}**
 * **Plausible Distractor Archetypes to Eliminate**:
 {trap_bullets_en}
@@ -182,6 +185,7 @@ def build_domain_markdown(d_num):
 
 #### 🇰🇷 한국어 전략 해설 & 단계별 대응 기준
 * **실전 핵심 딜레마**: {stem_kr}
+* **임원진 의사결정 형태 ({exec_title_kr})**: {exec_desc_kr}
 * **최적의 전략적 해법 (정답 기준)**: **{corr_kr}**
 * **아키텍처 및 거버넌스 핵심 원리**:
   * {rationale_kr}
