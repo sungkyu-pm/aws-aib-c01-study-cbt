@@ -426,6 +426,9 @@ class PortalApp {
 
     q.options = shuffled.map(item => item.opt);
     q.correct_answer = isMultiple ? newCorrect.sort() : (newCorrect[0] || q.correct_answer);
+    if (!isMultiple && typeof q.explanation_kr === 'string' && newCorrect[0]) {
+      q.explanation_kr = q.explanation_kr.replace(/^정답은 [A-F]입니다\./, `정답은 ${newCorrect[0]}입니다.`);
+    }
     return q;
   }
 
@@ -925,7 +928,7 @@ class PortalApp {
     }
 
     this.cbtFeedbackConceptTag.textContent = q.key_concept || 'AWS AI Strategy';
-    this.cbtFeedbackDetail.textContent = q.explanation_kr;
+    this.cbtFeedbackDetail.innerHTML = this.renderMarkdown(q.explanation_kr || '');
   }
 
   updateCbtSummary() {
