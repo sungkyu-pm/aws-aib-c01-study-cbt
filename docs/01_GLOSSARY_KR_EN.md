@@ -1,3 +1,114 @@
+# 📖 AWS Certified AI Business Strategist (AIB-C01) 마스터 용어사전 & 실전 시험 표현집 (Master Glossary & Exam Idioms)
+
+> **본 용어사전의 목적**: 실제 `AIB-C01` 시험은 단순 약어 암기가 아니라, **전략적 의사결정 맥락에서 쓰이는 고급 비즈니스/아키텍처 관용구(Idioms), 임원진(C-Suite) 거버넌스 용어, AI/ML 학습 방법론, 그리고 산업별(바이오·제조·R&D·유통·소매·금융) 실무 표현**을 정확히 독해할 수 있는지를 평가합니다.
+> 시험장에서 선지를 읽자마자 **정답 시그널(Green Flag)** 과 **매력적인 오답 함정(Red Flag)** 을 3초 만에 판별할 수 있도록 핵심 표현과 마스터 용어를 6개 파트로 체계화했습니다.
+
+---
+
+## 🎯 Part 1. 실전 시험 정답 시그널(Green Flags) vs. 오답 함정(Red Flags) 필수 관용구 사전
+
+실제 시험의 긴 영어/한국어 선지에서 **반복적으로 등장하는 정답 표현과 오답 함정 표현**을 대비한 실전 판별 사전입니다.
+
+### 1-1. 전략·재무·의사결정 핵심 관용구 (Strategy, FinOps & Decision Idioms)
+
+| 실전 시험 표현 (English / Korean) | 판별 신호 | 실전 의미 및 시험 출제 맥락 (Exam Context & Trap Analysis) |
+| :--- | :---: | :--- |
+| **Undifferentiated Heavy Lifting**<br>(비차별화 중노동 / 범용 반복 인프라 작업) | 🟢 **정답 신호** | 기업의 고유 경쟁력(Core IP)과 무관한 범용 작업(인프라 구축, 기본 OCR/번역, 범용 LLM 밑바닥 훈련). 시험에서는 **"Managed AI Service(SaaS/API)를 Buy하여 외주화/제거해야 할 대상"** 으로 등장합니다. |
+| **Core Competitive Differentiator**<br>(핵심 경쟁 차별화 요소 / 독점적 해자) | 🟢 **정답 신호** | 경쟁사가 복제할 수 없는 당사만의 고유 알고리즘·독점 R&D 데이터. 시험에서는 **"Proprietary Custom Build 또는 PEFT/RAG로 내재화해야 할 영역"** 으로 등장합니다. |
+| **Stage-Gated Tranche / Metered Funding**<br>(단계별 관문 기반 분할 펀딩) | 🟢 **정답 신호** | 대규모 일괄 예산(Upfront CapEx) 대신, `Envision ➔ Experiment ➔ Launch ➔ Scale` 각 단계의 KPI/비즈니스 가설 검증을 통과할 때마다 다음 예산을 집행하는 **CFO/투자심의위원회의 모범 재무 통제 방식**입니다. |
+| **Build-Operate-Transfer (BOT) & Co-Delivery**<br>(구축-운영-이전 파트너십 및 공동 수행) | 🟢 **정답 신호** | 내부 AI 역량은 부족하지만 독점 IP 내재화가 필요할 때, 외부 파트너와 **혼성 스쿼드(Co-Delivery)** 로 구축한 뒤 **지식 이전(Knowledge Transfer) 마일스톤을 계약에 명시하여 점진적으로 내재화**하는 정답 패턴입니다. |
+| **Paving the Cow Path**<br>(비효율적인 기존 수작업 프로세스를 그대로 자동화함) | 🔴 **오답 함정** | 레거시 병목이나 불필요한 결재 단계를 재설계(`BPR: Business Process Re-engineering`)하지 않고 옛날 방식 위에 AI만 덧씌우는 실패 패턴입니다. |
+| **Sunk Cost Fallacy**<br>(매몰 비용의 오류) | 🔴 **오답 함정** | 이미 투입한 예산과 시간이 아까워 비즈니스 가치가 없거나 데이터 드리프트가 심각한 AI 프로젝트를 중단(Kill/Pivot)하지 못하고 추가 예산을 투입하는 오답 패턴입니다. |
+| **Vanity Metrics vs. Actionable Value KPIs**<br>(허수 지표 vs. 실행 가능한 비즈니스 가치 KPI) | 🟢/🔴 **비교 핵심** | 단순 누적 챗봇 로그인 수·프롬프트 호출 건수는 **Vanity Metric(오답)** 이며, `First-Contact Resolution(FCR)`, `Cost per Resolved Ticket`, `Retention Uplift`가 **진정한 Value KPI(정답)** 입니다. |
+| **Showback ➔ Chargeback**<br>(클라우드/토큰 비용 가시화 ➔ 부서별 예산 실청구) | 🟢 **정답 신호** | 현업 부서의 무분별한 프롬프트/토큰 오남용을 막기 위해 태깅(`Cost Allocation Tags`)으로 부서별 사용량을 공개(`Showback`)하고 실제 부서 예산에서 차감(`Chargeback`)하는 **AI FinOps 핵심 거버넌스**입니다. |
+| **Semantic Caching & Prompt Caching**<br>(시맨틱 캐싱 및 프롬프트 프리픽스 캐싱) | 🟢 **정답 신호** | 유사한 질문의 기존 응답을 벡터 유사도로 재활용(`Semantic Caching`)하거나 반복되는 긴 시스템 지시문/문서를 캐싱(`Prompt Caching`)하여 **추론 단가(Token Cost)와 지연시간(Latency)을 60~80% 절감**하는 기법입니다. |
+| **Tiered Model Routing / Model Cascading**<br>(계층형 모델 라우팅 / 모델 캐스케이딩) | 🟢 **정답 신호** | 모든 질의를 고비용 Frontier LLM으로 보내지 않고, 경량 분류기/라우터가 **단순 질의(70~80%)는 SLM(소형 모델)으로, 고난도 추론(20%)만 Frontier 모델로 분기**시켜 단위 경제성(`Unit Economics`)을 달성하는 정답 아키텍처입니다. |
+| **Shadow Deployment / Dark Launch**<br>(섀도우 배포 / 다크 런치) | 🟢 **정답 신호** | 실제 고객에게 영향을 주지 않고 프로덕션 실시간 트래픽을 복제(Mirroring)하여 신규 AI 모델의 성능·지연시간·드리프트를 기존 시스템과 병렬 검증하는 안전한 출시 전략입니다. |
+| **Big-Bang Cutover / Rip-and-Replace**<br>(전면 일괄 교체 / 기존 시스템 일거 철거) | 🔴 **오답 함정** | 기존 레거시 ERP/MES를 하루아침에 내리고 검증되지 않은 AI 시스템으로 100% 전환하는 고위험 방식입니다. 정답은 항상 **Strangler Fig Pattern(점진적 우회 전환)** 또는 **Canary/Phased Rollout** 입니다. |
+
+---
+
+### 1-2. 거버넌스·보안·책임 있는 AI 핵심 관용구 (Governance, Risk & Responsible AI Idioms)
+
+| 실전 시험 표현 (English / Korean) | 판별 신호 | 실전 의미 및 시험 출제 맥락 (Exam Context & Trap Analysis) |
+| :--- | :---: | :--- |
+| **Shift-Left Governance / Governance-by-Design**<br>(거버넌스 좌측 이동 / 설계 단계 내재화) | 🟢 **정답 신호** | 배포 직전 사후 감사(Late-stage audit)가 아니라, **문제 정의·데이터 수집 초기 단계(Envision/Design)부터 법무·보안·윤리 가드레일을 파이프라인에 자동 내재화**하는 원칙입니다. |
+| **Risk-Tiered Governance Triage (Fast-Track vs. Deep Review)**<br>(위험 등급별 차등 거버넌스 심사) | 🟢 **정답 신호** | 모든 AI 과제를 똑같이 느리게 심사하지 않고, **내부 저위험 과제는 자동화된 가드레일(Fast-Track)로 즉시 승인**하고 **고객 대면·고위험 과제만 심층 위원회 심사(Deep Review)** 로 집중하는 전략입니다. |
+| **Fairness Through Unawareness**<br>(민감 변수 단순 삭제를 통한 공정성 착시) | 🔴 **오답 함정** | 성별·인종·연령 컬럼만 지우면 공정해질 것이라 믿는 치명적 함정입니다. 우편번호(`Zip Code`), 구매 시간대 등 **대리 변수(Proxy Variables)** 를 통해 편향이 그대로 재현되므로 반드시 **사전/사후 편향 측정(SageMaker Clarify)** 이 병행되어야 합니다. |
+| **Forced Output Parity / Arbitrary Quota Adjustment**<br>(결과값 강제 동등 할당 / 사후 임의 조작) | 🔴 **오답 함정** | 편향 문제를 해결한다며 지원자의 실제 자격·위험도 점수를 무시하고 결과 비율을 인위적으로 50:50으로 강제 조정하는 오답입니다. 역차별 및 모델 정확도 붕괴를 초래합니다. |
+| **Contextual Grounding Check & Automated Reasoning**<br>(문맥 기반 사실성 검증 및 수학적 자동 추론 검증) | 🟢 **정답 신호** | `Amazon Bedrock Guardrails`에서 LLM 답변이 검색된 출처 문서(Source Context)에 실제로 근거하는지 검증하고, 핵심 비즈니스 규칙을 논리적으로 위반하지 않는지 차단하는 **환각(Hallucination) 방지 핵심 기능**입니다. |
+| **Confidence-Based HITL & Rubber-Stamping Prevention**<br>(신뢰도 임계치 기반 인간 개입 및 무비판적 승인 방지) | 🟢 **정답 신호** | 모든 건을 사람이 검수(100% 수동 검수 = 오답)하거나 무조건 자동 통과시키는 대신, **신뢰도 점수가 임계치 미달이거나 고위험인 건만 인간 전문가(`Amazon A2I`)에게 라우팅**하고, 검수자가 AI 추천을 맹목적으로 승인(`Automation Bias / Rubber-stamping`)하지 못하도록 근거 확인 UI를 강제하는 설계입니다. |
+| **Principle of Least Privilege (PoLP) & Step-Up Auth for Agents**<br>(에이전트 최소 권한 원칙 및 고위험 작업 단계별 승인) | 🟢 **정답 신호** | 자율형 AI 에이전트에게 DB 전체 관리자 권한(`Excessive Agency`)을 주는 대신, **읽기 전용 권한을 기본 부여하고 일정 금액 이상 환불/송금 시 결정론적 API 검증 또는 인간 승인(Step-Up Authorization)** 을 거치게 하는 아키텍처입니다. |
+| **Non-Outsourceable Accountability**<br>(외주화할 수 없는 최종 법적·윤리적 책임) | 🟢 **정답 신호** | AWS나 외부 SaaS 벤더의 모델을 사용하더라도(`Shared Responsibility Model`), **자사 고객에게 발생한 차별·개인정보 유출·규제 위반의 최종 법적/비즈니스 책임(Ultimate Accountability)은 전적으로 도입 기업(Deployer)의 경영진에게 귀속**된다는 원칙입니다. |
+| **Amnesty Funnel / Safe-Harbor Sandbox**<br>(섀도우 AI 양성화 통로 및 안전 샌드박스) | 🟢 **정답 신호** | 현업 직원들이 몰래 외부 무료 생성형 AI를 쓰는 `Shadow AI` 문제를 적발·징계로만 막으면 음지화가 심해집니다. **기존 비인가 프롬프트/워크플로우를 처벌 없이 신고(Amnesty)받아 엔터프라이즈 보안 샌드박스로 안전하게 이관**해주는 전략이 정답입니다. |
+
+---
+
+## 👔 Part 2. C-Suite 임원진 의사결정 딜레마 & 거버넌스 핵심 표현 사전
+
+실제 `AIB-C01` 시험은 **"CEO, CFO, CISO, CLO, CHRO, COO, CIO, CDO 중 누가 어떤 우려를 제기하며, 어떤 거버넌스 장치로 이해관계를 조율해야 하는가?"** 를 집중 출제합니다.
+
+### 2-1. 임원별 핵심 우선순위·반대 논리(Pushback)·정답 해결책 매트릭스
+
+| 임원 직책 (C-Suite Role) | 주요 관심사 및 단골 반대 논리 (Typical Exam Concerns & Pushback) | 시험 정답 조율 전략 및 핵심 영문 표현 (Winning Resolution Phrases) |
+| :--- | :--- | :--- |
+| **CEO (최고경영자)**<br>& **Board of Directors (이사회)** | • 경쟁사 대비 시장 선점 속도(`Speed-to-Market`) 압박<br>• 주주가치, 브랜드 평판 리스크(`Reputational Fallout`), 장기적 경쟁 해자(`Strategic Moat`) | • **Horizon 1-2-3 Portfolio Allocation** (단기 효율화 70% : 중기 확장 20% : 장기 혁신 10% 균형 배분)<br>• **AI Steering Committee Charter** (전사 AI 운영위원회 헌장 제정 및 최종 책임 명확화) |
+| **CFO (최고재무책임자)** | • GPU/토큰 추론 비용 폭증(`Runaway Token Spend` / `Margin Erosion`)<br>• 불확실한 ROI, 숨겨진 운영비(`Hidden Lifecycle TCO`), 매몰 비용(`Sunk Cost`) | • **Stage-Gated Tranche Funding** (단계별 관문 통과 시 예산 분할 집행)<br>• **Unit Economics** (`Cost per Resolved Ticket`, `Gross Margin per Query`)<br>• **AI FinOps (`Showback / Chargeback`, `Semantic Caching`, `Tiered Model Routing`)** |
+| **CISO (최고정보보안책임자)** | • 기밀 데이터·소스코드·PII 외부 유출(`Data Exfiltration`)<br>• 프롬프트 인젝션(`Prompt Injection`), 과도한 에이전트 권한(`Excessive Agency`), 비인가 `Shadow AI` | • **Zero Base-Model Training Guarantee** (`AWS PrivateLink` + 입출력 데이터 파운데이션 모델 재학습 절대 미사용 보장)<br>• **Automated PII Redaction** (`Amazon Macie` / `Comprehend` + `Bedrock Guardrails`)<br>• **Amnesty Funnel & Approved Enterprise AI Sandbox** |
+| **CLO / General Counsel (최고법무책임자)** | • `EU AI Act` 역외 적용 과징금, 저작권 침해 소송(`IP Infringement`), 영업비밀 오염(`Trade Secret Contamination`), 설명의무 위반(`Adverse Action Notice`) | • **Vendor IP Indemnification** (상용 모델 저작권 면책 조항 확인)<br>• **Clean-Room Licensed Training Corpus** (적법 라이선스 데이터셋 검증)<br>• **Local Explainability (`SHAP` / `LIME`) & Immutable Audit Trail** |
+| **COO (최고운영책임자)** | • 현장(공장·물류·콜센터) 업무 중단(`Operational Disruption`), 지연시간 SLA 초과, 레거시 ERP/MES 충돌 | • **Shadow Deployment / Canary Rollout** (무중단 병렬 검증 및 점진적 트래픽 전환)<br>• **Business Process Re-engineering (`BPR`)** (단순 자동화가 아닌 업무 흐름 재설계)<br>• **Edge-Cloud Hybrid Inference & Deterministic Fallback** |
+| **CHRO (최고인사책임자)** | • 직원들의 일자리 대체 공포(`Job Displacement Anxiety`), 노조 반발, 업무 보이콧, 조용한 사직(`Quiet Quitting`), 변화 피로도(`Change Fatigue`) | • **Augmentation over Replacement** (인력 감축이 아닌 고부가가치 업무로의 역량 증강 선언)<br>• **Prosci ADKAR Change Management & Role-Based Upskilling**<br>• **Outcome-Based Incentive Realignment** (AI 협업 성과를 인사평가·보상에 긍정 반영) |
+| **CIO (최고정보책임자)**<br>vs. **LOB VP (현업 본부장)** | • **CIO**: 중앙 통제·표준화·기술 부채 방지 선호 (병목 유발 위험)<br>• **LOB VP**: 현업 속도 우선, 독자적 AI 툴 도입 강행 (사일로·중복 투자 유발) | • **Federated Hub-and-Spoke Operating Model** (중앙 `AI CoE` 허브는 공통 플랫폼·보안 가드레일·재사용 템플릿만 제공하고, 현업 스포크 스쿼드가 도메인 과제를 자율 실행) |
+| **CDO (최고데이터책임자)** | • 부서별 데이터 사일로(`Data Silos`), 데이터 독점(`Data Hoarding`), 스키마 불일치, 데이터 품질 저하(`Garbage In, Garbage Out`) | • **Domain-Oriented Data Mesh** (`Data-as-a-Product` 원칙)<br>• **Automated Data Contracts & Pipeline SLAs** (`Amazon DataZone` + `AWS Lake Formation` 세분화 권한 통제) |
+
+---
+
+## 🧠 Part 3. AI/ML 학습 방법론 & 모델 최적화 필수 용어·표현 사전
+
+실제 시험에서 자주 출제되는 **기계학습 패러다임, 생성형 AI 다단계 학습 파이프라인, 도메인 적응, 경량화/최적화 기법**의 핵심 영문 표현과 선택 기준입니다.
+
+### 3-1. 기초 기계학습 패러다임 & 모델 일반화 (Core ML Paradigms & Generalization)
+
+| 핵심 용어 (English / Korean) | 실전 시험 출제 포인트 및 아키텍처 선택 기준 (When to Choose & Exam Triggers) |
+| :--- | :--- |
+| **Supervised Learning**<br>(지도 학습: Classification / Regression) | • **출제 키워드**: 과거 정답 라벨(`Historical Labeled Outcomes`)이 풍부할 때 미래 수치 예측(`Regression`: 수요량·매출 예측) 또는 범주 분류(`Classification`: 이탈 여부·불량 판정).<br>• **대표 알고리즘**: `XGBoost / LightGBM` (정형 테이블 데이터에서 설명가능성·가성비 최고), `Linear Learner`. |
+| **Unsupervised Learning**<br>(비지도 학습: Clustering / Anomaly Detection) | • **출제 키워드**: 정답 라벨이 전혀 없는 상태(`Unlabeled Data`)에서 숨겨진 고객 군집 발굴(`Clustering: K-Means`) 또는 신종 이상 징후/설비 비정상 진동 탐지(`Anomaly Detection: Random Cut Forest`). |
+| **Reinforcement Learning (RL)**<br>(강화 학습) | • **출제 키워드**: 정적 정답 데이터셋이 없고, 시뮬레이션/실시간 환경과 상호작용하며 **연속적 의사결정(`Sequential Decision-Making`)과 장기 누적 보상 극대화(`Cumulative Reward Maximization`)** 가 필요할 때 선택 (예: 동적 가격 책정, 물류 AGV 로봇 경로 제어, 스마트 그리드 전력 제어). |
+| **Self-Supervised Learning (SSL)**<br>(자기지도 학습) | • **출제 키워드**: 사람이 수동 라벨링하지 않은 방대한 원시 텍스트/유전체/시계열 코퍼스에서 다음 토큰 예측(`Next-Token Prediction`)이나 마스킹 복원(`Masked Token Modeling`)을 통해 **Foundation Model을 사전 학습(Pre-training)** 하는 기법. |
+| **Semi-Supervised & Active Learning**<br>(준지도 학습 & 능동 학습) | • **출제 키워드**: 라벨링 비용이 매우 비싼 도메인(전문의 의료 영상, 변호사 계약서)에서 **소량의 라벨 데이터 + 대량의 비라벨 데이터**를 결합하고, **모델이 가장 불확실해하는 고가치 샘플만 골라 전문가에게 라벨링을 요청(`Active Learning` via `SageMaker Ground Truth`)** 하여 라벨링 비용을 70% 이상 절감. |
+| **Overfitting vs. Underfitting**<br>(과적합 vs. 과소적합) | • **Overfitting 징후**: 훈련 데이터 정확도는 99%인데 검증/실전 데이터(`Unseen Holdout Set`)에서는 성능이 급락함 (원인: 훈련 데이터 노이즈까지 암기, 데이터 부족, 과도한 모델 복잡도).<br>• **정답 처방**: `Stratified K-Fold Cross-Validation`(계층화 교차 검증), `Regularization (L1/L2, Dropout)`, `Early Stopping`(검증 손실 상승 시 조기 종료), `Feature Selection`(불필요 변수 제거), `Data Augmentation`. |
+| **Data Leakage (Target Leakage)**<br>(데이터 누수 / 타겟 누수) | • **출제 함정**: 추론 시점에는 알 수 없는 미래 정보(예: 해지 확정 후 생성된 환불 코드)가 훈련 피처에 섞여 들어가 검증 정확도가 비정상적으로 높게(99.9%) 나오는 오류. **시간순 분할(`Temporal Split`)과 피처 스토어 시점 일치(`Point-in-Time Correctness`)** 로 방지해야 합니다. |
+
+---
+
+### 3-2. 생성형 AI 학습 파이프라인 & 커스터마이징 의사결정 (GenAI Training & Customization Spectrum)
+
+| 학습/최적화 기법 (Methodology) | 목적 및 실전 시험 선택 기준 (Strategic Use Case & Cost/Latency Trade-off) |
+| :--- | :--- |
+| **1단계: Prompt Engineering & In-Context Learning (`Few-Shot`)** | • **최우선 검토(Lowest Cost/Fastest Time-to-Value)**: 모델 가중치 변경 없이 지시문과 몇 개의 예시(`Few-Shot Examples`)만으로 출력 형식과 톤앤매너를 제어. |
+| **2단계: RAG (`Retrieval-Augmented Generation`)**<br>+ **Hybrid Search (`Dense Vector + Sparse BM25`)**<br>+ **Cross-Encoder Reranking & `GraphRAG`** | • **실시간 외부 지식·출처 표기 필수 시 정답**: 시시각각 변하는 사내 규정·재고·논문을 모델 재학습 없이 실시간 참조하고 **정확한 출처(`Citation`)와 문서 수준 권한(`ACL`)** 을 적용할 때 선택.<br>• **고유명사/부품번호/약물코드 검색 누락 해결**: 의미 기반 `Dense Embedding`과 키워드 정확 매칭 `BM25(Lexical)`를 결합한 **Hybrid Search + Reciprocal Rank Fusion(RRF) + Reranker** 가 정답.<br>• **다단계 관계 추론(`Multi-Hop Reasoning`)**: 여러 문서에 흩어진 엔티티 간 복합 인과관계 파악 시 **Knowledge Graph + Vector RAG (`GraphRAG`)** 선택. |
+| **3단계: Instruction Fine-Tuning (`SFT`) & `PEFT` (`LoRA / QLoRA`)** | • **특수 출력 포맷·고유 문체·도메인 분류 일관성 내재화**: 수천~수만 건의 `(Prompt, Ideal Response)` 쌍으로 학습. 전체 가중치를 수정(`Full Fine-Tuning` = 고비용·과적합 위험)하지 않고, 원본 가중치는 동결(`Freeze`)한 채 **소수의 저랭크 어댑터 행렬(`LoRA Adapter`)만 학습**하여 비용·메모리를 90% 이상 절감.<br>• **Multi-Adapter Serving**: 단일 베이스 모델 위에 부서별/국가별 수십 개의 `LoRA Adapter`를 동적으로 교체 서빙하여 GPU 인프라 비용 극대화 절감. |
+| **4단계: Continued Pre-Training (`CPT` / Domain-Adaptive Pretraining)** | • **고유 전문 언어·기호 체계 자체의 이해력 주입**: 일반 LLM이 전혀 모르는 희귀 바이오 서열, 특수 화학식, 고대 법률 용어 등 **수십억 토큰 규모의 비라벨 도메인 원시 코퍼스(`Unlabeled Domain Corpus`)로 추가 사전학습**할 때 선택 (단, 실시간 사실 조회 용도로 쓰면 오답!). |
+| **5단계: Alignment (`RLHF` vs. `DPO` vs. `Constitutional AI` / `RLAIF`)** | • **인간 가치·안전성·선호도 정렬**: SFT 모델이 문법적으로는 맞지만 유해하거나 교묘하게 부정확한 답변을 할 때 교정.<br>• **`RLHF`**: 별도의 보상 모델(`Reward Model`) 학습 + `PPO` 강화학습 필요 (연산 무겁고 하이퍼파라미터 불안정).<br>• **`DPO (Direct Preference Optimization)`**: 별도 보상 모델 없이 `(Prompt, Chosen, Rejected)` 선호도 쌍 데이터만으로 직접 정책 최적화 ➔ **비용·안정성 면에서 RLHF 대비 실무 선호 정답**. |
+| **6단계: Knowledge Distillation (`Teacher-Student`) & `Quantization`** | • **추론 지연시간(`Sub-50ms Latency`) 및 엣지/단위 비용 혁신**: 거대 `Teacher LLM`이 생성한 고품질 추론 데이터로 경량 `Student SLM(1B~8B)`을 전이 학습(`Knowledge Distillation`)하고, 가중치 정밀도를 `FP16 ➔ INT8/INT4`로 양자화(`Post-Training Quantization`)하여 **95% 이상의 성능을 유지하면서 추론 비용과 지연시간을 1/10로 압축**. |
+
+---
+
+## 🏭 Part 4. 산업 도메인별(바이오·제조·R&D·소매·유통·금융) 실전 빈출 영문 표현 & KPI 사전
+
+실제 `AIB-C01` 시험은 단순 IT 기업이 아니라 **바이오/제약, 스마트 제조, 기업 R&D 연구소, 옴니채널 소매, 콜드체인 물류·유통, 금융/보험** 등 다양한 산업 현장의 고유 제약조건과 KPI를 지문에 등장시킵니다.
+
+| 산업 도메인 (Industry Domain) | 시험 지문 빈출 핵심 영문 표현 (Domain-Specific Exam Terminology) | 핵심 비즈니스 가치 KPI & 아키텍처 정답 패턴 |
+| :--- | :--- | :--- |
+| **🧬 바이오 / 제약 / 임상**<br>(Bio / Pharma / Clinical Trials) | • **Target Identification & Lead Optimization** (신약 타겟 발굴 및 선도물질 최적화)<br>• **De Novo Molecular / Protein Design** (신규 분자·단백질 구조 생성)<br>• **Clinical Trial Patient Stratification** (임상시험 환자군 정밀 층화/선별)<br>• **GxP Compliance & FDA 21 CFR Part 11 Audit Trail** (의약품 제조·품질관리 기준 및 전자기록 무결성 감사 추적)<br>• **Pharmacovigilance / Adverse Event Detection** (약물감시 및 이상반응 탐지) | • **KPI**: `Phase-Transition Success Rate` (임상 단계 진입 성공률), `Time-to-IND Filing` (임상시험계획 승인 신청 단축 기간)<br>• **아키텍처 정답**: 환자 유전체/임상 데이터는 `HIPAA/GxP` 준수 환경에서 **Differential Privacy(차등 프라이버시) 합성 데이터** 활용, 모든 모델 버전·데이터 혈통을 `SageMaker Model Lineage`로 불변 기록, 임상 의사결정은 반드시 **전문의 HITL(Human-in-the-Loop)** 필수. |
+| **⚙️ 스마트 제조 / 반도체 / 설비**<br>(Smart Manufacturing & Fab) | • **Predictive Maintenance (PdM) & Remaining Useful Life (RUL)** (예지보전 및 잔여 수명 예측)<br>• **Overall Equipment Effectiveness (OEE)** (설비종합효율 = 가동률 × 성능 × 양품률)<br>• **Sub-10ms Edge Computer Vision Defect Inspection** (10ms 미만 초저지연 엣지 비전 불량 검출)<br>• **OT (Operational Technology) Air-Gapped Network** (공장 폐쇄망 환경)<br>• **Digital Twin & PLC/SCADA Telemetry** (디지털 트윈 및 제어기 센서 텔레메트리) | • **KPI**: `Unplanned Downtime Reduction (%)` (비계획 설비 정지 감소율), `First-Pass Yield (FPY)` (초도 양품률), `Scrap Rate Reduction` (폐기율 감소), `False-Positive Line Stop Rate` (오탐지로 인한 라인 정지율)<br>• **아키텍처 정답**: 고속 생산라인(초당 수십 개 부품 이동)이나 네트워크 단절 위험이 있는 공장은 클라우드 왕복 지연(Latency)을 피하기 위해 **클라우드에서 학습·양자화(`SageMaker Edge / IoT Greengrass`)한 경량 비전 모델을 현장 Edge IPC에 배포**하고, 이상 샘플만 클라우드로 비동기 업로드하여 재학습(`Edge-Cloud Hybrid Loop`). |
+| **🔬 기업 R&D (배터리·소재·화학)**<br>(Corporate R&D & Materials) | • **Electronic Lab Notebooks (ELN) & LIMS** (전자연구노트 및 실험실 정보관리 시스템)<br>• **Trade Secret & Proprietary Formulation Leakage** (핵심 영업비밀 및 독점 배합비 유출)<br>• **High-Throughput Virtual Screening** (고속 가상 물질 스크리닝)<br>• **Inverse Materials Design & Surrogate Simulation** (역설계 및 물리 시뮬레이션 대리 모델)<br>• **Prior Art Patent Search & Multi-Hop GraphRAG** (선행특허 조사 및 다단계 지식그래프 검색) | • **KPI**: `Experiment Cycle Time Reduction` (실험 주기 단축률), `Failed Wet-Lab Experiment Avoidance` (실패할 물리 실험 사전 회피 비용 절감), `R&D Engineer Retrieval Productivity`<br>• **아키텍처 정답**: 수십 년간 축적된 비정형 실험노트·특허·분자구조식은 외부 공개 모델 학습에 절대 유출되면 안 되므로 **`AWS PrivateLink` + Zero-Training Policy + 문서 등급별 ACL이 적용된 Hybrid GraphRAG** 로 구축. |
+| **🛍️ 옴니채널 소매 / 이커머스**<br>(Omnichannel Retail & E-Commerce) | • **Hyper-Personalized Cross-Sell / Up-Sell** (초개인화 교차판매·상향판매)<br>• **Shopping Cart Abandonment & Churn Propensity** (장바구니 이탈 및 고객 이탈 성향)<br>• **Store Planogram Optimization & Markdown Pricing** (매대 진열 최적화 및 재고 소진 할인율 최적화)<br>• **Stockout Rate vs. Inventory Carrying Cost** (품절률 vs. 재고 유지비 트레이드오프)<br>• **Visual Search & Virtual Try-On** (시각 검색 및 가상 피팅) | • **KPI**: `Conversion Rate Uplift` (구매 전환율 상승), `Average Order Value (AOV) / Basket Size` (객단가), `Gross Margin Return on Inventory (GMROI)`, `Return Rate Reduction` (반품률 감소)<br>• **아키텍처 정답**: 실시간 개인화 추천은 `Amazon Personalize` 같은 관리형 서비스(Buy)로 빠르게 구축하여 `Time-to-Market`을 단축하고, 인과적 매출 증분은 반드시 **Holdout 대조군 기반 A/B 테스트(`Incremental Revenue Uplift`)** 로 증명. |
+| **🚚 콜드체인 유통 / 글로벌 물류**<br>(Cold-Chain & Supply Chain Logistics) | • **SKU-Location Demand Forecasting** (품목·거점별 정밀 수요 예측)<br>• **Cold-Chain Spoilage & Temperature Excursion** (신선식품/백신 콜드체인 부패 및 온도 이탈)<br>• **Dynamic Last-Mile Route Optimization** (실시간 라스트마일 배송 경로 최적화)<br>• **Warehouse Management System (WMS) Slotting** (물류센터 적치 위치 최적화)<br>• **Bullwhip Effect Mitigation** (공급망 채찍 효과 완화) | • **KPI**: `MAPE (Mean Absolute Percentage Error)` 또는 `WAPE` (수요예측 오차율 감소), `Spoilage / Waste Rate (%)` (폐기율 감소), `On-Time In-Full (OTIF)` (정시·전량 납품률), `Fuel Cost per Delivery`<br>• **아키텍처 정답**: 기상 악화·항만 파업 등 외부 변수로 인해 과거 통계 패턴이 깨질 때는(`Concept Drift`), 외부 거시/기상 피처를 결합한 **앙상블 시계열 모델 + 이상 징후 감지 시 공급망 플래너 HITL 개입 구조**를 설계. |
+| **🏦 금융 / 핀테크 / 보험**<br>(FinTech, Banking & Insurance) | • **Equal Credit Opportunity Act (ECOA) & Adverse Action Notice** (신용평등법 및 대출 거절 사유 통지 의무)<br>• **Real-Time Fraud Detection (Sub-50ms SLA)** (50ms 이내 실시간 이상거래 탐지)<br>• **False Positive Customer Friction vs. False Negative Fraud Loss** (오탐지로 인한 정상 카드 결제 차단 불편 vs. 미탐지로 인한 사기 손실)<br>• **Straight-Through Processing (STP) in Claims** (보험금 청구 무인 자동 심사 처리율) | • **KPI**: `Fraud Loss Reduction ($)`, `False Decline Rate` (정상 고객 오차단율), `Claims Processing Turnaround Time`, `Regulatory Audit Pass Rate`<br>• **아키텍처 정답**: 대출/보험 심사 모델은 규제 당국과 소비자에게 개별 거절 사유를 투명하게 제시해야 하므로 불투명한 거대 블랙박스 단독 사용을 피하고 **`XGBoost` 등 해석 가능한 모델 + `SageMaker Clarify (Local SHAP Values)`** 를 결합. |
+
+---
+
 # AIB-C01 마스터 한·영 비즈니스 AI 용어사전 (Master Glossary)
 
 > **💡 영문 실전 시험 대비 안내 (Exam Dual-Track Guide)**  
