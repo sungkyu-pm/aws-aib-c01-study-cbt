@@ -47,11 +47,11 @@
 </div>
 </div>
 
-> ### 📝 기출 기반 고난도 실전 문제 (Real Exam Scenario Practice - D3-Q001)
+> ### 📝 기출 기반 고난도 실전 문제 (Real Exam Scenario Practice - D3-Q005)
 >
 > **Q. [Responsible AI (RAI) End-to-End Lifecycle Governance]**  
-> **🇺🇸 English Scenario**: [global investment bank and wealth management firm — Responsible AI (RAI) End-to-End Lifecycle Governance] An enterprise operating across real-time derivatives trading logs and tens of thousands of multilingual regulatory compliance filings is scaling its AI transformation where the CFO demands immediate quarterly TCO reduction while the CISO enforces zero external data egress and 100% audit traceability. An enterprise waited until three days before production launch to engage Legal and Ethics teams for a Responsible AI review, only to discover fundamental training data consent violations and structural bias that forced a complete 8-month rebuild. Which governance operating principle prevents this late-stage failure?  
-> **🇰🇷 한국어 시나리오**: [글로벌 투자은행 및 자산운용사 — 전 생애주기(기획 ➔ 데이터 ➔ 학습 ➔ 배포 ➔ 모니터링) 책임 있는 AI(RAI) 내재화] 귀사는 실시간 파생상품 거래 로그와 수만 건의 다국어 금융 규제 준수 보고서 환경에서 엔터프라이즈 AI 전환을 추진하고 있으며, 현재 CFO는 분기 내 즉각적인 TCO 절감을 요구하고, CISO는 고객 금융 데이터의 외부 반출 절대 금지 및 100% 감사 추적성을 강제하는 상황에 직면해 있습니다. 한 기업이 신규 AI 서비스를 구축하면서 개발 완료 직전(출시 3일 전)에야 법무·윤리팀에 최종 검토를 요청했더니, 원천 데이터 수집 단계의 동의 누락과 아키텍처 수준의 편향 문제가 뒤늦게 발견되어 8개월간 개발한 모델을 전면 폐기하고 처음부터 다시 만들어야 하는 사태가 벌어졌습니다. 이 실패를 방지하기 위한 거버넌스 설계 원칙은 무엇입니까?
+> **🇺🇸 English Scenario**: [global wholesale distribution and cold-chain logistics provider — Responsible AI (RAI) End-to-End Lifecycle Governance] An enterprise operating across refrigerated container temperature telemetry, tens of thousands of SKU warehouse management (WMS) ledgers, and multilingual customs/Bills of Lading documents is scaling its AI transformation tasked with minimizing perishable inventory spoilage and routing delays across global warehouses under an aggressive 6-week TTM mandate with limited internal ML staff. An enterprise waited until three days before production launch to engage Legal and Ethics teams for a Responsible AI review, only to discover fundamental training data consent violations and structural bias that forced a complete 8-month rebuild. Which governance operating principle prevents this late-stage failure?  
+> **🇰🇷 한국어 시나리오**: [글로벌 도소매 유통 및 콜드체인 물류(Distribution & Cold-Chain) 기업 — 전 생애주기(기획 ➔ 데이터 ➔ 학습 ➔ 배포 ➔ 모니터링) 책임 있는 AI(RAI) 내재화] 귀사는 신선식품·의약품 냉장 컨테이너 온도/습도 원격 텔레메트리, 수만 개 SKU 입출고(WMS) 원장, 다국어 통관·선하증권(B/L) 문서 환경에서 엔터프라이즈 AI 전환을 추진하고 있으며, 현재 유통기한 임박 상품의 폐기 손실률(Spoilage)을 낮추고 리드타임 변동성에 실시간 대응해야 하며, 전담 데이터 과학자가 부족해 6주 내에 현업 물류센터에 솔루션을 배포(Fast TTM)해야 하는 상황에 직면해 있습니다. 한 기업이 신규 AI 서비스를 구축하면서 개발 완료 직전(출시 3일 전)에야 법무·윤리팀에 최종 검토를 요청했더니, 원천 데이터 수집 단계의 동의 누락과 아키텍처 수준의 편향 문제가 뒤늦게 발견되어 8개월간 개발한 모델을 전면 폐기하고 처음부터 다시 만들어야 하는 사태가 벌어졌습니다. 이 실패를 방지하기 위한 거버넌스 설계 원칙은 무엇입니까?
 >
 > * **(A)** Eliminate Legal, Security, and Ethics reviews entirely so engineering teams can deploy models without oversight  
 >   *(🇰🇷 출시 지연을 막기 위해 법무·보안·윤리 검토 단계를 아예 폐지하고 개발팀 단독 판단으로 모든 모델을 즉시 상용 배포함)*
@@ -67,12 +67,12 @@
 >
 > • **핵심 전략 및 정답 도출 근거**: 책임 있는 AI(RAI: 공정성, 설명 가능성, 개인정보 보호, 안전성, 제어 가능성, 진실성)는 사후 부착물(Bolt-on)이 되어서는 안 됩니다. 기획 및 데이터 수집 단계부터 보안·윤리·법무 기준을 설계에 반영하는 **Shift-Left / Governance-by-Design** 접근법을 취해야 재작업 비용(Rework TCO)을 막고 출시 속도(TTM)를 오히려 단축할 수 있습니다.
 >
-> • **시나리오 제약 조건 부합성 ([글로벌 투자은행 및 자산운용사])**: 본 시나리오는 'CFO는 분기 내 즉각적인 TCO 절감을 요구하고, CISO는 고객 금융 데이터의 외부 반출 절대 금지 및 100% 감사 추적성을 강제하는 상황'이라는 복합 제약을 포함하고 있습니다. 따라서 '전 생애주기(기획 ➔ 데이터 ➔ 학습 ➔ 배포 ➔ 모니터링) 책임 있는 AI(RAI) 내재화' 관점에서 단계적 정합성과 리스크 통제를 동시에 만족하는 **(B)**가 유일한 최적해(MOST appropriate strategy)입니다.
+> • **시나리오 제약 조건 부합성 ([글로벌 도소매 유통 및 콜드체인 물류(Distribution & Cold-Chain) 기업])**: 본 시나리오는 '유통기한 임박 상품의 폐기 손실률(Spoilage)을 낮추고 리드타임 변동성에 실시간 대응해야 하며, 전담 데이터 과학자가 부족해 6주 내에 현업 물류센터에 솔루션을 배포(Fast TTM)해야 하는 상황'이라는 복합 제약을 포함하고 있습니다. 따라서 '전 생애주기(기획 ➔ 데이터 ➔ 학습 ➔ 배포 ➔ 모니터링) 책임 있는 AI(RAI) 내재화' 관점에서 단계적 정합성과 리스크 통제를 동시에 만족하는 **(B)**가 유일한 최적해(MOST appropriate strategy)입니다.
 >
 > • **매력적인 오답(Distractor) 함정 분석**:
->   - **(A) 오답 분석**: '출시 지연을 막기 위해 법무·보안·윤리 검토 단계를 아예 폐지하고 개발팀 단독 판단으로 모든 모델을 즉시 상용 배포함' 접근법은 CFO는 분기 내 즉각적인 TCO 절감을 요구하고, CISO는 고객 금융 데이터의 외부 반출 절대 금지 및 100% 감사 추적성을 강제하는 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
->   - **(C) 오답 분석**: '모든 RAI 검사를 서비스 출시 후 1년이 지난 시점에 고객 집단 소송이 제기되었을 때만 사후적으로 수행함' 접근법은 CFO는 분기 내 즉각적인 TCO 절감을 요구하고, CISO는 고객 금융 데이터의 외부 반출 절대 금지 및 100% 감사 추적성을 강제하는 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
->   - **(D) 오답 분석**: '책임 소재를 회피하기 위해 외부 클라우드 벤더가 모든 윤리적·법적 기획 책임을 100% 진다는 내부 선언문만 작성함' 접근법은 CFO는 분기 내 즉각적인 TCO 절감을 요구하고, CISO는 고객 금융 데이터의 외부 반출 절대 금지 및 100% 감사 추적성을 강제하는 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
+>   - **(A) 오답 분석**: '출시 지연을 막기 위해 법무·보안·윤리 검토 단계를 아예 폐지하고 개발팀 단독 판단으로 모든 모델을 즉시 상용 배포함' 접근법은 유통기한 임박 상품의 폐기 손실률(Spoilage)을 낮추고 리드타임 변동성에 실시간 대응해야 하며, 전담 데이터 과학자가 부족해 6주 내에 현업 물류센터에 솔루션을 배포(Fast TTM)해야 하는 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
+>   - **(C) 오답 분석**: '모든 RAI 검사를 서비스 출시 후 1년이 지난 시점에 고객 집단 소송이 제기되었을 때만 사후적으로 수행함' 접근법은 유통기한 임박 상품의 폐기 손실률(Spoilage)을 낮추고 리드타임 변동성에 실시간 대응해야 하며, 전담 데이터 과학자가 부족해 6주 내에 현업 물류센터에 솔루션을 배포(Fast TTM)해야 하는 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
+>   - **(D) 오답 분석**: '책임 소재를 회피하기 위해 외부 클라우드 벤더가 모든 윤리적·법적 기획 책임을 100% 진다는 내부 선언문만 작성함' 접근법은 유통기한 임박 상품의 폐기 손실률(Spoilage)을 낮추고 리드타임 변동성에 실시간 대응해야 하며, 전담 데이터 과학자가 부족해 6주 내에 현업 물류센터에 솔루션을 배포(Fast TTM)해야 하는 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
 
 ---
 ### 3.2 모델 생애주기 단계별 편향 완화(Pre-processing ➔ In-processing ➔ Post-processing) 전략 (Pre-training vs In-processing vs Post-processing Bias Mitigation)
@@ -103,11 +103,11 @@
 </div>
 </div>
 
-> ### 📝 기출 기반 고난도 실전 문제 (Real Exam Scenario Practice - D3-Q011)
+> ### 📝 기출 기반 고난도 실전 문제 (Real Exam Scenario Practice - D3-Q016)
 >
 > **Q. [Pre-training vs In-processing vs Post-processing Bias Mitigation]**  
-> **🇺🇸 English Scenario**: [advanced semiconductor foundry and smart manufacturing enterprise — Pre-training vs In-processing vs Post-processing Bias Mitigation] An enterprise operating across high-frequency cleanroom lithography IoT sensor streams and semiconductor process troubleshooting manuals is scaling its AI transformation where unplanned downtime costs millions per hour, demanding real-time edge anomaly detection and strict air-gapped IP isolation. An audit of a credit/hiring model reveals deep historical and sampling bias in the underlying 10-year training dataset. A manager proposes simply hardcoding a post-inference quota script to force equal approval rates across groups without touching the data or model. Why is this flawed, and what is the proper lifecycle mitigation strategy?  
-> **🇰🇷 한국어 시나리오**: [첨단 반도체 파운드리 및 스마트 팩토리 — 모델 생애주기 단계별 편향 완화(Pre-processing ➔ In-processing ➔ Post-processing) 전략] 귀사는 클린룸 노광 장비의 초당 수만 건 IoT 진동·온도 센서 스트림과 공정 엔지니어 트러블슈팅 매뉴얼 환경에서 엔터프라이즈 AI 전환을 추진하고 있으며, 현재 공정 중단 시 시간당 수십억 원의 손실이 발생하므로 엣지(Edge) 단의 실시간 이상 탐지와 핵심 공정 IP의 폐쇄망 격리가 필수적인 상황에 직면해 있습니다. 인사 채용 및 신용 대출 심사 AI 모델을 감사한 결과, 과거 10년간의 사내 이력 데이터 자체에 특정 인구통계 집단의 표본이 과소 대표되어 있는 '역사적/표본 편향(Historical & Sampling Bias)'이 발견되었습니다. 근본 원인을 해결하지 않고 추론 결과값만 강제로 50:50 비율로 맞추는 사후 쿼터제(Forced Parity)를 적용했을 때의 문제점과 올바른 단계별 편향 완화 전략은 무엇입니까?
+> **🇺🇸 English Scenario**: [energy generation and smart grid utility corporation — Pre-training vs In-processing vs Post-processing Bias Mitigation] An enterprise operating across renewable turbine SCADA sensor streams, real-time wholesale power grid demand logs, drone inspection imagery, and environmental compliance manuals is scaling its AI transformation operating critical national infrastructure where grid forecasting or equipment failures risk blackouts, demanding 99.99% availability and instant fail-safe mechanisms. An audit of a credit/hiring model reveals deep historical and sampling bias in the underlying 10-year training dataset. A manager proposes simply hardcoding a post-inference quota script to force equal approval rates across groups without touching the data or model. Why is this flawed, and what is the proper lifecycle mitigation strategy?  
+> **🇰🇷 한국어 시나리오**: [에너지·발전 및 스마트 그리드 유틸리티 기업 — 모델 생애주기 단계별 편향 완화(Pre-processing ➔ In-processing ➔ Post-processing) 전략] 귀사는 풍력·태양광 발전 단지 SCADA 센서 스트림, 전력 도매시장 실시간 수요 데이터, 발전 설비 안전 점검 드론 영상 및 환경 규제 문서 환경에서 엔터프라이즈 AI 전환을 추진하고 있으며, 현재 전력망 과부하 예측 실패나 설비 고장 시 대규모 정전 사태가 발생하므로 99.99% 가용성과 비상시 즉각적인 안전 차단(Kill-Switch/Fallback)이 최우선인 핵심 인프라 환경에 직면해 있습니다. 인사 채용 및 신용 대출 심사 AI 모델을 감사한 결과, 과거 10년간의 사내 이력 데이터 자체에 특정 인구통계 집단의 표본이 과소 대표되어 있는 '역사적/표본 편향(Historical & Sampling Bias)'이 발견되었습니다. 근본 원인을 해결하지 않고 추론 결과값만 강제로 50:50 비율로 맞추는 사후 쿼터제(Forced Parity)를 적용했을 때의 문제점과 올바른 단계별 편향 완화 전략은 무엇입니까?
 >
 > * **(A)** Leave biased training data untouched and use a random number generator at inference time to artificially equalize approval ratios  
 >   *(🇰🇷 원천 데이터의 편향은 그대로 둔 채 추론 단계에서 주사위를 굴려 특정 집단 신청서를 무작위로 합격시켜 비율만 50:50으로 맞춤)*
@@ -123,12 +123,12 @@
 >
 > • **핵심 전략 및 정답 도출 근거**: 실제 AIB-C01 시험이 매우 좋아하는 고난도 함정입니다! 단순히 보호 속성 컬럼만 지우는 것(대리 변수인 거주지·출신학교 등으로 편향이 재현됨)이나, 모델은 편향된 채로 두고 **사후 결과 비율만 억지로 끼워 맞추는 조치(Forced Output Parity)**는 오답입니다. 반드시 **SageMaker Clarify를 활용한 Pre-training 데이터 편향 진단·교정 ➔ In-processing 학습 알고리즘 보정 ➔ Post-training 공정성 지표 검증 및 HITL 결합**의 정공법을 택해야 합니다.
 >
-> • **시나리오 제약 조건 부합성 ([첨단 반도체 파운드리 및 스마트 팩토리])**: 본 시나리오는 '공정 중단 시 시간당 수십억 원의 손실이 발생하므로 엣지(Edge) 단의 실시간 이상 탐지와 핵심 공정 IP의 폐쇄망 격리가 필수적인 상황'이라는 복합 제약을 포함하고 있습니다. 따라서 '모델 생애주기 단계별 편향 완화(Pre-processing ➔ In-processing ➔ Post-processing) 전략' 관점에서 단계적 정합성과 리스크 통제를 동시에 만족하는 **(D)**가 유일한 최적해(MOST appropriate strategy)입니다.
+> • **시나리오 제약 조건 부합성 ([에너지·발전 및 스마트 그리드 유틸리티 기업])**: 본 시나리오는 '전력망 과부하 예측 실패나 설비 고장 시 대규모 정전 사태가 발생하므로 99.99% 가용성과 비상시 즉각적인 안전 차단(Kill-Switch/Fallback)이 최우선인 핵심 인프라 환경'이라는 복합 제약을 포함하고 있습니다. 따라서 '모델 생애주기 단계별 편향 완화(Pre-processing ➔ In-processing ➔ Post-processing) 전략' 관점에서 단계적 정합성과 리스크 통제를 동시에 만족하는 **(D)**가 유일한 최적해(MOST appropriate strategy)입니다.
 >
 > • **매력적인 오답(Distractor) 함정 분석**:
->   - **(A) 오답 분석**: '원천 데이터의 편향은 그대로 둔 채 추론 단계에서 주사위를 굴려 특정 집단 신청서를 무작위로 합격시켜 비율만 50:50으로 맞춤' 접근법은 공정 중단 시 시간당 수십억 원의 손실이 발생하므로 엣지(Edge) 단의 실시간 이상 탐지와 핵심 공정 IP의 폐쇄망 격리가 필수적인 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
->   - **(B) 오답 분석**: '데이터셋에서 성별·나이·우편번호 컬럼 이름만 삭제(Fairness through Unawareness)하면 대리 변수(Proxy Variables)에 의한 편향도 100% 자동 소멸한다고 가정함' 접근법은 공정 중단 시 시간당 수십억 원의 손실이 발생하므로 엣지(Edge) 단의 실시간 이상 탐지와 핵심 공정 IP의 폐쇄망 격리가 필수적인 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
->   - **(C) 오답 분석**: '편향 감사가 번거로우므로 모든 심사 기준과 모델 평가 리포트를 암호화하여 규제 당국의 열람을 거부함' 접근법은 공정 중단 시 시간당 수십억 원의 손실이 발생하므로 엣지(Edge) 단의 실시간 이상 탐지와 핵심 공정 IP의 폐쇄망 격리가 필수적인 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
+>   - **(A) 오답 분석**: '원천 데이터의 편향은 그대로 둔 채 추론 단계에서 주사위를 굴려 특정 집단 신청서를 무작위로 합격시켜 비율만 50:50으로 맞춤' 접근법은 전력망 과부하 예측 실패나 설비 고장 시 대규모 정전 사태가 발생하므로 99.99% 가용성과 비상시 즉각적인 안전 차단(Kill-Switch/Fallback)이 최우선인 핵심 인프라 환경이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
+>   - **(B) 오답 분석**: '데이터셋에서 성별·나이·우편번호 컬럼 이름만 삭제(Fairness through Unawareness)하면 대리 변수(Proxy Variables)에 의한 편향도 100% 자동 소멸한다고 가정함' 접근법은 전력망 과부하 예측 실패나 설비 고장 시 대규모 정전 사태가 발생하므로 99.99% 가용성과 비상시 즉각적인 안전 차단(Kill-Switch/Fallback)이 최우선인 핵심 인프라 환경이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
+>   - **(C) 오답 분석**: '편향 감사가 번거로우므로 모든 심사 기준과 모델 평가 리포트를 암호화하여 규제 당국의 열람을 거부함' 접근법은 전력망 과부하 예측 실패나 설비 고장 시 대규모 정전 사태가 발생하므로 99.99% 가용성과 비상시 즉각적인 안전 차단(Kill-Switch/Fallback)이 최우선인 핵심 인프라 환경이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
 
 ---
 ### 3.3 공정성 정량 지표(Demographic Parity, Equal Opportunity, Disparate Impact)의 맥락별 검증 (Demographic Parity, Equal Opportunity & Disparate Impact Metrics)
@@ -159,11 +159,11 @@
 </div>
 </div>
 
-> ### 📝 기출 기반 고난도 실전 문제 (Real Exam Scenario Practice - D3-Q021)
+> ### 📝 기출 기반 고난도 실전 문제 (Real Exam Scenario Practice - D3-Q027)
 >
 > **Q. [Demographic Parity, Equal Opportunity & Disparate Impact Metrics]**  
-> **🇺🇸 English Scenario**: [international airline and mobility booking platform — Demographic Parity, Equal Opportunity & Disparate Impact Metrics] An enterprise operating across real-time dynamic fare logs alongside multilingual visa regulations and baggage compensation policies is scaling its AI transformation where chatbot hallucinations regarding refund policies create immediate legal liability, making strict factual grounding paramount. Financial regulators mandate that the enterprise's automated loan underwriting model must not exhibit disproportionate adverse outcomes across protected groups (the '80% / Four-Fifths Rule'), and that qualified applicants across all demographics must have equal true positive approval rates. Which fairness metrics must be audited?  
-> **🇰🇷 한국어 시나리오**: [글로벌 항공사 및 모빌리티 예약 플랫폼 — 공정성 정량 지표(Demographic Parity, Equal Opportunity, Disparate Impact)의 맥락별 검증] 귀사는 실시간 항공권 동적 가격 책정(Dynamic Pricing) 로그와 다국어 여권·비자 규정 및 수하물 보상 지침 환경에서 엔터프라이즈 AI 전환을 추진하고 있으며, 현재 챗봇이 잘못된 환불·보상 정책을 안내할 경우 즉각적인 법적 배상 책임이 발생하므로 할루시네이션 제로화가 최우선 과제인 상황에 직면해 있습니다. 금융 규제 당국이 당사의 대출 승인 AI 모델에 대해 '보호 대상 집단(Group A)의 긍정적 결과(승인) 비율이 비보호 집단(Group B)의 승인 비율 대비 80%(4/5 규칙) 미만이 되어서는 안 되며, 동시에 실제로 상환 능력을 갖춘 우량 고객이 거절당하는 위음성률(False Negative Rate) 격차도 없어야 한다'고 요구했습니다. 이를 검증하기 위해 측정해야 할 공정성 지표의 조합은 무엇입니까?
+> **🇺🇸 English Scenario**: [biotech and novel drug discovery enterprise — Demographic Parity, Equal Opportunity & Disparate Impact Metrics] An enterprise operating across protein structure simulations, multi-omics sequencing datasets, Phase I–III clinical trial protocols, and FDA/EMA regulatory dossiers is scaling its AI transformation needing to accelerate drug target discovery while enforcing strict GxP/FDA audit traceability, patient data de-identification, and zero medical hallucinations. Financial regulators mandate that the enterprise's automated loan underwriting model must not exhibit disproportionate adverse outcomes across protected groups (the '80% / Four-Fifths Rule'), and that qualified applicants across all demographics must have equal true positive approval rates. Which fairness metrics must be audited?  
+> **🇰🇷 한국어 시나리오**: [바이오테크 및 신약개발(Bio/Pharma R&D) 기업 — 공정성 정량 지표(Demographic Parity, Equal Opportunity, Disparate Impact)의 맥락별 검증] 귀사는 단백질 3D 구조 시뮬레이션·유전체(Genomics) 시퀀싱 데이터와 임상 1~3상 시험 프로토콜 및 FDA/EMA 인허가 문서 환경에서 엔터프라이즈 AI 전환을 추진하고 있으며, 현재 신약 후보물질 발굴(Target Identification) 기간을 단축해야 하나 GxP/FDA 감사 추적성(Audit Trail)과 임상 환자 데이터의 완벽한 비식별화 및 의학적 환각 제로화가 강제되는 상황에 직면해 있습니다. 금융 규제 당국이 당사의 대출 승인 AI 모델에 대해 '보호 대상 집단(Group A)의 긍정적 결과(승인) 비율이 비보호 집단(Group B)의 승인 비율 대비 80%(4/5 규칙) 미만이 되어서는 안 되며, 동시에 실제로 상환 능력을 갖춘 우량 고객이 거절당하는 위음성률(False Negative Rate) 격차도 없어야 한다'고 요구했습니다. 이를 검증하기 위해 측정해야 할 공정성 지표의 조합은 무엇입니까?
 >
 > * **(A)** Submit only network packet loss percentages and server deployment speed metrics to financial regulators  
 >   *(🇰🇷 모델의 공정성과 무관한 블루/그린 서버 배포 속도와 네트워크 패킷 손실률(Packet Loss)만 규제 당국에 제출함)*
@@ -179,12 +179,12 @@
 >
 > • **핵심 전략 및 정답 도출 근거**: 전체 평균 정확도(Aggregate Accuracy)가 95%라도 소수 집단에서의 오판율이 높으면 심각한 규제 위반이 됩니다. **Disparate Impact(이종 영향) / Demographic Parity**는 보호 집단 간 긍정 판정 비율을 비교하며, **Equal Opportunity(기회 균등)**는 실제 자격을 갖춘 집단 내에서 동등하게 승인 기회를 부여받는지(TPR 일치 여부)를 검증하는 핵심 수학적 공정성 지표입니다.
 >
-> • **시나리오 제약 조건 부합성 ([글로벌 항공사 및 모빌리티 예약 플랫폼])**: 본 시나리오는 '챗봇이 잘못된 환불·보상 정책을 안내할 경우 즉각적인 법적 배상 책임이 발생하므로 할루시네이션 제로화가 최우선 과제인 상황'이라는 복합 제약을 포함하고 있습니다. 따라서 '공정성 정량 지표(Demographic Parity, Equal Opportunity, Disparate Impact)의 맥락별 검증' 관점에서 단계적 정합성과 리스크 통제를 동시에 만족하는 **(B)**가 유일한 최적해(MOST appropriate strategy)입니다.
+> • **시나리오 제약 조건 부합성 ([바이오테크 및 신약개발(Bio/Pharma R&D) 기업])**: 본 시나리오는 '신약 후보물질 발굴(Target Identification) 기간을 단축해야 하나 GxP/FDA 감사 추적성(Audit Trail)과 임상 환자 데이터의 완벽한 비식별화 및 의학적 환각 제로화가 강제되는 상황'이라는 복합 제약을 포함하고 있습니다. 따라서 '공정성 정량 지표(Demographic Parity, Equal Opportunity, Disparate Impact)의 맥락별 검증' 관점에서 단계적 정합성과 리스크 통제를 동시에 만족하는 **(B)**가 유일한 최적해(MOST appropriate strategy)입니다.
 >
 > • **매력적인 오답(Distractor) 함정 분석**:
->   - **(A) 오답 분석**: '모델의 공정성과 무관한 블루/그린 서버 배포 속도와 네트워크 패킷 손실률(Packet Loss)만 규제 당국에 제출함' 접근법은 챗봇이 잘못된 환불·보상 정책을 안내할 경우 즉각적인 법적 배상 책임이 발생하므로 할루시네이션 제로화가 최우선 과제인 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
->   - **(C) 오답 분석**: '문장 번역 품질 지표인 BLEU 점수와 요약 지표인 ROUGE 점수만으로 대출 심사 모델의 인종·성별 공정성을 증명함' 접근법은 챗봇이 잘못된 환불·보상 정책을 안내할 경우 즉각적인 법적 배상 책임이 발생하므로 할루시네이션 제로화가 최우선 과제인 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
->   - **(D) 오답 분석**: '집단별 지표를 분리 측정하지 않고 전체 고객 평균 정확도(Overall Accuracy) 단일 수치만 제시하여 소수 집단의 차별을 가림' 접근법은 챗봇이 잘못된 환불·보상 정책을 안내할 경우 즉각적인 법적 배상 책임이 발생하므로 할루시네이션 제로화가 최우선 과제인 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
+>   - **(A) 오답 분석**: '모델의 공정성과 무관한 블루/그린 서버 배포 속도와 네트워크 패킷 손실률(Packet Loss)만 규제 당국에 제출함' 접근법은 신약 후보물질 발굴(Target Identification) 기간을 단축해야 하나 GxP/FDA 감사 추적성(Audit Trail)과 임상 환자 데이터의 완벽한 비식별화 및 의학적 환각 제로화가 강제되는 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
+>   - **(C) 오답 분석**: '문장 번역 품질 지표인 BLEU 점수와 요약 지표인 ROUGE 점수만으로 대출 심사 모델의 인종·성별 공정성을 증명함' 접근법은 신약 후보물질 발굴(Target Identification) 기간을 단축해야 하나 GxP/FDA 감사 추적성(Audit Trail)과 임상 환자 데이터의 완벽한 비식별화 및 의학적 환각 제로화가 강제되는 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
+>   - **(D) 오답 분석**: '집단별 지표를 분리 측정하지 않고 전체 고객 평균 정확도(Overall Accuracy) 단일 수치만 제시하여 소수 집단의 차별을 가림' 접근법은 신약 후보물질 발굴(Target Identification) 기간을 단축해야 하나 GxP/FDA 감사 추적성(Audit Trail)과 임상 환자 데이터의 완벽한 비식별화 및 의학적 환각 제로화가 강제되는 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
 
 ---
 ### 3.4 전역적(Global) vs 국소적(Local) 설명 가능성(SHAP) 및 고객 소명권 보장 (Global vs Local Explainability (SHAP / LIME) & Regulatory Right to Explanation)
@@ -215,11 +215,11 @@
 </div>
 </div>
 
-> ### 📝 기출 기반 고난도 실전 문제 (Real Exam Scenario Practice - D3-Q031)
+> ### 📝 기출 기반 고난도 실전 문제 (Real Exam Scenario Practice - D3-Q038)
 >
 > **Q. [Global vs Local Explainability (SHAP / LIME) & Regulatory Right to Explanation]**  
-> **🇺🇸 English Scenario**: [global ocean freight and supply chain logistics platform — Global vs Local Explainability (SHAP / LIME) & Regulatory Right to Explanation] An enterprise operating across global port weather and customs time-series telemetry alongside multilingual Bills of Lading and customs declarations is scaling its AI transformation facing an aggressive 6-week Time-to-Market (TTM) mandate across global branches with a severe shortage of internal ML engineers. In a complex ensemble underwriting model, (Requirement 1) the Risk Committee needs to understand the top features driving model behavior overall across the portfolio, and (Requirement 2) customer support must provide legally compliant explanations showing the exact marginal contribution of each feature to an individual applicant's rejection. Which explainability framework satisfies both?  
-> **🇰🇷 한국어 시나리오**: [글로벌 해운 물류 및 공급망 플랫폼 — 전역적(Global) vs 국소적(Local) 설명 가능성(SHAP) 및 고객 소명권 보장] 귀사는 전 세계 항만 기상·관세 시계열 데이터와 다국어 선하증권(B/L) 및 통관 세관 신고서 환경에서 엔터프라이즈 AI 전환을 추진하고 있으며, 현재 6주 이내에 MVP를 글로벌 지사에 배포(TTM)해야 하지만 사내 전담 머신러닝 엔지니어가 극소수에 불과한 상황에 직면해 있습니다. 딥러닝 및 앙상블 기반의 보험 언더라이팅·신용 심사 시스템에서 (요구사항 1) 리스크 관리 위원회는 '모델이 전반적으로 어떤 상위 5개 변수를 가장 중요하게 보고 판단하는지' 전체 경향성을 파악해야 하고, (요구사항 2) 거절 통보를 받은 개별 고객 A씨가 이의를 제기했을 때 '왜 다른 사람이 아닌 A씨 본인의 신청이 거절되었는지 각 변수(연체 이력 +35%, 부채비율 +28% 등)의 한계 기여도'를 투명하게 설명해야 합니다. 최적의 기술 솔루션은 무엇입니까?
+> **🇺🇸 English Scenario**: [global consumer packaged goods (CPG) and F&B franchise distributor — Global vs Local Explainability (SHAP / LIME) & Regulatory Right to Explanation] An enterprise operating across raw commodity price feeds, weather-correlated daily franchise order histories, sensory R&D test logs, and social media trend reviews is scaling its AI transformation needing to reduce demand forecasting error (MAPE) and accelerate product launches while enabling non-technical franchise managers to use AI without coding. In a complex ensemble underwriting model, (Requirement 1) the Risk Committee needs to understand the top features driving model behavior overall across the portfolio, and (Requirement 2) customer support must provide legally compliant explanations showing the exact marginal contribution of each feature to an individual applicant's rejection. Which explainability framework satisfies both?  
+> **🇰🇷 한국어 시나리오**: [글로벌 소비재(CPG) 및 식음료 프랜차이즈 유통사 — 전역적(Global) vs 국소적(Local) 설명 가능성(SHAP) 및 고객 소명권 보장] 귀사는 원자재 선물 시세 변동 데이터, 지역별 기상·프로모션에 따른 일별 가맹점 발주량 이력, 신제품 소비자 관능검사 및 SNS 트렌드 리뷰 환경에서 엔터프라이즈 AI 전환을 추진하고 있으며, 현재 계절적 수요 예측 오차(MAPE)를 줄여 가맹점 폐기 비용을 절감하고 신제품 출시 주기를 앞당겨야 하며, 비기술직 가맹점주와 영업사원이 코딩 없이 직관적으로 AI를 활용해야 하는 상황에 직면해 있습니다. 딥러닝 및 앙상블 기반의 보험 언더라이팅·신용 심사 시스템에서 (요구사항 1) 리스크 관리 위원회는 '모델이 전반적으로 어떤 상위 5개 변수를 가장 중요하게 보고 판단하는지' 전체 경향성을 파악해야 하고, (요구사항 2) 거절 통보를 받은 개별 고객 A씨가 이의를 제기했을 때 '왜 다른 사람이 아닌 A씨 본인의 신청이 거절되었는지 각 변수(연체 이력 +35%, 부채비율 +28% 등)의 한계 기여도'를 투명하게 설명해야 합니다. 최적의 기술 솔루션은 무엇입니까?
 >
 > * **(A)** Inform regulators and rejected applicants that the neural network is an unexplainable black box and refuse to provide reasons  
 >   *(🇰🇷 고성능 모델은 원래 블랙박스이므로 고객과 규제 기관에 '알고리즘 영업 비밀이라 거절 사유를 알려줄 수 없다'고 일괄 통보함)*
@@ -235,12 +235,12 @@
 >
 > • **핵심 전략 및 정답 도출 근거**: **설명 가능성(Explainability)**에서는 **전역적 설명(Global Explainability: 모델 전체가 어떤 피처에 가중치를 두는가)**과 **국소적 설명(Local Explainability: 왜 특정 고객 홍길동의 점수가 낮게 나왔는가)**을 명확히 구분해야 합니다. 게임 이론 기반의 **SHAP(Shapley Values, SageMaker Clarify 기본 내장)**은 개별 추론 건(Local)의 변수별 기여도 합산과 전체 집계(Global)를 모두 수학적으로 일관되게 제공하는 표준 도구입니다.
 >
-> • **시나리오 제약 조건 부합성 ([글로벌 해운 물류 및 공급망 플랫폼])**: 본 시나리오는 '6주 이내에 MVP를 글로벌 지사에 배포(TTM)해야 하지만 사내 전담 머신러닝 엔지니어가 극소수에 불과한 상황'이라는 복합 제약을 포함하고 있습니다. 따라서 '전역적(Global) vs 국소적(Local) 설명 가능성(SHAP) 및 고객 소명권 보장' 관점에서 단계적 정합성과 리스크 통제를 동시에 만족하는 **(D)**가 유일한 최적해(MOST appropriate strategy)입니다.
+> • **시나리오 제약 조건 부합성 ([글로벌 소비재(CPG) 및 식음료 프랜차이즈 유통사])**: 본 시나리오는 '계절적 수요 예측 오차(MAPE)를 줄여 가맹점 폐기 비용을 절감하고 신제품 출시 주기를 앞당겨야 하며, 비기술직 가맹점주와 영업사원이 코딩 없이 직관적으로 AI를 활용해야 하는 상황'이라는 복합 제약을 포함하고 있습니다. 따라서 '전역적(Global) vs 국소적(Local) 설명 가능성(SHAP) 및 고객 소명권 보장' 관점에서 단계적 정합성과 리스크 통제를 동시에 만족하는 **(D)**가 유일한 최적해(MOST appropriate strategy)입니다.
 >
 > • **매력적인 오답(Distractor) 함정 분석**:
->   - **(A) 오답 분석**: '고성능 모델은 원래 블랙박스이므로 고객과 규제 기관에 '알고리즘 영업 비밀이라 거절 사유를 알려줄 수 없다'고 일괄 통보함' 접근법은 6주 이내에 MVP를 글로벌 지사에 배포(TTM)해야 하지만 사내 전담 머신러닝 엔지니어가 극소수에 불과한 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
->   - **(B) 오답 분석**: '실제 심사 모델의 예측 근거와 상관없이 별도의 생성형 LLM에게 그럴듯한 거절 사유를 사후에 소설처럼 지어내게(Post-hoc Fabrication) 하여 통보함' 접근법은 6주 이내에 MVP를 글로벌 지사에 배포(TTM)해야 하지만 사내 전담 머신러닝 엔지니어가 극소수에 불과한 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
->   - **(C) 오답 분석**: '설명 가능성을 확보하기 위해 모든 변수를 제거하고 오직 신청자의 나이(Age) 단 하나의 변수로만 100% 승인 여부를 결정함' 접근법은 6주 이내에 MVP를 글로벌 지사에 배포(TTM)해야 하지만 사내 전담 머신러닝 엔지니어가 극소수에 불과한 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
+>   - **(A) 오답 분석**: '고성능 모델은 원래 블랙박스이므로 고객과 규제 기관에 '알고리즘 영업 비밀이라 거절 사유를 알려줄 수 없다'고 일괄 통보함' 접근법은 계절적 수요 예측 오차(MAPE)를 줄여 가맹점 폐기 비용을 절감하고 신제품 출시 주기를 앞당겨야 하며, 비기술직 가맹점주와 영업사원이 코딩 없이 직관적으로 AI를 활용해야 하는 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
+>   - **(B) 오답 분석**: '실제 심사 모델의 예측 근거와 상관없이 별도의 생성형 LLM에게 그럴듯한 거절 사유를 사후에 소설처럼 지어내게(Post-hoc Fabrication) 하여 통보함' 접근법은 계절적 수요 예측 오차(MAPE)를 줄여 가맹점 폐기 비용을 절감하고 신제품 출시 주기를 앞당겨야 하며, 비기술직 가맹점주와 영업사원이 코딩 없이 직관적으로 AI를 활용해야 하는 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
+>   - **(C) 오답 분석**: '설명 가능성을 확보하기 위해 모든 변수를 제거하고 오직 신청자의 나이(Age) 단 하나의 변수로만 100% 승인 여부를 결정함' 접근법은 계절적 수요 예측 오차(MAPE)를 줄여 가맹점 폐기 비용을 절감하고 신제품 출시 주기를 앞당겨야 하며, 비기술직 가맹점주와 영업사원이 코딩 없이 직관적으로 AI를 활용해야 하는 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
 
 ---
 ### 3.5 규제 위험 등급에 따른 본질적 해석 가능 모델(White-box) vs 블랙박스 모델 트레이드오프 (Interpretability vs Performance Trade-off by Risk Tier)
@@ -271,11 +271,11 @@
 </div>
 </div>
 
-> ### 📝 기출 기반 고난도 실전 문제 (Real Exam Scenario Practice - D3-Q041)
+> ### 📝 기출 기반 고난도 실전 문제 (Real Exam Scenario Practice - D3-Q049)
 >
 > **Q. [Interpretability vs Performance Trade-off by Risk Tier]**  
-> **🇺🇸 English Scenario**: [nationwide 5G telecommunications carrier — Interpretability vs Performance Trade-off by Risk Tier] An enterprise operating across telemetry from tens of thousands of cell towers and hundreds of thousands of daily billing/roaming call transcripts is scaling its AI transformation aiming to reduce agent burnout by automating routine inquiries while seamlessly escalating complex billing disputes to human agents. An enterprise is designing two systems: (System 1) a statutory compliance scorecard subject to strict regulatory inspection where every internal coefficient and decision rule must be intrinsically transparent; (System 2) a multimodal content discovery engine over unstructured video and text. How should the AI Strategist navigate the Interpretability-vs-Complexity trade-off?  
-> **🇰🇷 한국어 시나리오**: [전국망 이동통신 및 5G 인프라 사업자 — 규제 위험 등급에 따른 본질적 해석 가능 모델(White-box) vs 블랙박스 모델 트레이드오프] 귀사는 수만 개 기지국의 트래픽 혼잡도 지표와 일일 수십만 건의 요금·로밍 고객 상담 통화 기록 환경에서 엔터프라이즈 AI 전환을 추진하고 있으며, 현재 상담원 이직률을 낮추기 위해 반복 문의는 자동화하되 복잡한 요금 분쟁은 실시간 상담원 보조(Agent Assist)로 전환해야 하는 상황에 직면해 있습니다. 기업이 두 가지 머신러닝 과제를 설계 중입니다. (과제 1) 법원 제출 및 금융 감독원 직권 심사를 받아야 하며, 모델 내부의 모든 분기 규칙과 계수가 100% 투명하게 공개·검증되어야 하는 법정 규제 준수 판정 모델. (과제 2) 비정형 이미지·음성·장문 텍스트가 결합된 멀티모달 콘텐츠 추천 및 요약 모델. 각 과제의 위험도와 특성에 맞는 모델 복잡도-해석 가능성(Interpretability vs Performance) 선택 전략은 무엇입니까?
+> **🇺🇸 English Scenario**: [mega-scale online e-commerce and open marketplace platform — Interpretability vs Performance Trade-off by Risk Tier] An enterprise operating across hundreds of millions of daily clickstream events, tens of millions of seller catalog images/listings, and real-time dispute logs is scaling its AI transformation requiring sub-150ms inference latency during peak shopping events while boosting conversion rates and slashing unit token costs by 70%. An enterprise is designing two systems: (System 1) a statutory compliance scorecard subject to strict regulatory inspection where every internal coefficient and decision rule must be intrinsically transparent; (System 2) a multimodal content discovery engine over unstructured video and text. How should the AI Strategist navigate the Interpretability-vs-Complexity trade-off?  
+> **🇰🇷 한국어 시나리오**: [초대형 온라인 이커머스 및 오픈마켓 플랫폼 — 규제 위험 등급에 따른 본질적 해석 가능 모델(White-box) vs 블랙박스 모델 트레이드오프] 귀사는 일일 수억 건의 검색·장바구니 클릭스트림, 수천만 개의 판매자 상품 카탈로그 이미지·상세페이지, 실시간 반품·분쟁 상담 로그 환경에서 엔터프라이즈 AI 전환을 추진하고 있으며, 현재 블랙프라이데이 등 피크 트래픽 시 추론 지연 시간(Latency)을 150ms 이내로 유지하면서 개인화 추천 전환율을 높이고 건당 추론 비용을 70% 절감해야 하는 상황에 직면해 있습니다. 기업이 두 가지 머신러닝 과제를 설계 중입니다. (과제 1) 법원 제출 및 금융 감독원 직권 심사를 받아야 하며, 모델 내부의 모든 분기 규칙과 계수가 100% 투명하게 공개·검증되어야 하는 법정 규제 준수 판정 모델. (과제 2) 비정형 이미지·음성·장문 텍스트가 결합된 멀티모달 콘텐츠 추천 및 요약 모델. 각 과제의 위험도와 특성에 맞는 모델 복잡도-해석 가능성(Interpretability vs Performance) 선택 전략은 무엇입니까?
 >
 > * **(A)** Force an opaque multi-billion-parameter black-box neural network onto System 1, resulting in immediate regulatory rejection  
 >   *(🇰🇷 과제 1의 단순 정형 법정 심사에도 설명이 불가능한 수천억 파라미터의 비공개 블랙박스 딥러닝 모델만을 고집하여 규제 인허가 승인을 거부당함)*
@@ -291,12 +291,12 @@
 >
 > • **핵심 전략 및 정답 도출 근거**: AIB-C01에서는 **본질적 해석 가능성(Intrinsic Interpretability: 모델 구조 자체가 투명한 로지스틱 회귀·의사결정 트리)**과 **사후 설명 가능성(Post-hoc Explainability: 복잡한 딥러닝/앙상블 모델을 SHAP/LIME이나 출처 인용으로 설명)**의 트레이드오프를 이해해야 합니다. 고위험 법정 정형 심사에서는 화이트박스 모델 또는 엄격한 SHAP 검증 모델이 요구됩니다.
 >
-> • **시나리오 제약 조건 부합성 ([전국망 이동통신 및 5G 인프라 사업자])**: 본 시나리오는 '상담원 이직률을 낮추기 위해 반복 문의는 자동화하되 복잡한 요금 분쟁은 실시간 상담원 보조(Agent Assist)로 전환해야 하는 상황'이라는 복합 제약을 포함하고 있습니다. 따라서 '규제 위험 등급에 따른 본질적 해석 가능 모델(White-box) vs 블랙박스 모델 트레이드오프' 관점에서 단계적 정합성과 리스크 통제를 동시에 만족하는 **(B)**가 유일한 최적해(MOST appropriate strategy)입니다.
+> • **시나리오 제약 조건 부합성 ([초대형 온라인 이커머스 및 오픈마켓 플랫폼])**: 본 시나리오는 '블랙프라이데이 등 피크 트래픽 시 추론 지연 시간(Latency)을 150ms 이내로 유지하면서 개인화 추천 전환율을 높이고 건당 추론 비용을 70% 절감해야 하는 상황'이라는 복합 제약을 포함하고 있습니다. 따라서 '규제 위험 등급에 따른 본질적 해석 가능 모델(White-box) vs 블랙박스 모델 트레이드오프' 관점에서 단계적 정합성과 리스크 통제를 동시에 만족하는 **(B)**가 유일한 최적해(MOST appropriate strategy)입니다.
 >
 > • **매력적인 오답(Distractor) 함정 분석**:
->   - **(A) 오답 분석**: '과제 1의 단순 정형 법정 심사에도 설명이 불가능한 수천억 파라미터의 비공개 블랙박스 딥러닝 모델만을 고집하여 규제 인허가 승인을 거부당함' 접근법은 상담원 이직률을 낮추기 위해 반복 문의는 자동화하되 복잡한 요금 분쟁은 실시간 상담원 보조(Agent Assist)로 전환해야 하는 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
->   - **(C) 오답 분석**: '과제 2의 고해상도 동영상 및 음성 이해 업무에도 3줄짜리 단순 선형 회귀 수식만 적용하여 정확도 0%를 기록함' 접근법은 상담원 이직률을 낮추기 위해 반복 문의는 자동화하되 복잡한 요금 분쟁은 실시간 상담원 보조(Agent Assist)로 전환해야 하는 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
->   - **(D) 오답 분석**: '해석 가능성과 성능은 항상 정반대이므로 모든 AI 프로젝트에서 정확도가 가장 낮은 모델만 의무적으로 선택하도록 규정함' 접근법은 상담원 이직률을 낮추기 위해 반복 문의는 자동화하되 복잡한 요금 분쟁은 실시간 상담원 보조(Agent Assist)로 전환해야 하는 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
+>   - **(A) 오답 분석**: '과제 1의 단순 정형 법정 심사에도 설명이 불가능한 수천억 파라미터의 비공개 블랙박스 딥러닝 모델만을 고집하여 규제 인허가 승인을 거부당함' 접근법은 블랙프라이데이 등 피크 트래픽 시 추론 지연 시간(Latency)을 150ms 이내로 유지하면서 개인화 추천 전환율을 높이고 건당 추론 비용을 70% 절감해야 하는 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
+>   - **(C) 오답 분석**: '과제 2의 고해상도 동영상 및 음성 이해 업무에도 3줄짜리 단순 선형 회귀 수식만 적용하여 정확도 0%를 기록함' 접근법은 블랙프라이데이 등 피크 트래픽 시 추론 지연 시간(Latency)을 150ms 이내로 유지하면서 개인화 추천 전환율을 높이고 건당 추론 비용을 70% 절감해야 하는 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
+>   - **(D) 오답 분석**: '해석 가능성과 성능은 항상 정반대이므로 모든 AI 프로젝트에서 정확도가 가장 낮은 모델만 의무적으로 선택하도록 규정함' 접근법은 블랙프라이데이 등 피크 트래픽 시 추론 지연 시간(Latency)을 150ms 이내로 유지하면서 개인화 추천 전환율을 높이고 건당 추론 비용을 70% 절감해야 하는 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
 
 ---
 
@@ -330,11 +330,11 @@
 </div>
 </div>
 
-> ### 📝 기출 기반 고난도 실전 문제 (Real Exam Scenario Practice - D3-Q051)
+> ### 📝 기출 기반 고난도 실전 문제 (Real Exam Scenario Practice - D3-Q060)
 >
 > **Q. [PII Discovery, Classification & Automated Redaction Pipeline]**  
-> **🇺🇸 English Scenario**: [mega-scale e-commerce and retail marketplace — PII Discovery, Classification & Automated Redaction Pipeline] An enterprise operating across tens of millions of daily clickstream events alongside unstructured product reviews and seller dispute tickets is scaling its AI transformation requiring sub-200ms inference latency during peak seasonal traffic while slashing per-transaction unit inference costs by over 60%. An enterprise is building a RAG knowledge base and fine-tuning corpus from millions of unstructured support transcripts stored in Amazon S3 that contain embedded names, SSNs, credit card numbers, and medical records (PII/PHI). Which defense-in-depth architecture prevents PII memorization and runtime leakage?  
-> **🇰🇷 한국어 시나리오**: [초대형 이커머스 및 리테일 마켓플레이스 — 민감 개인정보(PII/PHI) 자동 탐지(Amazon Macie) 및 실시간 마스킹(Guardrails/Comprehend) 파이프라인] 귀사는 일일 수천만 건의 클릭스트림 이벤트와 비정형 상품 리뷰 및 판매자 분쟁 티켓 환경에서 엔터프라이즈 AI 전환을 추진하고 있으며, 현재 성수기 트래픽 급증 시 추론 지연 시간(Latency)을 200ms 이내로 유지해야 하며 동시에 건당 추론 단가(Unit Cost)를 60% 이상 절감해야 하는 상황에 직면해 있습니다. 병원·금융사의 수백만 건 고객 상담 녹취록과 S3 데이터 레이크 문서를 활용해 RAG 지식 베이스와 파인튜닝 데이터셋을 구축하려 합니다. 원본 문서 곳곳에 고객의 성명, 주민등록번호, 신용카드 번호, 병력 기록(PII/PHI)이 비정형 문장 속에 섞여 있어, 모델이 이를 그대로 암기해 타 고객에게 노출(Data Leakage)할 심각한 위험이 있습니다. 데이터 적재 단계와 실시간 추론 단계를 아우르는 심층 보호 아키텍처는 무엇입니까?
+> **🇺🇸 English Scenario**: [advanced materials and battery corporate R&D institute — PII Discovery, Classification & Automated Redaction Pipeline] An enterprise operating across decades of Electronic Lab Notebooks (ELN), molecular formulation tables, global patent filings, and scientific literature archives is scaling its AI transformation seeking to compress R&D formulation cycles and lab trial-and-error costs while guaranteeing zero leakage of pre-patent trade secrets and proprietary chemical IP. An enterprise is building a RAG knowledge base and fine-tuning corpus from millions of unstructured support transcripts stored in Amazon S3 that contain embedded names, SSNs, credit card numbers, and medical records (PII/PHI). Which defense-in-depth architecture prevents PII memorization and runtime leakage?  
+> **🇰🇷 한국어 시나리오**: [첨단 소재·배터리 기업 부설 R&D 연구소(Corporate R&D Center) — 민감 개인정보(PII/PHI) 자동 탐지(Amazon Macie) 및 실시간 마스킹(Guardrails/Comprehend) 파이프라인] 귀사는 수십 년간 축적된 실험실 전자연구노트(ELN), 분자 조성 실험 결과 테이블, 글로벌 특허 명세서 및 학술 논문 PDF 아카이브 환경에서 엔터프라이즈 AI 전환을 추진하고 있으며, 현재 차세대 소재 배합 시행착오(Trial-and-Error) 실험 횟수를 줄여 연구개발 리드타임을 단축해야 하며, 미출원 핵심 특허와 영업비밀(Trade Secrets)의 외부 유출을 100% 차단해야 하는 상황에 직면해 있습니다. 병원·금융사의 수백만 건 고객 상담 녹취록과 S3 데이터 레이크 문서를 활용해 RAG 지식 베이스와 파인튜닝 데이터셋을 구축하려 합니다. 원본 문서 곳곳에 고객의 성명, 주민등록번호, 신용카드 번호, 병력 기록(PII/PHI)이 비정형 문장 속에 섞여 있어, 모델이 이를 그대로 암기해 타 고객에게 노출(Data Leakage)할 심각한 위험이 있습니다. 데이터 적재 단계와 실시간 추론 단계를 아우르는 심층 보호 아키텍처는 무엇입니까?
 >
 > * **(A)** Fine-tune the foundation model directly on unredacted SSNs and medical records, then ask users nicely not to query other people's data  
 >   *(🇰🇷 원본 주민등록번호와 병력 기록을 아무런 마스킹 없이 파운데이션 모델 가중치에 그대로 파인튜닝(SFT)시킨 뒤 고객들에게 비밀 유지를 부탁함)*
@@ -350,12 +350,12 @@
 >
 > • **핵심 전략 및 정답 도출 근거**: 개인정보(PII/PHI) 보호는 **1차(저장 및 학습/인덱싱 전): Amazon Macie(S3 내 민감 데이터 자산 식별·분류) + Amazon Comprehend/Glue(배치 비식별화 및 가명화)를 통해 벡터 DB나 학습 가중치에 PII가 들어가는 것 자체를 차단**하고, **2차(실시간 추론 중): 사용자가 채팅창에 실수로 입력하거나 출력되는 PII를 Amazon Bedrock Guardrails로 실시간 마스킹(Redaction) 또는 차단(Block)**하는 이중 방어가 정석입니다.
 >
-> • **시나리오 제약 조건 부합성 ([초대형 이커머스 및 리테일 마켓플레이스])**: 본 시나리오는 '성수기 트래픽 급증 시 추론 지연 시간(Latency)을 200ms 이내로 유지해야 하며 동시에 건당 추론 단가(Unit Cost)를 60% 이상 절감해야 하는 상황'이라는 복합 제약을 포함하고 있습니다. 따라서 '민감 개인정보(PII/PHI) 자동 탐지(Amazon Macie) 및 실시간 마스킹(Guardrails/Comprehend) 파이프라인' 관점에서 단계적 정합성과 리스크 통제를 동시에 만족하는 **(D)**가 유일한 최적해(MOST appropriate strategy)입니다.
+> • **시나리오 제약 조건 부합성 ([첨단 소재·배터리 기업 부설 R&D 연구소(Corporate R&D Center)])**: 본 시나리오는 '차세대 소재 배합 시행착오(Trial-and-Error) 실험 횟수를 줄여 연구개발 리드타임을 단축해야 하며, 미출원 핵심 특허와 영업비밀(Trade Secrets)의 외부 유출을 100% 차단해야 하는 상황'이라는 복합 제약을 포함하고 있습니다. 따라서 '민감 개인정보(PII/PHI) 자동 탐지(Amazon Macie) 및 실시간 마스킹(Guardrails/Comprehend) 파이프라인' 관점에서 단계적 정합성과 리스크 통제를 동시에 만족하는 **(D)**가 유일한 최적해(MOST appropriate strategy)입니다.
 >
 > • **매력적인 오답(Distractor) 함정 분석**:
->   - **(A) 오답 분석**: '원본 주민등록번호와 병력 기록을 아무런 마스킹 없이 파운데이션 모델 가중치에 그대로 파인튜닝(SFT)시킨 뒤 고객들에게 비밀 유지를 부탁함' 접근법은 성수기 트래픽 급증 시 추론 지연 시간(Latency)을 200ms 이내로 유지해야 하며 동시에 건당 추론 단가(Unit Cost)를 60% 이상 절감해야 하는 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
->   - **(B) 오답 분석**: 'PII 탐지 도구는 비용이 들므로 S3 버킷 이름에만 'No-PII'라고 적어두고 실제 문서 내부의 개인정보는 전혀 검사하지 않음' 접근법은 성수기 트래픽 급증 시 추론 지연 시간(Latency)을 200ms 이내로 유지해야 하며 동시에 건당 추론 단가(Unit Cost)를 60% 이상 절감해야 하는 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
->   - **(C) 오답 분석**: '개인정보 유출을 막기 위해 정당한 본인 인증을 거친 고객조차 자신의 계좌 잔액이나 주문 내역을 조회하지 못하도록 모든 DB 연결을 영구 차단함' 접근법은 성수기 트래픽 급증 시 추론 지연 시간(Latency)을 200ms 이내로 유지해야 하며 동시에 건당 추론 단가(Unit Cost)를 60% 이상 절감해야 하는 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
+>   - **(A) 오답 분석**: '원본 주민등록번호와 병력 기록을 아무런 마스킹 없이 파운데이션 모델 가중치에 그대로 파인튜닝(SFT)시킨 뒤 고객들에게 비밀 유지를 부탁함' 접근법은 차세대 소재 배합 시행착오(Trial-and-Error) 실험 횟수를 줄여 연구개발 리드타임을 단축해야 하며, 미출원 핵심 특허와 영업비밀(Trade Secrets)의 외부 유출을 100% 차단해야 하는 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
+>   - **(B) 오답 분석**: 'PII 탐지 도구는 비용이 들므로 S3 버킷 이름에만 'No-PII'라고 적어두고 실제 문서 내부의 개인정보는 전혀 검사하지 않음' 접근법은 차세대 소재 배합 시행착오(Trial-and-Error) 실험 횟수를 줄여 연구개발 리드타임을 단축해야 하며, 미출원 핵심 특허와 영업비밀(Trade Secrets)의 외부 유출을 100% 차단해야 하는 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
+>   - **(C) 오답 분석**: '개인정보 유출을 막기 위해 정당한 본인 인증을 거친 고객조차 자신의 계좌 잔액이나 주문 내역을 조회하지 못하도록 모든 DB 연결을 영구 차단함' 접근법은 차세대 소재 배합 시행착오(Trial-and-Error) 실험 횟수를 줄여 연구개발 리드타임을 단축해야 하며, 미출원 핵심 특허와 영업비밀(Trade Secrets)의 외부 유출을 100% 차단해야 하는 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
 
 ---
 ### 3.7 AWS 엔터프라이즈 데이터 보호 서약(기본 모델 학습 미사용) 및 테넌트 격리 검증 (AWS Customer Data Privacy Commitment & Zero Model Training)
@@ -389,8 +389,8 @@
 > ### 📝 기출 기반 고난도 실전 문제 (Real Exam Scenario Practice - D3-Q061)
 >
 > **Q. [AWS Customer Data Privacy Commitment & Zero Model Training]**  
-> **🇺🇸 English Scenario**: [global streaming media and entertainment studio — AWS Customer Data Privacy Commitment & Zero Model Training] An enterprise operating across hundreds of thousands of hours of multilingual video/audio archives and viewer churn behavioral logs is scaling its AI transformation needing to eliminate third-party copyright infringement liabilities while preventing cultural bias across diverse global markets. Legal and Security leadership block Amazon Bedrock adoption, fearing that confidential enterprise prompts and fine-tuned weights will be absorbed by AWS or third-party model providers (e.g., Anthropic) to train public base foundation models. What factual architectural guarantee and governance control should the AI Strategist present?  
-> **🇰🇷 한국어 시나리오**: [글로벌 미디어 스트리밍 및 콘텐츠 스튜디오 — AWS 엔터프라이즈 데이터 보호 서약(기본 모델 학습 미사용) 및 테넌트 격리 검증] 귀사는 수십만 시간 분량의 다국어 영상·오디오 아카이브와 글로벌 시청자 이탈(Churn) 행동 로그 환경에서 엔터프라이즈 AI 전환을 추진하고 있으며, 현재 생성형 AI 콘텐츠의 제3자 저작권 침해 소송 리스크를 원천 차단하고 글로벌 지역별 문화적 편향을 제거해야 하는 상황에 직면해 있습니다. 법무팀과 CISO가 Amazon Bedrock 도입을 앞두고 '우리가 Bedrock API로 전송하는 기밀 계약서 프롬프트와 파인튜닝 어댑터 가중치가 AWS나 제3자 모델 개발사(Anthropic, Meta 등)의 글로벌 기본 모델(Base Foundation Model) 재학습에 흡수되어 타 경쟁사에게 노출될 수 있다'며 승인을 거부하고 있습니다. AI 비즈니스 전략가가 AWS의 보안 아키텍처에 기반해 제시해야 할 정확한 팩트와 기술적 통제 방안은 무엇입니까?
+> **🇺🇸 English Scenario**: [global gaming R&D and streaming entertainment studio — AWS Customer Data Privacy Commitment & Zero Model Training] An enterprise operating across hundreds of thousands of hours of multilingual audiovisual assets, 3D texture libraries, and real-time player telemetry logs is scaling its AI transformation needing to eliminate third-party IP infringement risks via indemnified models, C2PA provenance watermarking, and localized cultural bias auditing. Legal and Security leadership block Amazon Bedrock adoption, fearing that confidential enterprise prompts and fine-tuned weights will be absorbed by AWS or third-party model providers (e.g., Anthropic) to train public base foundation models. What factual architectural guarantee and governance control should the AI Strategist present?  
+> **🇰🇷 한국어 시나리오**: [글로벌 미디어·게임 R&D 및 엔터테인먼트 스튜디오 — AWS 엔터프라이즈 데이터 보호 서약(기본 모델 학습 미사용) 및 테넌트 격리 검증] 귀사는 수십만 시간의 다국어 영상·음성 에셋, 3D 그래픽 텍스처 라이브러리, 실시간 게이머 매치메이킹 및 이탈(Churn) 원격 로그 환경에서 엔터프라이즈 AI 전환을 추진하고 있으며, 현재 생성형 AI 에셋 제작 시 제3자 저작권(IP) 침해 리스크를 원천 차단하고 디지털 워터마킹(C2PA) 출처 증명과 지역별 문화적 편향 제거를 보장해야 하는 상황에 직면해 있습니다. 법무팀과 CISO가 Amazon Bedrock 도입을 앞두고 '우리가 Bedrock API로 전송하는 기밀 계약서 프롬프트와 파인튜닝 어댑터 가중치가 AWS나 제3자 모델 개발사(Anthropic, Meta 등)의 글로벌 기본 모델(Base Foundation Model) 재학습에 흡수되어 타 경쟁사에게 노출될 수 있다'며 승인을 거부하고 있습니다. AI 비즈니스 전략가가 AWS의 보안 아키텍처에 기반해 제시해야 할 정확한 팩트와 기술적 통제 방안은 무엇입니까?
 >
 > * **(A)** Concede that Bedrock leaks all prompts to public base models and cancel the enterprise cloud strategy  
 >   *(🇰🇷 법무팀의 우려가 사실이므로 Bedrock을 사용할 때마다 모든 기밀이 전 세계에 공개된다고 인정하고 프로젝트를 포기함)*
@@ -406,12 +406,12 @@
 >
 > • **핵심 전략 및 정답 도출 근거**: AIB-C01에서 반복 출제되는 핵심 클라우드 신뢰 원칙입니다. **Amazon Bedrock**은 (1) 고객 입출력 데이터를 기본 모델 개선/학습에 **절대 사용하지 않으며(Zero Base-Model Training)**, (2) Anthropic/Cohere 등 제3자 모델 벤더도 고객 프롬프트에 접근할 수 없도록 AWS 관리형 계정 내에서 완전 격리 실행되며, (3) 커스텀 파인튜닝 모델 가중치 역시 오직 해당 고객 전용으로만 암호화 격리됩니다.
 >
-> • **시나리오 제약 조건 부합성 ([글로벌 미디어 스트리밍 및 콘텐츠 스튜디오])**: 본 시나리오는 '생성형 AI 콘텐츠의 제3자 저작권 침해 소송 리스크를 원천 차단하고 글로벌 지역별 문화적 편향을 제거해야 하는 상황'이라는 복합 제약을 포함하고 있습니다. 따라서 'AWS 엔터프라이즈 데이터 보호 서약(기본 모델 학습 미사용) 및 테넌트 격리 검증' 관점에서 단계적 정합성과 리스크 통제를 동시에 만족하는 **(B)**가 유일한 최적해(MOST appropriate strategy)입니다.
+> • **시나리오 제약 조건 부합성 ([글로벌 미디어·게임 R&D 및 엔터테인먼트 스튜디오])**: 본 시나리오는 '생성형 AI 에셋 제작 시 제3자 저작권(IP) 침해 리스크를 원천 차단하고 디지털 워터마킹(C2PA) 출처 증명과 지역별 문화적 편향 제거를 보장해야 하는 상황'이라는 복합 제약을 포함하고 있습니다. 따라서 'AWS 엔터프라이즈 데이터 보호 서약(기본 모델 학습 미사용) 및 테넌트 격리 검증' 관점에서 단계적 정합성과 리스크 통제를 동시에 만족하는 **(B)**가 유일한 최적해(MOST appropriate strategy)입니다.
 >
 > • **매력적인 오답(Distractor) 함정 분석**:
->   - **(A) 오답 분석**: '법무팀의 우려가 사실이므로 Bedrock을 사용할 때마다 모든 기밀이 전 세계에 공개된다고 인정하고 프로젝트를 포기함' 접근법은 생성형 AI 콘텐츠의 제3자 저작권 침해 소송 리스크를 원천 차단하고 글로벌 지역별 문화적 편향을 제거해야 하는 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
->   - **(C) 오답 분석**: '데이터 유출을 막기 위해 매 호출마다 프롬프트 문장을 모스 부호(Morse Code)로 수동 변환해서 전송함' 접근법은 생성형 AI 콘텐츠의 제3자 저작권 침해 소송 리스크를 원천 차단하고 글로벌 지역별 문화적 편향을 제거해야 하는 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
->   - **(D) 오답 분석**: '계약서 검토 없이 개발자 개인 신용카드로 가입한 외부 무료 웹 챗봇으로 기밀 데이터를 우회 전송함' 접근법은 생성형 AI 콘텐츠의 제3자 저작권 침해 소송 리스크를 원천 차단하고 글로벌 지역별 문화적 편향을 제거해야 하는 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
+>   - **(A) 오답 분석**: '법무팀의 우려가 사실이므로 Bedrock을 사용할 때마다 모든 기밀이 전 세계에 공개된다고 인정하고 프로젝트를 포기함' 접근법은 생성형 AI 에셋 제작 시 제3자 저작권(IP) 침해 리스크를 원천 차단하고 디지털 워터마킹(C2PA) 출처 증명과 지역별 문화적 편향 제거를 보장해야 하는 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
+>   - **(C) 오답 분석**: '데이터 유출을 막기 위해 매 호출마다 프롬프트 문장을 모스 부호(Morse Code)로 수동 변환해서 전송함' 접근법은 생성형 AI 에셋 제작 시 제3자 저작권(IP) 침해 리스크를 원천 차단하고 디지털 워터마킹(C2PA) 출처 증명과 지역별 문화적 편향 제거를 보장해야 하는 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
+>   - **(D) 오답 분석**: '계약서 검토 없이 개발자 개인 신용카드로 가입한 외부 무료 웹 챗봇으로 기밀 데이터를 우회 전송함' 접근법은 생성형 AI 에셋 제작 시 제3자 저작권(IP) 침해 리스크를 원천 차단하고 디지털 워터마킹(C2PA) 출처 증명과 지역별 문화적 편향 제거를 보장해야 하는 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
 
 ---
 ### 3.8 투명성 고지 의무(AI Disclosure) 및 합성 미디어 디지털 워터마킹(C2PA 출처 증명) (Transparency, Mandatory AI Disclosure & C2PA Provenance Watermarking)
@@ -442,11 +442,11 @@
 </div>
 </div>
 
-> ### 📝 기출 기반 고난도 실전 문제 (Real Exam Scenario Practice - D3-Q071)
+> ### 📝 기출 기반 고난도 실전 문제 (Real Exam Scenario Practice - D3-Q072)
 >
 > **Q. [Transparency, Mandatory AI Disclosure & C2PA Provenance Watermarking]**  
-> **🇺🇸 English Scenario**: [global automotive OEM and connected mobility enterprise — Transparency, Mandatory AI Disclosure & C2PA Provenance Watermarking] An enterprise operating across connected-vehicle telematics streams alongside in-cabin voice assistant logs and dealer repair manuals is scaling its AI transformation requiring hybrid inference optimization across memory-constrained in-vehicle edge chipsets and cloud foundation models. An enterprise is launching (1) an autonomous conversational voice/chat agent for customer service and (2) a Generative AI media pipeline producing commercial imagery and video. To comply with global regulatory Transparency mandates (such as the EU AI Act) and prevent deepfake liability, which controls are required?  
-> **🇰🇷 한국어 시나리오**: [글로벌 완성차(OEM) 및 자율주행 모빌리티 기업 — 투명성 고지 의무(AI Disclosure) 및 합성 미디어 디지털 워터마킹(C2PA 출처 증명)] 귀사는 수백만 대 커넥티드카의 주행 텔레매틱스 데이터와 차량 내 음성 비서 대화 로그 및 정비 지침서 환경에서 엔터프라이즈 AI 전환을 추진하고 있으며, 현재 차량 온보드 칩셋의 제한된 메모리/전력 환경과 클라우드 백엔드 간의 하이브리드 추론 최적화가 요구되는 상황에 직면해 있습니다. 미디어·이커머스 기업이 (1) 고객 상담을 전담하는 대화형 AI 보이스봇과, (2) 상품 광고 이미지 및 홍보 영상을 대량 제작하는 생성형 AI 스튜디오를 출시하려 합니다. EU AI Act 등 글로벌 규제 프레임워크의 '투명성(Transparency)' 의무를 완벽히 준수하고 딥페이크/허위 조작 논란을 예방하기 위해 반드시 적용해야 하는 조치는 무엇입니까?
+> **🇺🇸 English Scenario**: [global wholesale distribution and cold-chain logistics provider — Transparency, Mandatory AI Disclosure & C2PA Provenance Watermarking] An enterprise operating across refrigerated container temperature telemetry, tens of thousands of SKU warehouse management (WMS) ledgers, and multilingual customs/Bills of Lading documents is scaling its AI transformation tasked with minimizing perishable inventory spoilage and routing delays across global warehouses under an aggressive 6-week TTM mandate with limited internal ML staff. An enterprise is launching (1) an autonomous conversational voice/chat agent for customer service and (2) a Generative AI media pipeline producing commercial imagery and video. To comply with global regulatory Transparency mandates (such as the EU AI Act) and prevent deepfake liability, which controls are required?  
+> **🇰🇷 한국어 시나리오**: [글로벌 도소매 유통 및 콜드체인 물류(Distribution & Cold-Chain) 기업 — 투명성 고지 의무(AI Disclosure) 및 합성 미디어 디지털 워터마킹(C2PA 출처 증명)] 귀사는 신선식품·의약품 냉장 컨테이너 온도/습도 원격 텔레메트리, 수만 개 SKU 입출고(WMS) 원장, 다국어 통관·선하증권(B/L) 문서 환경에서 엔터프라이즈 AI 전환을 추진하고 있으며, 현재 유통기한 임박 상품의 폐기 손실률(Spoilage)을 낮추고 리드타임 변동성에 실시간 대응해야 하며, 전담 데이터 과학자가 부족해 6주 내에 현업 물류센터에 솔루션을 배포(Fast TTM)해야 하는 상황에 직면해 있습니다. 미디어·이커머스 기업이 (1) 고객 상담을 전담하는 대화형 AI 보이스봇과, (2) 상품 광고 이미지 및 홍보 영상을 대량 제작하는 생성형 AI 스튜디오를 출시하려 합니다. EU AI Act 등 글로벌 규제 프레임워크의 '투명성(Transparency)' 의무를 완벽히 준수하고 딥페이크/허위 조작 논란을 예방하기 위해 반드시 적용해야 하는 조치는 무엇입니까?
 >
 > * **(A)** Program the voicebot to inject fake coughing sounds and explicitly claim to be a human employee  
 >   *(🇰🇷 고객이 AI임을 눈치채지 못하도록 보이스봇에 가짜 기침 소리와 타이핑 소음을 넣고 '실제 인간 상담원'이라고 거짓 소개하게 함)*
@@ -462,12 +462,12 @@
 >
 > • **핵심 전략 및 정답 도출 근거**: EU AI Act의 **제한적 위험(Limited Risk)** 등급 및 글로벌 RAI 가이드라인에서 가장 핵심적인 법적 의무는 **투명성(Transparency)**입니다. (1) 사람과 대화하는 챗봇/보이스봇은 **AI와의 상호작용 사실을 사용자에게 명확히 사전 고지**해야 하며, (2) 생성된 합성 이미지·오디오·비디오에는 **비가시적 디지털 워터마크(Digital Watermarking) 및 C2PA 출처 증명(Provenance)**을 삽입해야 합니다.
 >
-> • **시나리오 제약 조건 부합성 ([글로벌 완성차(OEM) 및 자율주행 모빌리티 기업])**: 본 시나리오는 '차량 온보드 칩셋의 제한된 메모리/전력 환경과 클라우드 백엔드 간의 하이브리드 추론 최적화가 요구되는 상황'이라는 복합 제약을 포함하고 있습니다. 따라서 '투명성 고지 의무(AI Disclosure) 및 합성 미디어 디지털 워터마킹(C2PA 출처 증명)' 관점에서 단계적 정합성과 리스크 통제를 동시에 만족하는 **(D)**가 유일한 최적해(MOST appropriate strategy)입니다.
+> • **시나리오 제약 조건 부합성 ([글로벌 도소매 유통 및 콜드체인 물류(Distribution & Cold-Chain) 기업])**: 본 시나리오는 '유통기한 임박 상품의 폐기 손실률(Spoilage)을 낮추고 리드타임 변동성에 실시간 대응해야 하며, 전담 데이터 과학자가 부족해 6주 내에 현업 물류센터에 솔루션을 배포(Fast TTM)해야 하는 상황'이라는 복합 제약을 포함하고 있습니다. 따라서 '투명성 고지 의무(AI Disclosure) 및 합성 미디어 디지털 워터마킹(C2PA 출처 증명)' 관점에서 단계적 정합성과 리스크 통제를 동시에 만족하는 **(D)**가 유일한 최적해(MOST appropriate strategy)입니다.
 >
 > • **매력적인 오답(Distractor) 함정 분석**:
->   - **(A) 오답 분석**: '고객이 AI임을 눈치채지 못하도록 보이스봇에 가짜 기침 소리와 타이핑 소음을 넣고 '실제 인간 상담원'이라고 거짓 소개하게 함' 접근법은 차량 온보드 칩셋의 제한된 메모리/전력 환경과 클라우드 백엔드 간의 하이브리드 추론 최적화가 요구되는 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
->   - **(B) 오답 분석**: '생성된 AI 이미지의 메타데이터를 모두 강제 삭제(Strip EXIF)하고 실제 사진작가가 직접 촬영한 실사 사진이라고 허위 광고함' 접근법은 차량 온보드 칩셋의 제한된 메모리/전력 환경과 클라우드 백엔드 간의 하이브리드 추론 최적화가 요구되는 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
->   - **(C) 오답 분석**: 'AI 고지 문구를 글자 크기 1pt의 흰색 배경 흰색 글씨로 약관 맨 마지막 페이지에 숨겨 아무도 읽지 못하게 함' 접근법은 차량 온보드 칩셋의 제한된 메모리/전력 환경과 클라우드 백엔드 간의 하이브리드 추론 최적화가 요구되는 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
+>   - **(A) 오답 분석**: '고객이 AI임을 눈치채지 못하도록 보이스봇에 가짜 기침 소리와 타이핑 소음을 넣고 '실제 인간 상담원'이라고 거짓 소개하게 함' 접근법은 유통기한 임박 상품의 폐기 손실률(Spoilage)을 낮추고 리드타임 변동성에 실시간 대응해야 하며, 전담 데이터 과학자가 부족해 6주 내에 현업 물류센터에 솔루션을 배포(Fast TTM)해야 하는 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
+>   - **(B) 오답 분석**: '생성된 AI 이미지의 메타데이터를 모두 강제 삭제(Strip EXIF)하고 실제 사진작가가 직접 촬영한 실사 사진이라고 허위 광고함' 접근법은 유통기한 임박 상품의 폐기 손실률(Spoilage)을 낮추고 리드타임 변동성에 실시간 대응해야 하며, 전담 데이터 과학자가 부족해 6주 내에 현업 물류센터에 솔루션을 배포(Fast TTM)해야 하는 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
+>   - **(C) 오답 분석**: 'AI 고지 문구를 글자 크기 1pt의 흰색 배경 흰색 글씨로 약관 맨 마지막 페이지에 숨겨 아무도 읽지 못하게 함' 접근법은 유통기한 임박 상품의 폐기 손실률(Spoilage)을 낮추고 리드타임 변동성에 실시간 대응해야 하며, 전담 데이터 과학자가 부족해 6주 내에 현업 물류센터에 솔루션을 배포(Fast TTM)해야 하는 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
 
 ---
 
@@ -501,11 +501,11 @@
 </div>
 </div>
 
-> ### 📝 기출 기반 고난도 실전 문제 (Real Exam Scenario Practice - D3-Q081)
+> ### 📝 기출 기반 고난도 실전 문제 (Real Exam Scenario Practice - D3-Q083)
 >
 > **Q. [Amazon Bedrock Guardrails Multi-Policy Architecture]**  
-> **🇺🇸 English Scenario**: [global property & casualty insurance underwriting group — Amazon Bedrock Guardrails Multi-Policy Architecture] An enterprise operating across millions of historical fraud records alongside field loss-adjustment photos, audio transcripts, and medical certificates is scaling its AI transformation where claim denials legally mandate deterministic policy verification coupled with documented Human-in-the-Loop (HITL) sign-off. Departments across an enterprise use five different foundation models (Claude, Nova, Llama, custom fine-tuned models). Relying solely on individual system prompts has resulted in inconsistent safety enforcement, competitor bashing, unauthorized investment advice, PII leaks, and hallucinations. Which architecture enforces standardized governance across all models centrally?  
-> **🇰🇷 한국어 시나리오**: [글로벌 손해보험 및 언더라이팅 그룹 — Amazon Bedrock Guardrails 6대 방어 정책의 통합 설계 및 모델 독립적 적용] 귀사는 수백만 건의 과거 보험 사기 적발 이력 테이블과 현장 손해사정 사진·음성 녹취록 및 진단서 환경에서 엔터프라이즈 AI 전환을 추진하고 있으며, 현재 보험금 지급 거절 시 법적 분쟁 방지를 위해 결정론적 약관 검증과 인간 전문가의 최종 승인(HITL)이 법적으로 의무화된 환경에 직면해 있습니다. 기업 내 다양한 부서에서 Claude, Amazon Nova, Llama 등 서로 다른 5종의 파운데이션 모델과 자체 파인튜닝 모델을 혼용하고 있습니다. 각 모델마다 개별 프롬프트 지시문으로만 안전 수칙을 적었더니, 모델별로 차단 기준이 들쭉날쭉하고 경쟁사 비방, 무자격 법률·투자 자문, 욕설, 개인정보 노출, 환각 답변이 빈발하고 있습니다. 모델 종류와 무관하게 전사 단일 표준으로 입출력을 통제하는 아키텍처는 무엇입니까?
+> **🇺🇸 English Scenario**: [energy generation and smart grid utility corporation — Amazon Bedrock Guardrails Multi-Policy Architecture] An enterprise operating across renewable turbine SCADA sensor streams, real-time wholesale power grid demand logs, drone inspection imagery, and environmental compliance manuals is scaling its AI transformation operating critical national infrastructure where grid forecasting or equipment failures risk blackouts, demanding 99.99% availability and instant fail-safe mechanisms. Departments across an enterprise use five different foundation models (Claude, Nova, Llama, custom fine-tuned models). Relying solely on individual system prompts has resulted in inconsistent safety enforcement, competitor bashing, unauthorized investment advice, PII leaks, and hallucinations. Which architecture enforces standardized governance across all models centrally?  
+> **🇰🇷 한국어 시나리오**: [에너지·발전 및 스마트 그리드 유틸리티 기업 — Amazon Bedrock Guardrails 6대 방어 정책의 통합 설계 및 모델 독립적 적용] 귀사는 풍력·태양광 발전 단지 SCADA 센서 스트림, 전력 도매시장 실시간 수요 데이터, 발전 설비 안전 점검 드론 영상 및 환경 규제 문서 환경에서 엔터프라이즈 AI 전환을 추진하고 있으며, 현재 전력망 과부하 예측 실패나 설비 고장 시 대규모 정전 사태가 발생하므로 99.99% 가용성과 비상시 즉각적인 안전 차단(Kill-Switch/Fallback)이 최우선인 핵심 인프라 환경에 직면해 있습니다. 기업 내 다양한 부서에서 Claude, Amazon Nova, Llama 등 서로 다른 5종의 파운데이션 모델과 자체 파인튜닝 모델을 혼용하고 있습니다. 각 모델마다 개별 프롬프트 지시문으로만 안전 수칙을 적었더니, 모델별로 차단 기준이 들쭉날쭉하고 경쟁사 비방, 무자격 법률·투자 자문, 욕설, 개인정보 노출, 환각 답변이 빈발하고 있습니다. 모델 종류와 무관하게 전사 단일 표준으로 입출력을 통제하는 아키텍처는 무엇입니까?
 >
 > * **(A)** Re-execute full pre-training across all five foundation models every week whenever a denied topic rule changes  
 >   *(🇰🇷 5개 모델의 가중치를 매주 새로 사전학습(Pre-training)시켜 금지어 목록이 바뀔 때마다 수십억 원의 학습비를 지출함)*
@@ -521,12 +521,12 @@
 >
 > • **핵심 전략 및 정답 도출 근거**: **Amazon Bedrock Guardrails**의 가장 큰 전략적 가치는 **모델 독립적(Model-Agnostic) 중앙 거버넌스**입니다. 시스템 프롬프트만으로는 모델 변경이나 탈옥 공격 시 정책이 쉽게 무너지지만, Bedrock Guardrails에 **콘텐츠 필터 + 금지 주제(Denied Topics) + 단어 필터 + PII 필터 + 문맥적 근거 검사(Grounding Check) + 자동 추론 검증(Automated Reasoning Checks)**을 정의해 두면 어떤 파운데이션 모델이나 Bedrock Agent에도 일관된 엔터프라이즈 안전망을 강제할 수 있습니다.
 >
-> • **시나리오 제약 조건 부합성 ([글로벌 손해보험 및 언더라이팅 그룹])**: 본 시나리오는 '보험금 지급 거절 시 법적 분쟁 방지를 위해 결정론적 약관 검증과 인간 전문가의 최종 승인(HITL)이 법적으로 의무화된 환경'이라는 복합 제약을 포함하고 있습니다. 따라서 'Amazon Bedrock Guardrails 6대 방어 정책의 통합 설계 및 모델 독립적 적용' 관점에서 단계적 정합성과 리스크 통제를 동시에 만족하는 **(B)**가 유일한 최적해(MOST appropriate strategy)입니다.
+> • **시나리오 제약 조건 부합성 ([에너지·발전 및 스마트 그리드 유틸리티 기업])**: 본 시나리오는 '전력망 과부하 예측 실패나 설비 고장 시 대규모 정전 사태가 발생하므로 99.99% 가용성과 비상시 즉각적인 안전 차단(Kill-Switch/Fallback)이 최우선인 핵심 인프라 환경'이라는 복합 제약을 포함하고 있습니다. 따라서 'Amazon Bedrock Guardrails 6대 방어 정책의 통합 설계 및 모델 독립적 적용' 관점에서 단계적 정합성과 리스크 통제를 동시에 만족하는 **(B)**가 유일한 최적해(MOST appropriate strategy)입니다.
 >
 > • **매력적인 오답(Distractor) 함정 분석**:
->   - **(A) 오답 분석**: '5개 모델의 가중치를 매주 새로 사전학습(Pre-training)시켜 금지어 목록이 바뀔 때마다 수십억 원의 학습비를 지출함' 접근법은 보험금 지급 거절 시 법적 분쟁 방지를 위해 결정론적 약관 검증과 인간 전문가의 최종 승인(HITL)이 법적으로 의무화된 환경이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
->   - **(C) 오답 분석**: '중앙 가드레일 없이 각 부서 인턴 사원이 자율적으로 정규표현식(Regex) 한 줄만 작성해 안전성을 관리하도록 위임함' 접근법은 보험금 지급 거절 시 법적 분쟁 방지를 위해 결정론적 약관 검증과 인간 전문가의 최종 승인(HITL)이 법적으로 의무화된 환경이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
->   - **(D) 오답 분석**: '통제 일관성을 위해 5개 모델을 모두 삭제하고 전사 AI 프로젝트 자체를 영구 중단함' 접근법은 보험금 지급 거절 시 법적 분쟁 방지를 위해 결정론적 약관 검증과 인간 전문가의 최종 승인(HITL)이 법적으로 의무화된 환경이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
+>   - **(A) 오답 분석**: '5개 모델의 가중치를 매주 새로 사전학습(Pre-training)시켜 금지어 목록이 바뀔 때마다 수십억 원의 학습비를 지출함' 접근법은 전력망 과부하 예측 실패나 설비 고장 시 대규모 정전 사태가 발생하므로 99.99% 가용성과 비상시 즉각적인 안전 차단(Kill-Switch/Fallback)이 최우선인 핵심 인프라 환경이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
+>   - **(C) 오답 분석**: '중앙 가드레일 없이 각 부서 인턴 사원이 자율적으로 정규표현식(Regex) 한 줄만 작성해 안전성을 관리하도록 위임함' 접근법은 전력망 과부하 예측 실패나 설비 고장 시 대규모 정전 사태가 발생하므로 99.99% 가용성과 비상시 즉각적인 안전 차단(Kill-Switch/Fallback)이 최우선인 핵심 인프라 환경이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
+>   - **(D) 오답 분석**: '통제 일관성을 위해 5개 모델을 모두 삭제하고 전사 AI 프로젝트 자체를 영구 중단함' 접근법은 전력망 과부하 예측 실패나 설비 고장 시 대규모 정전 사태가 발생하므로 99.99% 가용성과 비상시 즉각적인 안전 차단(Kill-Switch/Fallback)이 최우선인 핵심 인프라 환경이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
 
 ---
 ### 3.10 문맥적 근거 검사(Contextual Grounding Check) 및 자동 추론 검증을 통한 환각 실시간 차단 (Contextual Grounding Check & Automated Reasoning for Zero Hallucination)
@@ -557,11 +557,11 @@
 </div>
 </div>
 
-> ### 📝 기출 기반 고난도 실전 문제 (Real Exam Scenario Practice - D3-Q091)
+> ### 📝 기출 기반 고난도 실전 문제 (Real Exam Scenario Practice - D3-Q094)
 >
 > **Q. [Contextual Grounding Check & Automated Reasoning for Zero Hallucination]**  
-> **🇺🇸 English Scenario**: [public health and municipal administration portal — Contextual Grounding Check & Automated Reasoning for Zero Hallucination] An enterprise operating across citizen welfare eligibility records and frequently amended municipal ordinances and administrative statutes is scaling its AI transformation operating under a rigid public budget ceiling while legally obligated to prove fairness and explainability for every civic decision. An airline/financial RAG chatbot occasionally ignores retrieved policy text ('maximum baggage compensation is $500') and hallucinates false promises ('you are guaranteed $3,000 cash reimbursement'), creating immediate legal liability. Which runtime safeguard intercepts and blocks ungrounded claims before they reach the customer?  
-> **🇰🇷 한국어 시나리오**: [공공 보건복지 및 지자체 행정 포털 — 문맥적 근거 검사(Contextual Grounding Check) 및 자동 추론 검증을 통한 환각 실시간 차단] 귀사는 수백만 시민의 복지 급여 자격 심사 데이터와 수시로 개정되는 지방자치 조례 및 행정 법령집 환경에서 엔터프라이즈 AI 전환을 추진하고 있으며, 현재 예산 상한선이 엄격하게 고정되어 있으며 모든 행정 처분에 대해 공정성(Fairness)과 설명 가능성(Explainability)을 시민에게 입증해야 하는 환경에 직면해 있습니다. 금융·항공사 고객 포털에 RAG 기반 챗봇을 도입했으나, 간혹 검색된 약관 문서에는 '수하물 파손 보상은 최대 50만 원 한도'라고 적혀 있음에도 모델이 사전학습 기억과 혼동하여 '최대 300만 원까지 전액 현금 보상된다'는 치명적인 환각(Hallucination) 답변을 생성해 법적 분쟁을 일으키고 있습니다. 답변이 고객 화면에 전달되기 직전에 이를 실시간으로 검증·차단하는 기술은 무엇입니까?
+> **🇺🇸 English Scenario**: [biotech and novel drug discovery enterprise — Contextual Grounding Check & Automated Reasoning for Zero Hallucination] An enterprise operating across protein structure simulations, multi-omics sequencing datasets, Phase I–III clinical trial protocols, and FDA/EMA regulatory dossiers is scaling its AI transformation needing to accelerate drug target discovery while enforcing strict GxP/FDA audit traceability, patient data de-identification, and zero medical hallucinations. An airline/financial RAG chatbot occasionally ignores retrieved policy text ('maximum baggage compensation is $500') and hallucinates false promises ('you are guaranteed $3,000 cash reimbursement'), creating immediate legal liability. Which runtime safeguard intercepts and blocks ungrounded claims before they reach the customer?  
+> **🇰🇷 한국어 시나리오**: [바이오테크 및 신약개발(Bio/Pharma R&D) 기업 — 문맥적 근거 검사(Contextual Grounding Check) 및 자동 추론 검증을 통한 환각 실시간 차단] 귀사는 단백질 3D 구조 시뮬레이션·유전체(Genomics) 시퀀싱 데이터와 임상 1~3상 시험 프로토콜 및 FDA/EMA 인허가 문서 환경에서 엔터프라이즈 AI 전환을 추진하고 있으며, 현재 신약 후보물질 발굴(Target Identification) 기간을 단축해야 하나 GxP/FDA 감사 추적성(Audit Trail)과 임상 환자 데이터의 완벽한 비식별화 및 의학적 환각 제로화가 강제되는 상황에 직면해 있습니다. 금융·항공사 고객 포털에 RAG 기반 챗봇을 도입했으나, 간혹 검색된 약관 문서에는 '수하물 파손 보상은 최대 50만 원 한도'라고 적혀 있음에도 모델이 사전학습 기억과 혼동하여 '최대 300만 원까지 전액 현금 보상된다'는 치명적인 환각(Hallucination) 답변을 생성해 법적 분쟁을 일으키고 있습니다. 답변이 고객 화면에 전달되기 직전에 이를 실시간으로 검증·차단하는 기술은 무엇입니까?
 >
 > * **(A)** Allow hallucinated compensation promises to be displayed to customers and only review logs a month later  
 >   *(🇰🇷 환각이 발생하더라도 고객에게는 그대로 출력해 주고, 한 달 뒤에 로그를 모아 개발자 참고용 통계 그래프만 그림)*
@@ -577,12 +577,12 @@
 >
 > • **핵심 전략 및 정답 도출 근거**: **Contextual Grounding Check(문맥적 근거 검사)**는 RAG 시스템의 최종 방어선입니다. 모델이 생성한 답변을 사용자에게 내보내기 전에 **(1) Grounding(참조 원문에서 도출된 사실인가? 새로운 수치를 지어내지 않았는가?)**과 **(2) Relevance(사용자의 질문에 실제로 답하고 있는가?)** 점수를 계산하여, 설정한 임계치(예: 0.85) 미만이면 즉시 차단하고 안전한 안내 문구나 상담원 연결로 대체합니다.
 >
-> • **시나리오 제약 조건 부합성 ([공공 보건복지 및 지자체 행정 포털])**: 본 시나리오는 '예산 상한선이 엄격하게 고정되어 있으며 모든 행정 처분에 대해 공정성(Fairness)과 설명 가능성(Explainability)을 시민에게 입증해야 하는 환경'이라는 복합 제약을 포함하고 있습니다. 따라서 '문맥적 근거 검사(Contextual Grounding Check) 및 자동 추론 검증을 통한 환각 실시간 차단' 관점에서 단계적 정합성과 리스크 통제를 동시에 만족하는 **(D)**가 유일한 최적해(MOST appropriate strategy)입니다.
+> • **시나리오 제약 조건 부합성 ([바이오테크 및 신약개발(Bio/Pharma R&D) 기업])**: 본 시나리오는 '신약 후보물질 발굴(Target Identification) 기간을 단축해야 하나 GxP/FDA 감사 추적성(Audit Trail)과 임상 환자 데이터의 완벽한 비식별화 및 의학적 환각 제로화가 강제되는 상황'이라는 복합 제약을 포함하고 있습니다. 따라서 '문맥적 근거 검사(Contextual Grounding Check) 및 자동 추론 검증을 통한 환각 실시간 차단' 관점에서 단계적 정합성과 리스크 통제를 동시에 만족하는 **(D)**가 유일한 최적해(MOST appropriate strategy)입니다.
 >
 > • **매력적인 오답(Distractor) 함정 분석**:
->   - **(A) 오답 분석**: '환각이 발생하더라도 고객에게는 그대로 출력해 주고, 한 달 뒤에 로그를 모아 개발자 참고용 통계 그래프만 그림' 접근법은 예산 상한선이 엄격하게 고정되어 있으며 모든 행정 처분에 대해 공정성(Fairness)과 설명 가능성(Explainability)을 시민에게 입증해야 하는 환경이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
->   - **(B) 오답 분석**: '문맥적 근거 검사를 쓰는 대신 모델의 Temperature를 1.8로 높여 더욱 창의적인 보상 금액을 안내하게 함' 접근법은 예산 상한선이 엄격하게 고정되어 있으며 모든 행정 처분에 대해 공정성(Fairness)과 설명 가능성(Explainability)을 시민에게 입증해야 하는 환경이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
->   - **(C) 오답 분석**: 'RAG 참조 문서를 아예 제거하여 모델이 100% 자신의 사전학습 기억만으로 약관을 추측하게 만듦' 접근법은 예산 상한선이 엄격하게 고정되어 있으며 모든 행정 처분에 대해 공정성(Fairness)과 설명 가능성(Explainability)을 시민에게 입증해야 하는 환경이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
+>   - **(A) 오답 분석**: '환각이 발생하더라도 고객에게는 그대로 출력해 주고, 한 달 뒤에 로그를 모아 개발자 참고용 통계 그래프만 그림' 접근법은 신약 후보물질 발굴(Target Identification) 기간을 단축해야 하나 GxP/FDA 감사 추적성(Audit Trail)과 임상 환자 데이터의 완벽한 비식별화 및 의학적 환각 제로화가 강제되는 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
+>   - **(B) 오답 분석**: '문맥적 근거 검사를 쓰는 대신 모델의 Temperature를 1.8로 높여 더욱 창의적인 보상 금액을 안내하게 함' 접근법은 신약 후보물질 발굴(Target Identification) 기간을 단축해야 하나 GxP/FDA 감사 추적성(Audit Trail)과 임상 환자 데이터의 완벽한 비식별화 및 의학적 환각 제로화가 강제되는 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
+>   - **(C) 오답 분석**: 'RAG 참조 문서를 아예 제거하여 모델이 100% 자신의 사전학습 기억만으로 약관을 추측하게 만듦' 접근법은 신약 후보물질 발굴(Target Identification) 기간을 단축해야 하나 GxP/FDA 감사 추적성(Audit Trail)과 임상 환자 데이터의 완벽한 비식별화 및 의학적 환각 제로화가 강제되는 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
 
 ---
 ### 3.11 신뢰도 임계값(Confidence Threshold) 기반 인간 참여형 검증(HITL / Amazon A2I) 설계 (Human-in-the-Loop (HITL) Confidence Thresholding & Amazon A2I)
@@ -613,11 +613,11 @@
 </div>
 </div>
 
-> ### 📝 기출 기반 고난도 실전 문제 (Real Exam Scenario Practice - D3-Q101)
+> ### 📝 기출 기반 고난도 실전 문제 (Real Exam Scenario Practice - D3-Q105)
 >
 > **Q. [Human-in-the-Loop (HITL) Confidence Thresholding & Amazon A2I]**  
-> **🇺🇸 English Scenario**: [multinational pharmaceutical and clinical research organization — Human-in-the-Loop (HITL) Confidence Thresholding & Amazon A2I] An enterprise operating across massive genomic tabular datasets alongside clinical trial protocol PDFs and patient adverse-event narratives is scaling its AI transformation operating under strict FDA/EMA audit mandates requiring full provenance traceability and zero tolerance for medical hallucinations. An insurance claims and clinical triage pipeline processes 100,000 cases daily. Routing 100% of cases to human experts is financially unscalable, while 100% autonomous AI execution risks catastrophic legal errors on ambiguous cases. Which architecture optimizes both operational efficiency and risk governance?  
-> **🇰🇷 한국어 시나리오**: [다국적 제약사 및 임상 연구 기관 — 신뢰도 임계값(Confidence Threshold) 기반 인간 참여형 검증(HITL / Amazon A2I) 설계] 귀사는 방대한 유전체 시퀀싱 정형 데이터와 임상 시험 프로토콜 PDF 및 환자 부작용 의무기록 환경에서 엔터프라이즈 AI 전환을 추진하고 있으며, 현재 FDA/EMA 규제 감사에 대비해 모든 예측 근거를 역추적해야 하며 단 한 건의 의학적 환각(Hallucination)도 허용되지 않는 고위험 환경에 직면해 있습니다. 보험금 지급 심사 및 의료 판독 보조 AI 시스템에서 하루 10만 건의 청구가 유입됩니다. 100% 모든 건을 인간 전문가가 직접 심사하면 인건비와 지연 시간이 감당 불가능하고, 반대로 100% AI 자율 결정에 맡기면 경계선(Edge-case) 오판으로 인한 치명적 법적·윤리적 사고가 발생합니다. 운영 효율성과 안전성을 동시에 달성하는 아키텍처는 무엇입니까?
+> **🇺🇸 English Scenario**: [global consumer packaged goods (CPG) and F&B franchise distributor — Human-in-the-Loop (HITL) Confidence Thresholding & Amazon A2I] An enterprise operating across raw commodity price feeds, weather-correlated daily franchise order histories, sensory R&D test logs, and social media trend reviews is scaling its AI transformation needing to reduce demand forecasting error (MAPE) and accelerate product launches while enabling non-technical franchise managers to use AI without coding. An insurance claims and clinical triage pipeline processes 100,000 cases daily. Routing 100% of cases to human experts is financially unscalable, while 100% autonomous AI execution risks catastrophic legal errors on ambiguous cases. Which architecture optimizes both operational efficiency and risk governance?  
+> **🇰🇷 한국어 시나리오**: [글로벌 소비재(CPG) 및 식음료 프랜차이즈 유통사 — 신뢰도 임계값(Confidence Threshold) 기반 인간 참여형 검증(HITL / Amazon A2I) 설계] 귀사는 원자재 선물 시세 변동 데이터, 지역별 기상·프로모션에 따른 일별 가맹점 발주량 이력, 신제품 소비자 관능검사 및 SNS 트렌드 리뷰 환경에서 엔터프라이즈 AI 전환을 추진하고 있으며, 현재 계절적 수요 예측 오차(MAPE)를 줄여 가맹점 폐기 비용을 절감하고 신제품 출시 주기를 앞당겨야 하며, 비기술직 가맹점주와 영업사원이 코딩 없이 직관적으로 AI를 활용해야 하는 상황에 직면해 있습니다. 보험금 지급 심사 및 의료 판독 보조 AI 시스템에서 하루 10만 건의 청구가 유입됩니다. 100% 모든 건을 인간 전문가가 직접 심사하면 인건비와 지연 시간이 감당 불가능하고, 반대로 100% AI 자율 결정에 맡기면 경계선(Edge-case) 오판으로 인한 치명적 법적·윤리적 사고가 발생합니다. 운영 효율성과 안전성을 동시에 달성하는 아키텍처는 무엇입니까?
 >
 > * **(A)** Allow the AI to autonomously execute final claim denials even when model confidence is only 10%  
 >   *(🇰🇷 비용 절감을 위해 신뢰도가 10%에 불과한 불확실한 고액 보험금 거절 건까지 인간 검토 없이 100% AI가 자동 거절 통보하게 함)*
@@ -633,12 +633,12 @@
 >
 > • **핵심 전략 및 정답 도출 근거**: 엔터프라이즈 HITL(Human-in-the-Loop) 설계의 핵심은 **'무조건 사람이 다 본다'가 아니라 '리스크 등급과 신뢰도 임계값(Confidence Threshold)에 따른 선택적 에스컬레이션(Selective Escalation)'**입니다. **Amazon A2I(Augmented AI)** 또는 Step Functions 기반 HITL을 통해 명확한 케이스는 자동화하여 ROI를 달성하고, 모호하거나 불이익 처분(대출/보험 거절)이 수반되는 고위험 케이스만 인간 전문가에게 라우팅한 뒤, **인간의 판정 결과를 다시 Golden Dataset으로 축적(Active Learning)**해야 합니다.
 >
-> • **시나리오 제약 조건 부합성 ([다국적 제약사 및 임상 연구 기관])**: 본 시나리오는 'FDA/EMA 규제 감사에 대비해 모든 예측 근거를 역추적해야 하며 단 한 건의 의학적 환각(Hallucination)도 허용되지 않는 고위험 환경'이라는 복합 제약을 포함하고 있습니다. 따라서 '신뢰도 임계값(Confidence Threshold) 기반 인간 참여형 검증(HITL / Amazon A2I) 설계' 관점에서 단계적 정합성과 리스크 통제를 동시에 만족하는 **(B)**가 유일한 최적해(MOST appropriate strategy)입니다.
+> • **시나리오 제약 조건 부합성 ([글로벌 소비재(CPG) 및 식음료 프랜차이즈 유통사])**: 본 시나리오는 '계절적 수요 예측 오차(MAPE)를 줄여 가맹점 폐기 비용을 절감하고 신제품 출시 주기를 앞당겨야 하며, 비기술직 가맹점주와 영업사원이 코딩 없이 직관적으로 AI를 활용해야 하는 상황'이라는 복합 제약을 포함하고 있습니다. 따라서 '신뢰도 임계값(Confidence Threshold) 기반 인간 참여형 검증(HITL / Amazon A2I) 설계' 관점에서 단계적 정합성과 리스크 통제를 동시에 만족하는 **(B)**가 유일한 최적해(MOST appropriate strategy)입니다.
 >
 > • **매력적인 오답(Distractor) 함정 분석**:
->   - **(A) 오답 분석**: '비용 절감을 위해 신뢰도가 10%에 불과한 불확실한 고액 보험금 거절 건까지 인간 검토 없이 100% AI가 자동 거절 통보하게 함' 접근법은 FDA/EMA 규제 감사에 대비해 모든 예측 근거를 역추적해야 하며 단 한 건의 의학적 환각(Hallucination)도 허용되지 않는 고위험 환경이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
->   - **(C) 오답 분석**: 'AI 모델을 도입해 놓고도 AI의 예측 결과를 전혀 활용하지 않은 채 10만 건 전부를 인간 심사역이 처음부터 끝까지 수작업으로 재심사하게 함' 접근법은 FDA/EMA 규제 감사에 대비해 모든 예측 근거를 역추적해야 하며 단 한 건의 의학적 환각(Hallucination)도 허용되지 않는 고위험 환경이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
->   - **(D) 오답 분석**: '신뢰도가 낮은 애매한 청구 건은 검토 대기열로 보내는 대신 시스템에서 즉시 무단 삭제하여 처리 건수를 줄임' 접근법은 FDA/EMA 규제 감사에 대비해 모든 예측 근거를 역추적해야 하며 단 한 건의 의학적 환각(Hallucination)도 허용되지 않는 고위험 환경이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
+>   - **(A) 오답 분석**: '비용 절감을 위해 신뢰도가 10%에 불과한 불확실한 고액 보험금 거절 건까지 인간 검토 없이 100% AI가 자동 거절 통보하게 함' 접근법은 계절적 수요 예측 오차(MAPE)를 줄여 가맹점 폐기 비용을 절감하고 신제품 출시 주기를 앞당겨야 하며, 비기술직 가맹점주와 영업사원이 코딩 없이 직관적으로 AI를 활용해야 하는 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
+>   - **(C) 오답 분석**: 'AI 모델을 도입해 놓고도 AI의 예측 결과를 전혀 활용하지 않은 채 10만 건 전부를 인간 심사역이 처음부터 끝까지 수작업으로 재심사하게 함' 접근법은 계절적 수요 예측 오차(MAPE)를 줄여 가맹점 폐기 비용을 절감하고 신제품 출시 주기를 앞당겨야 하며, 비기술직 가맹점주와 영업사원이 코딩 없이 직관적으로 AI를 활용해야 하는 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
+>   - **(D) 오답 분석**: '신뢰도가 낮은 애매한 청구 건은 검토 대기열로 보내는 대신 시스템에서 즉시 무단 삭제하여 처리 건수를 줄임' 접근법은 계절적 수요 예측 오차(MAPE)를 줄여 가맹점 폐기 비용을 절감하고 신제품 출시 주기를 앞당겨야 하며, 비기술직 가맹점주와 영업사원이 코딩 없이 직관적으로 AI를 활용해야 하는 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
 
 ---
 ### 3.12 비상 정지 메커니즘(Kill-Switch / Circuit Breaker) 및 무중단 폴백(Fallback) 아키텍처 (Emergency Kill-Switch, Circuit Breakers & Automated Rollback)
@@ -669,11 +669,11 @@
 </div>
 </div>
 
-> ### 📝 기출 기반 고난도 실전 문제 (Real Exam Scenario Practice - D3-Q111)
+> ### 📝 기출 기반 고난도 실전 문제 (Real Exam Scenario Practice - D3-Q116)
 >
 > **Q. [Emergency Kill-Switch, Circuit Breakers & Automated Rollback]**  
-> **🇺🇸 English Scenario**: [enterprise B2B cloud security SaaS provider — Emergency Kill-Switch, Circuit Breakers & Automated Rollback] An enterprise operating across customer SIEM security telemetry and zero-day vulnerability advisories updated hundreds of times weekly is scaling its AI transformation requiring strict multi-tenant data isolation and real-time grounding on vulnerability advisories without daily model retraining. Following a model update, a live customer-facing AI agent begins exhibiting anomalous behavior and potential policy violations under adversarial load. While root-cause forensic engineering will take hours, what operational mechanism instantaneously halts damage within seconds without causing a complete business outage?  
-> **🇰🇷 한국어 시나리오**: [엔터프라이즈 B2B 클라우드 보안 SaaS 기업 — 비상 정지 메커니즘(Kill-Switch / Circuit Breaker) 및 무중단 폴백(Fallback) 아키텍처] 귀사는 고객사 보안 관제 이벤트(SIEM) 로그와 매주 수백 건씩 개정되는 제로데이 취약점 기술 문서 환경에서 엔터프라이즈 AI 전환을 추진하고 있으며, 현재 멀티테넌트 환경에서 고객사 간 데이터 혼입(Cross-tenant leakage)을 원천 차단하고 최신 보안 패치 정보를 실시간 반영해야 하는 상황에 직면해 있습니다. 전사 고객 대면 생성형 AI 에이전트가 신규 프롬프트/모델 업데이트 직후 예기치 못한 적대적 공격이나 외부 데이터 오염으로 인해 비정상적인 환각과 기밀 노출 징후를 보이기 시작했습니다. 엔지니어가 원인을 분석해 코드를 수정하기까지 수 시간이 걸리는 상황에서, 즉각적인 피해 확산을 1초 이내에 차단하면서도 핵심 비즈니스 업무가 전면 중단되지 않게 하는 운영 아키텍처는 무엇입니까?
+> **🇺🇸 English Scenario**: [mega-scale online e-commerce and open marketplace platform — Emergency Kill-Switch, Circuit Breakers & Automated Rollback] An enterprise operating across hundreds of millions of daily clickstream events, tens of millions of seller catalog images/listings, and real-time dispute logs is scaling its AI transformation requiring sub-150ms inference latency during peak shopping events while boosting conversion rates and slashing unit token costs by 70%. Following a model update, a live customer-facing AI agent begins exhibiting anomalous behavior and potential policy violations under adversarial load. While root-cause forensic engineering will take hours, what operational mechanism instantaneously halts damage within seconds without causing a complete business outage?  
+> **🇰🇷 한국어 시나리오**: [초대형 온라인 이커머스 및 오픈마켓 플랫폼 — 비상 정지 메커니즘(Kill-Switch / Circuit Breaker) 및 무중단 폴백(Fallback) 아키텍처] 귀사는 일일 수억 건의 검색·장바구니 클릭스트림, 수천만 개의 판매자 상품 카탈로그 이미지·상세페이지, 실시간 반품·분쟁 상담 로그 환경에서 엔터프라이즈 AI 전환을 추진하고 있으며, 현재 블랙프라이데이 등 피크 트래픽 시 추론 지연 시간(Latency)을 150ms 이내로 유지하면서 개인화 추천 전환율을 높이고 건당 추론 비용을 70% 절감해야 하는 상황에 직면해 있습니다. 전사 고객 대면 생성형 AI 에이전트가 신규 프롬프트/모델 업데이트 직후 예기치 못한 적대적 공격이나 외부 데이터 오염으로 인해 비정상적인 환각과 기밀 노출 징후를 보이기 시작했습니다. 엔지니어가 원인을 분석해 코드를 수정하기까지 수 시간이 걸리는 상황에서, 즉각적인 피해 확산을 1초 이내에 차단하면서도 핵심 비즈니스 업무가 전면 중단되지 않게 하는 운영 아키텍처는 무엇입니까?
 >
 > * **(A)** Leave the compromised model running live in production for two weeks while engineers slowly investigate  
 >   *(🇰🇷 원인 분석과 재학습이 끝날 때까지 향후 2주일 동안 문제가 있는 AI 모델을 그대로 상용 환경에 방치하여 피해가 누적되게 둠)*
@@ -689,12 +689,12 @@
 >
 > • **핵심 전략 및 정답 도출 근거**: 고위험 AI 시스템의 운영 복원력(Operational Resilience)을 위해서는 **비상 정지 메커니즘(Kill-Switch / Circuit Breaker)**과 **우아한 성능 저하(Graceful Degradation / Fallback)**가 쌍으로 설계되어야 합니다. 문제 발생 시 트래픽 라우터(API Gateway/Feature Flag)에서 즉각 해당 모델을 격리하고, 검증된 직전 버전이나 안전한 규칙 기반/인간 상담 플로우로 자동 폴백(Fallback)시켜야 합니다.
 >
-> • **시나리오 제약 조건 부합성 ([엔터프라이즈 B2B 클라우드 보안 SaaS 기업])**: 본 시나리오는 '멀티테넌트 환경에서 고객사 간 데이터 혼입(Cross-tenant leakage)을 원천 차단하고 최신 보안 패치 정보를 실시간 반영해야 하는 상황'이라는 복합 제약을 포함하고 있습니다. 따라서 '비상 정지 메커니즘(Kill-Switch / Circuit Breaker) 및 무중단 폴백(Fallback) 아키텍처' 관점에서 단계적 정합성과 리스크 통제를 동시에 만족하는 **(D)**가 유일한 최적해(MOST appropriate strategy)입니다.
+> • **시나리오 제약 조건 부합성 ([초대형 온라인 이커머스 및 오픈마켓 플랫폼])**: 본 시나리오는 '블랙프라이데이 등 피크 트래픽 시 추론 지연 시간(Latency)을 150ms 이내로 유지하면서 개인화 추천 전환율을 높이고 건당 추론 비용을 70% 절감해야 하는 상황'이라는 복합 제약을 포함하고 있습니다. 따라서 '비상 정지 메커니즘(Kill-Switch / Circuit Breaker) 및 무중단 폴백(Fallback) 아키텍처' 관점에서 단계적 정합성과 리스크 통제를 동시에 만족하는 **(D)**가 유일한 최적해(MOST appropriate strategy)입니다.
 >
 > • **매력적인 오답(Distractor) 함정 분석**:
->   - **(A) 오답 분석**: '원인 분석과 재학습이 끝날 때까지 향후 2주일 동안 문제가 있는 AI 모델을 그대로 상용 환경에 방치하여 피해가 누적되게 둠' 접근법은 멀티테넌트 환경에서 고객사 간 데이터 혼입(Cross-tenant leakage)을 원천 차단하고 최신 보안 패치 정보를 실시간 반영해야 하는 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
->   - **(B) 오답 분석**: '비상 정지를 위해 회사 전체 데이터센터의 물리적 주 전원 차단기를 내려 핵심 결제 DB와 웹사이트까지 모두 마비시킴' 접근법은 멀티테넌트 환경에서 고객사 간 데이터 혼입(Cross-tenant leakage)을 원천 차단하고 최신 보안 패치 정보를 실시간 반영해야 하는 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
->   - **(C) 오답 분석**: '사고가 발생하면 모든 시스템 로그와 감사 추적 기록을 즉시 파기하여 문제의 원인을 영원히 알 수 없게 만듦' 접근법은 멀티테넌트 환경에서 고객사 간 데이터 혼입(Cross-tenant leakage)을 원천 차단하고 최신 보안 패치 정보를 실시간 반영해야 하는 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
+>   - **(A) 오답 분석**: '원인 분석과 재학습이 끝날 때까지 향후 2주일 동안 문제가 있는 AI 모델을 그대로 상용 환경에 방치하여 피해가 누적되게 둠' 접근법은 블랙프라이데이 등 피크 트래픽 시 추론 지연 시간(Latency)을 150ms 이내로 유지하면서 개인화 추천 전환율을 높이고 건당 추론 비용을 70% 절감해야 하는 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
+>   - **(B) 오답 분석**: '비상 정지를 위해 회사 전체 데이터센터의 물리적 주 전원 차단기를 내려 핵심 결제 DB와 웹사이트까지 모두 마비시킴' 접근법은 블랙프라이데이 등 피크 트래픽 시 추론 지연 시간(Latency)을 150ms 이내로 유지하면서 개인화 추천 전환율을 높이고 건당 추론 비용을 70% 절감해야 하는 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
+>   - **(C) 오답 분석**: '사고가 발생하면 모든 시스템 로그와 감사 추적 기록을 즉시 파기하여 문제의 원인을 영원히 알 수 없게 만듦' 접근법은 블랙프라이데이 등 피크 트래픽 시 추론 지연 시간(Latency)을 150ms 이내로 유지하면서 개인화 추천 전환율을 높이고 건당 추론 비용을 70% 절감해야 하는 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
 
 ---
 ### 3.13 배포 전 적대적 레드팀(AI Red Teaming) 모의해킹 및 지속적 취약점 스트레스 테스트 (Adversarial Red Teaming & Proactive Vulnerability Stress-Testing)
@@ -725,11 +725,11 @@
 </div>
 </div>
 
-> ### 📝 기출 기반 고난도 실전 문제 (Real Exam Scenario Practice - D3-Q121)
+> ### 📝 기출 기반 고난도 실전 문제 (Real Exam Scenario Practice - D3-Q127)
 >
 > **Q. [Adversarial Red Teaming & Proactive Vulnerability Stress-Testing]**  
-> **🇺🇸 English Scenario**: [global investment bank and wealth management firm — Adversarial Red Teaming & Proactive Vulnerability Stress-Testing] An enterprise operating across real-time derivatives trading logs and tens of thousands of multilingual regulatory compliance filings is scaling its AI transformation where the CFO demands immediate quarterly TCO reduction while the CISO enforces zero external data egress and 100% audit traceability. Prior to launching an external AI agent, standard QA testing confirms 100% accuracy on normal user queries. However, the CISO warns that malicious actors will use role-play jailbreaks, base64/multilingual obfuscation, and multi-turn manipulation to bypass safety filters. What proactive governance practice must be executed?  
-> **🇰🇷 한국어 시나리오**: [글로벌 투자은행 및 자산운용사 — 배포 전 적대적 레드팀(AI Red Teaming) 모의해킹 및 지속적 취약점 스트레스 테스트] 귀사는 실시간 파생상품 거래 로그와 수만 건의 다국어 금융 규제 준수 보고서 환경에서 엔터프라이즈 AI 전환을 추진하고 있으며, 현재 CFO는 분기 내 즉각적인 TCO 절감을 요구하고, CISO는 고객 금융 데이터의 외부 반출 절대 금지 및 100% 감사 추적성을 강제하는 상황에 직면해 있습니다. 기업이 신규 자율 AI 에이전트를 대외 출시하기 전, 일반 기능 테스트(Happy-path QA)에서는 100% 정상 작동을 확인했습니다. 그러나 CISO는 '실제 해커나 악의적 사용자는 정상적인 질문을 하지 않고, 역할극(Role-play) 우회, 다국어 인코딩 변조, 간접 프롬프트 주입, 다단계 논리 함정을 동원해 가드레일을 뚫으려 할 것'이라고 경고합니다. 출시 전후에 수행해야 할 필수 보안 검증 절차는 무엇입니까?
+> **🇺🇸 English Scenario**: [advanced materials and battery corporate R&D institute — Adversarial Red Teaming & Proactive Vulnerability Stress-Testing] An enterprise operating across decades of Electronic Lab Notebooks (ELN), molecular formulation tables, global patent filings, and scientific literature archives is scaling its AI transformation seeking to compress R&D formulation cycles and lab trial-and-error costs while guaranteeing zero leakage of pre-patent trade secrets and proprietary chemical IP. Prior to launching an external AI agent, standard QA testing confirms 100% accuracy on normal user queries. However, the CISO warns that malicious actors will use role-play jailbreaks, base64/multilingual obfuscation, and multi-turn manipulation to bypass safety filters. What proactive governance practice must be executed?  
+> **🇰🇷 한국어 시나리오**: [첨단 소재·배터리 기업 부설 R&D 연구소(Corporate R&D Center) — 배포 전 적대적 레드팀(AI Red Teaming) 모의해킹 및 지속적 취약점 스트레스 테스트] 귀사는 수십 년간 축적된 실험실 전자연구노트(ELN), 분자 조성 실험 결과 테이블, 글로벌 특허 명세서 및 학술 논문 PDF 아카이브 환경에서 엔터프라이즈 AI 전환을 추진하고 있으며, 현재 차세대 소재 배합 시행착오(Trial-and-Error) 실험 횟수를 줄여 연구개발 리드타임을 단축해야 하며, 미출원 핵심 특허와 영업비밀(Trade Secrets)의 외부 유출을 100% 차단해야 하는 상황에 직면해 있습니다. 기업이 신규 자율 AI 에이전트를 대외 출시하기 전, 일반 기능 테스트(Happy-path QA)에서는 100% 정상 작동을 확인했습니다. 그러나 CISO는 '실제 해커나 악의적 사용자는 정상적인 질문을 하지 않고, 역할극(Role-play) 우회, 다국어 인코딩 변조, 간접 프롬프트 주입, 다단계 논리 함정을 동원해 가드레일을 뚫으려 할 것'이라고 경고합니다. 출시 전후에 수행해야 할 필수 보안 검증 절차는 무엇입니까?
 >
 > * **(A)** Assume malicious users will only submit polite happy-path queries and skip all adversarial testing  
 >   *(🇰🇷 일반 기능 테스트를 통과했으므로 악의적 공격은 절대 일어나지 않을 것이라 낙관하며 보안 테스트 없이 즉시 출시함)*
@@ -745,12 +745,12 @@
 >
 > • **핵심 전략 및 정답 도출 근거**: 일반 QA 테스트는 '정상적인 사용자가 의도된 대로 쓸 때 잘 작동하는가'만 확인하지만, **AI Red Teaming(적대적 레드팀 훈련)**은 공격자의 관점에서 시스템의 안전 경계(Jailbreak, PII 탈취, 금지 주제 우회, 유해 생성, 에이전트 권한 오남용)를 의도적으로 깨뜨려 보는 선제적 스트레스 테스트입니다. NIST AI RMF와 ISO 42001에서도 핵심 검증 절차로 요구됩니다.
 >
-> • **시나리오 제약 조건 부합성 ([글로벌 투자은행 및 자산운용사])**: 본 시나리오는 'CFO는 분기 내 즉각적인 TCO 절감을 요구하고, CISO는 고객 금융 데이터의 외부 반출 절대 금지 및 100% 감사 추적성을 강제하는 상황'이라는 복합 제약을 포함하고 있습니다. 따라서 '배포 전 적대적 레드팀(AI Red Teaming) 모의해킹 및 지속적 취약점 스트레스 테스트' 관점에서 단계적 정합성과 리스크 통제를 동시에 만족하는 **(B)**가 유일한 최적해(MOST appropriate strategy)입니다.
+> • **시나리오 제약 조건 부합성 ([첨단 소재·배터리 기업 부설 R&D 연구소(Corporate R&D Center)])**: 본 시나리오는 '차세대 소재 배합 시행착오(Trial-and-Error) 실험 횟수를 줄여 연구개발 리드타임을 단축해야 하며, 미출원 핵심 특허와 영업비밀(Trade Secrets)의 외부 유출을 100% 차단해야 하는 상황'이라는 복합 제약을 포함하고 있습니다. 따라서 '배포 전 적대적 레드팀(AI Red Teaming) 모의해킹 및 지속적 취약점 스트레스 테스트' 관점에서 단계적 정합성과 리스크 통제를 동시에 만족하는 **(B)**가 유일한 최적해(MOST appropriate strategy)입니다.
 >
 > • **매력적인 오답(Distractor) 함정 분석**:
->   - **(A) 오답 분석**: '일반 기능 테스트를 통과했으므로 악의적 공격은 절대 일어나지 않을 것이라 낙관하며 보안 테스트 없이 즉시 출시함' 접근법은 CFO는 분기 내 즉각적인 TCO 절감을 요구하고, CISO는 고객 금융 데이터의 외부 반출 절대 금지 및 100% 감사 추적성을 강제하는 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
->   - **(C) 오답 분석**: '레드팀 테스트 대신 해커들에게 공격하지 말아 달라는 협조 공문을 회사 홈페이지에 게시함' 접근법은 CFO는 분기 내 즉각적인 TCO 절감을 요구하고, CISO는 고객 금융 데이터의 외부 반출 절대 금지 및 100% 감사 추적성을 강제하는 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
->   - **(D) 오답 분석**: '실제 외부 고객들을 대상으로 아무런 예고 없이 악성 해킹 툴을 배포하여 고객 PC를 공격함' 접근법은 CFO는 분기 내 즉각적인 TCO 절감을 요구하고, CISO는 고객 금융 데이터의 외부 반출 절대 금지 및 100% 감사 추적성을 강제하는 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
+>   - **(A) 오답 분석**: '일반 기능 테스트를 통과했으므로 악의적 공격은 절대 일어나지 않을 것이라 낙관하며 보안 테스트 없이 즉시 출시함' 접근법은 차세대 소재 배합 시행착오(Trial-and-Error) 실험 횟수를 줄여 연구개발 리드타임을 단축해야 하며, 미출원 핵심 특허와 영업비밀(Trade Secrets)의 외부 유출을 100% 차단해야 하는 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
+>   - **(C) 오답 분석**: '레드팀 테스트 대신 해커들에게 공격하지 말아 달라는 협조 공문을 회사 홈페이지에 게시함' 접근법은 차세대 소재 배합 시행착오(Trial-and-Error) 실험 횟수를 줄여 연구개발 리드타임을 단축해야 하며, 미출원 핵심 특허와 영업비밀(Trade Secrets)의 외부 유출을 100% 차단해야 하는 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
+>   - **(D) 오답 분석**: '실제 외부 고객들을 대상으로 아무런 예고 없이 악성 해킹 툴을 배포하여 고객 PC를 공격함' 접근법은 차세대 소재 배합 시행착오(Trial-and-Error) 실험 횟수를 줄여 연구개발 리드타임을 단축해야 하며, 미출원 핵심 특허와 영업비밀(Trade Secrets)의 외부 유출을 100% 차단해야 하는 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
 
 ---
 
@@ -784,11 +784,11 @@
 </div>
 </div>
 
-> ### 📝 기출 기반 고난도 실전 문제 (Real Exam Scenario Practice - D3-Q131)
+> ### 📝 기출 기반 고난도 실전 문제 (Real Exam Scenario Practice - D3-Q138)
 >
 > **Q. [EU AI Act 4-Tier Risk Taxonomy & Extraterritorial Scope]**  
-> **🇺🇸 English Scenario**: [advanced semiconductor foundry and smart manufacturing enterprise — EU AI Act 4-Tier Risk Taxonomy & Extraterritorial Scope] An enterprise operating across high-frequency cleanroom lithography IoT sensor streams and semiconductor process troubleshooting manuals is scaling its AI transformation where unplanned downtime costs millions per hour, demanding real-time edge anomaly detection and strict air-gapped IP isolation. A non-EU enterprise plans to deploy three systems affecting users located within the European Union: (System A) automated recruitment screening and creditworthiness scoring, (System B) a customer service chatbot, and (System C) a behavioral social-scoring system. Executives believe EU laws do not apply because headquarters is outside Europe. What is the correct regulatory assessment?  
-> **🇰🇷 한국어 시나리오**: [첨단 반도체 파운드리 및 스마트 팩토리 — EU AI Act 4단계 위험 등급 분류 및 역외 적용(Extraterritoriality) 준수 전략] 귀사는 클린룸 노광 장비의 초당 수만 건 IoT 진동·온도 센서 스트림과 공정 엔지니어 트러블슈팅 매뉴얼 환경에서 엔터프라이즈 AI 전환을 추진하고 있으며, 현재 공정 중단 시 시간당 수십억 원의 손실이 발생하므로 엣지(Edge) 단의 실시간 이상 탐지와 핵심 공정 IP의 폐쇄망 격리가 필수적인 상황에 직면해 있습니다. 본사가 한국/미국에 위치한 글로벌 기업이 유럽연합(EU) 거주 시민을 대상으로 (시스템 A) 채용 이력서 자동 스크리닝 및 신용 한도 심사 AI, (시스템 B) 고객 상담 챗봇, (시스템 C) 시민의 사생활 및 성향을 추적해 사회적 등급을 매기는 사회적 점수제(Social Scoring) AI를 배포하려 합니다. 경영진은 '우리 본사는 EU 밖이므로 EU AI Act의 적용을 받지 않는다'고 오해하고 있습니다. 올바른 법적 진단과 등급별 조치는 무엇입니까?
+> **🇺🇸 English Scenario**: [global property & casualty insurance and reinsurance group — EU AI Act 4-Tier Risk Taxonomy & Extraterritorial Scope] An enterprise operating across millions of historical claim fraud records alongside field loss-adjustment photos, audio transcripts, and complex policy contract PDFs is scaling its AI transformation balancing higher straight-through claims processing against legal mandates requiring deterministic policy arithmetic and documented HITL sign-off on denials. A non-EU enterprise plans to deploy three systems affecting users located within the European Union: (System A) automated recruitment screening and creditworthiness scoring, (System B) a customer service chatbot, and (System C) a behavioral social-scoring system. Executives believe EU laws do not apply because headquarters is outside Europe. What is the correct regulatory assessment?  
+> **🇰🇷 한국어 시나리오**: [글로벌 손해보험 및 재보험 언더라이팅 그룹 — EU AI Act 4단계 위험 등급 분류 및 역외 적용(Extraterritoriality) 준수 전략] 귀사는 수백만 건의 과거 보험 사기 적발 이력 테이블과 현장 손해사정 파손 사진·음성 녹취록 및 다국어 보험 약관 PDF 환경에서 엔터프라이즈 AI 전환을 추진하고 있으며, 현재 청구 심사 자동화율(Straight-Through Processing)을 높이되, 지급 거절 시 법적 분쟁 방지를 위해 결정론적 약관 수식 검증과 인간 심사역의 최종 승인(HITL)이 의무화된 환경에 직면해 있습니다. 본사가 한국/미국에 위치한 글로벌 기업이 유럽연합(EU) 거주 시민을 대상으로 (시스템 A) 채용 이력서 자동 스크리닝 및 신용 한도 심사 AI, (시스템 B) 고객 상담 챗봇, (시스템 C) 시민의 사생활 및 성향을 추적해 사회적 등급을 매기는 사회적 점수제(Social Scoring) AI를 배포하려 합니다. 경영진은 '우리 본사는 EU 밖이므로 EU AI Act의 적용을 받지 않는다'고 오해하고 있습니다. 올바른 법적 진단과 등급별 조치는 무엇입니까?
 >
 > * **(A)** Ignore the EU AI Act based on headquarters location and launch the banned social-scoring system across Europe  
 >   *(🇰🇷 본사가 유럽 밖에 있으므로 EU AI Act를 완전히 무시하고 사회적 신용 점수제(시스템 C)를 유럽 전역에 강제 출시함)*
@@ -804,12 +804,12 @@
 >
 > • **핵심 전략 및 정답 도출 근거**: **EU AI Act**의 핵심 출제 포인트 두 가지는 **(1) 역외 적용(기업 본사가 어디에 있든 AI 시스템이나 그 출력물이 EU 내 사용자에게 영향을 미치면 법 적용 대상, 위반 시 전 세계 매출의 최대 7% 또는 3,500만 유로 과징금)**과 **(2) 4단계 위험 기반 접근(Unacceptable: 사회신용점수·잠재의식 조작 등 전면 금지 / High-Risk: 채용·신용·의료·핵심인프라 등 적합성 평가·데이터품질·로깅·인간감독 필수 / Limited: 챗봇·딥페이크 등 투명성 고지 의무 / Minimal: 스팸필터·게임 등 자율 준수)**입니다.
 >
-> • **시나리오 제약 조건 부합성 ([첨단 반도체 파운드리 및 스마트 팩토리])**: 본 시나리오는 '공정 중단 시 시간당 수십억 원의 손실이 발생하므로 엣지(Edge) 단의 실시간 이상 탐지와 핵심 공정 IP의 폐쇄망 격리가 필수적인 상황'이라는 복합 제약을 포함하고 있습니다. 따라서 'EU AI Act 4단계 위험 등급 분류 및 역외 적용(Extraterritoriality) 준수 전략' 관점에서 단계적 정합성과 리스크 통제를 동시에 만족하는 **(D)**가 유일한 최적해(MOST appropriate strategy)입니다.
+> • **시나리오 제약 조건 부합성 ([글로벌 손해보험 및 재보험 언더라이팅 그룹])**: 본 시나리오는 '청구 심사 자동화율(Straight-Through Processing)을 높이되, 지급 거절 시 법적 분쟁 방지를 위해 결정론적 약관 수식 검증과 인간 심사역의 최종 승인(HITL)이 의무화된 환경'이라는 복합 제약을 포함하고 있습니다. 따라서 'EU AI Act 4단계 위험 등급 분류 및 역외 적용(Extraterritoriality) 준수 전략' 관점에서 단계적 정합성과 리스크 통제를 동시에 만족하는 **(D)**가 유일한 최적해(MOST appropriate strategy)입니다.
 >
 > • **매력적인 오답(Distractor) 함정 분석**:
->   - **(A) 오답 분석**: '본사가 유럽 밖에 있으므로 EU AI Act를 완전히 무시하고 사회적 신용 점수제(시스템 C)를 유럽 전역에 강제 출시함' 접근법은 공정 중단 시 시간당 수십억 원의 손실이 발생하므로 엣지(Edge) 단의 실시간 이상 탐지와 핵심 공정 IP의 폐쇄망 격리가 필수적인 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
->   - **(B) 오답 분석**: '채용 및 신용 심사(시스템 A)는 아무런 규제가 없는 '최소 위험(Minimal Risk)' 등급이므로 인간 감독과 설명 가능성을 모두 제거함' 접근법은 공정 중단 시 시간당 수십억 원의 손실이 발생하므로 엣지(Edge) 단의 실시간 이상 탐지와 핵심 공정 IP의 폐쇄망 격리가 필수적인 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
->   - **(C) 오답 분석**: '단순 스팸 메일 필터나 고객 챗봇(시스템 B)도 모두 '허용 불가 위험'으로 분류하여 전사 모든 소프트웨어를 삭제함' 접근법은 공정 중단 시 시간당 수십억 원의 손실이 발생하므로 엣지(Edge) 단의 실시간 이상 탐지와 핵심 공정 IP의 폐쇄망 격리가 필수적인 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
+>   - **(A) 오답 분석**: '본사가 유럽 밖에 있으므로 EU AI Act를 완전히 무시하고 사회적 신용 점수제(시스템 C)를 유럽 전역에 강제 출시함' 접근법은 청구 심사 자동화율(Straight-Through Processing)을 높이되, 지급 거절 시 법적 분쟁 방지를 위해 결정론적 약관 수식 검증과 인간 심사역의 최종 승인(HITL)이 의무화된 환경이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
+>   - **(B) 오답 분석**: '채용 및 신용 심사(시스템 A)는 아무런 규제가 없는 '최소 위험(Minimal Risk)' 등급이므로 인간 감독과 설명 가능성을 모두 제거함' 접근법은 청구 심사 자동화율(Straight-Through Processing)을 높이되, 지급 거절 시 법적 분쟁 방지를 위해 결정론적 약관 수식 검증과 인간 심사역의 최종 승인(HITL)이 의무화된 환경이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
+>   - **(C) 오답 분석**: '단순 스팸 메일 필터나 고객 챗봇(시스템 B)도 모두 '허용 불가 위험'으로 분류하여 전사 모든 소프트웨어를 삭제함' 접근법은 청구 심사 자동화율(Straight-Through Processing)을 높이되, 지급 거절 시 법적 분쟁 방지를 위해 결정론적 약관 수식 검증과 인간 심사역의 최종 승인(HITL)이 의무화된 환경이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
 
 ---
 ### 3.15 고위험(High-Risk) AI 시스템의 법적 필수 요건: 적합성 평가·기술 문서화·인간 감독 (High-Risk AI Mandatory Conformity (Data Governance, Logging, Oversight))
@@ -840,11 +840,11 @@
 </div>
 </div>
 
-> ### 📝 기출 기반 고난도 실전 문제 (Real Exam Scenario Practice - D3-Q141)
+> ### 📝 기출 기반 고난도 실전 문제 (Real Exam Scenario Practice - D3-Q149)
 >
 > **Q. [High-Risk AI Mandatory Conformity (Data Governance, Logging, Oversight)]**  
-> **🇺🇸 English Scenario**: [international airline and mobility booking platform — High-Risk AI Mandatory Conformity (Data Governance, Logging, Oversight)] An enterprise operating across real-time dynamic fare logs alongside multilingual visa regulations and baggage compensation policies is scaling its AI transformation where chatbot hallucinations regarding refund policies create immediate legal liability, making strict factual grounding paramount. An organization is preparing a High-Risk AI system (automated recruitment and credit underwriting) for production deployment. Beyond predictive accuracy, which mandatory technical and governance controls must be architected into the system to pass regulatory Conformity Assessments?  
-> **🇰🇷 한국어 시나리오**: [글로벌 항공사 및 모빌리티 예약 플랫폼 — 고위험(High-Risk) AI 시스템의 법적 필수 요건: 적합성 평가·기술 문서화·인간 감독] 귀사는 실시간 항공권 동적 가격 책정(Dynamic Pricing) 로그와 다국어 여권·비자 규정 및 수하물 보상 지침 환경에서 엔터프라이즈 AI 전환을 추진하고 있으며, 현재 챗봇이 잘못된 환불·보상 정책을 안내할 경우 즉각적인 법적 배상 책임이 발생하므로 할루시네이션 제로화가 최우선 과제인 상황에 직면해 있습니다. 기업이 인사 승진/채용 평가 및 금융 대출 심사와 같은 '고위험(High-Risk) AI 시스템'을 상용 배포하기 위해 규제 준수 아키텍처를 설계하고 있습니다. 단순 정확도 테스트 외에 법적 적합성 평가(Conformity Assessment)를 통과하기 위해 시스템에 반드시 내재화해야 하는 필수 기술·거버넌스 통제 세트는 무엇입니까?
+> **🇺🇸 English Scenario**: [global gaming R&D and streaming entertainment studio — High-Risk AI Mandatory Conformity (Data Governance, Logging, Oversight)] An enterprise operating across hundreds of thousands of hours of multilingual audiovisual assets, 3D texture libraries, and real-time player telemetry logs is scaling its AI transformation needing to eliminate third-party IP infringement risks via indemnified models, C2PA provenance watermarking, and localized cultural bias auditing. An organization is preparing a High-Risk AI system (automated recruitment and credit underwriting) for production deployment. Beyond predictive accuracy, which mandatory technical and governance controls must be architected into the system to pass regulatory Conformity Assessments?  
+> **🇰🇷 한국어 시나리오**: [글로벌 미디어·게임 R&D 및 엔터테인먼트 스튜디오 — 고위험(High-Risk) AI 시스템의 법적 필수 요건: 적합성 평가·기술 문서화·인간 감독] 귀사는 수십만 시간의 다국어 영상·음성 에셋, 3D 그래픽 텍스처 라이브러리, 실시간 게이머 매치메이킹 및 이탈(Churn) 원격 로그 환경에서 엔터프라이즈 AI 전환을 추진하고 있으며, 현재 생성형 AI 에셋 제작 시 제3자 저작권(IP) 침해 리스크를 원천 차단하고 디지털 워터마킹(C2PA) 출처 증명과 지역별 문화적 편향 제거를 보장해야 하는 상황에 직면해 있습니다. 기업이 인사 승진/채용 평가 및 금융 대출 심사와 같은 '고위험(High-Risk) AI 시스템'을 상용 배포하기 위해 규제 준수 아키텍처를 설계하고 있습니다. 단순 정확도 테스트 외에 법적 적합성 평가(Conformity Assessment)를 통과하기 위해 시스템에 반드시 내재화해야 하는 필수 기술·거버넌스 통제 세트는 무엇입니까?
 >
 > * **(A)** Insert a one-sentence liability disclaimer in the customer terms of service to waive all regulatory obligations  
 >   *(🇰🇷 고위험 AI라도 외부에 '결과에 대해 회사는 아무런 법적 책임을 지지 않는다'는 면책 조항 한 줄만 약관에 넣으면 모든 기술적 통제가 면제됨)*
@@ -860,12 +860,12 @@
 >
 > • **핵심 전략 및 정답 도출 근거**: 고위험(High-Risk) AI에서 형식적인 '고무도장 찍기(Rubber-stamping / Automation Bias)'는 유효한 인간 감독으로 인정받지 못합니다. **데이터 품질/편향 거버넌스 + 불변 감사 로깅(Traceability) + 기술 문서화(Model/System Cards) + 설명 가능성 + AI의 결정을 실질적으로 검토·수정·중단(Override/Stop)할 수 있는 권한과 역량을 갖춘 인간 감독(Meaningful Human Oversight)**이 모두 결합되어야 합니다.
 >
-> • **시나리오 제약 조건 부합성 ([글로벌 항공사 및 모빌리티 예약 플랫폼])**: 본 시나리오는 '챗봇이 잘못된 환불·보상 정책을 안내할 경우 즉각적인 법적 배상 책임이 발생하므로 할루시네이션 제로화가 최우선 과제인 상황'이라는 복합 제약을 포함하고 있습니다. 따라서 '고위험(High-Risk) AI 시스템의 법적 필수 요건: 적합성 평가·기술 문서화·인간 감독' 관점에서 단계적 정합성과 리스크 통제를 동시에 만족하는 **(B)**가 유일한 최적해(MOST appropriate strategy)입니다.
+> • **시나리오 제약 조건 부합성 ([글로벌 미디어·게임 R&D 및 엔터테인먼트 스튜디오])**: 본 시나리오는 '생성형 AI 에셋 제작 시 제3자 저작권(IP) 침해 리스크를 원천 차단하고 디지털 워터마킹(C2PA) 출처 증명과 지역별 문화적 편향 제거를 보장해야 하는 상황'이라는 복합 제약을 포함하고 있습니다. 따라서 '고위험(High-Risk) AI 시스템의 법적 필수 요건: 적합성 평가·기술 문서화·인간 감독' 관점에서 단계적 정합성과 리스크 통제를 동시에 만족하는 **(B)**가 유일한 최적해(MOST appropriate strategy)입니다.
 >
 > • **매력적인 오답(Distractor) 함정 분석**:
->   - **(A) 오답 분석**: '고위험 AI라도 외부에 '결과에 대해 회사는 아무런 법적 책임을 지지 않는다'는 면책 조항 한 줄만 약관에 넣으면 모든 기술적 통제가 면제됨' 접근법은 챗봇이 잘못된 환불·보상 정책을 안내할 경우 즉각적인 법적 배상 책임이 발생하므로 할루시네이션 제로화가 최우선 과제인 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
->   - **(C) 오답 분석**: '감사 시 불리한 증거가 남지 않도록 모든 추론 로그와 학습 데이터 이력을 생성 즉시 자동 파기하도록 설계함' 접근법은 챗봇이 잘못된 환불·보상 정책을 안내할 경우 즉각적인 법적 배상 책임이 발생하므로 할루시네이션 제로화가 최우선 과제인 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
->   - **(D) 오답 분석**: '형식적인 인간 감독 요건만 채우기 위해 관련 지식이 전혀 없는 아르바이트생 1명에게 하루 5만 건의 AI 판정을 0.1초 만에 무조건 승인 버튼만 누르게 함(Rubber-stamping)' 접근법은 챗봇이 잘못된 환불·보상 정책을 안내할 경우 즉각적인 법적 배상 책임이 발생하므로 할루시네이션 제로화가 최우선 과제인 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
+>   - **(A) 오답 분석**: '고위험 AI라도 외부에 '결과에 대해 회사는 아무런 법적 책임을 지지 않는다'는 면책 조항 한 줄만 약관에 넣으면 모든 기술적 통제가 면제됨' 접근법은 생성형 AI 에셋 제작 시 제3자 저작권(IP) 침해 리스크를 원천 차단하고 디지털 워터마킹(C2PA) 출처 증명과 지역별 문화적 편향 제거를 보장해야 하는 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
+>   - **(C) 오답 분석**: '감사 시 불리한 증거가 남지 않도록 모든 추론 로그와 학습 데이터 이력을 생성 즉시 자동 파기하도록 설계함' 접근법은 생성형 AI 에셋 제작 시 제3자 저작권(IP) 침해 리스크를 원천 차단하고 디지털 워터마킹(C2PA) 출처 증명과 지역별 문화적 편향 제거를 보장해야 하는 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
+>   - **(D) 오답 분석**: '형식적인 인간 감독 요건만 채우기 위해 관련 지식이 전혀 없는 아르바이트생 1명에게 하루 5만 건의 AI 판정을 0.1초 만에 무조건 승인 버튼만 누르게 함(Rubber-stamping)' 접근법은 생성형 AI 에셋 제작 시 제3자 저작권(IP) 침해 리스크를 원천 차단하고 디지털 워터마킹(C2PA) 출처 증명과 지역별 문화적 편향 제거를 보장해야 하는 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
 
 ---
 ### 3.16 NIST AI 위험 관리 프레임워크(AI RMF) 4대 기능의 단계별 실행 매핑 (NIST AI Risk Management Framework (Govern, Map, Measure, Manage))
@@ -900,11 +900,11 @@
 </div>
 </div>
 
-> ### 📝 기출 기반 고난도 실전 문제 (Real Exam Scenario Practice - D3-Q151)
+> ### 📝 기출 기반 고난도 실전 문제 (Real Exam Scenario Practice - D3-Q160)
 >
 > **Q. [NIST AI Risk Management Framework (Govern, Map, Measure, Manage)]**  
-> **🇺🇸 English Scenario**: [global ocean freight and supply chain logistics platform — NIST AI Risk Management Framework (Govern, Map, Measure, Manage)] An enterprise operating across global port weather and customs time-series telemetry alongside multilingual Bills of Lading and customs declarations is scaling its AI transformation facing an aggressive 6-week Time-to-Market (TTM) mandate across global branches with a severe shortage of internal ML engineers. An enterprise is operationalizing the NIST AI Risk Management Framework (AI RMF) across four structured workstreams: (1) establishing organizational risk culture, policies, and clear accountability roles; (2) framing the business context and identifying potential socio-technical impacts of a specific AI use case; (3) quantitatively benchmarking bias, robustness, and hallucination rates; and (4) prioritizing and executing risk treatments, guardrails, and incident recovery. How do these map to the four NIST AI RMF core functions?  
-> **🇰🇷 한국어 시나리오**: [글로벌 해운 물류 및 공급망 플랫폼 — NIST AI 위험 관리 프레임워크(AI RMF) 4대 기능의 단계별 실행 매핑] 귀사는 전 세계 항만 기상·관세 시계열 데이터와 다국어 선하증권(B/L) 및 통관 세관 신고서 환경에서 엔터프라이즈 AI 전환을 추진하고 있으며, 현재 6주 이내에 MVP를 글로벌 지사에 배포(TTM)해야 하지만 사내 전담 머신러닝 엔지니어가 극소수에 불과한 상황에 직면해 있습니다. 기업이 미국 국립표준기술원(NIST)의 AI 위험 관리 프레임워크(AI RMF)를 기반으로 전사 거버넌스를 구축하고 있습니다. (활동 1) 전사 AI 위험 허용 한도(Risk Appetite), 위원회 역할 및 책임(R&R) 문화 정립, (활동 2) 개별 유스케이스의 비즈니스 맥락 파악 및 이해관계자 잠재적 영향 식별, (활동 3) 정량·정성적 벤치마크와 레드팀을 통한 편향·환각·취약점 수치 평가, (활동 4) 식별 및 측정된 위험에 대해 가드레일·HITL·사고 대응 및 롤백 우선순위 실행. 각 활동에 대응하는 NIST AI RMF 4대 기능은 무엇입니까?
+> **🇺🇸 English Scenario**: [global wholesale distribution and cold-chain logistics provider — NIST AI Risk Management Framework (Govern, Map, Measure, Manage)] An enterprise operating across refrigerated container temperature telemetry, tens of thousands of SKU warehouse management (WMS) ledgers, and multilingual customs/Bills of Lading documents is scaling its AI transformation tasked with minimizing perishable inventory spoilage and routing delays across global warehouses under an aggressive 6-week TTM mandate with limited internal ML staff. An enterprise is operationalizing the NIST AI Risk Management Framework (AI RMF) across four structured workstreams: (1) establishing organizational risk culture, policies, and clear accountability roles; (2) framing the business context and identifying potential socio-technical impacts of a specific AI use case; (3) quantitatively benchmarking bias, robustness, and hallucination rates; and (4) prioritizing and executing risk treatments, guardrails, and incident recovery. How do these map to the four NIST AI RMF core functions?  
+> **🇰🇷 한국어 시나리오**: [글로벌 도소매 유통 및 콜드체인 물류(Distribution & Cold-Chain) 기업 — NIST AI 위험 관리 프레임워크(AI RMF) 4대 기능의 단계별 실행 매핑] 귀사는 신선식품·의약품 냉장 컨테이너 온도/습도 원격 텔레메트리, 수만 개 SKU 입출고(WMS) 원장, 다국어 통관·선하증권(B/L) 문서 환경에서 엔터프라이즈 AI 전환을 추진하고 있으며, 현재 유통기한 임박 상품의 폐기 손실률(Spoilage)을 낮추고 리드타임 변동성에 실시간 대응해야 하며, 전담 데이터 과학자가 부족해 6주 내에 현업 물류센터에 솔루션을 배포(Fast TTM)해야 하는 상황에 직면해 있습니다. 기업이 미국 국립표준기술원(NIST)의 AI 위험 관리 프레임워크(AI RMF)를 기반으로 전사 거버넌스를 구축하고 있습니다. (활동 1) 전사 AI 위험 허용 한도(Risk Appetite), 위원회 역할 및 책임(R&R) 문화 정립, (활동 2) 개별 유스케이스의 비즈니스 맥락 파악 및 이해관계자 잠재적 영향 식별, (활동 3) 정량·정성적 벤치마크와 레드팀을 통한 편향·환각·취약점 수치 평가, (활동 4) 식별 및 측정된 위험에 대해 가드레일·HITL·사고 대응 및 롤백 우선순위 실행. 각 활동에 대응하는 NIST AI RMF 4대 기능은 무엇입니까?
 >
 > * **(A)** Workstream 1: Plan ➔ Workstream 2: Code ➔ Workstream 3: Build ➔ Workstream 4: Deploy  
 >   *(🇰🇷 활동 1: Plan ➔ 활동 2: Code ➔ 활동 3: Build ➔ 활동 4: Deploy (일반 소프트웨어 CI/CD 파이프라인))*
@@ -924,12 +924,12 @@
 > 3) **Measure(측정)**: TEVV(Test, Evaluation, Verification, Validation) 지표로 편향·신뢰성·안전성 정량 측정.
 > 4) **Manage(관리)**: 측정된 리스크를 완화(가드레일, HITL, 중단 게이트)하고 모니터링·대응.
 >
-> • **시나리오 제약 조건 부합성 ([글로벌 해운 물류 및 공급망 플랫폼])**: 본 시나리오는 '6주 이내에 MVP를 글로벌 지사에 배포(TTM)해야 하지만 사내 전담 머신러닝 엔지니어가 극소수에 불과한 상황'이라는 복합 제약을 포함하고 있습니다. 따라서 'NIST AI 위험 관리 프레임워크(AI RMF) 4대 기능의 단계별 실행 매핑' 관점에서 단계적 정합성과 리스크 통제를 동시에 만족하는 **(D)**가 유일한 최적해(MOST appropriate strategy)입니다.
+> • **시나리오 제약 조건 부합성 ([글로벌 도소매 유통 및 콜드체인 물류(Distribution & Cold-Chain) 기업])**: 본 시나리오는 '유통기한 임박 상품의 폐기 손실률(Spoilage)을 낮추고 리드타임 변동성에 실시간 대응해야 하며, 전담 데이터 과학자가 부족해 6주 내에 현업 물류센터에 솔루션을 배포(Fast TTM)해야 하는 상황'이라는 복합 제약을 포함하고 있습니다. 따라서 'NIST AI 위험 관리 프레임워크(AI RMF) 4대 기능의 단계별 실행 매핑' 관점에서 단계적 정합성과 리스크 통제를 동시에 만족하는 **(D)**가 유일한 최적해(MOST appropriate strategy)입니다.
 >
 > • **매력적인 오답(Distractor) 함정 분석**:
->   - **(A) 오답 분석**: '활동 1: Plan ➔ 활동 2: Code ➔ 활동 3: Build ➔ 활동 4: Deploy (일반 소프트웨어 CI/CD 파이프라인)' 접근법은 6주 이내에 MVP를 글로벌 지사에 배포(TTM)해야 하지만 사내 전담 머신러닝 엔지니어가 극소수에 불과한 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
->   - **(B) 오답 분석**: '활동 1: Manage ➔ 활동 2: Measure ➔ 활동 3: Map ➔ 활동 4: Govern (위험 식별 없이 조치부터 먼저 수행하는 역순 구조)' 접근법은 6주 이내에 MVP를 글로벌 지사에 배포(TTM)해야 하지만 사내 전담 머신러닝 엔지니어가 극소수에 불과한 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
->   - **(C) 오답 분석**: '활동 1: Extract ➔ 활동 2: Transform ➔ 활동 3: Load ➔ 활동 4: Archive (단순 데이터베이스 ETL 배치 순서)' 접근법은 6주 이내에 MVP를 글로벌 지사에 배포(TTM)해야 하지만 사내 전담 머신러닝 엔지니어가 극소수에 불과한 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
+>   - **(A) 오답 분석**: '활동 1: Plan ➔ 활동 2: Code ➔ 활동 3: Build ➔ 활동 4: Deploy (일반 소프트웨어 CI/CD 파이프라인)' 접근법은 유통기한 임박 상품의 폐기 손실률(Spoilage)을 낮추고 리드타임 변동성에 실시간 대응해야 하며, 전담 데이터 과학자가 부족해 6주 내에 현업 물류센터에 솔루션을 배포(Fast TTM)해야 하는 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
+>   - **(B) 오답 분석**: '활동 1: Manage ➔ 활동 2: Measure ➔ 활동 3: Map ➔ 활동 4: Govern (위험 식별 없이 조치부터 먼저 수행하는 역순 구조)' 접근법은 유통기한 임박 상품의 폐기 손실률(Spoilage)을 낮추고 리드타임 변동성에 실시간 대응해야 하며, 전담 데이터 과학자가 부족해 6주 내에 현업 물류센터에 솔루션을 배포(Fast TTM)해야 하는 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
+>   - **(C) 오답 분석**: '활동 1: Extract ➔ 활동 2: Transform ➔ 활동 3: Load ➔ 활동 4: Archive (단순 데이터베이스 ETL 배치 순서)' 접근법은 유통기한 임박 상품의 폐기 손실률(Spoilage)을 낮추고 리드타임 변동성에 실시간 대응해야 하며, 전담 데이터 과학자가 부족해 6주 내에 현업 물류센터에 솔루션을 배포(Fast TTM)해야 하는 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
 
 ---
 ### 3.17 ISO/IEC 42001 인공지능 경영시스템(AIMS) 국제 표준 인증 및 PDCA 운영 (ISO/IEC 42001 (AIMS) Certification & Continuous Improvement)
@@ -963,8 +963,8 @@
 > ### 📝 기출 기반 고난도 실전 문제 (Real Exam Scenario Practice - D3-Q161)
 >
 > **Q. [ISO/IEC 42001 (AIMS) Certification & Continuous Improvement]**  
-> **🇺🇸 English Scenario**: [nationwide 5G telecommunications carrier — ISO/IEC 42001 (AIMS) Certification & Continuous Improvement] An enterprise operating across telemetry from tens of thousands of cell towers and hundreds of thousands of daily billing/roaming call transcripts is scaling its AI transformation aiming to reduce agent burnout by automating routine inquiries while seamlessly escalating complex billing disputes to human agents. To win global enterprise and public-sector procurement contracts, a B2B company must provide independent, third-party audited certification proving it operates a formal Artificial Intelligence Management System (AIMS) with structured AI Impact Assessments and continuous PDCA improvement. Which international standard applies?  
-> **🇰🇷 한국어 시나리오**: [전국망 이동통신 및 5G 인프라 사업자 — ISO/IEC 42001 인공지능 경영시스템(AIMS) 국제 표준 인증 및 PDCA 운영] 귀사는 수만 개 기지국의 트래픽 혼잡도 지표와 일일 수십만 건의 요금·로밍 고객 상담 통화 기록 환경에서 엔터프라이즈 AI 전환을 추진하고 있으며, 현재 상담원 이직률을 낮추기 위해 반복 문의는 자동화하되 복잡한 요금 분쟁은 실시간 상담원 보조(Agent Assist)로 전환해야 하는 상황에 직면해 있습니다. 글로벌 B2B 엔터프라이즈 고객사들과 공공 조달 입찰에 참여하는 기업이, 자사의 AI 개발·운영 프로세스가 단순한 자체 윤리 선언문 수준이 아니라 국제적으로 공인된 관리 체계와 영향 평가(AI Impact Assessment), 지속적 감사 루프(Plan-Do-Check-Act)를 갖추고 있음을 객관적인 제3자 인증서로 증명해야 합니다. 취득해야 할 국제 표준은 무엇입니까?
+> **🇺🇸 English Scenario**: [biotech and novel drug discovery enterprise — ISO/IEC 42001 (AIMS) Certification & Continuous Improvement] An enterprise operating across protein structure simulations, multi-omics sequencing datasets, Phase I–III clinical trial protocols, and FDA/EMA regulatory dossiers is scaling its AI transformation needing to accelerate drug target discovery while enforcing strict GxP/FDA audit traceability, patient data de-identification, and zero medical hallucinations. To win global enterprise and public-sector procurement contracts, a B2B company must provide independent, third-party audited certification proving it operates a formal Artificial Intelligence Management System (AIMS) with structured AI Impact Assessments and continuous PDCA improvement. Which international standard applies?  
+> **🇰🇷 한국어 시나리오**: [바이오테크 및 신약개발(Bio/Pharma R&D) 기업 — ISO/IEC 42001 인공지능 경영시스템(AIMS) 국제 표준 인증 및 PDCA 운영] 귀사는 단백질 3D 구조 시뮬레이션·유전체(Genomics) 시퀀싱 데이터와 임상 1~3상 시험 프로토콜 및 FDA/EMA 인허가 문서 환경에서 엔터프라이즈 AI 전환을 추진하고 있으며, 현재 신약 후보물질 발굴(Target Identification) 기간을 단축해야 하나 GxP/FDA 감사 추적성(Audit Trail)과 임상 환자 데이터의 완벽한 비식별화 및 의학적 환각 제로화가 강제되는 상황에 직면해 있습니다. 글로벌 B2B 엔터프라이즈 고객사들과 공공 조달 입찰에 참여하는 기업이, 자사의 AI 개발·운영 프로세스가 단순한 자체 윤리 선언문 수준이 아니라 국제적으로 공인된 관리 체계와 영향 평가(AI Impact Assessment), 지속적 감사 루프(Plan-Do-Check-Act)를 갖추고 있음을 객관적인 제3자 인증서로 증명해야 합니다. 취득해야 할 국제 표준은 무엇입니까?
 >
 > * **(A)** Submit unrelated mechanical screw-thread standards or cafeteria food-safety certificates  
 >   *(🇰🇷 AI 거버넌스와 무관한 제조 공정 볼트 규격 표준이나 구내식당 위생 관리 표준만 제출함)*
@@ -980,12 +980,12 @@
 >
 > • **핵심 전략 및 정답 도출 근거**: **ISO/IEC 42001**은 정보보안의 ISO 27001에 대응하는 **인공지능 경영시스템(AIMS: AI Management System)** 국제 표준입니다. NIST AI RMF가 자율 프레임워크라면, ISO/IEC 42001은 **제3자 공인 인증(Certifiable Standard)**이 가능하여 글로벌 B2B/공공 계약에서 신뢰성을 입증하는 핵심 수단으로 활용됩니다.
 >
-> • **시나리오 제약 조건 부합성 ([전국망 이동통신 및 5G 인프라 사업자])**: 본 시나리오는 '상담원 이직률을 낮추기 위해 반복 문의는 자동화하되 복잡한 요금 분쟁은 실시간 상담원 보조(Agent Assist)로 전환해야 하는 상황'이라는 복합 제약을 포함하고 있습니다. 따라서 'ISO/IEC 42001 인공지능 경영시스템(AIMS) 국제 표준 인증 및 PDCA 운영' 관점에서 단계적 정합성과 리스크 통제를 동시에 만족하는 **(B)**가 유일한 최적해(MOST appropriate strategy)입니다.
+> • **시나리오 제약 조건 부합성 ([바이오테크 및 신약개발(Bio/Pharma R&D) 기업])**: 본 시나리오는 '신약 후보물질 발굴(Target Identification) 기간을 단축해야 하나 GxP/FDA 감사 추적성(Audit Trail)과 임상 환자 데이터의 완벽한 비식별화 및 의학적 환각 제로화가 강제되는 상황'이라는 복합 제약을 포함하고 있습니다. 따라서 'ISO/IEC 42001 인공지능 경영시스템(AIMS) 국제 표준 인증 및 PDCA 운영' 관점에서 단계적 정합성과 리스크 통제를 동시에 만족하는 **(B)**가 유일한 최적해(MOST appropriate strategy)입니다.
 >
 > • **매력적인 오답(Distractor) 함정 분석**:
->   - **(A) 오답 분석**: 'AI 거버넌스와 무관한 제조 공정 볼트 규격 표준이나 구내식당 위생 관리 표준만 제출함' 접근법은 상담원 이직률을 낮추기 위해 반복 문의는 자동화하되 복잡한 요금 분쟁은 실시간 상담원 보조(Agent Assist)로 전환해야 하는 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
->   - **(C) 오답 분석**: '공인된 외부 감사 대신 개발팀장이 직접 워드프로세서로 '우리는 윤리적이다'라고 한 줄 적은 자가 선언문만 제출함' 접근법은 상담원 이직률을 낮추기 위해 반복 문의는 자동화하되 복잡한 요금 분쟁은 실시간 상담원 보조(Agent Assist)로 전환해야 하는 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
->   - **(D) 오답 분석**: '글로벌 표준 준수를 회피하기 위해 해외 및 기업 간 거래(B2B) 영업을 모두 철수함' 접근법은 상담원 이직률을 낮추기 위해 반복 문의는 자동화하되 복잡한 요금 분쟁은 실시간 상담원 보조(Agent Assist)로 전환해야 하는 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
+>   - **(A) 오답 분석**: 'AI 거버넌스와 무관한 제조 공정 볼트 규격 표준이나 구내식당 위생 관리 표준만 제출함' 접근법은 신약 후보물질 발굴(Target Identification) 기간을 단축해야 하나 GxP/FDA 감사 추적성(Audit Trail)과 임상 환자 데이터의 완벽한 비식별화 및 의학적 환각 제로화가 강제되는 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
+>   - **(C) 오답 분석**: '공인된 외부 감사 대신 개발팀장이 직접 워드프로세서로 '우리는 윤리적이다'라고 한 줄 적은 자가 선언문만 제출함' 접근법은 신약 후보물질 발굴(Target Identification) 기간을 단축해야 하나 GxP/FDA 감사 추적성(Audit Trail)과 임상 환자 데이터의 완벽한 비식별화 및 의학적 환각 제로화가 강제되는 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
+>   - **(D) 오답 분석**: '글로벌 표준 준수를 회피하기 위해 해외 및 기업 간 거래(B2B) 영업을 모두 철수함' 접근법은 신약 후보물질 발굴(Target Identification) 기간을 단축해야 하나 GxP/FDA 감사 추적성(Audit Trail)과 임상 환자 데이터의 완벽한 비식별화 및 의학적 환각 제로화가 강제되는 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
 
 ---
 
@@ -1019,11 +1019,11 @@
 </div>
 </div>
 
-> ### 📝 기출 기반 고난도 실전 문제 (Real Exam Scenario Practice - D3-Q171)
+> ### 📝 기출 기반 고난도 실전 문제 (Real Exam Scenario Practice - D3-Q172)
 >
 > **Q. [Cross-Functional AI Governance Committee & Risk-Tiered Review]**  
-> **🇺🇸 English Scenario**: [mega-scale e-commerce and retail marketplace — Cross-Functional AI Governance Committee & Risk-Tiered Review] An enterprise operating across tens of millions of daily clickstream events alongside unstructured product reviews and seller dispute tickets is scaling its AI transformation requiring sub-200ms inference latency during peak seasonal traffic while slashing per-transaction unit inference costs by over 60%. An enterprise AI Governance Board initially consisted solely of IT engineers (missing critical legal and HR risks), and later overcorrected by requiring 3-month full-board reviews even for trivial low-risk internal productivity bots (paralyzing innovation). How should the governance operating model be redesigned?  
-> **🇰🇷 한국어 시나리오**: [초대형 이커머스 및 리테일 마켓플레이스 — 다학제적 AI 거버넌스 위원회 구성 및 위험 등급별 차등 심의(Risk-Tiered Triage) 프로세스] 귀사는 일일 수천만 건의 클릭스트림 이벤트와 비정형 상품 리뷰 및 판매자 분쟁 티켓 환경에서 엔터프라이즈 AI 전환을 추진하고 있으며, 현재 성수기 트래픽 급증 시 추론 지연 시간(Latency)을 200ms 이내로 유지해야 하며 동시에 건당 추론 단가(Unit Cost)를 60% 이상 절감해야 하는 상황에 직면해 있습니다. 기업이 AI 거버넌스 위원회를 신설했으나 두 가지 극단적 문제에 부딪혔습니다. 초기에는 IT 엔지니어들로만 위원회를 구성했더니 법적·윤리적·노무적 리스크를 전혀 걸러내지 못했고, 이후 모든 임원을 참석시켜 사내 회의실 예약 봇 같은 최소 위험 과제까지 3개월씩 전수 심사했더니 전사 혁신 속도가 완전히 멈춰버렸습니다. 거버넌스 안전성과 혁신 속도(Agility)를 모두 살리는 최적의 운영 모델은 무엇입니까?
+> **🇺🇸 English Scenario**: [global consumer packaged goods (CPG) and F&B franchise distributor — Cross-Functional AI Governance Committee & Risk-Tiered Review] An enterprise operating across raw commodity price feeds, weather-correlated daily franchise order histories, sensory R&D test logs, and social media trend reviews is scaling its AI transformation needing to reduce demand forecasting error (MAPE) and accelerate product launches while enabling non-technical franchise managers to use AI without coding. An enterprise AI Governance Board initially consisted solely of IT engineers (missing critical legal and HR risks), and later overcorrected by requiring 3-month full-board reviews even for trivial low-risk internal productivity bots (paralyzing innovation). How should the governance operating model be redesigned?  
+> **🇰🇷 한국어 시나리오**: [글로벌 소비재(CPG) 및 식음료 프랜차이즈 유통사 — 다학제적 AI 거버넌스 위원회 구성 및 위험 등급별 차등 심의(Risk-Tiered Triage) 프로세스] 귀사는 원자재 선물 시세 변동 데이터, 지역별 기상·프로모션에 따른 일별 가맹점 발주량 이력, 신제품 소비자 관능검사 및 SNS 트렌드 리뷰 환경에서 엔터프라이즈 AI 전환을 추진하고 있으며, 현재 계절적 수요 예측 오차(MAPE)를 줄여 가맹점 폐기 비용을 절감하고 신제품 출시 주기를 앞당겨야 하며, 비기술직 가맹점주와 영업사원이 코딩 없이 직관적으로 AI를 활용해야 하는 상황에 직면해 있습니다. 기업이 AI 거버넌스 위원회를 신설했으나 두 가지 극단적 문제에 부딪혔습니다. 초기에는 IT 엔지니어들로만 위원회를 구성했더니 법적·윤리적·노무적 리스크를 전혀 걸러내지 못했고, 이후 모든 임원을 참석시켜 사내 회의실 예약 봇 같은 최소 위험 과제까지 3개월씩 전수 심사했더니 전사 혁신 속도가 완전히 멈춰버렸습니다. 거버넌스 안전성과 혁신 속도(Agility)를 모두 살리는 최적의 운영 모델은 무엇입니까?
 >
 > * **(A)** Disband the governance council and allow individual junior developers to deploy high-risk credit and hiring models unilaterally  
 >   *(🇰🇷 혁신 속도를 위해 거버넌스 위원회를 해체하고 고위험 대출·채용 AI까지 주니어 개발자 1명이 독단으로 배포하게 함)*
@@ -1039,12 +1039,12 @@
 >
 > • **핵심 전략 및 정답 도출 근거**: 실제 시험에서 자주 나오는 **'거버넌스 병목(Governance Bottleneck) vs 리스크 방치'** 딜레마입니다. 정답은 **(1) 다학제적(Cross-functional: 비즈니스+기술+법무+보안+HR+윤리) 위원회 구성**과 **(2) 위험 기반 차등 심의(Risk-Tiered Governance / Proportional Oversight)**의 결합입니다. 모든 과제를 똑같이 심사하면 혁신이 죽으므로, 저위험 과제는 사전 승인된 샌드박스/가드레일로 자동 패스트트랙 처리해야 합니다.
 >
-> • **시나리오 제약 조건 부합성 ([초대형 이커머스 및 리테일 마켓플레이스])**: 본 시나리오는 '성수기 트래픽 급증 시 추론 지연 시간(Latency)을 200ms 이내로 유지해야 하며 동시에 건당 추론 단가(Unit Cost)를 60% 이상 절감해야 하는 상황'이라는 복합 제약을 포함하고 있습니다. 따라서 '다학제적 AI 거버넌스 위원회 구성 및 위험 등급별 차등 심의(Risk-Tiered Triage) 프로세스' 관점에서 단계적 정합성과 리스크 통제를 동시에 만족하는 **(D)**가 유일한 최적해(MOST appropriate strategy)입니다.
+> • **시나리오 제약 조건 부합성 ([글로벌 소비재(CPG) 및 식음료 프랜차이즈 유통사])**: 본 시나리오는 '계절적 수요 예측 오차(MAPE)를 줄여 가맹점 폐기 비용을 절감하고 신제품 출시 주기를 앞당겨야 하며, 비기술직 가맹점주와 영업사원이 코딩 없이 직관적으로 AI를 활용해야 하는 상황'이라는 복합 제약을 포함하고 있습니다. 따라서 '다학제적 AI 거버넌스 위원회 구성 및 위험 등급별 차등 심의(Risk-Tiered Triage) 프로세스' 관점에서 단계적 정합성과 리스크 통제를 동시에 만족하는 **(D)**가 유일한 최적해(MOST appropriate strategy)입니다.
 >
 > • **매력적인 오답(Distractor) 함정 분석**:
->   - **(A) 오답 분석**: '혁신 속도를 위해 거버넌스 위원회를 해체하고 고위험 대출·채용 AI까지 주니어 개발자 1명이 독단으로 배포하게 함' 접근법은 성수기 트래픽 급증 시 추론 지연 시간(Latency)을 200ms 이내로 유지해야 하며 동시에 건당 추론 단가(Unit Cost)를 60% 이상 절감해야 하는 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
->   - **(B) 오답 분석**: '위험도 구분 없이 사내 맞춤법 검사기 프롬프트의 오타 하나를 고칠 때도 이사회 전원 만장일치와 6개월의 법무 감사를 거치게 강제함' 접근법은 성수기 트래픽 급증 시 추론 지연 시간(Latency)을 200ms 이내로 유지해야 하며 동시에 건당 추론 단가(Unit Cost)를 60% 이상 절감해야 하는 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
->   - **(C) 오답 분석**: '법무팀과 보안팀은 기술 용어를 모른다는 이유로 모든 AI 의사결정 회의에서 영구 배제함' 접근법은 성수기 트래픽 급증 시 추론 지연 시간(Latency)을 200ms 이내로 유지해야 하며 동시에 건당 추론 단가(Unit Cost)를 60% 이상 절감해야 하는 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
+>   - **(A) 오답 분석**: '혁신 속도를 위해 거버넌스 위원회를 해체하고 고위험 대출·채용 AI까지 주니어 개발자 1명이 독단으로 배포하게 함' 접근법은 계절적 수요 예측 오차(MAPE)를 줄여 가맹점 폐기 비용을 절감하고 신제품 출시 주기를 앞당겨야 하며, 비기술직 가맹점주와 영업사원이 코딩 없이 직관적으로 AI를 활용해야 하는 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
+>   - **(B) 오답 분석**: '위험도 구분 없이 사내 맞춤법 검사기 프롬프트의 오타 하나를 고칠 때도 이사회 전원 만장일치와 6개월의 법무 감사를 거치게 강제함' 접근법은 계절적 수요 예측 오차(MAPE)를 줄여 가맹점 폐기 비용을 절감하고 신제품 출시 주기를 앞당겨야 하며, 비기술직 가맹점주와 영업사원이 코딩 없이 직관적으로 AI를 활용해야 하는 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
+>   - **(C) 오답 분석**: '법무팀과 보안팀은 기술 용어를 모른다는 이유로 모든 AI 의사결정 회의에서 영구 배제함' 접근법은 계절적 수요 예측 오차(MAPE)를 줄여 가맹점 폐기 비용을 절감하고 신제품 출시 주기를 앞당겨야 하며, 비기술직 가맹점주와 영업사원이 코딩 없이 직관적으로 AI를 활용해야 하는 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
 
 ---
 ### 3.19 AI 공동 책임 모델(Shared Responsibility Model) 및 최종 법적 책임(Accountability) 귀속 원칙 (Accountability & AWS Shared Responsibility Model for AI)
@@ -1075,11 +1075,11 @@
 </div>
 </div>
 
-> ### 📝 기출 기반 고난도 실전 문제 (Real Exam Scenario Practice - D3-Q181)
+> ### 📝 기출 기반 고난도 실전 문제 (Real Exam Scenario Practice - D3-Q183)
 >
 > **Q. [Accountability & AWS Shared Responsibility Model for AI]**  
-> **🇺🇸 English Scenario**: [global streaming media and entertainment studio — Accountability & AWS Shared Responsibility Model for AI] An enterprise operating across hundreds of thousands of hours of multilingual video/audio archives and viewer churn behavioral logs is scaling its AI transformation needing to eliminate third-party copyright infringement liabilities while preventing cultural bias across diverse global markets. A financial firm launches an automated wealth advisory service built on AWS foundation models. Due to flawed internal RAG documents and the firm's decision to omit human oversight, customers suffer financial losses. Executives propose shifting all regulatory and legal blame onto AWS and the third-party model vendor. What fundamental governance principle applies?  
-> **🇰🇷 한국어 시나리오**: [글로벌 미디어 스트리밍 및 콘텐츠 스튜디오 — AI 공동 책임 모델(Shared Responsibility Model) 및 최종 법적 책임(Accountability) 귀속 원칙] 귀사는 수십만 시간 분량의 다국어 영상·오디오 아카이브와 글로벌 시청자 이탈(Churn) 행동 로그 환경에서 엔터프라이즈 AI 전환을 추진하고 있으며, 현재 생성형 AI 콘텐츠의 제3자 저작권 침해 소송 리스크를 원천 차단하고 글로벌 지역별 문화적 편향을 제거해야 하는 상황에 직면해 있습니다. 한 금융사가 AWS 클라우드의 파운데이션 모델과 외부 ISV 솔루션을 활용해 자동화된 자산 관리 자문 서비스를 출시했습니다. 그러나 금융사가 자체 구성한 RAG 문서에 오류가 있었고 사내 비즈니스 로직에 인간 검증(HITL)을 생략하여 고객에게 대규모 투자 손실이 발생했습니다. 경영진이 '클라우드 벤더와 모델 제작사에게 모든 법적 배상 책임을 전가하자'고 할 때, AI 비즈니스 전략가가 설명해야 할 거버넌스 대원칙은 무엇입니까?
+> **🇺🇸 English Scenario**: [mega-scale online e-commerce and open marketplace platform — Accountability & AWS Shared Responsibility Model for AI] An enterprise operating across hundreds of millions of daily clickstream events, tens of millions of seller catalog images/listings, and real-time dispute logs is scaling its AI transformation requiring sub-150ms inference latency during peak shopping events while boosting conversion rates and slashing unit token costs by 70%. A financial firm launches an automated wealth advisory service built on AWS foundation models. Due to flawed internal RAG documents and the firm's decision to omit human oversight, customers suffer financial losses. Executives propose shifting all regulatory and legal blame onto AWS and the third-party model vendor. What fundamental governance principle applies?  
+> **🇰🇷 한국어 시나리오**: [초대형 온라인 이커머스 및 오픈마켓 플랫폼 — AI 공동 책임 모델(Shared Responsibility Model) 및 최종 법적 책임(Accountability) 귀속 원칙] 귀사는 일일 수억 건의 검색·장바구니 클릭스트림, 수천만 개의 판매자 상품 카탈로그 이미지·상세페이지, 실시간 반품·분쟁 상담 로그 환경에서 엔터프라이즈 AI 전환을 추진하고 있으며, 현재 블랙프라이데이 등 피크 트래픽 시 추론 지연 시간(Latency)을 150ms 이내로 유지하면서 개인화 추천 전환율을 높이고 건당 추론 비용을 70% 절감해야 하는 상황에 직면해 있습니다. 한 금융사가 AWS 클라우드의 파운데이션 모델과 외부 ISV 솔루션을 활용해 자동화된 자산 관리 자문 서비스를 출시했습니다. 그러나 금융사가 자체 구성한 RAG 문서에 오류가 있었고 사내 비즈니스 로직에 인간 검증(HITL)을 생략하여 고객에게 대규모 투자 손실이 발생했습니다. 경영진이 '클라우드 벤더와 모델 제작사에게 모든 법적 배상 책임을 전가하자'고 할 때, AI 비즈니스 전략가가 설명해야 할 거버넌스 대원칙은 무엇입니까?
 >
 > * **(A)** Subscribing to a cloud AI API automatically transfers 100% of industry regulatory compliance and legal liability to the cloud vendor  
 >   *(🇰🇷 외부 상용 AI 솔루션을 구매하거나 클라우드 API를 호출하기만 하면 기업의 모든 금융 규제 준수 의무와 법적 배상 책임이 100% 자동 소멸됨)*
@@ -1095,12 +1095,12 @@
 >
 > • **핵심 전략 및 정답 도출 근거**: 거버넌스의 절대 원칙: **'기술과 구현은 외주화(Buy/Partner)할 수 있어도, 최종 책임(Accountability)은 절대 외주화할 수 없다!'** **AWS AI 공동 책임 모델**에서 AWS는 클라우드 자체의 보안(Security OF the Cloud)을 책임지지만, 어떤 데이터를 넣고 어떤 가드레일과 HITL을 설정해 어떤 비즈니스 결정을 내릴지(Security & Governance IN the Cloud)에 대한 최종 책임은 항상 고객사(Enterprise)에 있습니다.
 >
-> • **시나리오 제약 조건 부합성 ([글로벌 미디어 스트리밍 및 콘텐츠 스튜디오])**: 본 시나리오는 '생성형 AI 콘텐츠의 제3자 저작권 침해 소송 리스크를 원천 차단하고 글로벌 지역별 문화적 편향을 제거해야 하는 상황'이라는 복합 제약을 포함하고 있습니다. 따라서 'AI 공동 책임 모델(Shared Responsibility Model) 및 최종 법적 책임(Accountability) 귀속 원칙' 관점에서 단계적 정합성과 리스크 통제를 동시에 만족하는 **(B)**가 유일한 최적해(MOST appropriate strategy)입니다.
+> • **시나리오 제약 조건 부합성 ([초대형 온라인 이커머스 및 오픈마켓 플랫폼])**: 본 시나리오는 '블랙프라이데이 등 피크 트래픽 시 추론 지연 시간(Latency)을 150ms 이내로 유지하면서 개인화 추천 전환율을 높이고 건당 추론 비용을 70% 절감해야 하는 상황'이라는 복합 제약을 포함하고 있습니다. 따라서 'AI 공동 책임 모델(Shared Responsibility Model) 및 최종 법적 책임(Accountability) 귀속 원칙' 관점에서 단계적 정합성과 리스크 통제를 동시에 만족하는 **(B)**가 유일한 최적해(MOST appropriate strategy)입니다.
 >
 > • **매력적인 오답(Distractor) 함정 분석**:
->   - **(A) 오답 분석**: '외부 상용 AI 솔루션을 구매하거나 클라우드 API를 호출하기만 하면 기업의 모든 금융 규제 준수 의무와 법적 배상 책임이 100% 자동 소멸됨' 접근법은 생성형 AI 콘텐츠의 제3자 저작권 침해 소송 리스크를 원천 차단하고 글로벌 지역별 문화적 편향을 제거해야 하는 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
->   - **(C) 오답 분석**: '사고의 법적 책임은 모델을 개발한 엔지니어나 기업이 아니라 AI 시스템 스스로가 법인격을 가지고 직접 감옥에 가거나 벌금을 내야 함' 접근법은 생성형 AI 콘텐츠의 제3자 저작권 침해 소송 리스크를 원천 차단하고 글로벌 지역별 문화적 편향을 제거해야 하는 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
->   - **(D) 오답 분석**: '잘못된 투자 자문을 그대로 믿고 따른 일반 소비자(고객)에게 100% 모든 과실 책임을 물어 손해배상을 거부함' 접근법은 생성형 AI 콘텐츠의 제3자 저작권 침해 소송 리스크를 원천 차단하고 글로벌 지역별 문화적 편향을 제거해야 하는 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
+>   - **(A) 오답 분석**: '외부 상용 AI 솔루션을 구매하거나 클라우드 API를 호출하기만 하면 기업의 모든 금융 규제 준수 의무와 법적 배상 책임이 100% 자동 소멸됨' 접근법은 블랙프라이데이 등 피크 트래픽 시 추론 지연 시간(Latency)을 150ms 이내로 유지하면서 개인화 추천 전환율을 높이고 건당 추론 비용을 70% 절감해야 하는 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
+>   - **(C) 오답 분석**: '사고의 법적 책임은 모델을 개발한 엔지니어나 기업이 아니라 AI 시스템 스스로가 법인격을 가지고 직접 감옥에 가거나 벌금을 내야 함' 접근법은 블랙프라이데이 등 피크 트래픽 시 추론 지연 시간(Latency)을 150ms 이내로 유지하면서 개인화 추천 전환율을 높이고 건당 추론 비용을 70% 절감해야 하는 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
+>   - **(D) 오답 분석**: '잘못된 투자 자문을 그대로 믿고 따른 일반 소비자(고객)에게 100% 모든 과실 책임을 물어 손해배상을 거부함' 접근법은 블랙프라이데이 등 피크 트래픽 시 추론 지연 시간(Latency)을 150ms 이내로 유지하면서 개인화 추천 전환율을 높이고 건당 추론 비용을 70% 절감해야 하는 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
 
 ---
 ### 3.20 모델 카드(Model Cards)와 시스템 카드(System Cards)를 통한 한계점 및 의도된 용도 문서화 (Model Cards vs System Cards & Transparency Artifacts)
@@ -1131,11 +1131,11 @@
 </div>
 </div>
 
-> ### 📝 기출 기반 고난도 실전 문제 (Real Exam Scenario Practice - D3-Q191)
+> ### 📝 기출 기반 고난도 실전 문제 (Real Exam Scenario Practice - D3-Q194)
 >
 > **Q. [Model Cards vs System Cards & Transparency Artifacts]**  
-> **🇺🇸 English Scenario**: [global automotive OEM and connected mobility enterprise — Model Cards vs System Cards & Transparency Artifacts] An enterprise operating across connected-vehicle telematics streams alongside in-cabin voice assistant logs and dealer repair manuals is scaling its AI transformation requiring hybrid inference optimization across memory-constrained in-vehicle edge chipsets and cloud foundation models. An internal platform team published a fine-tuned model intended strictly for summarizing English technical manuals. However, the HR department unknowingly repurposed it to score multilingual candidate job interviews, causing severe bias failures. Which standardized documentation artifacts prevent out-of-scope misuse?  
-> **🇰🇷 한국어 시나리오**: [글로벌 완성차(OEM) 및 자율주행 모빌리티 기업 — 모델 카드(Model Cards)와 시스템 카드(System Cards)를 통한 한계점 및 의도된 용도 문서화] 귀사는 수백만 대 커넥티드카의 주행 텔레매틱스 데이터와 차량 내 음성 비서 대화 로그 및 정비 지침서 환경에서 엔터프라이즈 AI 전환을 추진하고 있으며, 현재 차량 온보드 칩셋의 제한된 메모리/전력 환경과 클라우드 백엔드 간의 하이브리드 추론 최적화가 요구되는 상황에 직면해 있습니다. 중앙 AI 플랫폼 팀이 파인튜닝한 도메인 모델을 사내 15개 사업부에 배포했더니, 본래 '영문 기술 매뉴얼 요약용'으로만 학습·검증된 모델을 인사팀이 가져다가 '다국어 채용 면접 당락 판정용'으로 오용(Out-of-Scope Misuse)하여 심각한 오작동과 편향 사고가 발생했습니다. 이러한 목적 외 오용을 예방하고 투명한 아키텍처 소통을 표준화하기 위한 문서화 체계는 무엇입니까?
+> **🇺🇸 English Scenario**: [advanced materials and battery corporate R&D institute — Model Cards vs System Cards & Transparency Artifacts] An enterprise operating across decades of Electronic Lab Notebooks (ELN), molecular formulation tables, global patent filings, and scientific literature archives is scaling its AI transformation seeking to compress R&D formulation cycles and lab trial-and-error costs while guaranteeing zero leakage of pre-patent trade secrets and proprietary chemical IP. An internal platform team published a fine-tuned model intended strictly for summarizing English technical manuals. However, the HR department unknowingly repurposed it to score multilingual candidate job interviews, causing severe bias failures. Which standardized documentation artifacts prevent out-of-scope misuse?  
+> **🇰🇷 한국어 시나리오**: [첨단 소재·배터리 기업 부설 R&D 연구소(Corporate R&D Center) — 모델 카드(Model Cards)와 시스템 카드(System Cards)를 통한 한계점 및 의도된 용도 문서화] 귀사는 수십 년간 축적된 실험실 전자연구노트(ELN), 분자 조성 실험 결과 테이블, 글로벌 특허 명세서 및 학술 논문 PDF 아카이브 환경에서 엔터프라이즈 AI 전환을 추진하고 있으며, 현재 차세대 소재 배합 시행착오(Trial-and-Error) 실험 횟수를 줄여 연구개발 리드타임을 단축해야 하며, 미출원 핵심 특허와 영업비밀(Trade Secrets)의 외부 유출을 100% 차단해야 하는 상황에 직면해 있습니다. 중앙 AI 플랫폼 팀이 파인튜닝한 도메인 모델을 사내 15개 사업부에 배포했더니, 본래 '영문 기술 매뉴얼 요약용'으로만 학습·검증된 모델을 인사팀이 가져다가 '다국어 채용 면접 당락 판정용'으로 오용(Out-of-Scope Misuse)하여 심각한 오작동과 편향 사고가 발생했습니다. 이러한 목적 외 오용을 예방하고 투명한 아키텍처 소통을 표준화하기 위한 문서화 체계는 무엇입니까?
 >
 > * **(A)** Conceal all known model limitations and benchmark failures, marketing the model internally as an infallible general intelligence  
 >   *(🇰🇷 모델의 한계나 약점을 문서에 적으면 사내 채택률이 떨어지므로 모든 단점과 제약 사항을 숨기고 '만능 인공지능'으로 홍보함)*
@@ -1151,12 +1151,12 @@
 >
 > • **핵심 전략 및 정답 도출 근거**: **모델 카드(Model Cards)**가 개별 ML/FM 모델 자체의 스펙(학습 데이터 특성, 평가 지표, 의도된 사용처 vs 절대 쓰면 안 되는 Out-of-Scope 영역, 편향 한계)을 정의하는 신분증이라면, **시스템 카드(System Cards / AWS AI Service Cards)**는 모델 + 검색 DB + Guardrails + UI + HITL이 결합된 **전체 엔드투엔드 AI 시스템의 작동 방식과 리스크 완화 구조**를 설명하는 상위 투명성 문서입니다.
 >
-> • **시나리오 제약 조건 부합성 ([글로벌 완성차(OEM) 및 자율주행 모빌리티 기업])**: 본 시나리오는 '차량 온보드 칩셋의 제한된 메모리/전력 환경과 클라우드 백엔드 간의 하이브리드 추론 최적화가 요구되는 상황'이라는 복합 제약을 포함하고 있습니다. 따라서 '모델 카드(Model Cards)와 시스템 카드(System Cards)를 통한 한계점 및 의도된 용도 문서화' 관점에서 단계적 정합성과 리스크 통제를 동시에 만족하는 **(D)**가 유일한 최적해(MOST appropriate strategy)입니다.
+> • **시나리오 제약 조건 부합성 ([첨단 소재·배터리 기업 부설 R&D 연구소(Corporate R&D Center)])**: 본 시나리오는 '차세대 소재 배합 시행착오(Trial-and-Error) 실험 횟수를 줄여 연구개발 리드타임을 단축해야 하며, 미출원 핵심 특허와 영업비밀(Trade Secrets)의 외부 유출을 100% 차단해야 하는 상황'이라는 복합 제약을 포함하고 있습니다. 따라서 '모델 카드(Model Cards)와 시스템 카드(System Cards)를 통한 한계점 및 의도된 용도 문서화' 관점에서 단계적 정합성과 리스크 통제를 동시에 만족하는 **(D)**가 유일한 최적해(MOST appropriate strategy)입니다.
 >
 > • **매력적인 오답(Distractor) 함정 분석**:
->   - **(A) 오답 분석**: '모델의 한계나 약점을 문서에 적으면 사내 채택률이 떨어지므로 모든 단점과 제약 사항을 숨기고 '만능 인공지능'으로 홍보함' 접근법은 차량 온보드 칩셋의 제한된 메모리/전력 환경과 클라우드 백엔드 간의 하이브리드 추론 최적화가 요구되는 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
->   - **(B) 오답 분석**: '기술 문서 대신 모델 가중치 이진 파일(Binary Weights)만 공유 폴더에 아무런 설명 없이 업로드함' 접근법은 차량 온보드 칩셋의 제한된 메모리/전력 환경과 클라우드 백엔드 간의 하이브리드 추론 최적화가 요구되는 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
->   - **(C) 오답 분석**: '문서화 작업을 피하기 위해 사내 모든 부서 간 모델 및 프롬프트 자산 공유를 전면 금지함' 접근법은 차량 온보드 칩셋의 제한된 메모리/전력 환경과 클라우드 백엔드 간의 하이브리드 추론 최적화가 요구되는 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
+>   - **(A) 오답 분석**: '모델의 한계나 약점을 문서에 적으면 사내 채택률이 떨어지므로 모든 단점과 제약 사항을 숨기고 '만능 인공지능'으로 홍보함' 접근법은 차세대 소재 배합 시행착오(Trial-and-Error) 실험 횟수를 줄여 연구개발 리드타임을 단축해야 하며, 미출원 핵심 특허와 영업비밀(Trade Secrets)의 외부 유출을 100% 차단해야 하는 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
+>   - **(B) 오답 분석**: '기술 문서 대신 모델 가중치 이진 파일(Binary Weights)만 공유 폴더에 아무런 설명 없이 업로드함' 접근법은 차세대 소재 배합 시행착오(Trial-and-Error) 실험 횟수를 줄여 연구개발 리드타임을 단축해야 하며, 미출원 핵심 특허와 영업비밀(Trade Secrets)의 외부 유출을 100% 차단해야 하는 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
+>   - **(C) 오답 분석**: '문서화 작업을 피하기 위해 사내 모든 부서 간 모델 및 프롬프트 자산 공유를 전면 금지함' 접근법은 차세대 소재 배합 시행착오(Trial-and-Error) 실험 횟수를 줄여 연구개발 리드타임을 단축해야 하며, 미출원 핵심 특허와 영업비밀(Trade Secrets)의 외부 유출을 100% 차단해야 하는 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
 
 ---
 ### 3.21 데이터-학습-배포 전 과정의 모델 계보 추적(Lineage Tracking) 및 불변 감사 증적 (End-to-End Lineage Tracking, Model Registry & Auditability)
@@ -1187,11 +1187,11 @@
 </div>
 </div>
 
-> ### 📝 기출 기반 고난도 실전 문제 (Real Exam Scenario Practice - D3-Q201)
+> ### 📝 기출 기반 고난도 실전 문제 (Real Exam Scenario Practice - D3-Q205)
 >
 > **Q. [End-to-End Lineage Tracking, Model Registry & Auditability]**  
-> **🇺🇸 English Scenario**: [global property & casualty insurance underwriting group — End-to-End Lineage Tracking, Model Registry & Auditability] An enterprise operating across millions of historical fraud records alongside field loss-adjustment photos, audio transcripts, and medical certificates is scaling its AI transformation where claim denials legally mandate deterministic policy verification coupled with documented Human-in-the-Loop (HITL) sign-off. During a regulatory audit, inspectors demand cryptographic proof tracing a specific automated decision made 6 months ago back to the exact S3 dataset snapshot, preprocessing Git commit, training hyperparameters, approved model version, and guardrail configuration active at that timestamp. Which infrastructure satisfies this requirement?  
-> **🇰🇷 한국어 시나리오**: [글로벌 손해보험 및 언더라이팅 그룹 — 데이터-학습-배포 전 과정의 모델 계보 추적(Lineage Tracking) 및 불변 감사 증적] 귀사는 수백만 건의 과거 보험 사기 적발 이력 테이블과 현장 손해사정 사진·음성 녹취록 및 진단서 환경에서 엔터프라이즈 AI 전환을 추진하고 있으며, 현재 보험금 지급 거절 시 법적 분쟁 방지를 위해 결정론적 약관 검증과 인간 전문가의 최종 승인(HITL)이 법적으로 의무화된 환경에 직면해 있습니다. 규제 당국의 정기 감사에서 '6개월 전 특정 날짜에 고객 B씨에게 내려진 자동 심사 판정이 정확히 어떤 버전의 원천 데이터셋(S3 스냅샷), 어떤 전처리 피처 엔지니어링 코드(Git 커밋), 어떤 하이퍼파라미터로 학습된 몇 버전 모델 아티팩트, 그리고 어떤 가드레일 정책 버전에서 생성되었는지 역추적하여 증명하라'는 명령이 내려왔습니다. 이를 즉각 입증하기 위한 MLOps/LLMOps 거버넌스 인프라는 무엇입니까?
+> **🇺🇸 English Scenario**: [global property & casualty insurance and reinsurance group — End-to-End Lineage Tracking, Model Registry & Auditability] An enterprise operating across millions of historical claim fraud records alongside field loss-adjustment photos, audio transcripts, and complex policy contract PDFs is scaling its AI transformation balancing higher straight-through claims processing against legal mandates requiring deterministic policy arithmetic and documented HITL sign-off on denials. During a regulatory audit, inspectors demand cryptographic proof tracing a specific automated decision made 6 months ago back to the exact S3 dataset snapshot, preprocessing Git commit, training hyperparameters, approved model version, and guardrail configuration active at that timestamp. Which infrastructure satisfies this requirement?  
+> **🇰🇷 한국어 시나리오**: [글로벌 손해보험 및 재보험 언더라이팅 그룹 — 데이터-학습-배포 전 과정의 모델 계보 추적(Lineage Tracking) 및 불변 감사 증적] 귀사는 수백만 건의 과거 보험 사기 적발 이력 테이블과 현장 손해사정 파손 사진·음성 녹취록 및 다국어 보험 약관 PDF 환경에서 엔터프라이즈 AI 전환을 추진하고 있으며, 현재 청구 심사 자동화율(Straight-Through Processing)을 높이되, 지급 거절 시 법적 분쟁 방지를 위해 결정론적 약관 수식 검증과 인간 심사역의 최종 승인(HITL)이 의무화된 환경에 직면해 있습니다. 규제 당국의 정기 감사에서 '6개월 전 특정 날짜에 고객 B씨에게 내려진 자동 심사 판정이 정확히 어떤 버전의 원천 데이터셋(S3 스냅샷), 어떤 전처리 피처 엔지니어링 코드(Git 커밋), 어떤 하이퍼파라미터로 학습된 몇 버전 모델 아티팩트, 그리고 어떤 가드레일 정책 버전에서 생성되었는지 역추적하여 증명하라'는 명령이 내려왔습니다. 이를 즉각 입증하기 위한 MLOps/LLMOps 거버넌스 인프라는 무엇입니까?
 >
 > * **(A)** Overwrite dataset files and model binaries in place on every training run, destroying historical provenance  
 >   *(🇰🇷 모델이 새로 학습될 때마다 이전 버전의 데이터셋과 학습 스크립트, 모델 파일을 디스크에서 즉시 덮어쓰기(Overwrite)하여 과거 기록을 삭제함)*
@@ -1207,12 +1207,12 @@
 >
 > • **핵심 전략 및 정답 도출 근거**: 규제 산업에서 **재현성(Reproducibility)과 감사 추적성(Auditability)**은 생명줄입니다. **Amazon SageMaker Lineage Tracking + Model Registry**를 사용하면 `원천 데이터 버전 ➔ 전처리 파이프라인 ➔ 학습 코드 및 하이퍼파라미터 ➔ 평가 지표 및 거버넌스 승인 이력 ➔ 배포 엔드포인트 및 추론 로그`가 그래프 형태로 자동 연결되어 언제든 100% 역추적이 가능합니다.
 >
-> • **시나리오 제약 조건 부합성 ([글로벌 손해보험 및 언더라이팅 그룹])**: 본 시나리오는 '보험금 지급 거절 시 법적 분쟁 방지를 위해 결정론적 약관 검증과 인간 전문가의 최종 승인(HITL)이 법적으로 의무화된 환경'이라는 복합 제약을 포함하고 있습니다. 따라서 '데이터-학습-배포 전 과정의 모델 계보 추적(Lineage Tracking) 및 불변 감사 증적' 관점에서 단계적 정합성과 리스크 통제를 동시에 만족하는 **(B)**가 유일한 최적해(MOST appropriate strategy)입니다.
+> • **시나리오 제약 조건 부합성 ([글로벌 손해보험 및 재보험 언더라이팅 그룹])**: 본 시나리오는 '청구 심사 자동화율(Straight-Through Processing)을 높이되, 지급 거절 시 법적 분쟁 방지를 위해 결정론적 약관 수식 검증과 인간 심사역의 최종 승인(HITL)이 의무화된 환경'이라는 복합 제약을 포함하고 있습니다. 따라서 '데이터-학습-배포 전 과정의 모델 계보 추적(Lineage Tracking) 및 불변 감사 증적' 관점에서 단계적 정합성과 리스크 통제를 동시에 만족하는 **(B)**가 유일한 최적해(MOST appropriate strategy)입니다.
 >
 > • **매력적인 오답(Distractor) 함정 분석**:
->   - **(A) 오답 분석**: '모델이 새로 학습될 때마다 이전 버전의 데이터셋과 학습 스크립트, 모델 파일을 디스크에서 즉시 덮어쓰기(Overwrite)하여 과거 기록을 삭제함' 접근법은 보험금 지급 거절 시 법적 분쟁 방지를 위해 결정론적 약관 검증과 인간 전문가의 최종 승인(HITL)이 법적으로 의무화된 환경이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
->   - **(C) 오답 분석**: '담당 엔지니어의 개인 기억력에 의존하여 6개월 전 파라미터 값을 구두로 진술하게 함' 접근법은 보험금 지급 거절 시 법적 분쟁 방지를 위해 결정론적 약관 검증과 인간 전문가의 최종 승인(HITL)이 법적으로 의무화된 환경이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
->   - **(D) 오답 분석**: '감사 추적을 피하기 위해 모든 운영 로그의 보관 주기를 1초로 설정하여 생성 즉시 휘발되게 만듦' 접근법은 보험금 지급 거절 시 법적 분쟁 방지를 위해 결정론적 약관 검증과 인간 전문가의 최종 승인(HITL)이 법적으로 의무화된 환경이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
+>   - **(A) 오답 분석**: '모델이 새로 학습될 때마다 이전 버전의 데이터셋과 학습 스크립트, 모델 파일을 디스크에서 즉시 덮어쓰기(Overwrite)하여 과거 기록을 삭제함' 접근법은 청구 심사 자동화율(Straight-Through Processing)을 높이되, 지급 거절 시 법적 분쟁 방지를 위해 결정론적 약관 수식 검증과 인간 심사역의 최종 승인(HITL)이 의무화된 환경이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
+>   - **(C) 오답 분석**: '담당 엔지니어의 개인 기억력에 의존하여 6개월 전 파라미터 값을 구두로 진술하게 함' 접근법은 청구 심사 자동화율(Straight-Through Processing)을 높이되, 지급 거절 시 법적 분쟁 방지를 위해 결정론적 약관 수식 검증과 인간 심사역의 최종 승인(HITL)이 의무화된 환경이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
+>   - **(D) 오답 분석**: '감사 추적을 피하기 위해 모든 운영 로그의 보관 주기를 1초로 설정하여 생성 즉시 휘발되게 만듦' 접근법은 청구 심사 자동화율(Straight-Through Processing)을 높이되, 지급 거절 시 법적 분쟁 방지를 위해 결정론적 약관 수식 검증과 인간 심사역의 최종 승인(HITL)이 의무화된 환경이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
 
 ---
 
@@ -1248,11 +1248,11 @@
 </div>
 </div>
 
-> ### 📝 기출 기반 고난도 실전 문제 (Real Exam Scenario Practice - D3-Q211)
+> ### 📝 기출 기반 고난도 실전 문제 (Real Exam Scenario Practice - D3-Q216)
 >
 > **Q. [Copyright, Intellectual Property (IP) Risk & Indemnification]**  
-> **🇺🇸 English Scenario**: [public health and municipal administration portal — Copyright, Intellectual Property (IP) Risk & Indemnification] An enterprise operating across citizen welfare eligibility records and frequently amended municipal ordinances and administrative statutes is scaling its AI transformation operating under a rigid public budget ceiling while legally obligated to prove fairness and explainability for every civic decision. Marketing and Engineering teams plan to embed AI-generated imagery and code into commercial products. Legal raises two concerns: (Risk 1) third-party copyright infringement claims against AI outputs, and (Risk 2) whether purely AI-generated artifacts enjoy exclusive copyright protection. What is the soundest strategic and legal governance posture?  
-> **🇰🇷 한국어 시나리오**: [공공 보건복지 및 지자체 행정 포털 — 생성형 AI 지적재산권(IP)·저작권 침해 리스크 관리 및 클라우드 면책 보증(Indemnification)] 귀사는 수백만 시민의 복지 급여 자격 심사 데이터와 수시로 개정되는 지방자치 조례 및 행정 법령집 환경에서 엔터프라이즈 AI 전환을 추진하고 있으며, 현재 예산 상한선이 엄격하게 고정되어 있으며 모든 행정 처분에 대해 공정성(Fairness)과 설명 가능성(Explainability)을 시민에게 입증해야 하는 환경에 직면해 있습니다. 마케팅 및 소프트웨어 개발 부서에서 생성형 AI가 만든 이미지와 소스코드 조각을 상용 제품에 포함시키려 합니다. 법무팀은 (리스크 1) 생성된 결과물이 제3자의 기존 저작물이나 오픈소스 라이선스(GPL 등)를 침해하여 소송을 당할 위험과, (리스크 2) 반대로 순수하게 AI가 생성한 산출물에 대해 우리 회사가 배타적 저작권(Copyright)을 주장할 수 있는지에 대한 법률적 가이드라인을 요구합니다. 가장 정확한 거버넌스 판단은 무엇입니까?
+> **🇺🇸 English Scenario**: [global gaming R&D and streaming entertainment studio — Copyright, Intellectual Property (IP) Risk & Indemnification] An enterprise operating across hundreds of thousands of hours of multilingual audiovisual assets, 3D texture libraries, and real-time player telemetry logs is scaling its AI transformation needing to eliminate third-party IP infringement risks via indemnified models, C2PA provenance watermarking, and localized cultural bias auditing. Marketing and Engineering teams plan to embed AI-generated imagery and code into commercial products. Legal raises two concerns: (Risk 1) third-party copyright infringement claims against AI outputs, and (Risk 2) whether purely AI-generated artifacts enjoy exclusive copyright protection. What is the soundest strategic and legal governance posture?  
+> **🇰🇷 한국어 시나리오**: [글로벌 미디어·게임 R&D 및 엔터테인먼트 스튜디오 — 생성형 AI 지적재산권(IP)·저작권 침해 리스크 관리 및 클라우드 면책 보증(Indemnification)] 귀사는 수십만 시간의 다국어 영상·음성 에셋, 3D 그래픽 텍스처 라이브러리, 실시간 게이머 매치메이킹 및 이탈(Churn) 원격 로그 환경에서 엔터프라이즈 AI 전환을 추진하고 있으며, 현재 생성형 AI 에셋 제작 시 제3자 저작권(IP) 침해 리스크를 원천 차단하고 디지털 워터마킹(C2PA) 출처 증명과 지역별 문화적 편향 제거를 보장해야 하는 상황에 직면해 있습니다. 마케팅 및 소프트웨어 개발 부서에서 생성형 AI가 만든 이미지와 소스코드 조각을 상용 제품에 포함시키려 합니다. 법무팀은 (리스크 1) 생성된 결과물이 제3자의 기존 저작물이나 오픈소스 라이선스(GPL 등)를 침해하여 소송을 당할 위험과, (리스크 2) 반대로 순수하게 AI가 생성한 산출물에 대해 우리 회사가 배타적 저작권(Copyright)을 주장할 수 있는지에 대한 법률적 가이드라인을 요구합니다. 가장 정확한 거버넌스 판단은 무엇입니까?
 >
 > * **(A)** Fine-tune models on pirated datasets while disabling safety filters, expecting cloud vendors to indemnify intentional infringement  
 >   *(🇰🇷 인터넷에서 크롤링된 출처 불명의 불법 복제 데이터셋으로 모델을 직접 파인튜닝한 뒤 AWS에 모든 저작권 소송 비용을 대신 내라고 요구함)*
@@ -1270,12 +1270,12 @@
 > 1) **인바운드/아웃바운드 침해 방어**: 비인가 저작물을 학습 데이터에 쓰지 않고, **클라우드 벤더의 저작권 면책(AWS IP Indemnification)** 대상 모델(Amazon Nova/Titan, Amazon Q 등)을 **가드레일/보안 필터를 켠 상태로** 정상 사용하여 법적 보호막을 확보합니다(Amazon Q Developer의 오픈소스 라이선스 Reference Tracking 포함).
 > 2) **생성물 권리 확보**: 미국 저작권청 등 주요 법역에서 '인간의 창작적 기여(Human Authorship)'가 없는 순수 AI 생성물은 저작권 보호가 부인될 수 있으므로, 핵심 자산은 인간의 수정·편집·설계 개입 과정을 기록해야 합니다.
 >
-> • **시나리오 제약 조건 부합성 ([공공 보건복지 및 지자체 행정 포털])**: 본 시나리오는 '예산 상한선이 엄격하게 고정되어 있으며 모든 행정 처분에 대해 공정성(Fairness)과 설명 가능성(Explainability)을 시민에게 입증해야 하는 환경'이라는 복합 제약을 포함하고 있습니다. 따라서 '생성형 AI 지적재산권(IP)·저작권 침해 리스크 관리 및 클라우드 면책 보증(Indemnification)' 관점에서 단계적 정합성과 리스크 통제를 동시에 만족하는 **(D)**가 유일한 최적해(MOST appropriate strategy)입니다.
+> • **시나리오 제약 조건 부합성 ([글로벌 미디어·게임 R&D 및 엔터테인먼트 스튜디오])**: 본 시나리오는 '생성형 AI 에셋 제작 시 제3자 저작권(IP) 침해 리스크를 원천 차단하고 디지털 워터마킹(C2PA) 출처 증명과 지역별 문화적 편향 제거를 보장해야 하는 상황'이라는 복합 제약을 포함하고 있습니다. 따라서 '생성형 AI 지적재산권(IP)·저작권 침해 리스크 관리 및 클라우드 면책 보증(Indemnification)' 관점에서 단계적 정합성과 리스크 통제를 동시에 만족하는 **(D)**가 유일한 최적해(MOST appropriate strategy)입니다.
 >
 > • **매력적인 오답(Distractor) 함정 분석**:
->   - **(A) 오답 분석**: '인터넷에서 크롤링된 출처 불명의 불법 복제 데이터셋으로 모델을 직접 파인튜닝한 뒤 AWS에 모든 저작권 소송 비용을 대신 내라고 요구함' 접근법은 예산 상한선이 엄격하게 고정되어 있으며 모든 행정 처분에 대해 공정성(Fairness)과 설명 가능성(Explainability)을 시민에게 입증해야 하는 환경이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
->   - **(B) 오답 분석**: '오픈소스 코드 참조 추적(Reference Tracking) 기능을 끄고 GPL 전염성 라이선스 코드를 상용 독점 소프트웨어에 무단 복제하여 배포함' 접근법은 예산 상한선이 엄격하게 고정되어 있으며 모든 행정 처분에 대해 공정성(Fairness)과 설명 가능성(Explainability)을 시민에게 입증해야 하는 환경이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
->   - **(C) 오답 분석**: '프롬프트에 단어 한 개만 입력해 AI가 100% 자동 생성한 모든 결과물에 대해 전 세계 특허청과 저작권위원회에서 무조건 100년 독점권이 자동 부여된다고 가정함' 접근법은 예산 상한선이 엄격하게 고정되어 있으며 모든 행정 처분에 대해 공정성(Fairness)과 설명 가능성(Explainability)을 시민에게 입증해야 하는 환경이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
+>   - **(A) 오답 분석**: '인터넷에서 크롤링된 출처 불명의 불법 복제 데이터셋으로 모델을 직접 파인튜닝한 뒤 AWS에 모든 저작권 소송 비용을 대신 내라고 요구함' 접근법은 생성형 AI 에셋 제작 시 제3자 저작권(IP) 침해 리스크를 원천 차단하고 디지털 워터마킹(C2PA) 출처 증명과 지역별 문화적 편향 제거를 보장해야 하는 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
+>   - **(B) 오답 분석**: '오픈소스 코드 참조 추적(Reference Tracking) 기능을 끄고 GPL 전염성 라이선스 코드를 상용 독점 소프트웨어에 무단 복제하여 배포함' 접근법은 생성형 AI 에셋 제작 시 제3자 저작권(IP) 침해 리스크를 원천 차단하고 디지털 워터마킹(C2PA) 출처 증명과 지역별 문화적 편향 제거를 보장해야 하는 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
+>   - **(C) 오답 분석**: '프롬프트에 단어 한 개만 입력해 AI가 100% 자동 생성한 모든 결과물에 대해 전 세계 특허청과 저작권위원회에서 무조건 100년 독점권이 자동 부여된다고 가정함' 접근법은 생성형 AI 에셋 제작 시 제3자 저작권(IP) 침해 리스크를 원천 차단하고 디지털 워터마킹(C2PA) 출처 증명과 지역별 문화적 편향 제거를 보장해야 하는 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
 
 ---
 ### 3.23 데이터 중독(Data Poisoning) 및 외부 모델 공급망(Supply Chain) 보안 위협 차단 (Data Poisoning, Model Supply Chain Security & Model Provenance)
@@ -1306,11 +1306,11 @@
 </div>
 </div>
 
-> ### 📝 기출 기반 고난도 실전 문제 (Real Exam Scenario Practice - D3-Q221)
+> ### 📝 기출 기반 고난도 실전 문제 (Real Exam Scenario Practice - D3-Q227)
 >
 > **Q. [Data Poisoning, Model Supply Chain Security & Model Provenance]**  
-> **🇺🇸 English Scenario**: [multinational pharmaceutical and clinical research organization — Data Poisoning, Model Supply Chain Security & Model Provenance] An enterprise operating across massive genomic tabular datasets alongside clinical trial protocol PDFs and patient adverse-event narratives is scaling its AI transformation operating under strict FDA/EMA audit mandates requiring full provenance traceability and zero tolerance for medical hallucinations. A security review flags two dangerous practices: (Scenario A) an automated pipeline scrapes unverified public forum comments directly into the enterprise fine-tuning and RAG corpus every week; (Scenario B) a developer downloads an unsigned third-party model weight file (`.pkl`) from a public internet repository onto internal servers. What are these threats, and how must they be mitigated?  
-> **🇰🇷 한국어 시나리오**: [다국적 제약사 및 임상 연구 기관 — 데이터 중독(Data Poisoning) 및 외부 모델 공급망(Supply Chain) 보안 위협 차단] 귀사는 방대한 유전체 시퀀싱 정형 데이터와 임상 시험 프로토콜 PDF 및 환자 부작용 의무기록 환경에서 엔터프라이즈 AI 전환을 추진하고 있으며, 현재 FDA/EMA 규제 감사에 대비해 모든 예측 근거를 역추적해야 하며 단 한 건의 의학적 환각(Hallucination)도 허용되지 않는 고위험 환경에 직면해 있습니다. 기업이 (시나리오 A) 외부 공개 포럼의 사용자 댓글과 위키 문서를 검증 없이 매주 자동 크롤링하여 RAG 지식 베이스와 파인튜닝 파이프라인에 자동 반영하고 있으며, (시나리오 B) 개발자가 외부 공개 모델 허브에서 출처가 불분명한 서드파티 파인튜닝 가중치 파일(`.pkl` / 피클 파일)을 다운로드해 사내 서버에 직접 로드하려 합니다. 각 시나리오가 초래하는 치명적 보안 위협과 방어 대책은 무엇입니까?
+> **🇺🇸 English Scenario**: [global wholesale distribution and cold-chain logistics provider — Data Poisoning, Model Supply Chain Security & Model Provenance] An enterprise operating across refrigerated container temperature telemetry, tens of thousands of SKU warehouse management (WMS) ledgers, and multilingual customs/Bills of Lading documents is scaling its AI transformation tasked with minimizing perishable inventory spoilage and routing delays across global warehouses under an aggressive 6-week TTM mandate with limited internal ML staff. A security review flags two dangerous practices: (Scenario A) an automated pipeline scrapes unverified public forum comments directly into the enterprise fine-tuning and RAG corpus every week; (Scenario B) a developer downloads an unsigned third-party model weight file (`.pkl`) from a public internet repository onto internal servers. What are these threats, and how must they be mitigated?  
+> **🇰🇷 한국어 시나리오**: [글로벌 도소매 유통 및 콜드체인 물류(Distribution & Cold-Chain) 기업 — 데이터 중독(Data Poisoning) 및 외부 모델 공급망(Supply Chain) 보안 위협 차단] 귀사는 신선식품·의약품 냉장 컨테이너 온도/습도 원격 텔레메트리, 수만 개 SKU 입출고(WMS) 원장, 다국어 통관·선하증권(B/L) 문서 환경에서 엔터프라이즈 AI 전환을 추진하고 있으며, 현재 유통기한 임박 상품의 폐기 손실률(Spoilage)을 낮추고 리드타임 변동성에 실시간 대응해야 하며, 전담 데이터 과학자가 부족해 6주 내에 현업 물류센터에 솔루션을 배포(Fast TTM)해야 하는 상황에 직면해 있습니다. 기업이 (시나리오 A) 외부 공개 포럼의 사용자 댓글과 위키 문서를 검증 없이 매주 자동 크롤링하여 RAG 지식 베이스와 파인튜닝 파이프라인에 자동 반영하고 있으며, (시나리오 B) 개발자가 외부 공개 모델 허브에서 출처가 불분명한 서드파티 파인튜닝 가중치 파일(`.pkl` / 피클 파일)을 다운로드해 사내 서버에 직접 로드하려 합니다. 각 시나리오가 초래하는 치명적 보안 위협과 방어 대책은 무엇입니까?
 >
 > * **(A)** Treat all anonymous internet comments as verified ground truth and automatically fine-tune production underwriting models on them  
 >   *(🇰🇷 외부 인터넷의 모든 익명 댓글은 100% 진실이므로 아무런 필터링 없이 금융 심사 모델의 정답 레이블로 즉시 자동 학습시킴)*
@@ -1326,12 +1326,12 @@
 >
 > • **핵심 전략 및 정답 도출 근거**: AI 보안에서는 추론 단계의 프롬프트 인젝션뿐 아니라 **학습/데이터 파이프라인 단계의 데이터 중독(Data Poisoning / Backdoor Trigger Injection)**과 **외부 오픈소스 모델 가중치 반입 시의 AI 공급망 보안(AI Supply Chain Security / AI BOM)**이 매우 중요합니다. 검증되지 않은 외부 크롤링 데이터는 반드시 **데이터 무결성 검증·독성/이상치 필터링 및 인간 승인**을 거쳐야 하며, 모델 아티팩트는 **신뢰할 수 있는 프라이빗 레지스트리와 서명 검증**을 통과해야 합니다.
 >
-> • **시나리오 제약 조건 부합성 ([다국적 제약사 및 임상 연구 기관])**: 본 시나리오는 'FDA/EMA 규제 감사에 대비해 모든 예측 근거를 역추적해야 하며 단 한 건의 의학적 환각(Hallucination)도 허용되지 않는 고위험 환경'이라는 복합 제약을 포함하고 있습니다. 따라서 '데이터 중독(Data Poisoning) 및 외부 모델 공급망(Supply Chain) 보안 위협 차단' 관점에서 단계적 정합성과 리스크 통제를 동시에 만족하는 **(B)**가 유일한 최적해(MOST appropriate strategy)입니다.
+> • **시나리오 제약 조건 부합성 ([글로벌 도소매 유통 및 콜드체인 물류(Distribution & Cold-Chain) 기업])**: 본 시나리오는 '유통기한 임박 상품의 폐기 손실률(Spoilage)을 낮추고 리드타임 변동성에 실시간 대응해야 하며, 전담 데이터 과학자가 부족해 6주 내에 현업 물류센터에 솔루션을 배포(Fast TTM)해야 하는 상황'이라는 복합 제약을 포함하고 있습니다. 따라서 '데이터 중독(Data Poisoning) 및 외부 모델 공급망(Supply Chain) 보안 위협 차단' 관점에서 단계적 정합성과 리스크 통제를 동시에 만족하는 **(B)**가 유일한 최적해(MOST appropriate strategy)입니다.
 >
 > • **매력적인 오답(Distractor) 함정 분석**:
->   - **(A) 오답 분석**: '외부 인터넷의 모든 익명 댓글은 100% 진실이므로 아무런 필터링 없이 금융 심사 모델의 정답 레이블로 즉시 자동 학습시킴' 접근법은 FDA/EMA 규제 감사에 대비해 모든 예측 근거를 역추적해야 하며 단 한 건의 의학적 환각(Hallucination)도 허용되지 않는 고위험 환경이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
->   - **(C) 오답 분석**: '출처 불명의 `.pkl` 모델 파일이라도 파일 이름에 'Safe'라고 적혀 있으면 백신 검사나 샌드박스 격리 없이 운영 DB 서버에서 루트 권한으로 실행함' 접근법은 FDA/EMA 규제 감사에 대비해 모든 예측 근거를 역추적해야 하며 단 한 건의 의학적 환각(Hallucination)도 허용되지 않는 고위험 환경이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
->   - **(D) 오답 분석**: '공급망 보안을 위해 사내 개발자들이 작성한 정상적인 자체 코드까지 모두 삭제하고 컴퓨터 사용을 금지함' 접근법은 FDA/EMA 규제 감사에 대비해 모든 예측 근거를 역추적해야 하며 단 한 건의 의학적 환각(Hallucination)도 허용되지 않는 고위험 환경이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
+>   - **(A) 오답 분석**: '외부 인터넷의 모든 익명 댓글은 100% 진실이므로 아무런 필터링 없이 금융 심사 모델의 정답 레이블로 즉시 자동 학습시킴' 접근법은 유통기한 임박 상품의 폐기 손실률(Spoilage)을 낮추고 리드타임 변동성에 실시간 대응해야 하며, 전담 데이터 과학자가 부족해 6주 내에 현업 물류센터에 솔루션을 배포(Fast TTM)해야 하는 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
+>   - **(C) 오답 분석**: '출처 불명의 `.pkl` 모델 파일이라도 파일 이름에 'Safe'라고 적혀 있으면 백신 검사나 샌드박스 격리 없이 운영 DB 서버에서 루트 권한으로 실행함' 접근법은 유통기한 임박 상품의 폐기 손실률(Spoilage)을 낮추고 리드타임 변동성에 실시간 대응해야 하며, 전담 데이터 과학자가 부족해 6주 내에 현업 물류센터에 솔루션을 배포(Fast TTM)해야 하는 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
+>   - **(D) 오답 분석**: '공급망 보안을 위해 사내 개발자들이 작성한 정상적인 자체 코드까지 모두 삭제하고 컴퓨터 사용을 금지함' 접근법은 유통기한 임박 상품의 폐기 손실률(Spoilage)을 낮추고 리드타임 변동성에 실시간 대응해야 하며, 전담 데이터 과학자가 부족해 6주 내에 현업 물류센터에 솔루션을 배포(Fast TTM)해야 하는 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
 
 ---
 ### 3.24 자율 AI 에이전트의 과도한 대리 권한(Excessive Agency) 통제 및 최소 권한 원칙(PoLP) (Agentic Tool-Use Governance & Principle of Least Privilege (PoLP))
@@ -1362,11 +1362,11 @@
 </div>
 </div>
 
-> ### 📝 기출 기반 고난도 실전 문제 (Real Exam Scenario Practice - D3-Q231)
+> ### 📝 기출 기반 고난도 실전 문제 (Real Exam Scenario Practice - D3-Q238)
 >
 > **Q. [Agentic Tool-Use Governance & Principle of Least Privilege (PoLP)]**  
-> **🇺🇸 English Scenario**: [enterprise B2B cloud security SaaS provider — Agentic Tool-Use Governance & Principle of Least Privilege (PoLP)] An enterprise operating across customer SIEM security telemetry and zero-day vulnerability advisories updated hundreds of times weekly is scaling its AI transformation requiring strict multi-tenant data isolation and real-time grounding on vulnerability advisories without daily model retraining. To speed up customer issue resolution, an autonomous AI agent was granted an unrestricted Administrator IAM role with full Read/Write/Delete permissions across the entire corporate ERP and customer database. How should the AI Strategist remediate this 'Excessive Agency' vulnerability?  
-> **🇰🇷 한국어 시나리오**: [엔터프라이즈 B2B 클라우드 보안 SaaS 기업 — 자율 AI 에이전트의 과도한 대리 권한(Excessive Agency) 통제 및 최소 권한 원칙(PoLP)] 귀사는 고객사 보안 관제 이벤트(SIEM) 로그와 매주 수백 건씩 개정되는 제로데이 취약점 기술 문서 환경에서 엔터프라이즈 AI 전환을 추진하고 있으며, 현재 멀티테넌트 환경에서 고객사 간 데이터 혼입(Cross-tenant leakage)을 원천 차단하고 최신 보안 패치 정보를 실시간 반영해야 하는 상황에 직면해 있습니다. 고객 지원 자율 AI 에이전트에게 고객 문의를 신속히 해결하라는 목적으로 사내 전체 ERP 및 고객 데이터베이스에 대한 '읽기/쓰기/삭제 무제한 관리자 권한(Admin IAM Role)'을 부여했습니다. 만약 이 에이전트가 환각을 일으키거나 프롬프트 인젝션 공격을 당할 경우 전체 고객 테이블 삭제나 무제한 현금 환불 같은 대형 참사가 발생할 수 있습니다. OWASP Top 10 for LLM의 '과도한 대리 권한(Excessive Agency)' 위험을 통제하는 아키텍처는 무엇입니까?
+> **🇺🇸 English Scenario**: [energy generation and smart grid utility corporation — Agentic Tool-Use Governance & Principle of Least Privilege (PoLP)] An enterprise operating across renewable turbine SCADA sensor streams, real-time wholesale power grid demand logs, drone inspection imagery, and environmental compliance manuals is scaling its AI transformation operating critical national infrastructure where grid forecasting or equipment failures risk blackouts, demanding 99.99% availability and instant fail-safe mechanisms. To speed up customer issue resolution, an autonomous AI agent was granted an unrestricted Administrator IAM role with full Read/Write/Delete permissions across the entire corporate ERP and customer database. How should the AI Strategist remediate this 'Excessive Agency' vulnerability?  
+> **🇰🇷 한국어 시나리오**: [에너지·발전 및 스마트 그리드 유틸리티 기업 — 자율 AI 에이전트의 과도한 대리 권한(Excessive Agency) 통제 및 최소 권한 원칙(PoLP)] 귀사는 풍력·태양광 발전 단지 SCADA 센서 스트림, 전력 도매시장 실시간 수요 데이터, 발전 설비 안전 점검 드론 영상 및 환경 규제 문서 환경에서 엔터프라이즈 AI 전환을 추진하고 있으며, 현재 전력망 과부하 예측 실패나 설비 고장 시 대규모 정전 사태가 발생하므로 99.99% 가용성과 비상시 즉각적인 안전 차단(Kill-Switch/Fallback)이 최우선인 핵심 인프라 환경에 직면해 있습니다. 고객 지원 자율 AI 에이전트에게 고객 문의를 신속히 해결하라는 목적으로 사내 전체 ERP 및 고객 데이터베이스에 대한 '읽기/쓰기/삭제 무제한 관리자 권한(Admin IAM Role)'을 부여했습니다. 만약 이 에이전트가 환각을 일으키거나 프롬프트 인젝션 공격을 당할 경우 전체 고객 테이블 삭제나 무제한 현금 환불 같은 대형 참사가 발생할 수 있습니다. OWASP Top 10 for LLM의 '과도한 대리 권한(Excessive Agency)' 위험을 통제하는 아키텍처는 무엇입니까?
 >
 > * **(A)** Grant the AI agent full AWS Root Account credentials so it can also delete cloud infrastructure autonomously  
 >   *(🇰🇷 에이전트의 자율성을 높이기 위해 관리자 권한에 더해 클라우드 루트 계정(Root Account) 결제 및 인프라 삭제 권한까지 추가로 부여함)*
@@ -1382,12 +1382,12 @@
 >
 > • **핵심 전략 및 정답 도출 근거**: 자율 에이전트 보안의 제1원칙은 **'프롬프트 지시문은 보안 경계(Security Boundary)가 될 수 없다'**는 것입니다. 에이전트가 탈옥당하더라도 물리적으로 피해가 발생할 수 없도록 **백엔드 API/Lambda 및 IAM 수준에서 최소 권한 원칙(Least Privilege), 사용자 신원 컨텍스트 전파(Session/Identity Scoping), 결정론적 한도 검증(예: $100 초과 환불 불가), 고위험 액션 인간 승인(Return of Control)**을 강제해야 합니다.
 >
-> • **시나리오 제약 조건 부합성 ([엔터프라이즈 B2B 클라우드 보안 SaaS 기업])**: 본 시나리오는 '멀티테넌트 환경에서 고객사 간 데이터 혼입(Cross-tenant leakage)을 원천 차단하고 최신 보안 패치 정보를 실시간 반영해야 하는 상황'이라는 복합 제약을 포함하고 있습니다. 따라서 '자율 AI 에이전트의 과도한 대리 권한(Excessive Agency) 통제 및 최소 권한 원칙(PoLP)' 관점에서 단계적 정합성과 리스크 통제를 동시에 만족하는 **(D)**가 유일한 최적해(MOST appropriate strategy)입니다.
+> • **시나리오 제약 조건 부합성 ([에너지·발전 및 스마트 그리드 유틸리티 기업])**: 본 시나리오는 '전력망 과부하 예측 실패나 설비 고장 시 대규모 정전 사태가 발생하므로 99.99% 가용성과 비상시 즉각적인 안전 차단(Kill-Switch/Fallback)이 최우선인 핵심 인프라 환경'이라는 복합 제약을 포함하고 있습니다. 따라서 '자율 AI 에이전트의 과도한 대리 권한(Excessive Agency) 통제 및 최소 권한 원칙(PoLP)' 관점에서 단계적 정합성과 리스크 통제를 동시에 만족하는 **(D)**가 유일한 최적해(MOST appropriate strategy)입니다.
 >
 > • **매력적인 오답(Distractor) 함정 분석**:
->   - **(A) 오답 분석**: '에이전트의 자율성을 높이기 위해 관리자 권한에 더해 클라우드 루트 계정(Root Account) 결제 및 인프라 삭제 권한까지 추가로 부여함' 접근법은 멀티테넌트 환경에서 고객사 간 데이터 혼입(Cross-tenant leakage)을 원천 차단하고 최신 보안 패치 정보를 실시간 반영해야 하는 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
->   - **(B) 오답 분석**: '권한은 그대로 무제한 관리자 상태로 두고, 시스템 프롬프트에 '절대 나쁜 짓이나 실수를 하지 마세요'라는 문장 한 줄만 추가함' 접근법은 멀티테넌트 환경에서 고객사 간 데이터 혼입(Cross-tenant leakage)을 원천 차단하고 최신 보안 패치 정보를 실시간 반영해야 하는 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
->   - **(C) 오답 분석**: '보안을 위해 에이전트가 읽기 전용(Read-Only) 공개 FAQ 문서조차 조회하지 못하도록 모든 네트워크를 차단함' 접근법은 멀티테넌트 환경에서 고객사 간 데이터 혼입(Cross-tenant leakage)을 원천 차단하고 최신 보안 패치 정보를 실시간 반영해야 하는 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
+>   - **(A) 오답 분석**: '에이전트의 자율성을 높이기 위해 관리자 권한에 더해 클라우드 루트 계정(Root Account) 결제 및 인프라 삭제 권한까지 추가로 부여함' 접근법은 전력망 과부하 예측 실패나 설비 고장 시 대규모 정전 사태가 발생하므로 99.99% 가용성과 비상시 즉각적인 안전 차단(Kill-Switch/Fallback)이 최우선인 핵심 인프라 환경이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
+>   - **(B) 오답 분석**: '권한은 그대로 무제한 관리자 상태로 두고, 시스템 프롬프트에 '절대 나쁜 짓이나 실수를 하지 마세요'라는 문장 한 줄만 추가함' 접근법은 전력망 과부하 예측 실패나 설비 고장 시 대규모 정전 사태가 발생하므로 99.99% 가용성과 비상시 즉각적인 안전 차단(Kill-Switch/Fallback)이 최우선인 핵심 인프라 환경이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
+>   - **(C) 오답 분석**: '보안을 위해 에이전트가 읽기 전용(Read-Only) 공개 FAQ 문서조차 조회하지 못하도록 모든 네트워크를 차단함' 접근법은 전력망 과부하 예측 실패나 설비 고장 시 대규모 정전 사태가 발생하므로 99.99% 가용성과 비상시 즉각적인 안전 차단(Kill-Switch/Fallback)이 최우선인 핵심 인프라 환경이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
 
 ---
 ### 3.25 AI 보안·윤리 사고 발생 시 표준 사고 대응 프로토콜(Incident Response Playbook) 실행 순서 (AI Incident Response SOP (Isolate, Preserve, Notify, Remediate))
@@ -1418,11 +1418,11 @@
 </div>
 </div>
 
-> ### 📝 기출 기반 고난도 실전 문제 (Real Exam Scenario Practice - D3-Q241)
+> ### 📝 기출 기반 고난도 실전 문제 (Real Exam Scenario Practice - D3-Q249)
 >
 > **Q. [AI Incident Response SOP (Isolate, Preserve, Notify, Remediate)]**  
-> **🇺🇸 English Scenario**: [global investment bank and wealth management firm — AI Incident Response SOP (Isolate, Preserve, Notify, Remediate)] An enterprise operating across real-time derivatives trading logs and tens of thousands of multilingual regulatory compliance filings is scaling its AI transformation where the CFO demands immediate quarterly TCO reduction while the CISO enforces zero external data egress and 100% audit traceability. Monitoring alerts indicate a live AI advisory system is leaking sensitive customer PII and internal underwriting logic when triggered by specific prompt patterns. What is the correct chronological Incident Response Standard Operating Procedure (SOP) the organization must execute?  
-> **🇰🇷 한국어 시나리오**: [글로벌 투자은행 및 자산운용사 — AI 보안·윤리 사고 발생 시 표준 사고 대응 프로토콜(Incident Response Playbook) 실행 순서] 귀사는 실시간 파생상품 거래 로그와 수만 건의 다국어 금융 규제 준수 보고서 환경에서 엔터프라이즈 AI 전환을 추진하고 있으며, 현재 CFO는 분기 내 즉각적인 TCO 절감을 요구하고, CISO는 고객 금융 데이터의 외부 반출 절대 금지 및 100% 감사 추적성을 강제하는 상황에 직면해 있습니다. 운영 중인 생성형 AI 채용·대출 자문 시스템에서 특정 조건의 프롬프트 입력 시 타 고객의 민감 개인정보와 내부 심사 기준이 외부로 유출되는 심각한 보안/규제 사고가 탐지되었습니다. 피해 확산을 막고 규제 당국(GDPR/개인정보보호위원회 등)의 법정 보고 의무를 준수하며 재발을 방지하기 위해 AI 사고 대응팀이 수행해야 할 올바른 단계별 조치(SOP)는 무엇입니까?
+> **🇺🇸 English Scenario**: [biotech and novel drug discovery enterprise — AI Incident Response SOP (Isolate, Preserve, Notify, Remediate)] An enterprise operating across protein structure simulations, multi-omics sequencing datasets, Phase I–III clinical trial protocols, and FDA/EMA regulatory dossiers is scaling its AI transformation needing to accelerate drug target discovery while enforcing strict GxP/FDA audit traceability, patient data de-identification, and zero medical hallucinations. Monitoring alerts indicate a live AI advisory system is leaking sensitive customer PII and internal underwriting logic when triggered by specific prompt patterns. What is the correct chronological Incident Response Standard Operating Procedure (SOP) the organization must execute?  
+> **🇰🇷 한국어 시나리오**: [바이오테크 및 신약개발(Bio/Pharma R&D) 기업 — AI 보안·윤리 사고 발생 시 표준 사고 대응 프로토콜(Incident Response Playbook) 실행 순서] 귀사는 단백질 3D 구조 시뮬레이션·유전체(Genomics) 시퀀싱 데이터와 임상 1~3상 시험 프로토콜 및 FDA/EMA 인허가 문서 환경에서 엔터프라이즈 AI 전환을 추진하고 있으며, 현재 신약 후보물질 발굴(Target Identification) 기간을 단축해야 하나 GxP/FDA 감사 추적성(Audit Trail)과 임상 환자 데이터의 완벽한 비식별화 및 의학적 환각 제로화가 강제되는 상황에 직면해 있습니다. 운영 중인 생성형 AI 채용·대출 자문 시스템에서 특정 조건의 프롬프트 입력 시 타 고객의 민감 개인정보와 내부 심사 기준이 외부로 유출되는 심각한 보안/규제 사고가 탐지되었습니다. 피해 확산을 막고 규제 당국(GDPR/개인정보보호위원회 등)의 법정 보고 의무를 준수하며 재발을 방지하기 위해 AI 사고 대응팀이 수행해야 할 올바른 단계별 조치(SOP)는 무엇입니까?
 >
 > * **(A)** Step 1: Delete all server logs to destroy evidence ➔ Step 2: Issue public denials ➔ Step 3: Keep the leaking endpoint live  
 >   *(🇰🇷 1단계: 증거 인멸을 위해 모든 서버 로그를 즉시 삭제 ➔ 2단계: 언론과 규제 기관에 유출 사실을 전면 부인 ➔ 3단계: 취약점 수정 없이 시스템 계속 가동)*
@@ -1438,12 +1438,12 @@
 >
 > • **핵심 전략 및 정답 도출 근거**: AI 사고 대응 플레이북(Incident Response SOP)은 **즉각적 피해 차단(Containment/Kill-Switch) ➔ 포렌식 로그 보존(Preservation - 절대 로그를 먼저 지우면 안 됨!) ➔ 법무/CISO 주도의 영향 범위 산정 및 법정 기한 내 규제 당국·정보주체 통지(Notification) ➔ 근본 원인 제거(Guardrails/데이터 정제) 및 레드팀 검증 후 복구(Remediation & Recovery)**의 엄격한 순서를 따릅니다.
 >
-> • **시나리오 제약 조건 부합성 ([글로벌 투자은행 및 자산운용사])**: 본 시나리오는 'CFO는 분기 내 즉각적인 TCO 절감을 요구하고, CISO는 고객 금융 데이터의 외부 반출 절대 금지 및 100% 감사 추적성을 강제하는 상황'이라는 복합 제약을 포함하고 있습니다. 따라서 'AI 보안·윤리 사고 발생 시 표준 사고 대응 프로토콜(Incident Response Playbook) 실행 순서' 관점에서 단계적 정합성과 리스크 통제를 동시에 만족하는 **(B)**가 유일한 최적해(MOST appropriate strategy)입니다.
+> • **시나리오 제약 조건 부합성 ([바이오테크 및 신약개발(Bio/Pharma R&D) 기업])**: 본 시나리오는 '신약 후보물질 발굴(Target Identification) 기간을 단축해야 하나 GxP/FDA 감사 추적성(Audit Trail)과 임상 환자 데이터의 완벽한 비식별화 및 의학적 환각 제로화가 강제되는 상황'이라는 복합 제약을 포함하고 있습니다. 따라서 'AI 보안·윤리 사고 발생 시 표준 사고 대응 프로토콜(Incident Response Playbook) 실행 순서' 관점에서 단계적 정합성과 리스크 통제를 동시에 만족하는 **(B)**가 유일한 최적해(MOST appropriate strategy)입니다.
 >
 > • **매력적인 오답(Distractor) 함정 분석**:
->   - **(A) 오답 분석**: '1단계: 증거 인멸을 위해 모든 서버 로그를 즉시 삭제 ➔ 2단계: 언론과 규제 기관에 유출 사실을 전면 부인 ➔ 3단계: 취약점 수정 없이 시스템 계속 가동' 접근법은 CFO는 분기 내 즉각적인 TCO 절감을 요구하고, CISO는 고객 금융 데이터의 외부 반출 절대 금지 및 100% 감사 추적성을 강제하는 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
->   - **(C) 오답 분석**: '1단계: 엔드포인트를 켜둔 채로 6개월간 원인 분석 보고서 작성 ➔ 2단계: 보고서 완성 후 가드레일 패치 ➔ 3단계: 피해자 통지 생략' 접근법은 CFO는 분기 내 즉각적인 TCO 절감을 요구하고, CISO는 고객 금융 데이터의 외부 반출 절대 금지 및 100% 감사 추적성을 강제하는 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
->   - **(D) 오답 분석**: '1단계: 사고를 발견한 내부 제보 직원을 해고 ➔ 2단계: 모니터링 알람 시스템을 영구 제거하여 추가 사고가 탐지되지 않게 함' 접근법은 CFO는 분기 내 즉각적인 TCO 절감을 요구하고, CISO는 고객 금융 데이터의 외부 반출 절대 금지 및 100% 감사 추적성을 강제하는 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
+>   - **(A) 오답 분석**: '1단계: 증거 인멸을 위해 모든 서버 로그를 즉시 삭제 ➔ 2단계: 언론과 규제 기관에 유출 사실을 전면 부인 ➔ 3단계: 취약점 수정 없이 시스템 계속 가동' 접근법은 신약 후보물질 발굴(Target Identification) 기간을 단축해야 하나 GxP/FDA 감사 추적성(Audit Trail)과 임상 환자 데이터의 완벽한 비식별화 및 의학적 환각 제로화가 강제되는 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
+>   - **(C) 오답 분석**: '1단계: 엔드포인트를 켜둔 채로 6개월간 원인 분석 보고서 작성 ➔ 2단계: 보고서 완성 후 가드레일 패치 ➔ 3단계: 피해자 통지 생략' 접근법은 신약 후보물질 발굴(Target Identification) 기간을 단축해야 하나 GxP/FDA 감사 추적성(Audit Trail)과 임상 환자 데이터의 완벽한 비식별화 및 의학적 환각 제로화가 강제되는 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
+>   - **(D) 오답 분석**: '1단계: 사고를 발견한 내부 제보 직원을 해고 ➔ 2단계: 모니터링 알람 시스템을 영구 제거하여 추가 사고가 탐지되지 않게 함' 접근법은 신약 후보물질 발굴(Target Identification) 기간을 단축해야 하나 GxP/FDA 감사 추적성(Audit Trail)과 임상 환자 데이터의 완벽한 비식별화 및 의학적 환각 제로화가 강제되는 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
 
 ---
 ### 3.26 금지된 주제(Denied Topics) 정책을 통한 무자격 자문 및 브랜드 평판 리스크 원천 차단 (Denied Topics & Brand Reputation Protection)
@@ -1474,11 +1474,11 @@
 </div>
 </div>
 
-> ### 📝 기출 기반 고난도 실전 문제 (Real Exam Scenario Practice - D3-Q251)
+> ### 📝 기출 기반 고난도 실전 문제 (Real Exam Scenario Practice - D3-Q260)
 >
 > **Q. [Denied Topics & Brand Reputation Protection]**  
-> **🇺🇸 English Scenario**: [advanced semiconductor foundry and smart manufacturing enterprise — Denied Topics & Brand Reputation Protection] An enterprise operating across high-frequency cleanroom lithography IoT sensor streams and semiconductor process troubleshooting manuals is scaling its AI transformation where unplanned downtime costs millions per hour, demanding real-time edge anomaly detection and strict air-gapped IP isolation. Customers frequently ask a retail banking support chatbot for speculative stock picks, tax evasion tips, and comparisons praising competitor banks. Relying on system prompt instructions alone fails when users rephrase queries cleverly. Which control deterministically blocks these conversations?  
-> **🇰🇷 한국어 시나리오**: [첨단 반도체 파운드리 및 스마트 팩토리 — 금지된 주제(Denied Topics) 정책을 통한 무자격 자문 및 브랜드 평판 리스크 원천 차단] 귀사는 클린룸 노광 장비의 초당 수만 건 IoT 진동·온도 센서 스트림과 공정 엔지니어 트러블슈팅 매뉴얼 환경에서 엔터프라이즈 AI 전환을 추진하고 있으며, 현재 공정 중단 시 시간당 수십억 원의 손실이 발생하므로 엣지(Edge) 단의 실시간 이상 탐지와 핵심 공정 IP의 폐쇄망 격리가 필수적인 상황에 직면해 있습니다. 소매 은행의 일반 계좌 안내 챗봇에게 고객들이 '어떤 주식을 사야 대박이 나나요?', '경쟁사 B은행의 대출 상품이 여기보다 낫지 않나요?', '세금 탈루 방법을 알려주세요' 같은 질문을 던지고 있습니다. 시스템 프롬프트의 단순 지시만으로는 우회 질문에 계속 답변이 새어 나갈 때, 모델과 무관하게 이러한 주제를 원천 차단하는 방법은 무엇입니까?
+> **🇺🇸 English Scenario**: [global consumer packaged goods (CPG) and F&B franchise distributor — Denied Topics & Brand Reputation Protection] An enterprise operating across raw commodity price feeds, weather-correlated daily franchise order histories, sensory R&D test logs, and social media trend reviews is scaling its AI transformation needing to reduce demand forecasting error (MAPE) and accelerate product launches while enabling non-technical franchise managers to use AI without coding. Customers frequently ask a retail banking support chatbot for speculative stock picks, tax evasion tips, and comparisons praising competitor banks. Relying on system prompt instructions alone fails when users rephrase queries cleverly. Which control deterministically blocks these conversations?  
+> **🇰🇷 한국어 시나리오**: [글로벌 소비재(CPG) 및 식음료 프랜차이즈 유통사 — 금지된 주제(Denied Topics) 정책을 통한 무자격 자문 및 브랜드 평판 리스크 원천 차단] 귀사는 원자재 선물 시세 변동 데이터, 지역별 기상·프로모션에 따른 일별 가맹점 발주량 이력, 신제품 소비자 관능검사 및 SNS 트렌드 리뷰 환경에서 엔터프라이즈 AI 전환을 추진하고 있으며, 현재 계절적 수요 예측 오차(MAPE)를 줄여 가맹점 폐기 비용을 절감하고 신제품 출시 주기를 앞당겨야 하며, 비기술직 가맹점주와 영업사원이 코딩 없이 직관적으로 AI를 활용해야 하는 상황에 직면해 있습니다. 소매 은행의 일반 계좌 안내 챗봇에게 고객들이 '어떤 주식을 사야 대박이 나나요?', '경쟁사 B은행의 대출 상품이 여기보다 낫지 않나요?', '세금 탈루 방법을 알려주세요' 같은 질문을 던지고 있습니다. 시스템 프롬프트의 단순 지시만으로는 우회 질문에 계속 답변이 새어 나갈 때, 모델과 무관하게 이러한 주제를 원천 차단하는 방법은 무엇입니까?
 >
 > * **(A)** Disable all natural-language input on the chatbot and display only a static telephone number  
 >   *(🇰🇷 금지 주제를 막기 위해 챗봇의 모든 자연어 입력 기능을 폐쇄하고 전화번호 안내 텍스트 한 줄만 띄워둠)*
@@ -1494,12 +1494,12 @@
 >
 > • **핵심 전략 및 정답 도출 근거**: **Amazon Bedrock Guardrails의 Denied Topics(금지된 주제)**는 단순 키워드 일치가 아니라 **의미론적(Semantic) 주제 분류**를 수행하여, 사용자가 우회적인 표현으로 무자격 의료·법률·투자 자문이나 경쟁사 비교, 사내 기밀 정책을 유도하더라도 이를 정확히 식별해 차단합니다.
 >
-> • **시나리오 제약 조건 부합성 ([첨단 반도체 파운드리 및 스마트 팩토리])**: 본 시나리오는 '공정 중단 시 시간당 수십억 원의 손실이 발생하므로 엣지(Edge) 단의 실시간 이상 탐지와 핵심 공정 IP의 폐쇄망 격리가 필수적인 상황'이라는 복합 제약을 포함하고 있습니다. 따라서 '금지된 주제(Denied Topics) 정책을 통한 무자격 자문 및 브랜드 평판 리스크 원천 차단' 관점에서 단계적 정합성과 리스크 통제를 동시에 만족하는 **(D)**가 유일한 최적해(MOST appropriate strategy)입니다.
+> • **시나리오 제약 조건 부합성 ([글로벌 소비재(CPG) 및 식음료 프랜차이즈 유통사])**: 본 시나리오는 '계절적 수요 예측 오차(MAPE)를 줄여 가맹점 폐기 비용을 절감하고 신제품 출시 주기를 앞당겨야 하며, 비기술직 가맹점주와 영업사원이 코딩 없이 직관적으로 AI를 활용해야 하는 상황'이라는 복합 제약을 포함하고 있습니다. 따라서 '금지된 주제(Denied Topics) 정책을 통한 무자격 자문 및 브랜드 평판 리스크 원천 차단' 관점에서 단계적 정합성과 리스크 통제를 동시에 만족하는 **(D)**가 유일한 최적해(MOST appropriate strategy)입니다.
 >
 > • **매력적인 오답(Distractor) 함정 분석**:
->   - **(A) 오답 분석**: '금지 주제를 막기 위해 챗봇의 모든 자연어 입력 기능을 폐쇄하고 전화번호 안내 텍스트 한 줄만 띄워둠' 접근법은 공정 중단 시 시간당 수십억 원의 손실이 발생하므로 엣지(Edge) 단의 실시간 이상 탐지와 핵심 공정 IP의 폐쇄망 격리가 필수적인 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
->   - **(B) 오답 분석**: '고객이 경쟁사를 언급할 때마다 챗봇이 경쟁사에 대한 허위 비방 루머를 생성하여 반박하도록 프롬프트를 수정함' 접근법은 공정 중단 시 시간당 수십억 원의 손실이 발생하므로 엣지(Edge) 단의 실시간 이상 탐지와 핵심 공정 IP의 폐쇄망 격리가 필수적인 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
->   - **(C) 오답 분석**: '무자격 투자 자문을 허용하되 손실 발생 시 상담원 개인의 급여에서 배상하도록 사내 규정을 변경함' 접근법은 공정 중단 시 시간당 수십억 원의 손실이 발생하므로 엣지(Edge) 단의 실시간 이상 탐지와 핵심 공정 IP의 폐쇄망 격리가 필수적인 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
+>   - **(A) 오답 분석**: '금지 주제를 막기 위해 챗봇의 모든 자연어 입력 기능을 폐쇄하고 전화번호 안내 텍스트 한 줄만 띄워둠' 접근법은 계절적 수요 예측 오차(MAPE)를 줄여 가맹점 폐기 비용을 절감하고 신제품 출시 주기를 앞당겨야 하며, 비기술직 가맹점주와 영업사원이 코딩 없이 직관적으로 AI를 활용해야 하는 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
+>   - **(B) 오답 분석**: '고객이 경쟁사를 언급할 때마다 챗봇이 경쟁사에 대한 허위 비방 루머를 생성하여 반박하도록 프롬프트를 수정함' 접근법은 계절적 수요 예측 오차(MAPE)를 줄여 가맹점 폐기 비용을 절감하고 신제품 출시 주기를 앞당겨야 하며, 비기술직 가맹점주와 영업사원이 코딩 없이 직관적으로 AI를 활용해야 하는 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
+>   - **(C) 오답 분석**: '무자격 투자 자문을 허용하되 손실 발생 시 상담원 개인의 급여에서 배상하도록 사내 규정을 변경함' 접근법은 계절적 수요 예측 오차(MAPE)를 줄여 가맹점 폐기 비용을 절감하고 신제품 출시 주기를 앞당겨야 하며, 비기술직 가맹점주와 영업사원이 코딩 없이 직관적으로 AI를 활용해야 하는 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
 
 ---
 ### 3.27 절대 금지 대상 AI(Unacceptable Risk)의 즉각 폐기와 고위험 AI로의 합법적 재설계 (Unacceptable Risk (Banned AI Practices) vs High-Risk Compliance)
@@ -1533,8 +1533,8 @@
 > ### 📝 기출 기반 고난도 실전 문제 (Real Exam Scenario Practice - D3-Q261)
 >
 > **Q. [Unacceptable Risk (Banned AI Practices) vs High-Risk Compliance]**  
-> **🇺🇸 English Scenario**: [international airline and mobility booking platform — Unacceptable Risk (Banned AI Practices) vs High-Risk Compliance] An enterprise operating across real-time dynamic fare logs alongside multilingual visa regulations and baggage compensation policies is scaling its AI transformation where chatbot hallucinations regarding refund policies create immediate legal liability, making strict factual grounding paramount. During an executive ideation session, two proposals are pitched: (Proposal 1) subliminal behavioral manipulation targeting vulnerable age groups to induce financial commitments, and (Proposal 2) real-time biometric mass surveillance paired with citizen social trustworthiness scoring. What governance decision is mandatory?  
-> **🇰🇷 한국어 시나리오**: [글로벌 항공사 및 모빌리티 예약 플랫폼 — 절대 금지 대상 AI(Unacceptable Risk)의 즉각 폐기와 고위험 AI로의 합법적 재설계] 귀사는 실시간 항공권 동적 가격 책정(Dynamic Pricing) 로그와 다국어 여권·비자 규정 및 수하물 보상 지침 환경에서 엔터프라이즈 AI 전환을 추진하고 있으며, 현재 챗봇이 잘못된 환불·보상 정책을 안내할 경우 즉각적인 법적 배상 책임이 발생하므로 할루시네이션 제로화가 최우선 과제인 상황에 직면해 있습니다. 글로벌 리테일 및 공공 프로젝트 기획 회의에서 (아이디어 1) 매장 내 취약 계층 및 어린이의 잠재의식을 교묘히 자극해 충동구매와 위험 행동을 유도하는 조작 알고리즘과, (아이디어 2) 공공장소 CCTV를 통한 전 시민 실시간 원격 생체인식 감시 및 사회적 품행 등급 산정 시스템이 제안되었습니다. 글로벌 AI 규제(EU AI Act 등) 관점에서 AI 비즈니스 전략가가 내려야 할 결정은 무엇입니까?
+> **🇺🇸 English Scenario**: [advanced materials and battery corporate R&D institute — Unacceptable Risk (Banned AI Practices) vs High-Risk Compliance] An enterprise operating across decades of Electronic Lab Notebooks (ELN), molecular formulation tables, global patent filings, and scientific literature archives is scaling its AI transformation seeking to compress R&D formulation cycles and lab trial-and-error costs while guaranteeing zero leakage of pre-patent trade secrets and proprietary chemical IP. During an executive ideation session, two proposals are pitched: (Proposal 1) subliminal behavioral manipulation targeting vulnerable age groups to induce financial commitments, and (Proposal 2) real-time biometric mass surveillance paired with citizen social trustworthiness scoring. What governance decision is mandatory?  
+> **🇰🇷 한국어 시나리오**: [첨단 소재·배터리 기업 부설 R&D 연구소(Corporate R&D Center) — 절대 금지 대상 AI(Unacceptable Risk)의 즉각 폐기와 고위험 AI로의 합법적 재설계] 귀사는 수십 년간 축적된 실험실 전자연구노트(ELN), 분자 조성 실험 결과 테이블, 글로벌 특허 명세서 및 학술 논문 PDF 아카이브 환경에서 엔터프라이즈 AI 전환을 추진하고 있으며, 현재 차세대 소재 배합 시행착오(Trial-and-Error) 실험 횟수를 줄여 연구개발 리드타임을 단축해야 하며, 미출원 핵심 특허와 영업비밀(Trade Secrets)의 외부 유출을 100% 차단해야 하는 상황에 직면해 있습니다. 글로벌 리테일 및 공공 프로젝트 기획 회의에서 (아이디어 1) 매장 내 취약 계층 및 어린이의 잠재의식을 교묘히 자극해 충동구매와 위험 행동을 유도하는 조작 알고리즘과, (아이디어 2) 공공장소 CCTV를 통한 전 시민 실시간 원격 생체인식 감시 및 사회적 품행 등급 산정 시스템이 제안되었습니다. 글로벌 AI 규제(EU AI Act 등) 관점에서 AI 비즈니스 전략가가 내려야 할 결정은 무엇입니까?
 >
 > * **(A)** Self-classify both systems as Minimal Risk due to high revenue potential and deploy them covertly  
 >   *(🇰🇷 매출 증대 효과가 크므로 두 시스템 모두 '최소 위험(Minimal Risk)'으로 자체 분류하여 비밀리에 상용 배포함)*
@@ -1550,12 +1550,12 @@
 >
 > • **핵심 전략 및 정답 도출 근거**: EU AI Act에서 **허용 불가 위험(Unacceptable Risk)**에 해당하는 기술(잠재의식/취약계층 행동 조작, 정부/기업의 일반 목적 사회적 신용 점수 매기기 Social Scoring, 직장/학교 내 무단 감정 인식, 무차별 안면 이미지 스크래핑, 법집행 예외 없는 공공장소 실시간 원격 생체인식)은 **완화(Mitigation) 대상이 아니라 즉각적인 전면 금지(Absolute Ban / Immediate Veto) 대상**입니다.
 >
-> • **시나리오 제약 조건 부합성 ([글로벌 항공사 및 모빌리티 예약 플랫폼])**: 본 시나리오는 '챗봇이 잘못된 환불·보상 정책을 안내할 경우 즉각적인 법적 배상 책임이 발생하므로 할루시네이션 제로화가 최우선 과제인 상황'이라는 복합 제약을 포함하고 있습니다. 따라서 '절대 금지 대상 AI(Unacceptable Risk)의 즉각 폐기와 고위험 AI로의 합법적 재설계' 관점에서 단계적 정합성과 리스크 통제를 동시에 만족하는 **(B)**가 유일한 최적해(MOST appropriate strategy)입니다.
+> • **시나리오 제약 조건 부합성 ([첨단 소재·배터리 기업 부설 R&D 연구소(Corporate R&D Center)])**: 본 시나리오는 '차세대 소재 배합 시행착오(Trial-and-Error) 실험 횟수를 줄여 연구개발 리드타임을 단축해야 하며, 미출원 핵심 특허와 영업비밀(Trade Secrets)의 외부 유출을 100% 차단해야 하는 상황'이라는 복합 제약을 포함하고 있습니다. 따라서 '절대 금지 대상 AI(Unacceptable Risk)의 즉각 폐기와 고위험 AI로의 합법적 재설계' 관점에서 단계적 정합성과 리스크 통제를 동시에 만족하는 **(B)**가 유일한 최적해(MOST appropriate strategy)입니다.
 >
 > • **매력적인 오답(Distractor) 함정 분석**:
->   - **(A) 오답 분석**: '매출 증대 효과가 크므로 두 시스템 모두 '최소 위험(Minimal Risk)'으로 자체 분류하여 비밀리에 상용 배포함' 접근법은 챗봇이 잘못된 환불·보상 정책을 안내할 경우 즉각적인 법적 배상 책임이 발생하므로 할루시네이션 제로화가 최우선 과제인 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
->   - **(C) 오답 분석**: '화면 구석에 작은 글씨로 'AI가 작동 중입니다'라는 투명성 고지만 넣으면 사회적 신용 점수제도 100% 합법화된다고 판단함' 접근법은 챗봇이 잘못된 환불·보상 정책을 안내할 경우 즉각적인 법적 배상 책임이 발생하므로 할루시네이션 제로화가 최우선 과제인 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
->   - **(D) 오답 분석**: '일단 전 세계에 출시하여 수익을 거둔 뒤 정부로부터 과징금 부과 통지서가 날아올 때만 일시 정지함' 접근법은 챗봇이 잘못된 환불·보상 정책을 안내할 경우 즉각적인 법적 배상 책임이 발생하므로 할루시네이션 제로화가 최우선 과제인 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
+>   - **(A) 오답 분석**: '매출 증대 효과가 크므로 두 시스템 모두 '최소 위험(Minimal Risk)'으로 자체 분류하여 비밀리에 상용 배포함' 접근법은 차세대 소재 배합 시행착오(Trial-and-Error) 실험 횟수를 줄여 연구개발 리드타임을 단축해야 하며, 미출원 핵심 특허와 영업비밀(Trade Secrets)의 외부 유출을 100% 차단해야 하는 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
+>   - **(C) 오답 분석**: '화면 구석에 작은 글씨로 'AI가 작동 중입니다'라는 투명성 고지만 넣으면 사회적 신용 점수제도 100% 합법화된다고 판단함' 접근법은 차세대 소재 배합 시행착오(Trial-and-Error) 실험 횟수를 줄여 연구개발 리드타임을 단축해야 하며, 미출원 핵심 특허와 영업비밀(Trade Secrets)의 외부 유출을 100% 차단해야 하는 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
+>   - **(D) 오답 분석**: '일단 전 세계에 출시하여 수익을 거둔 뒤 정부로부터 과징금 부과 통지서가 날아올 때만 일시 정지함' 접근법은 차세대 소재 배합 시행착오(Trial-and-Error) 실험 횟수를 줄여 연구개발 리드타임을 단축해야 하며, 미출원 핵심 특허와 영업비밀(Trade Secrets)의 외부 유출을 100% 차단해야 하는 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
 
 ---
 ### 3.28 인간 검토자의 자동화 편향(Automation Bias) 및 무비판적 추종(Rubber-Stamping) 방지 설계 (Automation Bias & Over-Reliance Mitigation in HITL Workflows)
@@ -1586,11 +1586,11 @@
 </div>
 </div>
 
-> ### 📝 기출 기반 고난도 실전 문제 (Real Exam Scenario Practice - D3-Q271)
+> ### 📝 기출 기반 고난도 실전 문제 (Real Exam Scenario Practice - D3-Q272)
 >
 > **Q. [Automation Bias & Over-Reliance Mitigation in HITL Workflows]**  
-> **🇺🇸 English Scenario**: [global ocean freight and supply chain logistics platform — Automation Bias & Over-Reliance Mitigation in HITL Workflows] An enterprise operating across global port weather and customs time-series telemetry alongside multilingual Bills of Lading and customs declarations is scaling its AI transformation facing an aggressive 6-week Time-to-Market (TTM) mandate across global branches with a severe shortage of internal ML engineers. Despite implementing a mandatory Human-in-the-Loop (HITL) step for high-risk underwriting, an audit reveals that time-pressured human reviewers agree with the AI's recommendation 99.5% of the time within 2 seconds without verifying source documents ('Automation Bias'). How should the HITL workflow be redesigned to restore meaningful human oversight?  
-> **🇰🇷 한국어 시나리오**: [글로벌 해운 물류 및 공급망 플랫폼 — 인간 검토자의 자동화 편향(Automation Bias) 및 무비판적 추종(Rubber-Stamping) 방지 설계] 귀사는 전 세계 항만 기상·관세 시계열 데이터와 다국어 선하증권(B/L) 및 통관 세관 신고서 환경에서 엔터프라이즈 AI 전환을 추진하고 있으며, 현재 6주 이내에 MVP를 글로벌 지사에 배포(TTM)해야 하지만 사내 전담 머신러닝 엔지니어가 극소수에 불과한 상황에 직면해 있습니다. 고위험 대출 및 의료 심사 워크플로우에 인간 참여형 검증(HITL)을 도입했음에도 불구하고, 사후 감사 결과 인간 심사역들이 바쁜 업무 시간 압박 때문에 AI가 제시한 추천 결과와 요약문을 단 2초 만에 읽지도 않고 99.5% 그대로 승인 버튼만 누르는 '자동화 편향(Automation Bias / Over-reliance)'에 빠져 사실상 HITL 안전망이 무력화된 것이 확인되었습니다. 이를 실질적으로 교정하기 위한 워크플로우 재설계 방안은 무엇입니까?
+> **🇺🇸 English Scenario**: [global property & casualty insurance and reinsurance group — Automation Bias & Over-Reliance Mitigation in HITL Workflows] An enterprise operating across millions of historical claim fraud records alongside field loss-adjustment photos, audio transcripts, and complex policy contract PDFs is scaling its AI transformation balancing higher straight-through claims processing against legal mandates requiring deterministic policy arithmetic and documented HITL sign-off on denials. Despite implementing a mandatory Human-in-the-Loop (HITL) step for high-risk underwriting, an audit reveals that time-pressured human reviewers agree with the AI's recommendation 99.5% of the time within 2 seconds without verifying source documents ('Automation Bias'). How should the HITL workflow be redesigned to restore meaningful human oversight?  
+> **🇰🇷 한국어 시나리오**: [글로벌 손해보험 및 재보험 언더라이팅 그룹 — 인간 검토자의 자동화 편향(Automation Bias) 및 무비판적 추종(Rubber-Stamping) 방지 설계] 귀사는 수백만 건의 과거 보험 사기 적발 이력 테이블과 현장 손해사정 파손 사진·음성 녹취록 및 다국어 보험 약관 PDF 환경에서 엔터프라이즈 AI 전환을 추진하고 있으며, 현재 청구 심사 자동화율(Straight-Through Processing)을 높이되, 지급 거절 시 법적 분쟁 방지를 위해 결정론적 약관 수식 검증과 인간 심사역의 최종 승인(HITL)이 의무화된 환경에 직면해 있습니다. 고위험 대출 및 의료 심사 워크플로우에 인간 참여형 검증(HITL)을 도입했음에도 불구하고, 사후 감사 결과 인간 심사역들이 바쁜 업무 시간 압박 때문에 AI가 제시한 추천 결과와 요약문을 단 2초 만에 읽지도 않고 99.5% 그대로 승인 버튼만 누르는 '자동화 편향(Automation Bias / Over-reliance)'에 빠져 사실상 HITL 안전망이 무력화된 것이 확인되었습니다. 이를 실질적으로 교정하기 위한 워크플로우 재설계 방안은 무엇입니까?
 >
 > * **(A)** Remove all source citations and explanations from the UI and enlarge the 'Approve' button to speed up clicking  
 >   *(🇰🇷 인간 심사역의 처리 속도를 더 높이기 위해 화면에서 모든 근거 문서와 설명(SHAP)을 제거하고 '승인' 버튼 크기를 5배로 키움)*
@@ -1606,12 +1606,12 @@
 >
 > • **핵심 전략 및 정답 도출 근거**: 실제 시험의 고급 거버넌스 주제인 **자동화 편향(Automation Bias: 인간이 AI 시스템의 출력을 무비판적으로 과신하여 명백한 오류를 놓치는 현상)**입니다. 이를 막으려면 단순히 HITL 단계를 두는 것에 그치지 않고, **UI/UX 상에서 원문 근거와 불확실성 지표를 먼저 확인하게 설계(Cognitive Forcing)**하고, **속도 위주 KPI를 품질 위주로 개편**하며, **주기적인 블라인드 검증 샘플(Catch Trials)**로 검토 품질을 관리해야 합니다.
 >
-> • **시나리오 제약 조건 부합성 ([글로벌 해운 물류 및 공급망 플랫폼])**: 본 시나리오는 '6주 이내에 MVP를 글로벌 지사에 배포(TTM)해야 하지만 사내 전담 머신러닝 엔지니어가 극소수에 불과한 상황'이라는 복합 제약을 포함하고 있습니다. 따라서 '인간 검토자의 자동화 편향(Automation Bias) 및 무비판적 추종(Rubber-Stamping) 방지 설계' 관점에서 단계적 정합성과 리스크 통제를 동시에 만족하는 **(D)**가 유일한 최적해(MOST appropriate strategy)입니다.
+> • **시나리오 제약 조건 부합성 ([글로벌 손해보험 및 재보험 언더라이팅 그룹])**: 본 시나리오는 '청구 심사 자동화율(Straight-Through Processing)을 높이되, 지급 거절 시 법적 분쟁 방지를 위해 결정론적 약관 수식 검증과 인간 심사역의 최종 승인(HITL)이 의무화된 환경'이라는 복합 제약을 포함하고 있습니다. 따라서 '인간 검토자의 자동화 편향(Automation Bias) 및 무비판적 추종(Rubber-Stamping) 방지 설계' 관점에서 단계적 정합성과 리스크 통제를 동시에 만족하는 **(D)**가 유일한 최적해(MOST appropriate strategy)입니다.
 >
 > • **매력적인 오답(Distractor) 함정 분석**:
->   - **(A) 오답 분석**: '인간 심사역의 처리 속도를 더 높이기 위해 화면에서 모든 근거 문서와 설명(SHAP)을 제거하고 '승인' 버튼 크기를 5배로 키움' 접근법은 6주 이내에 MVP를 글로벌 지사에 배포(TTM)해야 하지만 사내 전담 머신러닝 엔지니어가 극소수에 불과한 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
->   - **(B) 오답 분석**: '심사역 한 명당 일일 의무 처리 할당량을 500건에서 5,000건으로 10배 늘려 건당 검토 시간을 0.5초로 단축시킴' 접근법은 6주 이내에 MVP를 글로벌 지사에 배포(TTM)해야 하지만 사내 전담 머신러닝 엔지니어가 극소수에 불과한 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
->   - **(C) 오답 분석**: '인간이 AI와 다른 의견을 낼 때마다 인사 고과에서 감점을 주어 100% AI 결론에 복종하도록 강제함' 접근법은 6주 이내에 MVP를 글로벌 지사에 배포(TTM)해야 하지만 사내 전담 머신러닝 엔지니어가 극소수에 불과한 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
+>   - **(A) 오답 분석**: '인간 심사역의 처리 속도를 더 높이기 위해 화면에서 모든 근거 문서와 설명(SHAP)을 제거하고 '승인' 버튼 크기를 5배로 키움' 접근법은 청구 심사 자동화율(Straight-Through Processing)을 높이되, 지급 거절 시 법적 분쟁 방지를 위해 결정론적 약관 수식 검증과 인간 심사역의 최종 승인(HITL)이 의무화된 환경이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
+>   - **(B) 오답 분석**: '심사역 한 명당 일일 의무 처리 할당량을 500건에서 5,000건으로 10배 늘려 건당 검토 시간을 0.5초로 단축시킴' 접근법은 청구 심사 자동화율(Straight-Through Processing)을 높이되, 지급 거절 시 법적 분쟁 방지를 위해 결정론적 약관 수식 검증과 인간 심사역의 최종 승인(HITL)이 의무화된 환경이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
+>   - **(C) 오답 분석**: '인간이 AI와 다른 의견을 낼 때마다 인사 고과에서 감점을 주어 100% AI 결론에 복종하도록 강제함' 접근법은 청구 심사 자동화율(Straight-Through Processing)을 높이되, 지급 거절 시 법적 분쟁 방지를 위해 결정론적 약관 수식 검증과 인간 심사역의 최종 승인(HITL)이 의무화된 환경이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
 
 ---
 ### 3.29 외부 AI SaaS 및 서드파티 모델 도입 시 공급망·보안·규제 실사(Due Diligence) 프레임워크 (Third-Party AI Vendor & SaaS Risk Assessment Framework)
@@ -1642,11 +1642,11 @@
 </div>
 </div>
 
-> ### 📝 기출 기반 고난도 실전 문제 (Real Exam Scenario Practice - D3-Q281)
+> ### 📝 기출 기반 고난도 실전 문제 (Real Exam Scenario Practice - D3-Q283)
 >
 > **Q. [Third-Party AI Vendor & SaaS Risk Assessment Framework]**  
-> **🇺🇸 English Scenario**: [nationwide 5G telecommunications carrier — Third-Party AI Vendor & SaaS Risk Assessment Framework] An enterprise operating across telemetry from tens of thousands of cell towers and hundreds of thousands of daily billing/roaming call transcripts is scaling its AI transformation aiming to reduce agent burnout by automating routine inquiries while seamlessly escalating complex billing disputes to human agents. A business unit wants to procure an external startup's Generative AI SaaS tool and connect it to enterprise customer and HR records. Before approving procurement, what mandatory Third-Party AI Risk Assessment criteria must the Governance Council verify?  
-> **🇰🇷 한국어 시나리오**: [전국망 이동통신 및 5G 인프라 사업자 — 외부 AI SaaS 및 서드파티 모델 도입 시 공급망·보안·규제 실사(Due Diligence) 프레임워크] 귀사는 수만 개 기지국의 트래픽 혼잡도 지표와 일일 수십만 건의 요금·로밍 고객 상담 통화 기록 환경에서 엔터프라이즈 AI 전환을 추진하고 있으며, 현재 상담원 이직률을 낮추기 위해 반복 문의는 자동화하되 복잡한 요금 분쟁은 실시간 상담원 보조(Agent Assist)로 전환해야 하는 상황에 직면해 있습니다. 마케팅 및 인사 부서가 외부 스타트업이 제공하는 생성형 AI SaaS 솔루션을 즉시 구독하여 사내 고객·지원자 데이터를 연동하려 합니다. 조달(Procurement) 및 AI 거버넌스 위원회가 계약 체결 전 해당 서드파티 벤더를 대상으로 반드시 검증해야 하는 핵심 실사(Third-Party AI Due Diligence) 항목은 무엇입니까?
+> **🇺🇸 English Scenario**: [global gaming R&D and streaming entertainment studio — Third-Party AI Vendor & SaaS Risk Assessment Framework] An enterprise operating across hundreds of thousands of hours of multilingual audiovisual assets, 3D texture libraries, and real-time player telemetry logs is scaling its AI transformation needing to eliminate third-party IP infringement risks via indemnified models, C2PA provenance watermarking, and localized cultural bias auditing. A business unit wants to procure an external startup's Generative AI SaaS tool and connect it to enterprise customer and HR records. Before approving procurement, what mandatory Third-Party AI Risk Assessment criteria must the Governance Council verify?  
+> **🇰🇷 한국어 시나리오**: [글로벌 미디어·게임 R&D 및 엔터테인먼트 스튜디오 — 외부 AI SaaS 및 서드파티 모델 도입 시 공급망·보안·규제 실사(Due Diligence) 프레임워크] 귀사는 수십만 시간의 다국어 영상·음성 에셋, 3D 그래픽 텍스처 라이브러리, 실시간 게이머 매치메이킹 및 이탈(Churn) 원격 로그 환경에서 엔터프라이즈 AI 전환을 추진하고 있으며, 현재 생성형 AI 에셋 제작 시 제3자 저작권(IP) 침해 리스크를 원천 차단하고 디지털 워터마킹(C2PA) 출처 증명과 지역별 문화적 편향 제거를 보장해야 하는 상황에 직면해 있습니다. 마케팅 및 인사 부서가 외부 스타트업이 제공하는 생성형 AI SaaS 솔루션을 즉시 구독하여 사내 고객·지원자 데이터를 연동하려 합니다. 조달(Procurement) 및 AI 거버넌스 위원회가 계약 체결 전 해당 서드파티 벤더를 대상으로 반드시 검증해야 하는 핵심 실사(Third-Party AI Due Diligence) 항목은 무엇입니까?
 >
 > * **(A)** Skip security and data-usage contract reviews, approving procurement based solely on slide deck aesthetics and a free first-month trial  
 >   *(🇰🇷 벤더의 기술 보안이나 데이터 학습 약관은 전혀 확인하지 않고 오직 영업 사원의 프레젠테이션 디자인과 첫 달 무료 할인 여부만 보고 즉시 계약함)*
@@ -1662,12 +1662,12 @@
 >
 > • **핵심 전략 및 정답 도출 근거**: Buy/Partner 전략으로 외부 AI SaaS를 도입할 때는 **서드파티 AI 벤더 리스크 관리(TPRM for AI)**가 필수입니다. 특히 무료/저가형 AI SaaS는 약관에 **'고객 입력 데이터를 벤더의 기본 모델 학습에 활용할 수 있다'**는 독소 조항이 숨어 있는 경우가 많으므로, **Zero Data Retention/Training 보증, 하위 모델 공급망(Sub-processors), 보안/AI 인증(ISO 42001/SOC2), 벤더 폐업 대비 Exit Plan**을 반드시 감사해야 합니다.
 >
-> • **시나리오 제약 조건 부합성 ([전국망 이동통신 및 5G 인프라 사업자])**: 본 시나리오는 '상담원 이직률을 낮추기 위해 반복 문의는 자동화하되 복잡한 요금 분쟁은 실시간 상담원 보조(Agent Assist)로 전환해야 하는 상황'이라는 복합 제약을 포함하고 있습니다. 따라서 '외부 AI SaaS 및 서드파티 모델 도입 시 공급망·보안·규제 실사(Due Diligence) 프레임워크' 관점에서 단계적 정합성과 리스크 통제를 동시에 만족하는 **(B)**가 유일한 최적해(MOST appropriate strategy)입니다.
+> • **시나리오 제약 조건 부합성 ([글로벌 미디어·게임 R&D 및 엔터테인먼트 스튜디오])**: 본 시나리오는 '생성형 AI 에셋 제작 시 제3자 저작권(IP) 침해 리스크를 원천 차단하고 디지털 워터마킹(C2PA) 출처 증명과 지역별 문화적 편향 제거를 보장해야 하는 상황'이라는 복합 제약을 포함하고 있습니다. 따라서 '외부 AI SaaS 및 서드파티 모델 도입 시 공급망·보안·규제 실사(Due Diligence) 프레임워크' 관점에서 단계적 정합성과 리스크 통제를 동시에 만족하는 **(B)**가 유일한 최적해(MOST appropriate strategy)입니다.
 >
 > • **매력적인 오답(Distractor) 함정 분석**:
->   - **(A) 오답 분석**: '벤더의 기술 보안이나 데이터 학습 약관은 전혀 확인하지 않고 오직 영업 사원의 프레젠테이션 디자인과 첫 달 무료 할인 여부만 보고 즉시 계약함' 접근법은 상담원 이직률을 낮추기 위해 반복 문의는 자동화하되 복잡한 요금 분쟁은 실시간 상담원 보조(Agent Assist)로 전환해야 하는 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
->   - **(C) 오답 분석**: '외부 SaaS 벤더가 당사 고객 데이터를 자사 공개 모델 학습에 사용하고 제3자 데이터 브로커에게 재판매할 수 있는 무제한 라이선스 조항을 그대로 수용함' 접근법은 상담원 이직률을 낮추기 위해 반복 문의는 자동화하되 복잡한 요금 분쟁은 실시간 상담원 보조(Agent Assist)로 전환해야 하는 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
->   - **(D) 오답 분석**: '실사 절차를 생략하기 위해 법인 카드 결제 한도 이하로 계약을 쪼개어 보안팀 몰래 현업 부서가 독단으로 연동함' 접근법은 상담원 이직률을 낮추기 위해 반복 문의는 자동화하되 복잡한 요금 분쟁은 실시간 상담원 보조(Agent Assist)로 전환해야 하는 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
+>   - **(A) 오답 분석**: '벤더의 기술 보안이나 데이터 학습 약관은 전혀 확인하지 않고 오직 영업 사원의 프레젠테이션 디자인과 첫 달 무료 할인 여부만 보고 즉시 계약함' 접근법은 생성형 AI 에셋 제작 시 제3자 저작권(IP) 침해 리스크를 원천 차단하고 디지털 워터마킹(C2PA) 출처 증명과 지역별 문화적 편향 제거를 보장해야 하는 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
+>   - **(C) 오답 분석**: '외부 SaaS 벤더가 당사 고객 데이터를 자사 공개 모델 학습에 사용하고 제3자 데이터 브로커에게 재판매할 수 있는 무제한 라이선스 조항을 그대로 수용함' 접근법은 생성형 AI 에셋 제작 시 제3자 저작권(IP) 침해 리스크를 원천 차단하고 디지털 워터마킹(C2PA) 출처 증명과 지역별 문화적 편향 제거를 보장해야 하는 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
+>   - **(D) 오답 분석**: '실사 절차를 생략하기 위해 법인 카드 결제 한도 이하로 계약을 쪼개어 보안팀 몰래 현업 부서가 독단으로 연동함' 접근법은 생성형 AI 에셋 제작 시 제3자 저작권(IP) 침해 리스크를 원천 차단하고 디지털 워터마킹(C2PA) 출처 증명과 지역별 문화적 편향 제거를 보장해야 하는 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
 
 ---
 ### 3.30 국경 간 데이터 이전 제한(Data Residency)과 교차 리전 추론(Cross-Region Inference)의 규제 조화 (Cross-Border Data Residency, Sovereignty & Multi-Region Inference Governance)
@@ -1698,11 +1698,11 @@
 </div>
 </div>
 
-> ### 📝 기출 기반 고난도 실전 문제 (Real Exam Scenario Practice - D3-Q291)
+> ### 📝 기출 기반 고난도 실전 문제 (Real Exam Scenario Practice - D3-Q294)
 >
 > **Q. [Cross-Border Data Residency, Sovereignty & Multi-Region Inference Governance]**  
-> **🇺🇸 English Scenario**: [mega-scale e-commerce and retail marketplace — Cross-Border Data Residency, Sovereignty & Multi-Region Inference Governance] An enterprise operating across tens of millions of daily clickstream events alongside unstructured product reviews and seller dispute tickets is scaling its AI transformation requiring sub-200ms inference latency during peak seasonal traffic while slashing per-transaction unit inference costs by over 60%. A multinational healthcare and banking firm wants high inference availability using Amazon Bedrock Cross-Region Inference, but strict national Data Residency laws mandate that citizen records must never be processed or stored outside their designated geographic jurisdiction (e.g., EU-only or single-country boundary). Which configuration satisfies both availability and compliance?  
-> **🇰🇷 한국어 시나리오**: [초대형 이커머스 및 리테일 마켓플레이스 — 국경 간 데이터 이전 제한(Data Residency)과 교차 리전 추론(Cross-Region Inference)의 규제 조화] 귀사는 일일 수천만 건의 클릭스트림 이벤트와 비정형 상품 리뷰 및 판매자 분쟁 티켓 환경에서 엔터프라이즈 AI 전환을 추진하고 있으며, 현재 성수기 트래픽 급증 시 추론 지연 시간(Latency)을 200ms 이내로 유지해야 하며 동시에 건당 추론 단가(Unit Cost)를 60% 이상 절감해야 하는 상황에 직면해 있습니다. 글로벌 금융·헬스케어 기업이 트래픽 폭주 시 가용성을 높이기 위해 Amazon Bedrock의 교차 리전 추론(Cross-Region Inference) 기능을 검토 중입니다. 그러나 유럽(GDPR) 및 국내 금융 보안 규정상 특정 국가 시민의 원문 금융·의료 데이터는 지정된 법역(예: EU 또는 서울 리전) 외부의 물리적 서버에서 처리되거나 저장되어서는 안 됩니다. 가용성과 데이터 거주성(Data Residency) 규제를 동시에 충족하는 아키텍처 결정은 무엇입니까?
+> **🇺🇸 English Scenario**: [global wholesale distribution and cold-chain logistics provider — Cross-Border Data Residency, Sovereignty & Multi-Region Inference Governance] An enterprise operating across refrigerated container temperature telemetry, tens of thousands of SKU warehouse management (WMS) ledgers, and multilingual customs/Bills of Lading documents is scaling its AI transformation tasked with minimizing perishable inventory spoilage and routing delays across global warehouses under an aggressive 6-week TTM mandate with limited internal ML staff. A multinational healthcare and banking firm wants high inference availability using Amazon Bedrock Cross-Region Inference, but strict national Data Residency laws mandate that citizen records must never be processed or stored outside their designated geographic jurisdiction (e.g., EU-only or single-country boundary). Which configuration satisfies both availability and compliance?  
+> **🇰🇷 한국어 시나리오**: [글로벌 도소매 유통 및 콜드체인 물류(Distribution & Cold-Chain) 기업 — 국경 간 데이터 이전 제한(Data Residency)과 교차 리전 추론(Cross-Region Inference)의 규제 조화] 귀사는 신선식품·의약품 냉장 컨테이너 온도/습도 원격 텔레메트리, 수만 개 SKU 입출고(WMS) 원장, 다국어 통관·선하증권(B/L) 문서 환경에서 엔터프라이즈 AI 전환을 추진하고 있으며, 현재 유통기한 임박 상품의 폐기 손실률(Spoilage)을 낮추고 리드타임 변동성에 실시간 대응해야 하며, 전담 데이터 과학자가 부족해 6주 내에 현업 물류센터에 솔루션을 배포(Fast TTM)해야 하는 상황에 직면해 있습니다. 글로벌 금융·헬스케어 기업이 트래픽 폭주 시 가용성을 높이기 위해 Amazon Bedrock의 교차 리전 추론(Cross-Region Inference) 기능을 검토 중입니다. 그러나 유럽(GDPR) 및 국내 금융 보안 규정상 특정 국가 시민의 원문 금융·의료 데이터는 지정된 법역(예: EU 또는 서울 리전) 외부의 물리적 서버에서 처리되거나 저장되어서는 안 됩니다. 가용성과 데이터 거주성(Data Residency) 규제를 동시에 충족하는 아키텍처 결정은 무엇입니까?
 >
 > * **(A)** Ignore statutory data residency mandates and enable unconstrained global cross-continental routing for restricted citizen records  
 >   *(🇰🇷 데이터 거주성 법률을 무시하고 전 세계 모든 대륙으로 데이터가 무작위 전송되는 글로벌 라우팅을 켜서 법적 영업 정지 처분을 자초함)*
@@ -1718,11 +1718,11 @@
 >
 > • **핵심 전략 및 정답 도출 근거**: **데이터 거주성(Data Residency: 데이터가 물리적으로 저장·처리되는 지리적 위치)**과 **고가용성(High Availability)**을 조화시키는 실전 문제입니다. **AWS Organizations의 SCP(Service Control Policies)**로 허용되지 않은 해외 리전 API 호출을 원천 차단하고, 권역 내 분산이 필요한 경우 **지리적 권역이 고정된 추론 프로파일(Geography-specific Inference Profiles)**이나 해당 리전 내 **Multi-AZ 구성**을 활용해야 합니다.
 >
-> • **시나리오 제약 조건 부합성 ([초대형 이커머스 및 리테일 마켓플레이스])**: 본 시나리오는 '성수기 트래픽 급증 시 추론 지연 시간(Latency)을 200ms 이내로 유지해야 하며 동시에 건당 추론 단가(Unit Cost)를 60% 이상 절감해야 하는 상황'이라는 복합 제약을 포함하고 있습니다. 따라서 '국경 간 데이터 이전 제한(Data Residency)과 교차 리전 추론(Cross-Region Inference)의 규제 조화' 관점에서 단계적 정합성과 리스크 통제를 동시에 만족하는 **(D)**가 유일한 최적해(MOST appropriate strategy)입니다.
+> • **시나리오 제약 조건 부합성 ([글로벌 도소매 유통 및 콜드체인 물류(Distribution & Cold-Chain) 기업])**: 본 시나리오는 '유통기한 임박 상품의 폐기 손실률(Spoilage)을 낮추고 리드타임 변동성에 실시간 대응해야 하며, 전담 데이터 과학자가 부족해 6주 내에 현업 물류센터에 솔루션을 배포(Fast TTM)해야 하는 상황'이라는 복합 제약을 포함하고 있습니다. 따라서 '국경 간 데이터 이전 제한(Data Residency)과 교차 리전 추론(Cross-Region Inference)의 규제 조화' 관점에서 단계적 정합성과 리스크 통제를 동시에 만족하는 **(D)**가 유일한 최적해(MOST appropriate strategy)입니다.
 >
 > • **매력적인 오답(Distractor) 함정 분석**:
->   - **(A) 오답 분석**: '데이터 거주성 법률을 무시하고 전 세계 모든 대륙으로 데이터가 무작위 전송되는 글로벌 라우팅을 켜서 법적 영업 정지 처분을 자초함' 접근법은 성수기 트래픽 급증 시 추론 지연 시간(Latency)을 200ms 이내로 유지해야 하며 동시에 건당 추론 단가(Unit Cost)를 60% 이상 절감해야 하는 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
->   - **(B) 오답 분석**: '가용영역(AZ) 장애 대비까지 포기하고 단일 전산실의 단일 물리 서버 1대에만 시스템을 구축해 장애 시 100% 서비스가 중단되게 만듦' 접근법은 성수기 트래픽 급증 시 추론 지연 시간(Latency)을 200ms 이내로 유지해야 하며 동시에 건당 추론 단가(Unit Cost)를 60% 이상 절감해야 하는 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
->   - **(C) 오답 분석**: '규제를 피하기 위해 고객 데이터를 암호화 없이 직원 개인 이메일로 해외 지사에 수동 발송함' 접근법은 성수기 트래픽 급증 시 추론 지연 시간(Latency)을 200ms 이내로 유지해야 하며 동시에 건당 추론 단가(Unit Cost)를 60% 이상 절감해야 하는 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
+>   - **(A) 오답 분석**: '데이터 거주성 법률을 무시하고 전 세계 모든 대륙으로 데이터가 무작위 전송되는 글로벌 라우팅을 켜서 법적 영업 정지 처분을 자초함' 접근법은 유통기한 임박 상품의 폐기 손실률(Spoilage)을 낮추고 리드타임 변동성에 실시간 대응해야 하며, 전담 데이터 과학자가 부족해 6주 내에 현업 물류센터에 솔루션을 배포(Fast TTM)해야 하는 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
+>   - **(B) 오답 분석**: '가용영역(AZ) 장애 대비까지 포기하고 단일 전산실의 단일 물리 서버 1대에만 시스템을 구축해 장애 시 100% 서비스가 중단되게 만듦' 접근법은 유통기한 임박 상품의 폐기 손실률(Spoilage)을 낮추고 리드타임 변동성에 실시간 대응해야 하며, 전담 데이터 과학자가 부족해 6주 내에 현업 물류센터에 솔루션을 배포(Fast TTM)해야 하는 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
+>   - **(C) 오답 분석**: '규제를 피하기 위해 고객 데이터를 암호화 없이 직원 개인 이메일로 해외 지사에 수동 발송함' 접근법은 유통기한 임박 상품의 폐기 손실률(Spoilage)을 낮추고 리드타임 변동성에 실시간 대응해야 하며, 전담 데이터 과학자가 부족해 6주 내에 현업 물류센터에 솔루션을 배포(Fast TTM)해야 하는 상황이라는 핵심 거버넌스·아키텍처 제약 조건을 위반하거나 과도한 TCO/운영 리스크를 초래하므로 부적절합니다.
 
 ---

@@ -161,8 +161,8 @@ def build_domain_markdown(d_num):
             md_lines.append(f"## {chapter_start_map[idx]}")
             md_lines.append("")
 
-        # Representative question from questions_domain{d_num}.json (first question of this category)
-        rep_q = q_list[(idx - 1) * 10]
+        # Representative question from questions_domain{d_num}.json rotating across diverse industries (Bio, Manufacturing, R&D, Retail, Distribution, etc.)
+        rep_q = q_list[(idx - 1) * 10 + ((idx + d_num) % 10)]
 
         trap_bullets_en = "\n".join([f"  * *Common Exam Trap*: {d_en}" for _, d_en in distractors])
         trap_bullets_kr = "\n".join([f"  * *주의해야 할 오답 함정*: {d_kr}" for d_kr, _ in distractors])
